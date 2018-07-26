@@ -30,8 +30,8 @@ class RadioReceiver(object):
 class Baseline(RadioReceiver):
     """
         * Equalizer @TODO: add MMSE
-        * Demodulator (QPSK, QAM16, PSK, or Neural-network based model)
-        * Decoder (Viterbi, MAP, or Neural-network based model)
+        * Demodulator (QPSK, QAM16, PSK, etc.)
+        * Decoder: Viterbi
     """
 
     def __init__(self, 
@@ -60,6 +60,9 @@ class Baseline(RadioReceiver):
         estimated_message_bits = self.decode(decoded_bits)
         return estimated_message_bits
 
+    def equalize(self, inputs):
+        raise NotImplementedError
+        
     def demodulate(self, inputs):
         return self.modulator.demodulate(inputs, demod_type='hard')
 
