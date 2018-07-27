@@ -5,8 +5,9 @@ from commpy.modulation import QAMModem
 from commpy.channelcoding import viterbi_decode
 
 import tensorflow as tf
-from tensorflow.keras.layers import Input, Dense, GRU, LSTM, BatchNormalization, Activation
-from tensorflow.keras.layers import RepeatVector, Bidirectional, TimeDistributed
+from tensorflow.keras.layers import Input, Dense, BatchNormalization
+from tensorflow.keras.layers import GRU, Bidirectional, TimeDistributed
+
 
 class RadioReceiver(object):
     """Abstract Radio Receiver class."""
@@ -93,72 +94,26 @@ class End2End(RadioReceiver):
 
     def _build_model(self, pretrained_model_path):
 
-        def cfo_network(preamble, preamble_conv, scope='CFOCorrectionNet'):
-            """
-            Arguments:
-                preamble :     tf.Tensor float32 -  [batch, preamble_length, 2]
-                preamble_conv: tf.Tensor float32 -  [batch, preamble_length, 2]
-                
-            Return:
-                cfo_estimate: tf.Tensor float32 - [batch_size, 1]
-            """
-            with tf.name_scope(scope):
-                inputs = tf.keras.layers.concatenate([preamble, preamble_conv], axis=1)
-                inputs = tf.keras.layers.Flatten(name='Flatten')(inputs)
-                x = tf.keras.layers.Dense(100, 'selu', name=scope+"_dense_1")(inputs)
-                x = tf.keras.layers.Dense(100, 'selu', name=scope+"_dense_2")(x)
-                x = tf.keras.layers.Dense(100, 'selu', name=scope+"_dense_3")(x)
-            cfo_est = tf.keras.layers.Dense(1, 'linear',name='CFOEstimate')(x)
-            return cfo_est
+        # Define network parameters (num layers, hidden units, etc.)
+        num_hidden_layers = 2
+        hidden_units = 400
+        dropout = 0.3
+        
+        # Define network architecture
+        inputs  = Input(shape=(None, 2))
+        x = inputs
+        for _ in range(num_hidden_layers):
+            x = Bidirectional(GRU(units=hidden_units,
+                                  return_sequences=True, 
+                                  recurrent_dropout=dropout))(x)
+            x = BatchNormalization()(x)
+        outputs = TimeDistributed(Dense(1, activation='sigmoid'))(x)
 
+        # Convert to a `keras.Model` for training/evaluation.
+        model = tf.keras.Model(inputs, outputs)
 
-        def cfo_correction(kwargs):
-            """Given an CFO estimate w, rotate packets in opposite w as
-
-                packets = packets * e^(-j*w*range(len(packets)))
+        # Load pretrained weights
+        if pretrained_model_path:
+            model.load_weights(pretrained_model_path)
             
-            Arguments:
-                omega_estimate: tf.Tensor float32 - [batch, 1]
-                packets:        tf.Tensor float32 - [batch, (preamble_len + data_len), 2] 
-                
-            Return:
-                rotated_packets: tf.Tensor float32 - [batch, (preamble_len + data_len), 2] 
-            """ 
-            # Because of Lambda Layer, we need to pass arguments as Kwargs
-            omega_estimate, packets = kwargs[0], kwargs[1]
-            with tf.name_scope('CFOCorrection'):
-                with tf.name_scope('rotation_matrix'):
-                    # preamble_len + data_len
-                    packet_len      = tf.cast(tf.shape(packets)[1], tf.float32)
-                    rotation_matrix = tf.exp(tf.complex(0.0, - 1.0 * omega_estimate * tf.range(packet_len)))
-                with tf.name_scope('cfo_correction'):
-                    rotated_packets = tf.complex(packets[..., 0], packets[...,1]) * rotation_matrix
-
-                # Encode complex packets into 2D array
-                rotated_packets = tf.stack([tf.real(rotated_packets), 
-                                            tf.imag(rotated_packets)], 
-                                        axis=-1, name='cfo_corrected')
-            return rotated_packets
-
-
-        def equalization_network(cfo_corrected_packets, preamble):
-            with tf.name_scope('EqualizationNet'):
-                inputs = tf.keras.layers.concatenate([preamble, cfo_corrected_packets], axis=1)
-                x = Bidirectional(LSTM(20, return_sequences=True))(inputs)
-                x = Bidirectional(LSTM(20, return_sequences=False))(x)
-                x = Dense(400, activation='relu')(x)
-                
-                x = Dense(400, activation='linear')(x)
-                equalized_packets = Reshape((200, 2))(x)
-            return equalized_packets
-
-        def demod_and_ecc_network(equalized_packets):
-            num_hidden_layers = 2
-            hidden_units=400 # 400
-            with tf.name_scope('DemodAndDecodeNet'):
-                x = equalized_packets
-                for _ in range(num_hidden_layers):
-                    x = Bidirectional(GRU(hidden_units, return_sequences=True))(x)
-                    x = BatchNormalization()(x)
-            data_estimates = TimeDistributed(Dense(1, activation='sigmoid'), name='DataEstimate')(x)
-            return data_estimates
+        return model
