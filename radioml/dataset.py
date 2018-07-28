@@ -7,12 +7,19 @@ from commpy.channelcoding import Trellis
 from commpy.modulation import QAMModem
 
 class RadioData(object):
-    """Simulate sending data over multi-tap channels with carrier frequency
-    offset (CFO).
+    """Simulation of a Radio Transmitter that sends data over AWGN Channels.
     
-    Assumptions:
-        * Data is encoded using Convolutional Code with Memory = 2
-          and generator matrix = [[0o7, 0o5]] (in decimal).
+        Assumptions:
+            * Data is encoded using Convolutional Code.
+
+    Arguments:
+    ----------
+        data_len:
+        preamble_len:
+        channels_len:
+        modulation_scheme:
+        data_rate
+        
 
     """
     MEMORY = np.array([2])
@@ -23,12 +30,6 @@ class RadioData(object):
                  channels_len, 
                  modulation_scheme='qpsk', 
                  data_rate=1/2):
-        """
-        Initalize Radio Data object
-
-        Arguments:
-            TODO
-        """
         self.modulator = self._build_modulator(modulation_scheme)
         self.trellis = Trellis(memory=self.MEMORY, g_matrix=self.G_MATRIX)
         self.data_len = data_len
