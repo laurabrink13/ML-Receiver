@@ -1,16 +1,13 @@
 
 """Contains implementations of Radio Receivers."""
 import numpy as np
+import scipy.signal as sig
 from commpy.modulation import QAMModem
-from commpy.channelcoding import viterbi_decode
+from commpy.channelcoding import viterbi_decode, Trellis
 
-import tensorflow as tf
-from tensorflow.keras.layers import Input, Dense, GRU, LSTM, BatchNormalization, Activation
-from tensorflow.keras.layers import RepeatVector, Bidirectional, TimeDistributed
 
 class RadioReceiver(object):
     """Abstract Radio Receiver class."""
-     
     def __init__(self):
         pass
 
@@ -25,16 +22,15 @@ class RadioReceiver(object):
         """
         raise NotImplementedError
 
-
 class Baseline(RadioReceiver):
     """
         * Equalizer @TODO: add MMSE
         * Demodulator (QPSK, QAM16, PSK, etc.)
         * Decoder: Viterbi
     """
-
+    MEMORY = np.array([2])
+    G_MATRIX = g_matrix=np.array([[0o7, 0o5]])
     def __init__(self, 
-                 trellis, 
                  modulation_scheme='QPSK', 
                  tb_depth=15, 
                  decoding_type='hard'):
@@ -48,15 +44,25 @@ class Baseline(RadioReceiver):
             decoding_type:
         """
         super(Baseline, self).__init__()
-        self.modulator = QAMModem(m=4)
-        self.trellis = trellis
+        self.mmse = LeastMeanSquares(
+            init_params={'equalizer_order':5,
+                         'random_starts':True,
+                         'learning_rate':0.01})
+        self.modulator = self._build_modulator(modulation_scheme)
+        self.trellis = Trellis(memory=self.MEMORY, g_matrix=self.G_MATRIX)
         self.tb_depth = tb_depth
         self.decoding_type= decoding_type
 
-    def __call__(self, complex_inputs):
-        # @TODO: add parallel processing
-        decoded_bits  = self.demodulate(complex_inputs)
+    def __call__(self, convolved_data, convolved_preamble, preamble):
+
+        # Update state
+        self.mmse.train_closed_form(np.squeeze(convolved_preamble), np.squeeze(preamble))
+
+        equalized_data = self.mmse.predict(np.squeeze(convolved_data))[:-2]
+
+        decoded_bits  = self.demodulate(equalized_data)
         estimated_message_bits = self.decode(decoded_bits)
+
         return estimated_message_bits
 
     def equalize(self, inputs):
@@ -68,6 +74,18 @@ class Baseline(RadioReceiver):
     def decode(self, inputs):
         return viterbi_decode(inputs, self.trellis, self.tb_depth, 
                               self.decoding_type)
+
+    def _build_modulator(self, modulation_scheme):
+        """Construct Modulator."""
+        if str.lower(modulation_scheme) == 'qpsk':
+            return QAMModem(m=4)
+        elif str.lower(modulation_scheme) == 'qam16':
+            return QAMModem(m=16)
+        elif str.lower(modulation_scheme) == 'qam64':
+            return QAMModem(m=64)  
+        else:
+            raise ValueError('Modulation scheme {} is not supported'.format(
+                modulation_scheme))
 
 
 class End2End(RadioReceiver):
@@ -92,73 +110,37 @@ class End2End(RadioReceiver):
         return x.reshape((-1, self.data_length, 2))  
 
     def _build_model(self, pretrained_model_path):
-
-        def cfo_network(preamble, preamble_conv, scope='CFOCorrectionNet'):
-            """
-            Arguments:
-                preamble :     tf.Tensor float32 -  [batch, preamble_length, 2]
-                preamble_conv: tf.Tensor float32 -  [batch, preamble_length, 2]
-                
-            Return:
-                cfo_estimate: tf.Tensor float32 - [batch_size, 1]
-            """
-            with tf.name_scope(scope):
-                inputs = tf.keras.layers.concatenate([preamble, preamble_conv], axis=1)
-                inputs = tf.keras.layers.Flatten(name='Flatten')(inputs)
-                x = tf.keras.layers.Dense(100, 'selu', name=scope+"_dense_1")(inputs)
-                x = tf.keras.layers.Dense(100, 'selu', name=scope+"_dense_2")(x)
-                x = tf.keras.layers.Dense(100, 'selu', name=scope+"_dense_3")(x)
-            cfo_est = tf.keras.layers.Dense(1, 'linear',name='CFOEstimate')(x)
-            return cfo_est
+        pass
 
 
-        def cfo_correction(kwargs):
-            """Given an CFO estimate w, rotate packets in opposite w as
-
-                packets = packets * e^(-j*w*range(len(packets)))
+class LeastMeanSquares:
+    def __init__(self, init_params={'equalizer_order':None,'random_starts':True, 'learning_rate':0.01}):
+        if (not init_params['equalizer_order']):
+            raise ValueError("LeastMeanSquares: init_params['equalizer_order'] is missing")
+        self.order = init_params['equalizer_order']
+        if (self.order % 2 == 0):
+            raise ValueError("LeastMeanSquares: init_params['equalizer_order'] must be odd")
+        if (self.order < 3):
+            raise ValueError("LeastMeanSquares: init_params['equalizer_order'] must be at least 3")
+        self.h = None
+        self.random_starts = init_params['random_starts']
+        self.L = (self.order-1)//2
+        self.mu = init_params['learning_rate']
             
-            Arguments:
-                omega_estimate: tf.Tensor float32 - [batch, 1]
-                packets:        tf.Tensor float32 - [batch, (preamble_len + data_len), 2] 
-                
-            Return:
-                rotated_packets: tf.Tensor float32 - [batch, (preamble_len + data_len), 2] 
-            """ 
-            # Because of Lambda Layer, we need to pass arguments as Kwargs
-            omega_estimate, packets = kwargs[0], kwargs[1]
-            with tf.name_scope('CFOCorrection'):
-                with tf.name_scope('rotation_matrix'):
-                    # preamble_len + data_len
-                    packet_len      = tf.cast(tf.shape(packets)[1], tf.float32)
-                    rotation_matrix = tf.exp(tf.complex(0.0, - 1.0 * omega_estimate * tf.range(packet_len)))
-                with tf.name_scope('cfo_correction'):
-                    rotated_packets = tf.complex(packets[..., 0], packets[...,1]) * rotation_matrix
-
-                # Encode complex packets into 2D array
-                rotated_packets = tf.stack([tf.real(rotated_packets), 
-                                            tf.imag(rotated_packets)], 
-                                        axis=-1, name='cfo_corrected')
-            return rotated_packets
-
-
-        def equalization_network(cfo_corrected_packets, preamble):
-            with tf.name_scope('EqualizationNet'):
-                inputs = tf.keras.layers.concatenate([preamble, cfo_corrected_packets], axis=1)
-                x = Bidirectional(LSTM(20, return_sequences=True))(inputs)
-                x = Bidirectional(LSTM(20, return_sequences=False))(x)
-                x = Dense(400, activation='relu')(x)
-                
-                x = Dense(400, activation='linear')(x)
-                equalized_packets = Reshape((200, 2))(x)
-            return equalized_packets
-
-        def demod_and_ecc_network(equalized_packets):
-            num_hidden_layers = 2
-            hidden_units=400 # 400
-            with tf.name_scope('DemodAndDecodeNet'):
-                x = equalized_packets
-                for _ in range(num_hidden_layers):
-                    x = Bidirectional(GRU(hidden_units, return_sequences=True))(x)
-                    x = BatchNormalization()(x)
-            data_estimates = TimeDistributed(Dense(1, activation='sigmoid'), name='DataEstimate')(x)
-            return data_estimates
+    def train_closed_form(self, x, y):
+        constant = 0j if isinstance(x[0], complex) else 0.0
+        A = []
+        x = np.pad(x, self.L, 'constant', constant_values=(constant))
+        for i in range(len(y)):
+            A += [np.flip(x[i: i+self.order],0)]
+        A = np.array(A)
+        h,_,_,_ = np.linalg.lstsq(A, y,rcond=-1)
+        self.h = h
+    
+    def predict(self, x):
+        if (self.h is None):
+            if (self.random_starts):
+                self.h = np.random.randn(self.order) + 1j*np.random.randn(self.order) if isinstance(x[0], complex) else np.random.randn(self.order)
+            else:
+                self.h = np.zeros(self.order, dtype=np.complex_ if isinstance(x[0], complex) else np.float32)
+        return sig.convolve(x, self.h , mode="full")[self.L:]
