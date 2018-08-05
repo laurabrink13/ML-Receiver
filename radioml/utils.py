@@ -41,3 +41,14 @@ class TrainValTensorBoard(tf.keras.callbacks.TensorBoard):
     def on_train_end(self, logs=None):
         super(TrainValTensorBoard, self).on_train_end(logs)
         self.val_writer.close()
+
+
+def visualize_signals(ax, x, y, groundtruths=None, title=None, min_val=-2, max_val=2):
+    ax.scatter(x,  y, c=groundtruths)
+    ax.set_xlabel('I-component')
+    ax.set_ylabel('Q-component')
+    ax.set_title(title)
+    ax.axhline()
+    ax.axvline()
+    ax.set_xlim(min_val, max_val)
+    ax.set_ylim(min_val, max_val)

@@ -1,7 +1,6 @@
 import numpy as np
 import commpy as cp
 
-#### UTIL FUNCTIONS ####
 def get_ber_bler(estimated_bits, original_bits):
     """Compute Bit Error Rate and Block Error Rate."""
     n_sequences = len(original_bits)
