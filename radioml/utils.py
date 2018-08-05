@@ -4,6 +4,7 @@ from tensorflow.python.ops import array_ops
 from tensorflow.python.keras import backend as K
 from tensorflow.python.summary import summary as tf_summary
 
+
 class TrainValTensorBoard(tf.keras.callbacks.TensorBoard):
     """Write summaries with training and evaluation in
     on plot. Display images on visualization"""
@@ -44,7 +45,7 @@ class TrainValTensorBoard(tf.keras.callbacks.TensorBoard):
 
 
 def visualize_signals(ax, x, y, groundtruths=None, title=None, min_val=-2, max_val=2):
-    ax.scatter(x,  y, c=groundtruths)
+    ax.scatter(x, y, c=groundtruths)
     ax.set_xlabel('I-component')
     ax.set_ylabel('Q-component')
     ax.set_title(title)
