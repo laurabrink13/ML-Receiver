@@ -9,10 +9,10 @@ from commpy.modulation import QAMModem
 
 
 class Radio(object):
-    """Simulation of a Radio Transmitter that sends data over AWGN Channels.
-    
-        Assumptions:
-            * Data is encoded using Convolutional Code.
+    """Simulation of a Radio Transmitter.
+
+    Assumptions:
+        * Data is encoded using Convolutional Code.
 
     Arguments:
     ----------
@@ -83,7 +83,7 @@ class RadioDataGenerator(Radio):
         """
         # @TODO : assert input shape validataion
         x = np.random.uniform(-1, 1, (len(inputs), self.channels_len))  
-        channels = np.abs(x / np.linalg.norm(x, axis=-1)[:, np.newaxis])
+        channels = x / np.linalg.norm(x, axis=-1)[:, np.newaxis]
         
         # @TODO : vectorize this op
         a = [sig.convolve(x, y, mode='same') for x, y in zip(inputs, channels)]
@@ -110,7 +110,7 @@ class RadioDataGenerator(Radio):
 
        
     def _data_genenerator(self, transform_func, omega, snr_dB, batch_size, seed=None, num_cpus=4):
-        """A generic generator template returns an `Iterator` object that 
+        """A generic generator returns an `Iterator` object that 
         generates (inputs, labels) until it raises a `StopIteration` exception, 
         
         Arguments:
@@ -124,15 +124,7 @@ class RadioDataGenerator(Radio):
         
         Returns:
         --------
-            `Iterator` object that yields 
-                ([premables, preambles_conv], cfo_corrected_preamble)
-                
-        Example:
-        --------
-            >> train_set = cfo_data_generator(omega=1/50, snr_dB=15.0, batch_size=128)        
-            >> for i in range(steps_per_epoch):
-                    inputs, labels = next(train_set)
-                    # training here      
+            `Iterator` object that yields (inputs, labels)    
         """
         pool = mp.Pool(num_cpus)
         try:
@@ -160,11 +152,9 @@ class RadioDataGenerator(Radio):
             _, modulated_packets = zip(*dataset)
             batch_size = len(modulated_packets)
 
-            # Simulate multi-tap channel interference
-            convolved_packets, _ = self._channel_interefence(modulated_packets)
-
+            modulated_packets = np.array(modulated_packets)
             # Add AWGN noise
-            noisy_packets = cp.channels.awgn(convolved_packets.flatten(), snr_dB) 
+            noisy_packets = cp.channels.awgn(modulated_packets.flatten(), snr_dB) 
             noisy_packets = noisy_packets.reshape((batch_size, -1))
 
             # Simulate CFO
@@ -172,15 +162,15 @@ class RadioDataGenerator(Radio):
             rotated = self._carrier_frequency_offset(noisy_packets, w_batch)
             
             # Process Inputs
-            preambles = np.array(modulated_packets)[:, :self.preamble_len]
+            preambles = modulated_packets[:, :self.preamble_len]
             preambles = self._encode_complex_to_real(preambles)
             preambles_conv = self._encode_complex_to_real(rotated[:, :self.preamble_len])
 
             # Process labels
-            # cfo_corrected_preamble =np.array(noisy_packets)[:, :self.preamble_len]
-            # cfo_corrected_preamble = self._encode_complex_to_real(cfo_corrected_preamble)
+            cfo_corrected_preamble = noisy_packets[:, :self.preamble_len]
+            cfo_corrected_preamble = self._encode_complex_to_real(cfo_corrected_preamble)
         
-            return [preambles, preambles_conv], w_batch
+            return [preambles, preambles_conv], cfo_corrected_preamble
 
         return self._data_genenerator(_cfo_data_func,
                                      omega, snr_dB, batch_size, seed, num_cpus)
@@ -197,32 +187,35 @@ class RadioDataGenerator(Radio):
 
             # Unpack  radio data
             _, modulated_packets = zip(*dataset)
+    
+            modulated_packets = np.array(modulated_packets)
             batch_size = len(modulated_packets)
 
-            # Simulate multi-tap channel interference
-            convolved_packets, _ = self._channel_interefence(modulated_packets)
-
-            # Add AWGN noise
-            noisy_packets = cp.channels.awgn(convolved_packets.flatten(), snr_dB) 
-            noisy_packets = noisy_packets.reshape((batch_size, -1))
-
-            # Process Inputs
-            preambles = np.array(modulated_packets)[:, : self.preamble_len]
+            preambles = modulated_packets[:, : self.preamble_len]
             preambles = self._encode_complex_to_real(preambles)
 
-            cfo_corrected_preamble = noisy_packets[:, :self.preamble_len]
-            cfo_corrected_preamble = self._encode_complex_to_real(cfo_corrected_preamble)
+            # Add AWGN noise
+            noisy_packets = cp.channels.awgn(modulated_packets.flatten(), snr_dB) 
+            noisy_packets = noisy_packets.reshape((batch_size, -1))
 
-            cfo_corrected_data     = noisy_packets[:, self.preamble_len:]
+            # Simulate multi-tap channel interference
+            convolved_packets, _ = self._channel_interefence(noisy_packets)
+
+            ################
+            # Process Inputs
+            ################
+            cfo_corrected_preamble = convolved_packets[:, :self.preamble_len]
+            cfo_corrected_data     = convolved_packets[:, self.preamble_len:]
+
+            cfo_corrected_preamble = self._encode_complex_to_real(cfo_corrected_preamble)
             cfo_corrected_data = self._encode_complex_to_real(cfo_corrected_data)
             
             # Process Label
-            x = cp.channels.awgn(np.array(modulated_packets).flatten(), snr_dB) 
-            x = x.reshape((batch_size, -1))[:, self.preamble_len:]
+            x = noisy_packets[:, self.preamble_len:]
             equalized_packet = self._encode_complex_to_real(x)
     
             return [preambles, cfo_corrected_preamble, cfo_corrected_data],\
-                    equalized_packet
+                    [equalized_packet, modulated_packets[:, self.preamble_len:]]
 
         return self._data_genenerator(_process_data_for_equalization_net,
                                       omega, snr_dB, batch_size, seed, num_cpus)
