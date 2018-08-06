@@ -22,17 +22,15 @@ class Radio(object):
         modulation_scheme:
         data_rate:
     """
-    MEMORY = np.array([2])
-    G_MATRIX = g_matrix=np.array([[0o7, 0o5]])
-
     def __init__(self, data_len, preamble_len, channels_len, 
                  modulation_scheme='qpsk', data_rate=1/2):
         self.modulator = self._build_modulator(modulation_scheme)
-        self.trellis = Trellis(memory=self.MEMORY, g_matrix=self.G_MATRIX)
         self.data_len = data_len
         self.preamble_len = preamble_len
         self.channels_len = channels_len
         self.data_rate = data_rate
+        self.trellis = Trellis(memory=np.array([2]), 
+                              g_matrix=np.array([[0o7, 0o5]]))
 
     def emit_signal(self, seed=None):
         """Simulate data from a transmitter"""
@@ -45,7 +43,7 @@ class Radio(object):
 
         # Simulate TX
         encoded_packet   = cp.channelcoding.conv_encode(packet, self.trellis)
-        encoded_packet   = encoded_packet[:-2*int(self.MEMORY)]
+        encoded_packet   = encoded_packet[:-2*int(self.trellis.total_memory)]
         modulated_packet = self.modulator.modulate(encoded_packet)
 
         return (packet, modulated_packet)
@@ -258,6 +256,7 @@ class RadioDataGenerator(Radio):
         """
         def _process_data_end2end_net(dataset, omega, snr_dB, seed=None):
             np.random.seed(seed)
+            
             # Unpack  radio data
             original_packets, modulated_packets = zip(*dataset)
             batch_size = len(modulated_packets)
