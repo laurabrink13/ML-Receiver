@@ -1,13 +1,61 @@
 import os
+import numpy as np
 import tensorflow as tf
-from tensorflow.python.ops import array_ops
-from tensorflow.python.keras import backend as K
-from tensorflow.python.summary import summary as tf_summary
+from commpy.modulation import QAMModem
+from commpy.channelcoding import Trellis
+
+
+def build_trellis_structure(memory=np.array([2]),
+                            g_matrix=np.array([[0o7, 0o5]])):
+    """Our current assumption about how input is encoded. All signals are encoded
+    using Convolution Code at rate 1/2.
+
+    Arguments:
+    ----------
+        memory : 1D ndarray of ints
+            Number of memory elements per input of the convolutional encoder.
+
+        g_matrix : 2D ndarray of ints (octal representation)
+            Generator matrix G(D) of the convolutional encoder. Each element of
+            G(D) represents a polynomial.
+
+    Returns:
+    --------
+        trellis - a Trellis structure
+    """
+    return Trellis(memory=memory, g_matrix=g_matrix)
+
+
+def build_modulator(modulation_scheme):
+    """Construct a modulator.
+
+    Arguments:
+    ----------
+        modulation_scheme: a string - name of a modulation scheme.
+
+    Returns:
+    --------
+        QAMModem - represents  modulator @ particular modulation scheme.
+    """
+    # @TODO: add more modulation schemes
+
+    if str.lower(modulation_scheme) == 'qpsk':
+        return QAMModem(m=4)
+    elif str.lower(modulation_scheme) == 'qam16':
+        return QAMModem(m=16)
+    elif str.lower(modulation_scheme) == 'qam64':
+        return QAMModem(m=64)
+    elif str.lower(modulation_scheme) == 'qam128':
+        return QAMModem(m=128)
+    else:
+        raise ValueError('Modulation scheme {} is not supported'.format(modulation_scheme))
 
 
 class TrainValTensorBoard(tf.keras.callbacks.TensorBoard):
-    """Write summaries with training and evaluation in
-    on plot. Display images on visualization"""
+    """Write summaries with training and evaluation in on plot.
+
+
+    """
     def __init__(self, log_dir='./logs', **kwargs):
         # Make the original `TensorBoard` log to a subdirectory 'training'
         training_log_dir = os.path.join(log_dir, 'training')
@@ -45,7 +93,7 @@ class TrainValTensorBoard(tf.keras.callbacks.TensorBoard):
 
 
 def visualize_signals(ax, x, y, groundtruths=None, title=None, min_val=-2, max_val=2):
-    ax.scatter(x, y, c=groundtruths)
+    ax.scatter(x, y, c=groundtruths, s=300)
     ax.set_xlabel('I-component')
     ax.set_ylabel('Q-component')
     ax.set_title(title)
