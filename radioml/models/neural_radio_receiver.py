@@ -1,19 +1,13 @@
-from __future__ import absolute_import
-from __future__ import division
-from __future__ import print_function
-
 import numpy as np
-from radioml.core.radio_receiver import RadioReceiver
 
 
-class NeuralRadioReceiver(RadioReceiver):
+class NeuralRadioReceiver(object):
     """Neural Defined Radio Receiver.
 
     Arguments:
     ----------
 
     """
-
     def __init__(self, data_length, pre_trained_model_path=None):
         super(NeuralRadioReceiver, self).__init__()
 
