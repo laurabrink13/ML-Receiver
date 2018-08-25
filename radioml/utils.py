@@ -7,8 +7,8 @@ from commpy.channelcoding import Trellis
 
 def build_trellis_structure(memory=np.array([2]),
                             g_matrix=np.array([[0o7, 0o5]])):
-    """Our current assumption about how input is encoded. All signals are encoded
-    using Convolution Code at rate 1/2.
+    """Construct a Trellis Structure. Our current assumption for this project 
+    is all signals are encoded using Convolution Code at rate 1/2.
 
     Arguments:
     ----------
@@ -51,10 +51,21 @@ def build_modulator(modulation_scheme):
         raise ValueError('Modulation scheme {} is not supported'.format(modulation_scheme))
 
 
+def visualize_signals(ax, x, y, groundtruths=None, title=None, min_val=-2, max_val=2):
+    ax.scatter(x, y, c=groundtruths, s=300)
+    ax.set_xlabel('I-component')
+    ax.set_ylabel('Q-component')
+    ax.set_title(title)
+    ax.axhline()
+    ax.axvline()
+    ax.set_xlim(min_val, max_val)
+    ax.set_ylim(min_val, max_val)
+
+    
 class TrainValTensorBoard(tf.keras.callbacks.TensorBoard):
     """Write summaries with training and evaluation in on plot.
-
-
+    Source:
+    https://stackoverflow.com/questions/47877475/keras-tensorboard-plot-train-and-validation-scalars-in-a-same-figure
     """
     def __init__(self, log_dir='./logs', **kwargs):
         # Make the original `TensorBoard` log to a subdirectory 'training'
@@ -90,14 +101,3 @@ class TrainValTensorBoard(tf.keras.callbacks.TensorBoard):
     def on_train_end(self, logs=None):
         super(TrainValTensorBoard, self).on_train_end(logs)
         self.val_writer.close()
-
-
-def visualize_signals(ax, x, y, groundtruths=None, title=None, min_val=-2, max_val=2):
-    ax.scatter(x, y, c=groundtruths, s=300)
-    ax.set_xlabel('I-component')
-    ax.set_ylabel('Q-component')
-    ax.set_title(title)
-    ax.axhline()
-    ax.axvline()
-    ax.set_xlim(min_val, max_val)
-    ax.set_ylim(min_val, max_val)
