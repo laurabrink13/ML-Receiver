@@ -1,0 +1,23 @@
+dist: trusty
+language: python
+
+python:
+  - "2.7"
+  - "3.5"
+  - "3.6"
+
+install:
+  # Install miniconda env for testing
+  - pip install --user pytest pytest-cov
+  - pip install --user numpy
+  
+script:
+  - py.test -verbose --cov-report term --cov=radioml tests/
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
+
+ignore:
+  - *.md
+  - *.ipynb
+  - *.hdf5
