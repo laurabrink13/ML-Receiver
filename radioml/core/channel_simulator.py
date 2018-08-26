@@ -1,4 +1,5 @@
 import numpy as np
+import commpy as cp
 import scipy.signal as sig
 
 
@@ -15,7 +16,7 @@ def additive_white_gaussian_noise(data_stream, snr_db):
         noisy_data_stream: complex or float nd-array [batch, data_length]
     """
     batch_size = len(data_stream)
-    return cp.channels.awgn(data_stream.flatten(), snr_dB).reshape((batch_size, -1))
+    return cp.channels.awgn(data_stream.flatten(), snr_db).reshape((batch_size, -1))
 
 
 def channel_interference(data_stream, channel_length):
