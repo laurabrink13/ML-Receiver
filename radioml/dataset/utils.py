@@ -2,7 +2,7 @@ import multiprocessing as mp
 import numpy as np
 
 
-def _data_generator(radio_transmitter, transform_func, omega, snr_dB, batch_size,
+def data_generator(radio_transmitter, transform_func, omega, snr_dB, batch_size,
                     seed=None, num_cpus=4):
     """A generic generator for providing radio data in parallel. 
 
@@ -34,7 +34,7 @@ def _data_generator(radio_transmitter, transform_func, omega, snr_dB, batch_size
         pool.close()
 
 
-def _encode_complex_to_real(inputs):
+def encode_complex_to_real(inputs):
     """TF does not support complex numbers for training.
     Therefore, we need to encode complex inputs into 2D array.
 
@@ -47,7 +47,7 @@ def _encode_complex_to_real(inputs):
         encoded_inputs: float ndarray  [batch, data_len, 2]
     """
 
-    if isinstance(inputs[0], complex):
+    if np.iscomplexobj(inputs):
         return np.stack([np.real(inputs),
                          np.imag(inputs)], -1)
     else:
