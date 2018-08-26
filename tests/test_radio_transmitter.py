@@ -37,7 +37,7 @@ def test_radio_encoder():
                     np.array([0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0 ,0])),
     ]
     for test in tests:
-        tx = RadioTransmitter(0, 0, test.trellis)
+        tx = RadioTransmitter(0, 0, 'qpsk', test.trellis)
         # Test correctness of encoder
         got, _ = tx._simulate_radio_transmitter(packet)
         np.testing.assert_array_equal(got, test.wanted)

@@ -19,12 +19,11 @@ class RadioTransmitter(object):
         trellis:
         modulation_scheme:
     """
-    def __init__(self, data_len, preamble_len, trellis=None,
-                modulation_scheme='qpsk'):
+    def __init__(self, data_len, preamble_len, modulation_scheme='qpsk', trellis=None):
         self.data_len = data_len
         self.preamble_len = preamble_len
         if trellis is None:
-            warnings.warn('Trellis is None. Use default option (data_rate = 1/2)')
+            # warnings.warn('Trellis is None. Use default option (data_rate = 1/2)')
             trellis = build_trellis_structure()
         self.trellis = trellis
         self.modulator = build_modulator(modulation_scheme)
