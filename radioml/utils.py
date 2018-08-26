@@ -1,4 +1,6 @@
 import os
+import multiprocessing as mp
+
 import numpy as np
 import tensorflow as tf
 from commpy.modulation import QAMModem
@@ -67,7 +69,55 @@ def build_trellis_structure(num_shift=1, num_output=2, constraint_len=3):
     memory = np.array([constraint_len - 1])
     g_matrix = _build_g_matrix(data_rate, constraint_len)
     return Trellis(memory=memory, g_matrix=g_matrix)
-    
+
+
+def data_generator(radio_transmitter, transform_func, batch_size, seed=None, num_cpus=4, **kwargs):
+    """A generic generator for providing radio data in parallel. 
+
+    Arguments:
+    ----------
+        transform_func: callable function that generate (inputs, labels)
+        batch_size(int): number of samples per training/eval step
+        seed  (int):
+        num_cpus (int): number of cpu cores for generating data in parallel.
+        **kwargs: parameters that would pass into transform_func
+    Returns:
+    --------
+        `Iterator` object that yields (inputs, labels)
+    """
+    pool = mp.Pool(num_cpus)
+    try:
+        while True:
+            signals = pool.map(radio_transmitter.emit_signal,
+                               [(seed + i if seed else None) for i in range(batch_size)])
+            inputs, labels = transform_func(signals, **kwargs)
+            yield inputs, labels
+    except Exception as e:
+        raise e
+    finally:
+        pool.close()
+
+
+def encode_complex_to_real(inputs):
+    """TF does not support complex numbers for training.
+    Therefore, we need to encode complex inputs into 2D array.
+
+    Arguments:
+    ----------
+        inputs: complex ndarray [batch, data_len]
+
+    Return:
+    -------
+        encoded_inputs: float ndarray  [batch, data_len, 2]
+    """
+
+    if np.iscomplexobj(inputs):
+        return np.stack([np.real(inputs),
+                         np.imag(inputs)], -1)
+    else:
+        return np.array(inputs)
+
+
 class TrainValTensorBoard(tf.keras.callbacks.TensorBoard):
     """Write summaries with training and evaluation in on plot.
     Source:
@@ -107,7 +157,6 @@ class TrainValTensorBoard(tf.keras.callbacks.TensorBoard):
     def on_train_end(self, logs=None):
         super(TrainValTensorBoard, self).on_train_end(logs)
         self.val_writer.close()
-
 
 
 def _build_g_matrix(data_rate, constraint_len):
