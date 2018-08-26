@@ -5,34 +5,28 @@ from commpy.modulation import QAMModem
 from commpy.channelcoding import Trellis
 
 
-def build_trellis_structure(memory=np.array([2]),
-                            g_matrix=np.array([[0o7, 0o5]])):
-    """Construct a Trellis Structure. Our current assumption for this project 
-    is all signals are encoded using Convolution Code at rate 1/2.
-
+def generate_synthetic_packet(preamble_len, data_len, seed):
+    """Generate one synthetic packet.
     Arguments:
     ----------
-        memory : 1D ndarray of ints
-            Number of memory elements per input of the convolutional encoder.
-
-        g_matrix : 2D ndarray of ints (octal representation)
-            Generator matrix G(D) of the convolutional encoder. Each element of
-            G(D) represents a polynomial.
-
+        preamble_len: int - size of the preamble in a packet
+        data_len: int - size of the data in a packet
     Returns:
     --------
-        trellis - a Trellis structure
+        packet : ndarray size [data_len + preamble_len, 1]
     """
-    return Trellis(memory=memory, g_matrix=g_matrix)
+    np.random.seed(seed)
+    preamble = np.random.randint(0, 2, preamble_len)
+    message_bits = np.random.randint(0, 2, data_len)
+    packet = np.concatenate([preamble, message_bits])
+    return packet
 
 
 def build_modulator(modulation_scheme):
     """Construct a modulator.
-
     Arguments:
     ----------
         modulation_scheme: a string - name of a modulation scheme.
-
     Returns:
     --------
         QAMModem - represents  modulator @ particular modulation scheme.
@@ -51,16 +45,28 @@ def build_modulator(modulation_scheme):
         raise ValueError('Modulation scheme {} is not supported'.format(modulation_scheme))
 
 
-def visualize_signals(ax, x, y, groundtruths=None, title=None, min_val=-2, max_val=2):
-    ax.scatter(x, y, c=groundtruths, s=300)
-    ax.set_xlabel('I-component')
-    ax.set_ylabel('Q-component')
-    ax.set_title(title)
-    ax.axhline()
-    ax.axvline()
-    ax.set_xlim(min_val, max_val)
-    ax.set_ylim(min_val, max_val)
+def build_trellis_structure(num_shift=1, num_output=2, constraint_len=3):
+    """Construct a Trellis Structure. 
+    
+    Our current assumption for this project 
+    is all signals are encoded using Convolution Code at rate 1/2.
 
+    Arguments:
+    ----------
+        num_shift : int -  number of bits shifted into the encoder at one time.
+        num_output: int -  number of encoder output bits corresponding to the 
+                           `num_shift` information bits.
+        constraint_len: int - encoder memory
+        
+    Returns:
+    --------
+        trellis - a Trellis structure
+    """
+    
+    data_rate = num_shift / num_output
+    memory = np.array([constraint_len - 1])
+    g_matrix = _build_g_matrix(data_rate, constraint_len)
+    return Trellis(memory=memory, g_matrix=g_matrix)
     
 class TrainValTensorBoard(tf.keras.callbacks.TensorBoard):
     """Write summaries with training and evaluation in on plot.
@@ -101,3 +107,23 @@ class TrainValTensorBoard(tf.keras.callbacks.TensorBoard):
     def on_train_end(self, logs=None):
         super(TrainValTensorBoard, self).on_train_end(logs)
         self.val_writer.close()
+
+
+
+def _build_g_matrix(data_rate, constraint_len):
+    # @TODO: generalize how to construct G matrix based on
+    # data_rate and constraint_len ??
+    if data_rate == 1/2:
+        if constraint_len == 3:
+            g_matrix = np.array([[0o7, 0o5]])
+        elif constraint_len == 4:
+            g_matrix = np.array([[0o17, 0o13]])
+        else:
+            raise ValueError('Not support current trellis structure.')
+    elif data_rate == 1/3:
+        if constraint_len == 4:
+            g_matrix = np.array([[0o13, 0o15, 0o17]])
+    else:
+        raise ValueError('Not support current trellis structure.')
+
+    return g_matrix

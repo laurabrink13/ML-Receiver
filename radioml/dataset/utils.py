@@ -1,16 +1,10 @@
-"""
-"""
-from __future__ import absolute_import
-from __future__ import division
-from __future__ import print_function
-
 import multiprocessing as mp
 import numpy as np
 
 
-def _data_generator(radio_transmitter, transform_func, omega, snr_dB, batch_size, seed=None, num_cpus=4):
-    """A generic generator returns an `Iterator` object that
-    generates (inputs, labels) until it raises a `StopIteration` exception,
+def _data_generator(radio_transmitter, transform_func, omega, snr_dB, batch_size,
+                    seed=None, num_cpus=4):
+    """A generic generator for providing radio data in parallel. 
 
     Arguments:
     ----------
