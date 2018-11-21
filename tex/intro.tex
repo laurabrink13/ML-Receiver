@@ -1,0 +1,84 @@
+
+With the rise of internet of things, more and more users will need to access the wireless spectrum.  As the spectrum becomes saturated with users, not only must our systems adapt to changing environments but also be able to coexist and thrive in the presence of unknown neighbors.  
+We must design a robust communications system that will give us the freedom to. 
+
+Most communications systems have three main processes; equalization, demodulation, and error-correction.  While we will need to design robust forms of all of these processes, we will focus on equalization for the remainder of this paper. 
+
+
+\subsection{Inter-symbol Interference and Equalization}
+
+What is equalization and ISI? 
+
+Inter-symbol interference occurs when we are transmitting over a channel that has some echos.  These echos cause the receiver to hear a garbled signal instead of the original signal from the transmitter.  This is called inter-symbol interference because the receiver is hearing a combination of symbols across time. 
+
+Let $\vec{x}=[x_0, x_1, \ldots x_n]$ be the set of $n$ complex symbols that the transmitter sends over the channel that connects the transmitter to the receiver.
+Each channel will have different characteristics. Some channels may have echos, others may have delays, often channels will have both.  When a channel has echos, this is called a multipath channel because there are multiple paths to reach the receiver.  Each path is called a tap.  We can characterize a channel by characterizing the taps.
+
+What can cause these echos?  How prevelant are they?
+
+Channel taps:
+Let $\vec{a} = [a_0, a_1, \ldots a_l]$ be the set of characteristic for a multipath channel that has $l$ taps. When a sequence of symbols like $\vec{x}$ is transmitted over this channel, the channel taps are convolved over the sequence.  Additionally, there is noise in the system denoted by $\eta_i$. 
+
+$$\tilde{x}_m = \sum_{i=0}^l a_i x_{m-i} + \eta_i$$
+
+The receiver will hear a signal that is corrupted by inter-symbol interfence and noise;
+$\tilde{\vec{x}}=[\tilde{x}_0, \tilde{x_1}, \ldots \tilde{x}_{n+l}]$. 
+
+Receivers must be able to handle garbled signals in order to transmit data in the real world.  The process of removing the inter-symbol interference is called equalization.  The goal of equalization is to take in a garbled signal and output a signal without any inter-symbol interference. 
+
+INSERT IMAGE OF 2 TAP CHANNEL EFFECTS ON QPSK
+
+Engineers have built processes to remove inter-symbol interference.  First, let's go into the case when the channel characteristics are known.
+
+\subsubsection{Equalization for a known channel}
+If you know the channel characteristics, $\vec{a}$, perfectly, then there are a few different methods that can be used. 
+
+Zero-forcing
+
+While it's important to consider how well a receiver can equalize with a known channel, this is rarely the case.  Usually, we do not know the channel characteristics.
+
+\subsubsection{Equalization for an unknown channel}
+When the receiver does not know the channel characteristics, the process of equalization essentially has two jobs; first, identify the channel, second, remove the inter-symbol interference. If the receiver did not identify the channel first, there would be no way to remove the affects of it on the received signal. 
+
+In order to do channel estimation, most systems require that packets begin with a known sequence called a preamble. 
+
+Channel estimation: least squares
+
+Minimum mean squared error equalizer.
+ 
+\subsubsection{How do real systems handle equalization?}
+
+OFDM does not have this problem!
+
+ 
+\subsection{Carrier Frequency Offset and Correction}
+
+Now, if we were to implement our minimum mean squared error algorithm on a physical receiver, we would find some problems with our equalization process.  
+Our equalizer will equalize the first symbols very well.  However, as we equalize end parts of our sequence, we will encounter a physical phenomonen called carrier frequency offset, CFO.
+
+Carrier frequency offset occurs when ???
+
+When there is a significant CFO present, our symbols will gradually start rotating. CFO will effect our received symbols like
+
+$$\tilde{x}_m = x_m e^{mj\omega}$$
+
+
+The effect will look like something like this 
+
+INSERT IMAGE OF CFO OCCURRING on QPSK
+
+\subsubsection{How do real systems handle CFO correction?}
+
+There are a few ways to handle CFO, some are more elegant than others. 
+
+The first solution is to try to remove the problem.  Since CFO is dependent on the length of a packet, one solution is to make packets so short that 
+
+A more elegant solution is using phase-lock loops (costas loops).
+
+What must a modern day receiver handle?  What does it look like when we have both CFO and ISI?
+
+$$\tilde{x}_m = (\sum_{i=0}^l a_i x_{m-i})e^{mj\omega} + \eta_i$$
+
+INSERT IMAGE OF AFFECTS OF BOTH CFO AND EQUALIZATION
+
+INSERT IMAGE OF SAME THING WITH NOISE!
