@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.15)  4 DEC 2018 21:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.15)  4 DEC 2018 22:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -585,7 +585,8 @@ File: english.lbx 2016/03/03 v3.3 biblatex localization (PK/JW/AB)
 \@quotelevel=\count327
 \@quotereset=\count328
 
-(./thesis.aux (./abstract.aux) (./chap1.aux) (./chap2.aux))
+(./thesis.aux (./abstract.aux) (./intro.aux) (./equal.aux) (./cfo.aux)
+(./conclusion.aux))
 \openout1 = `thesis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
@@ -640,68 +641,59 @@ Package biblatex Info: Reference segment=0 on input line 19.
 
  (./abstract.tex [1
 
-]) [1
-
-] (./thesis.toc
+]) (./thesis.toc
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <12> on input line 3.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 3.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 3.
-) [2] (./thesis.lof) [3
+) [1
 
-]
-(./thesis.lot) [4
+] (./thesis.lof) [2
 
-] [5]
-\openout2 = `chap1.aux'.
+] (./thesis.lot)
+[3
 
- (./chap1.tex
+] [4]
+\openout2 = `intro.aux'.
 
-LaTeX Warning: Citation 'waveshaping' on page 1 undefined on input line 8.
-
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 18.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 18.
-[1
+ (./intro.tex [1
 
 
-]
+] [2] (./related_works.tex)) [3]
+\openout2 = `equal.aux'.
 
-LaTeX Warning: Citation 'cmusic' on page 2 undefined on input line 98.
-
-
-Overfull \hbox (3.09605pt too wide) in paragraph at lines 96--99
-\OT1/cmr/m/n/12 seclu-sion Thoreau touch; known ashy Bu-jum-bura may, as-sess, 
-hadn't servi-tor. Wash[[]],
- []
-
-
-LaTeX Warning: Citation 'fm' on page 2 undefined on input line 121.
-
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 126.
+ (./equal.tex
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 9.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 126.
- [2]
-
-LaTeX Warning: Citation 'waveshaping' on page 3 undefined on input line 148.
-
-) [3]
-\openout2 = `chap2.aux'.
-
- (./chap2.tex [4
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 9.
+ [4
 
 
 
 ]) [5]
+\openout2 = `cfo.aux'.
 
-LaTeX Warning: Empty bibliography on input line 90.
+ (./cfo.tex)
+[6
+
+
+
+]
+\openout2 = `conclusion.aux'.
+
+ (./conclusion.tex) [7
+
+
+
+]
+
+LaTeX Warning: Empty bibliography on input line 88.
 
 \tf@toc=\write5
 \openout5 = `thesis.toc'.
@@ -712,42 +704,33 @@ LaTeX Warning: Empty bibliography on input line 90.
 \tf@lot=\write7
 \openout7 = `thesis.lot'.
 
-(./thesis.aux (./abstract.aux) (./chap1.aux) (./chap2.aux))
-
-LaTeX Warning: There were undefined references.
-
-
-Package biblatex Warning: Please (re)run Biber on the file:
-(biblatex)                thesis
-(biblatex)                and rerun LaTeX afterwards.
-
+(./thesis.aux (./abstract.aux) (./intro.aux) (./equal.aux) (./cfo.aux)
+(./conclusion.aux))
 Package logreq Info: Writing requests to 'thesis.run.xml'.
 \openout1 = `thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 9559 strings out of 493029
- 153934 string characters out of 6136233
- 587818 words of memory out of 5000000
- 13033 multiletter control sequences out of 15000+600000
- 9499 words of font info for 33 fonts, out of 8000000 for 9000
+ 9456 strings out of 493029
+ 152002 string characters out of 6136233
+ 590384 words of memory out of 5000000
+ 12915 multiletter control sequences out of 15000+600000
+ 9152 words of font info for 32 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
- 48i,10n,32p,875b,736s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 48i,11n,32p,875b,668s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmsl12.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
-/latxfont/lcircle1.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
-ts/latxfont/line10.pfb>
-Output written on thesis.pdf (14 pages, 127185 bytes).
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmsl12.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmsy8.pfb>
+Output written on thesis.pdf (15 pages, 109413 bytes).
 PDF statistics:
- 94 PDF objects out of 1000 (max. 8388607)
- 66 compressed objects within 1 object stream
+ 89 PDF objects out of 1000 (max. 8388607)
+ 62 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
