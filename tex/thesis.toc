@@ -1,0 +1,21 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Contents}{ii}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{List of Figures}{iii}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{List of Tables}{iv}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\chapternumberline {1}Prexy Salaam}{1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.1}Faceplate Marginalia}{1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{Promenade Exeter}{1}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\chapternumberline {2}Placental Ionosphere}{4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.1}Pigeonhole Buckthorn}{4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.2}Pinwheel Thresh}{4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.3}Laryngeal Gallon Mission}{5}

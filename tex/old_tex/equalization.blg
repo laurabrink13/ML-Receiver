@@ -1,0 +1,67 @@
+This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: equalization.aux
+The style file: IEEEtran.bst
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Database file #1: IEEEabrv.bib
+Database file #2: mybib.bib
+-- IEEEtran.bst version 1.14 (2015/08/26) by Michael Shell.
+-- http://www.michaelshell.org/tex/ieeetran/bibtex/
+-- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
+Warning--empty journal in dorner2017
+Name 2 in "Kim, Hyeji and Jiang, Yihan, and Rana, Ranvir, and Kannan, Sreeram, and Oh, Sewoong, and Viswanath, Pramod" has a comma at the end for entry kim2018
+while executing---line 2403 of file IEEEtran.bst
+Name 3 in "Kim, Hyeji and Jiang, Yihan, and Rana, Ranvir, and Kannan, Sreeram, and Oh, Sewoong, and Viswanath, Pramod" has a comma at the end for entry kim2018
+while executing---line 2403 of file IEEEtran.bst
+Name 4 in "Kim, Hyeji and Jiang, Yihan, and Rana, Ranvir, and Kannan, Sreeram, and Oh, Sewoong, and Viswanath, Pramod" has a comma at the end for entry kim2018
+while executing---line 2403 of file IEEEtran.bst
+Name 5 in "Kim, Hyeji and Jiang, Yihan, and Rana, Ranvir, and Kannan, Sreeram, and Oh, Sewoong, and Viswanath, Pramod" has a comma at the end for entry kim2018
+while executing---line 2403 of file IEEEtran.bst
+
+Done.
+You've used 3 entries,
+            4087 wiz_defined-function locations,
+            1360 strings with 18181 characters,
+and the built_in function-call counts, 1499 in all, are:
+= -- 101
+> -- 51
+< -- 1
++ -- 24
+- -- 12
+* -- 84
+:= -- 263
+add.period$ -- 6
+call.type$ -- 3
+change.case$ -- 3
+chr.to.int$ -- 0
+cite$ -- 4
+duplicate$ -- 120
+empty$ -- 121
+format.name$ -- 15
+if$ -- 314
+int.to.chr$ -- 0
+int.to.str$ -- 3
+missing$ -- 25
+newline$ -- 32
+num.names$ -- 3
+pop$ -- 70
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 2
+skip$ -- 104
+stack$ -- 0
+substring$ -- 3
+swap$ -- 71
+text.length$ -- 1
+text.prefix$ -- 0
+top$ -- 5
+type$ -- 3
+warning$ -- 1
+while$ -- 3
+width$ -- 4
+write$ -- 46
+(There were 4 error messages)

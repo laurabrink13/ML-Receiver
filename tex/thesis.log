@@ -1,0 +1,753 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.15)  4 DEC 2018 21:30
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**thesis.tex
+(./thesis.tex
+LaTeX2e <2016/02/01>
+Babel <3.9q> and hyphenation patterns for 81 language(s) loaded.
+(./ucbthesis.cls
+Document Class: ucbthesis 2012/08/06 v3.391 University of California, Berkeley 
+Thesis Class
+(/usr/share/texlive/texmf-dist/tex/latex/memoir/memoir.cls
+Document Class: memoir 2015/07/08 v3.7e configurable book, report, article docu
+ment class
+\onelineskip=\skip41
+\lxvchars=\skip42
+\xlvchars=\skip43
+\@memcnta=\count79
+\c@@memmarkcntra=\count80
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/ifetex/ifetex.sty
+Package: ifetex 2011/12/15 v1.2 ifetex
+
+(/usr/share/texlive/texmf-dist/tex/plain/ifetex/ifetex.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+\stockheight=\skip44
+\stockwidth=\skip45
+\trimtop=\skip46
+\trimedge=\skip47
+
+(/usr/share/texlive/texmf-dist/tex/latex/memoir/mem12.clo
+File: mem12.clo 2010/10/19 v0.4b memoir class 12pt size option
+)
+\binding=\skip48
+\spinemargin=\skip49
+\foremargin=\skip50
+\uppermargin=\skip51
+\lowermargin=\skip52
+\headdrop=\skip53
+\normalrulethickness=\skip54
+\mem@maxheadheight=\skip55
+\mem@maxfootheight=\skip56
+\headwidth=\skip57
+\c@storedpagenumber=\count81
+\memPD=\dimen102
+\m@mabparskip=\skip58
+\thanksmarkwidth=\skip59
+\thanksmarksep=\skip60
+\droptitle=\skip61
+\c@book=\count82
+\c@part=\count83
+\c@chapter=\count84
+\c@section=\count85
+\c@subsection=\count86
+\c@subsubsection=\count87
+\c@paragraph=\count88
+\c@subparagraph=\count89
+\beforechapskip=\skip62
+\midchapskip=\skip63
+\afterchapskip=\skip64
+\chapindent=\skip65
+\bottomsectionskip=\skip66
+\secindent=\skip67
+\beforesecskip=\skip68
+\aftersecskip=\skip69
+\subsecindent=\skip70
+\beforesubsecskip=\skip71
+\aftersubsecskip=\skip72
+\subsubsecindent=\skip73
+\beforesubsubsecskip=\skip74
+\aftersubsubsecskip=\skip75
+\paraindent=\skip76
+\beforeparaskip=\skip77
+\afterparaskip=\skip78
+\subparaindent=\skip79
+\beforesubparaskip=\skip80
+\aftersubparaskip=\skip81
+\pfbreakskip=\skip82
+\c@@ppsavesec=\count90
+\c@@ppsaveapp=\count91
+\ragrparindent=\dimen103
+\everylistparindent=\dimen104
+\parsepi=\skip83
+\topsepi=\skip84
+\itemsepi=\skip85
+\parsepii=\skip86
+\topsepii=\skip87
+\topsepiii=\skip88
+\itemsepii=\skip89
+\itemsepiii=\skip90
+\partopsepii=\skip91
+\partopsepiii=\skip92
+\m@msavetopsep=\skip93
+\m@msavepartopsep=\skip94
+\@enLab=\toks14
+\abstitleskip=\skip95
+\absleftindent=\skip96
+\abs@leftindent=\dimen105
+\absrightindent=\skip97
+\absparindent=\skip98
+\absparsep=\skip99
+\c@vslineno=\count92
+\c@poemline=\count93
+\c@modulo@vs=\count94
+\c@memfvsline=\count95
+\vleftskip=\skip100
+\vrightskip=\skip101
+\stanzaskip=\skip102
+\versewidth=\skip103
+\vgap=\skip104
+\vindent=\skip105
+\vleftmargin=\dimen106
+\c@verse=\count96
+\c@chrsinstr=\count97
+\beforepoemtitleskip=\skip106
+\afterpoemtitleskip=\skip107
+\c@poem=\count98
+\beforePoemTitleskip=\skip108
+\midPoemTitleskip=\skip109
+\afterPoemTitleskip=\skip110
+\col@sep=\dimen107
+\extrarowheight=\dimen108
+\NC@list=\toks15
+\extratabsurround=\skip111
+\backup@length=\skip112
+\TX@col@width=\dimen109
+\TX@old@table=\dimen110
+\TX@old@col=\dimen111
+\TX@target=\dimen112
+\TX@delta=\dimen113
+\TX@cols=\count99
+\TX@ftn=\toks16
+\heavyrulewidth=\dimen114
+\lightrulewidth=\dimen115
+\cmidrulewidth=\dimen116
+\belowrulesep=\dimen117
+\belowbottomsep=\dimen118
+\aboverulesep=\dimen119
+\abovetopsep=\dimen120
+\cmidrulesep=\dimen121
+\cmidrulekern=\dimen122
+\defaultaddspace=\dimen123
+\@cmidla=\count100
+\@cmidlb=\count101
+\@aboverulesep=\dimen124
+\@belowrulesep=\dimen125
+\@thisruleclass=\count102
+\@lastruleclass=\count103
+\@thisrulewidth=\dimen126
+\ctableftskip=\skip113
+\ctabrightskip=\skip114
+\abovecolumnspenalty=\count104
+\@linestogo=\count105
+\@cellstogo=\count106
+\@cellsincolumn=\count107
+\crtok=\toks17
+\@mincolumnwidth=\dimen127
+\c@newflo@tctr=\count108
+\mem@margin@floatbox=\box26
+\@contcwidth=\skip115
+\@contindw=\skip116
+\abovecaptionskip=\skip117
+\belowcaptionskip=\skip118
+\subfloattopskip=\skip119
+\subfloatcapskip=\skip120
+\subfloatcaptopadj=\skip121
+\subfloatbottomskip=\skip122
+\subfloatlabelskip=\skip123
+\subfloatcapmargin=\dimen128
+\c@@contsubnum=\count109
+\m@mscap@capbox=\box27
+\m@mscap@fbox=\box28
+\sidecapsep=\dimen129
+\sidecapwidth=\dimen130
+\m@m@tempdima=\dimen131
+\m@mscapraise=\dimen132
+\sidecapraise=\dimen133
+\m@mscapmainwidth=\dimen134
+\m@mscaplkern=\dimen135
+\beforeepigraphskip=\skip124
+\afterepigraphskip=\skip125
+\epigraphwidth=\skip126
+\epigraphrule=\skip127
+LaTeX Info: Redefining \em on input line 7535.
+LaTeX Info: Redefining \emph on input line 7543.
+\tocentryskip=\skip128
+\tocbaseline=\skip129
+\cftparskip=\skip130
+\cftbeforebookskip=\skip131
+\cftbookindent=\dimen136
+\cftbooknumwidth=\dimen137
+\cftbeforepartskip=\skip132
+\cftpartindent=\skip133
+\cftpartnumwidth=\skip134
+\cftbeforechapterskip=\skip135
+\cftchapterindent=\skip136
+\cftchapternumwidth=\skip137
+\cftbeforesectionskip=\skip138
+\cftsectionindent=\skip139
+\cftsectionnumwidth=\skip140
+\cftbeforesubsectionskip=\skip141
+\cftsubsectionindent=\skip142
+\cftsubsectionnumwidth=\skip143
+\cftbeforesubsubsectionskip=\skip144
+\cftsubsubsectionindent=\skip145
+\cftsubsubsectionnumwidth=\skip146
+\cftbeforeparagraphskip=\skip147
+\cftparagraphindent=\skip148
+\cftparagraphnumwidth=\skip149
+\cftbeforesubparagraphskip=\skip150
+\cftsubparagraphindent=\skip151
+\cftsubparagraphnumwidth=\skip152
+\prechapterprecisshift=\dimen138
+\c@maxsecnumdepth=\count110
+\bibindent=\dimen139
+\bibitemsep=\skip153
+\indexcolsep=\skip154
+\indexrule=\skip155
+\indexmarkstyle=\toks18
+\@indexbox=\insert199
+\glossarycolsep=\dimen140
+\glossaryrule=\dimen141
+\sideparvshift=\skip156
+\sideins=\insert198
+\sidebartopsep=\skip157
+\sidebarhsep=\skip158
+\sidebarvsep=\skip159
+\sidebarwidth=\skip160
+\footmarkwidth=\skip161
+\footmarksep=\skip162
+\footparindent=\skip163
+\footinsdim=\skip164
+\footinsv@r=\insert197
+\@mpfootinsv@r=\insert196
+\m@m@k=\count111
+\m@m@h=\dimen142
+\m@mipn@skip=\skip165
+\sidefootins=\insert195
+\sidefootadjust=\skip166
+\sidefootheight=\skip167
+\sidefoothsep=\skip168
+\sidefootvsep=\skip169
+\sidefootwidth=\skip170
+\m@mdownsf=\skip171
+\c@sidefootnote=\count112
+\sidefootmarkwidth=\skip172
+\sidefootmarksep=\skip173
+\sidefootparindent=\skip174
+\c@pagenote=\count113
+\c@pagenoteshadow=\count114
+\mem@pn@lastkern=\skip175
+\every@verbatim=\toks19
+\afterevery@verbatim=\toks20
+\verbatim@line=\toks21
+\tab@position=\count115
+\verbatim@in@stream=\read1
+\verbatimindent=\skip176
+\verbatim@out=\write3
+\bvboxsep=\skip177
+\c@memfbvline=\count116
+\c@bvlinectr=\count117
+\bvnumlength=\skip178
+\fb@frw=\dimen143
+\fb@frh=\dimen144
+\FrameRule=\dimen145
+\FrameSep=\dimen146
+\c@cp@cntr=\count118
+LaTeX Info: Redefining \: on input line 12052.
+LaTeX Info: Redefining \! on input line 12054.
+\c@ism@mctr=\count119
+\c@xsm@mctr=\count120
+\c@csm@mctr=\count121
+\c@ksm@mctr=\count122
+\c@xksm@mctr=\count123
+\c@cksm@mctr=\count124
+\c@msm@mctr=\count125
+\c@xmsm@mctr=\count126
+\c@cmsm@mctr=\count127
+\c@bsm@mctr=\count128
+\c@workm@mctr=\count129
+\c@sheetsequence=\count130
+\c@lastsheet=\count131
+\c@lastpage=\count132
+\c@figure=\count133
+\c@lofdepth=\count134
+\cftbeforefigureskip=\skip179
+\cftfigureindent=\skip180
+\cftfigurenumwidth=\skip181
+\c@table=\count135
+\c@lotdepth=\count136
+\cftbeforetableskip=\skip182
+\cfttableindent=\skip183
+\cfttablenumwidth=\skip184
+Package abstract [2008/07/23] emulated by memoir.
+Package appendix [2008/07/23] emulated by memoir.
+Package array [2008/09/09] emulated by memoir.
+Package booktabs [2008/07/23] emulated by memoir.
+Package ccaption [2008/07/23] emulated by memoir.
+Package changepage [2008/07/23] emulated by memoir.
+Package chngcntr [2008/07/23] emulated by memoir.
+Package chngpage [2008/07/23] emulated by memoir.
+Package crop emulated by memoir.
+Package dcolumn [2008/07/23] emulated by memoir.
+Package delarray [2008/07/23] emulated by memoir.
+Package enumerate [2008/07/23] emulated by memoir.
+Package epigraph [2008/07/23] emulated by memoir.
+Package ifmtarg [2008/07/23] emulated by memoir.
+Package index [2008/07/23] emulated by memoir.
+Package makeidx [2008/07/23] emulated by memoir.
+Package moreverb [2008/07/23] emulated by memoir.
+Package mparhack [2008/07/23] emulated by memoir.
+Package needspace [2008/07/23] emulated by memoir.
+Package newfile [2008/07/23] emulated by memoir.
+Package nextpage [2008/07/23] emulated by memoir.
+Package pagenote [2008/07/23] emulated by memoir.
+Package parskip [2008/07/23] emulated by memoir.
+Package patchcmd [2008/07/23] emulated by memoir.
+Package setspace [2008/07/23] emulated by memoir.
+Package shortvrb [2008/07/23] emulated by memoir.
+Package showidx [2008/07/23] emulated by memoir.
+Package tabularx [2008/07/23] emulated by memoir.
+Package titleref [2008/07/23] emulated by memoir.
+Package titling [2008/07/23] emulated by memoir.
+Package tocbibind [2008/07/23] emulated by memoir.
+Package tocloft [2008/07/23] emulated by memoir.
+Package tocvsec2 [2008/07/23] emulated by memoir.
+Package verbatim [2008/07/23] emulated by memoir.
+Package verse [2008/07/23] emulated by memoir.
+
+(/usr/share/texlive/texmf-dist/tex/latex/memoir/mempatch.sty
+Package: mempatch 2009/07/24 v6.0f Patches for memoir class v1.6180339
+)))
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.sty
+Package: biblatex 2016/03/03 v3.3 programmable bibliographies (PK/JW/AB)
+
+
+Package biblatex Warning: No "backend" specified, using Biber backend.
+(biblatex)                To use BibTeX, load biblatex with 
+(biblatex)                the "backend=bibtex" option.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex_.sty
+Package: biblatex_ 2016/03/03 v3.3 programmable bibliographies (biber) (PK/JW/A
+B)
+
+(/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2015/08/02 v2.2a e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count137
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks22
+)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+(/usr/share/texlive/texmf-dist/tex/latex/logreq/logreq.sty
+Package: logreq 2010/08/04 v1.0 xml request logger
+\lrq@indent=\count138
+
+(/usr/share/texlive/texmf-dist/tex/latex/logreq/logreq.def
+File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
+))
+(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip10
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+\c@tabx@nest=\count139
+\c@listtotal=\count140
+\c@listcount=\count141
+\c@liststart=\count142
+\c@liststop=\count143
+\c@citecount=\count144
+\c@citetotal=\count145
+\c@multicitecount=\count146
+\c@multicitetotal=\count147
+\c@instcount=\count148
+\c@maxnames=\count149
+\c@minnames=\count150
+\c@maxitems=\count151
+\c@minitems=\count152
+\c@citecounter=\count153
+\c@savedcitecounter=\count154
+\c@uniquelist=\count155
+\c@uniquename=\count156
+\c@refsection=\count157
+\c@refsegment=\count158
+\c@maxextratitle=\count159
+\c@maxextratitleyear=\count160
+\c@maxextrayear=\count161
+\c@maxextraalpha=\count162
+\c@abbrvpenalty=\count163
+\c@highnamepenalty=\count164
+\c@lownamepenalty=\count165
+\c@maxparens=\count166
+\c@parenlevel=\count167
+\blx@tempcnta=\count168
+\blx@tempcntb=\count169
+\blx@tempcntc=\count170
+\blx@maxsection=\count171
+\blx@maxsegment@0=\count172
+\blx@notetype=\count173
+\blx@parenlevel@text=\count174
+\blx@parenlevel@foot=\count175
+\blx@sectionciteorder@0=\count176
+\labelnumberwidth=\skip185
+\labelalphawidth=\skip186
+\biblabelsep=\skip187
+\bibnamesep=\skip188
+\bibinitsep=\skip189
+\bibparsep=\skip190
+\bibhang=\skip191
+\blx@bcfin=\read2
+\blx@bcfout=\write4
+\c@mincomprange=\count177
+\c@maxcomprange=\count178
+\c@mincompwidth=\count179
+Package biblatex Info: Trying to load biblatex default data model...
+Package biblatex Info: ... file 'blx-dm.def' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/blx-dm.def)
+Package biblatex Info: Trying to load biblatex custom data model...
+Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
+\c@afterword=\count180
+\c@savedafterword=\count181
+\c@annotator=\count182
+\c@savedannotator=\count183
+\c@author=\count184
+\c@savedauthor=\count185
+\c@bookauthor=\count186
+\c@savedbookauthor=\count187
+\c@commentator=\count188
+\c@savedcommentator=\count189
+\c@editor=\count190
+\c@savededitor=\count191
+\c@editora=\count192
+\c@savededitora=\count193
+\c@editorb=\count194
+\c@savededitorb=\count266
+\c@editorc=\count267
+\c@savededitorc=\count268
+\c@foreword=\count269
+\c@savedforeword=\count270
+\c@holder=\count271
+\c@savedholder=\count272
+\c@introduction=\count273
+\c@savedintroduction=\count274
+\c@namea=\count275
+\c@savednamea=\count276
+\c@nameb=\count277
+\c@savednameb=\count278
+\c@namec=\count279
+\c@savednamec=\count280
+\c@translator=\count281
+\c@savedtranslator=\count282
+\c@shortauthor=\count283
+\c@savedshortauthor=\count284
+\c@shorteditor=\count285
+\c@savedshorteditor=\count286
+\c@labelname=\count287
+\c@savedlabelname=\count288
+\c@institution=\count289
+\c@savedinstitution=\count290
+\c@lista=\count291
+\c@savedlista=\count292
+\c@listb=\count293
+\c@savedlistb=\count294
+\c@listc=\count295
+\c@savedlistc=\count296
+\c@listd=\count297
+\c@savedlistd=\count298
+\c@liste=\count299
+\c@savedliste=\count300
+\c@listf=\count301
+\c@savedlistf=\count302
+\c@location=\count303
+\c@savedlocation=\count304
+\c@organization=\count305
+\c@savedorganization=\count306
+\c@origlocation=\count307
+\c@savedoriglocation=\count308
+\c@origpublisher=\count309
+\c@savedorigpublisher=\count310
+\c@publisher=\count311
+\c@savedpublisher=\count312
+\c@language=\count313
+\c@savedlanguage=\count314
+\c@pageref=\count315
+\c@savedpageref=\count316
+\shorthandwidth=\skip192
+\shortjournalwidth=\skip193
+\shortserieswidth=\skip194
+\shorttitlewidth=\skip256
+\shortauthorwidth=\skip257
+\shorteditorwidth=\skip258
+Package biblatex Info: Trying to load compatibility code...
+Package biblatex Info: ... file 'blx-compat.def' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/blx-compat.def
+File: blx-compat.def 2016/03/03 v3.3 biblatex compatibility (PK/JW/AB)
+)
+Package biblatex Info: Trying to load generic definitions...
+Package biblatex Info: ... file 'biblatex_.def' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex_.def
+File: biblatex_.def 
+\c@textcitecount=\count317
+\c@textcitetotal=\count318
+\c@textcitemaxnames=\count319
+\c@biburlnumpenalty=\count320
+\c@biburlucpenalty=\count321
+\c@biburllcpenalty=\count322
+\c@smartand=\count323
+)
+Package biblatex Info: Trying to load bibliography style 'numeric'...
+Package biblatex Info: ... file 'numeric.bbx' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/bbx/numeric.bbx
+File: numeric.bbx 2016/03/03 v3.3 biblatex bibliography style (PK/JW/AB)
+Package biblatex Info: Trying to load bibliography style 'standard'...
+Package biblatex Info: ... file 'standard.bbx' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
+File: standard.bbx 2016/03/03 v3.3 biblatex bibliography style (PK/JW/AB)
+\c@bbx:relatedcount=\count324
+\c@bbx:relatedtotal=\count325
+))
+Package biblatex Info: Trying to load citation style 'numeric'...
+Package biblatex Info: ... file 'numeric.cbx' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/cbx/numeric.cbx
+File: numeric.cbx 2016/03/03 v3.3 biblatex citation style (PK/JW/AB)
+Package biblatex Info: Redefining '\cite'.
+Package biblatex Info: Redefining '\parencite'.
+Package biblatex Info: Redefining '\footcite'.
+Package biblatex Info: Redefining '\footcitetext'.
+Package biblatex Info: Redefining '\smartcite'.
+Package biblatex Info: Redefining '\supercite'.
+Package biblatex Info: Redefining '\textcite'.
+Package biblatex Info: Redefining '\textcites'.
+Package biblatex Info: Redefining '\cites'.
+Package biblatex Info: Redefining '\parencites'.
+Package biblatex Info: Redefining '\smartcites'.
+)
+Package biblatex Info: Trying to load configuration file...
+Package biblatex Info: ... file 'biblatex.cfg' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.cfg
+File: biblatex.cfg 
+)))
+\c@theorem=\count326
+Package biblatex Info: Trying to load language 'english'...
+Package biblatex Info: ... file 'english.lbx' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/lbx/english.lbx
+File: english.lbx 2016/03/03 v3.3 biblatex localization (PK/JW/AB)
+)
+\@quotelevel=\count327
+\@quotereset=\count328
+
+(./thesis.aux (./abstract.aux) (./chap1.aux) (./chap2.aux))
+\openout1 = `thesis.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+
+
+******************************************************
+Stock height and width: 794.96999pt by 614.295pt
+Top and edge trims: 0pt and 0pt
+Page height and width: 794.96999pt by 614.295pt
+Text height and width: 606.5pt by 469pt
+Spine and edge margins: 72.26999pt and 72.26999pt
+Upper and lower margins: 111.76999pt and 76.7pt
+Headheight and headsep: 14.5pt and 19.8738pt
+Footskip: 30pt
+Columnsep and columnseprule: 10pt and 0pt
+Marginparsep and marginparwidth: 7pt and 58.26999pt
+Sidecapsep and sidecapwidth: 7pt and 50pt
+Sidebarhsep and sidebarwidth: 7pt and 50pt
+Sidebarvsep and sidebartopsep: 14.5pt and 0pt
+Sidebarheight: 546.64995pt
+Sidefoothsep and sidefootwidth: 7pt and 50pt
+Sidefootvsep and sidefootheight: 14.5pt and 546.64995pt
+******************************************************
+
+Package biblatex Info: No input encoding detected.
+(biblatex)             Assuming 'ascii'.
+Package biblatex Info: Automatic encoding selection.
+(biblatex)             Assuming data encoding 'ascii'.
+\openout4 = `thesis.bcf'.
+
+Package biblatex Info: Trying to load bibliographic data...
+Package biblatex Info: ... file 'thesis.bbl' found.
+(./thesis.bbl)
+Package biblatex Info: Reference section=0 on input line 19.
+Package biblatex Info: Reference segment=0 on input line 19.
+ [1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2]
+[3]
+\openout2 = `abstract.aux'.
+
+ (./abstract.tex [1
+
+]) [1
+
+] (./thesis.toc
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 3.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 3.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 3.
+) [2] (./thesis.lof) [3
+
+]
+(./thesis.lot) [4
+
+] [5]
+\openout2 = `chap1.aux'.
+
+ (./chap1.tex
+
+LaTeX Warning: Citation 'waveshaping' on page 1 undefined on input line 8.
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 18.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 18.
+[1
+
+
+]
+
+LaTeX Warning: Citation 'cmusic' on page 2 undefined on input line 98.
+
+
+Overfull \hbox (3.09605pt too wide) in paragraph at lines 96--99
+\OT1/cmr/m/n/12 seclu-sion Thoreau touch; known ashy Bu-jum-bura may, as-sess, 
+hadn't servi-tor. Wash[[]],
+ []
+
+
+LaTeX Warning: Citation 'fm' on page 2 undefined on input line 121.
+
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 126.
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 126.
+ [2]
+
+LaTeX Warning: Citation 'waveshaping' on page 3 undefined on input line 148.
+
+) [3]
+\openout2 = `chap2.aux'.
+
+ (./chap2.tex [4
+
+
+
+]) [5]
+
+LaTeX Warning: Empty bibliography on input line 90.
+
+\tf@toc=\write5
+\openout5 = `thesis.toc'.
+
+\tf@lof=\write6
+\openout6 = `thesis.lof'.
+
+\tf@lot=\write7
+\openout7 = `thesis.lot'.
+
+(./thesis.aux (./abstract.aux) (./chap1.aux) (./chap2.aux))
+
+LaTeX Warning: There were undefined references.
+
+
+Package biblatex Warning: Please (re)run Biber on the file:
+(biblatex)                thesis
+(biblatex)                and rerun LaTeX afterwards.
+
+Package logreq Info: Writing requests to 'thesis.run.xml'.
+\openout1 = `thesis.run.xml'.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 9559 strings out of 493029
+ 153934 string characters out of 6136233
+ 587818 words of memory out of 5000000
+ 13033 multiletter control sequences out of 15000+600000
+ 9499 words of font info for 33 fonts, out of 8000000 for 9000
+ 1143 hyphenation exceptions out of 8191
+ 48i,10n,32p,875b,736s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmsl12.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
+/latxfont/lcircle1.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
+ts/latxfont/line10.pfb>
+Output written on thesis.pdf (14 pages, 127185 bytes).
+PDF statistics:
+ 94 PDF objects out of 1000 (max. 8388607)
+ 66 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+
