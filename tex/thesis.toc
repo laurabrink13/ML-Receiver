@@ -4,8 +4,6 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{List of Figures}{ii}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{List of Tables}{iii}
-\defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\chapternumberline {1}Introduction}{1}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {1.1}Motivation}{1}
@@ -18,7 +16,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{Equalization for an unknown channel}{2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{How do real systems handle equalization?}{2}
+\contentsline {subsubsection}{How do real systems handle equalization?}{3}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{Carrier Frequency Offset and Correction}{3}
 \defcounter {refsection}{0}\relax 

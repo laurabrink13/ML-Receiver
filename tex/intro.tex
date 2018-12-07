@@ -1,7 +1,9 @@
 \chapter{Introduction}
 
 With the rise of internet of things, more and more users will need to access the wireless spectrum.  As the spectrum becomes saturated with users, not only must our systems adapt to changing environments but also be able to coexist and thrive in the presence of unknown neighbors.  
-We must design a robust communications system that will give us the freedom to. 
+We must design a robust communications system that will give our devices freedom.
+
+From an academic perspective, the rise of machine learning tools and processing has allowed us to tackle problems we have not yet been able to, like in image processing.  However, we still do not fully understand the reach or the limitations of this technology.  In order to study the limitations of machine learning, we must apply them to spaces that we have studied extensively, like communications, and compare them to the well-known baselines.
 
 Most communications systems have three main processes; equalization, demodulation, and error-correction.  While we will need to design robust forms of all of these processes, we will focus on equalization for the remainder of this paper. 
 
@@ -29,7 +31,7 @@ $$\tilde{x}_m = \sum_{i=0}^l a_i x_{m-i} + \eta_i$$
 The receiver will hear a signal that is corrupted by inter-symbol interfence and noise;
 $\tilde{\vec{x}}=[\tilde{x}_0, \tilde{x_1}, \ldots \tilde{x}_{n+l}]$. 
 
-Receivers must be able to handle garbled signals in order to transmit data in the real world.  The process of removing the inter-symbol interference is called equalization.  The goal of equalization is to take in a garbled signal and output a signal without any inter-symbol interference. 
+Receivers must be able to handle garbled signals in order to transmit data in the real world.  The process of removing the inter-symbol interference is called equalization.  The goal of equalization is to take in a garbled signal and output a signal with minimal inter-symbol interference. 
 
 INSERT IMAGE OF 2 TAP CHANNEL EFFECTS ON QPSK
 

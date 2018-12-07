@@ -175,6 +175,53 @@
       \field{title}{Model-agnostic meta-learning for fast adaptation of deep networks}
       \field{year}{2017}
     \endentry
+    \entry{hemodel}{article}{}
+      \name{author}{6}{}{%
+        {{hash=f87e7216f2689adb4a21d106498e56a1}{%
+           family={He},
+           familyi={H\bibinitperiod},
+           given={Hengtao},
+           giveni={H\bibinitperiod}}}%
+        {{hash=c59d8dd54aa89c2a33d932d96e6f4bbd}{%
+           family={Jin},
+           familyi={J\bibinitperiod},
+           given={Shi},
+           giveni={S\bibinitperiod}}}%
+        {{hash=c824e6070f31269885a0497b5041aab6}{%
+           family={Wen},
+           familyi={W\bibinitperiod},
+           given={Chao-Kai},
+           giveni={C\bibinithyphendelim K\bibinitperiod}}}%
+        {{hash=fd9d93585d1317978d7af8e8a346a262}{%
+           family={Gao},
+           familyi={G\bibinitperiod},
+           given={Feifei},
+           giveni={F\bibinitperiod}}}%
+        {{hash=1408aae9f11912b5e9d07ff8ac47d8c6}{%
+           family={Ye\bibnamedelima Li},
+           familyi={Y\bibinitperiod\bibinitdelim L\bibinitperiod},
+           given={Geoffrey},
+           giveni={G\bibinitperiod}}}%
+        {{hash=15cd85f01e4b0aeebe5122454d075216}{%
+           family={Xu},
+           familyi={X\bibinitperiod},
+           given={Zongben},
+           giveni={Z\bibinitperiod}}}%
+      }
+      \strng{namehash}{66768227052c119493a5416c2d3e693a}
+      \strng{fullhash}{ab4e9b0ef5fe5a03bc20be003c0e7e57}
+      \strng{bibnamehash}{66768227052c119493a5416c2d3e693a}
+      \strng{authorbibnamehash}{66768227052c119493a5416c2d3e693a}
+      \strng{authornamehash}{66768227052c119493a5416c2d3e693a}
+      \strng{authorfullhash}{ab4e9b0ef5fe5a03bc20be003c0e7e57}
+      \field{sortinit}{H}
+      \field{sortinithash}{5f15a7bc777ad49ff15aa4d2831b1681}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{arXiv preprint arxiv:1809.06059}
+      \field{title}{Model-Driven Deep Learning for Physical Layer Communications}
+      \field{year}{2018}
+    \endentry
     \entry{kim2018}{article}{}
       \name{author}{6}{}{%
         {{hash=0b58fa37f7f7440edaa58ecbca652d47}{%
@@ -331,6 +378,43 @@
       \field{journaltitle}{arXiv preprint arxiv:1805.06350}
       \field{title}{Approximating the Void: Learning Stochastic Channel Models from Observation with Variational Generative Adversarial Networks}
       \field{year}{2018}
+    \endentry
+    \entry{osheasynch}{article}{}
+      \name{author}{4}{}{%
+        {{hash=909c9965c7e55bd7133fa7d7b7d3dc9b}{%
+           family={O'Shea},
+           familyi={O\bibinitperiod},
+           given={Timothy\bibnamedelima J.},
+           giveni={T\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=45218f1c6f51df14328708aab1d373f6}{%
+           family={Pemula},
+           familyi={P\bibinitperiod},
+           given={Latha},
+           giveni={L\bibinitperiod}}}%
+        {{hash=d0a408119272ca1bd49b625e3b927d05}{%
+           family={Batra},
+           familyi={B\bibinitperiod},
+           given={Dhruv},
+           giveni={D\bibinitperiod}}}%
+        {{hash=2d06b755eba63b1401841a30730dd441}{%
+           family={Clancy},
+           familyi={C\bibinitperiod},
+           given={T.\bibnamedelimi Charles},
+           giveni={T\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+      }
+      \strng{namehash}{043230cc658055051eb7c1efbf4fd66e}
+      \strng{fullhash}{aba2f09c46871414036cf7ea462cbb93}
+      \strng{bibnamehash}{043230cc658055051eb7c1efbf4fd66e}
+      \strng{authorbibnamehash}{043230cc658055051eb7c1efbf4fd66e}
+      \strng{authornamehash}{043230cc658055051eb7c1efbf4fd66e}
+      \strng{authorfullhash}{aba2f09c46871414036cf7ea462cbb93}
+      \field{sortinit}{O}
+      \field{sortinithash}{dad3efd0836470093a7b4a7bb756eb8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{arXiv preprint arxiv:1605.00716}
+      \field{title}{Radio Transformer Networks: Attention Models for Learning to Synchronize in Wireless Systems}
+      \field{year}{2016}
     \endentry
     \entry{osheamimo}{article}{}
       \name{author}{3}{}{%

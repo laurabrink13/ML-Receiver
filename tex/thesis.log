@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.10.4)  6 DEC 2018 19:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.10.4)  6 DEC 2018 20:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -721,9 +721,6 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 ] (./thesis.lof) [2
 
 ]
-(./thesis.lot) [3
-
-] [4]
 \openout2 = `intro.aux'.
 
  (./intro.tex [1
@@ -732,27 +729,26 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 ] [2] (./related_works.tex [3])) [4]
 \openout2 = `equal.aux'.
 
-
-(./equal.tex
+ (./equal.tex
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 9.
- (/usr/local/texlive/2018/texmf-dist/tex/latex/base/omscmr.fd
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 9.
-
-[5
+ [5
 
 
 
 ]
-<figures/plot_of_division_function.png, id=53, 292.09125pt x 195.73125pt>
+<figures/plot_of_division_function.png, id=46, 292.09125pt x 195.73125pt>
 File: figures/plot_of_division_function.png Graphic file (type png)
 <use figures/plot_of_division_function.png>
 Package pdftex.def Info: figures/plot_of_division_function.png  used on input l
 ine 43.
 (pdftex.def)             Requested size: 292.09052pt x 195.73076pt.
-<figures/plot_of_multiplication_func.png, id=55, 287.0725pt x 203.76125pt>
+<figures/plot_of_multiplication_func.png, id=48, 287.0725pt x 203.76125pt>
 File: figures/plot_of_multiplication_func.png Graphic file (type png)
 <use figures/plot_of_multiplication_func.png>
 Package pdftex.def Info: figures/plot_of_multiplication_func.png  used on input
@@ -789,9 +785,6 @@ Overfull \hbox (9.67142pt too wide) in paragraph at lines 89--89
 \tf@lof=\write7
 \openout7 = `thesis.lof'.
 
-\tf@lot=\write8
-\openout8 = `thesis.lot'.
-
  (./thesis.aux (./abstract.aux) (./intro.aux) (./equal.aux) (./cfo.aux) (./conc
 lusion.aux))
 Package logreq Info: Writing requests to 'thesis.run.xml'.
@@ -800,12 +793,12 @@ Package logreq Info: Writing requests to 'thesis.run.xml'.
  ) 
 Here is how much of TeX's memory you used:
  11633 strings out of 492639
- 192903 string characters out of 6129287
- 649207 words of memory out of 5000000
- 15402 multiletter control sequences out of 15000+600000
+ 193035 string characters out of 6129287
+ 649299 words of memory out of 5000000
+ 15405 multiletter control sequences out of 15000+600000
  9499 words of font info for 33 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
- 44i,11n,45p,1131b,1189s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 44i,11n,45p,1131b,1194s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 ></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb>
 </usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><
@@ -816,10 +809,10 @@ cal/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl12.pfb></usr/loc
 al/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/loca
 l/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/
 texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on thesis.pdf (19 pages, 199045 bytes).
+Output written on thesis.pdf (17 pages, 200264 bytes).
 PDF statistics:
- 111 PDF objects out of 1000 (max. 8388607)
- 75 compressed objects within 1 object stream
+ 104 PDF objects out of 1000 (max. 8388607)
+ 70 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  11 words of extra memory for PDF output out of 10000 (max. 10000000)
 
