@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.10.4)  6 DEC 2018 19:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.10.4)  6 DEC 2018 19:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -799,13 +799,13 @@ Package logreq Info: Writing requests to 'thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 11629 strings out of 492639
- 192743 string characters out of 6129287
- 649002 words of memory out of 5000000
- 15398 multiletter control sequences out of 15000+600000
+ 11633 strings out of 492639
+ 192903 string characters out of 6129287
+ 649207 words of memory out of 5000000
+ 15402 multiletter control sequences out of 15000+600000
  9499 words of font info for 33 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
- 44i,11n,45p,1131b,1156s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 44i,11n,45p,1131b,1189s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 ></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb>
 </usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><
@@ -816,7 +816,7 @@ cal/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl12.pfb></usr/loc
 al/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/loca
 l/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/
 texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on thesis.pdf (19 pages, 198010 bytes).
+Output written on thesis.pdf (19 pages, 199045 bytes).
 PDF statistics:
  111 PDF objects out of 1000 (max. 8388607)
  75 compressed objects within 1 object stream

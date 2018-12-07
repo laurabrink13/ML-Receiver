@@ -300,6 +300,38 @@
       \field{pages}{1332\bibrangedash 1338}
       \range{pages}{7}
     \endentry
+    \entry{osheavoid}{article}{}
+      \name{author}{3}{}{%
+        {{hash=909c9965c7e55bd7133fa7d7b7d3dc9b}{%
+           family={O'Shea},
+           familyi={O\bibinitperiod},
+           given={Timothy\bibnamedelima J.},
+           giveni={T\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=a037c0df26cba6f56be34dbeb6e0a7fc}{%
+           family={Roy},
+           familyi={R\bibinitperiod},
+           given={Tamoghna},
+           giveni={T\bibinitperiod}}}%
+        {{hash=87f28c524bbdf3c3831f3182d37857ce}{%
+           family={West},
+           familyi={W\bibinitperiod},
+           given={Nathan},
+           giveni={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{3afbf815e17afd8165fd5e078f48846e}
+      \strng{fullhash}{3afbf815e17afd8165fd5e078f48846e}
+      \strng{bibnamehash}{3afbf815e17afd8165fd5e078f48846e}
+      \strng{authorbibnamehash}{3afbf815e17afd8165fd5e078f48846e}
+      \strng{authornamehash}{3afbf815e17afd8165fd5e078f48846e}
+      \strng{authorfullhash}{3afbf815e17afd8165fd5e078f48846e}
+      \field{sortinit}{O}
+      \field{sortinithash}{dad3efd0836470093a7b4a7bb756eb8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{arXiv preprint arxiv:1805.06350}
+      \field{title}{Approximating the Void: Learning Stochastic Channel Models from Observation with Variational Generative Adversarial Networks}
+      \field{year}{2018}
+    \endentry
     \entry{osheamimo}{article}{}
       \name{author}{3}{}{%
         {{hash=1168ef24c5478085b24966bb867edfc3}{%
@@ -444,6 +476,38 @@
       \field{year}{2017}
       \field{pages}{92\bibrangedash 111}
       \range{pages}{20}
+    \endentry
+    \entry{yegans}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=27dfc5d4754ab8d88dfd8829759a8109}{%
+           family={Ye},
+           familyi={Y\bibinitperiod},
+           given={Hao},
+           giveni={H\bibinitperiod}}}%
+        {{hash=1408aae9f11912b5e9d07ff8ac47d8c6}{%
+           family={Ye\bibnamedelima Li},
+           familyi={Y\bibinitperiod\bibinitdelim L\bibinitperiod},
+           given={Geoffrey},
+           giveni={G\bibinitperiod}}}%
+        {{hash=d130e0fb0614fc89f8792edf59e1c68a}{%
+           family={Juang},
+           familyi={J\bibinitperiod},
+           given={Biing-Hwang},
+           giveni={B\bibinithyphendelim H\bibinitperiod}}}%
+      }
+      \strng{namehash}{3d2ceea00dc3435c19f38aaa5a677805}
+      \strng{fullhash}{3d2ceea00dc3435c19f38aaa5a677805}
+      \strng{bibnamehash}{3d2ceea00dc3435c19f38aaa5a677805}
+      \strng{authorbibnamehash}{3d2ceea00dc3435c19f38aaa5a677805}
+      \strng{authornamehash}{3d2ceea00dc3435c19f38aaa5a677805}
+      \strng{authorfullhash}{3d2ceea00dc3435c19f38aaa5a677805}
+      \field{sortinit}{Y}
+      \field{sortinithash}{b8d711a035f7be9840c721c82920477e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{IEEE Global Communications Conference}
+      \field{title}{Channel Agnostic End-to-End Learning based Communication Systems with Conditional GAN}
+      \field{year}{2018}
     \endentry
     \entry{ye2018}{incollection}{}
       \name{author}{3}{}{%
