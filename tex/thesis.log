@@ -1,35 +1,33 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.15)  4 DEC 2018 22:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.10.4)  6 DEC 2018 19:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **thesis.tex
 (./thesis.tex
-LaTeX2e <2016/02/01>
-Babel <3.9q> and hyphenation patterns for 81 language(s) loaded.
+LaTeX2e <2018-04-01> patch level 5
 (./ucbthesis.cls
 Document Class: ucbthesis 2012/08/06 v3.391 University of California, Berkeley 
 Thesis Class
-(/usr/share/texlive/texmf-dist/tex/latex/memoir/memoir.cls
-Document Class: memoir 2015/07/08 v3.7e configurable book, report, article docu
+(/usr/local/texlive/2018/texmf-dist/tex/latex/memoir/memoir.cls
+Document Class: memoir 2018/04/04 v3.7g configurable book, report, article docu
 ment class
 \onelineskip=\skip41
 \lxvchars=\skip42
 \xlvchars=\skip43
-\@memcnta=\count79
-\c@@memmarkcntra=\count80
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
-Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
-Package ifpdf Info: pdfTeX in PDF mode is detected.
+\@memcnta=\count80
+\c@@memmarkcntra=\count81
+(/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2018/09/07 v3.3 Provides the ifpdf switch
 )
-(/usr/share/texlive/texmf-dist/tex/latex/ifetex/ifetex.sty
-Package: ifetex 2011/12/15 v1.2 ifetex
+(/usr/local/texlive/2018/texmf-dist/tex/latex/ifetex/ifetex.sty
+Package: ifetex 2018/03/31 v1.2a ifetex
 
-(/usr/share/texlive/texmf-dist/tex/plain/ifetex/ifetex.tex))
-(/usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+(/usr/local/texlive/2018/texmf-dist/tex/plain/ifetex/ifetex.tex))
+(/usr/local/texlive/2018/texmf-dist/tex/generic/ifxetex/ifxetex.sty
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty
-Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+(/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
 )
 \stockheight=\skip44
@@ -37,7 +35,7 @@ Package ifluatex Info: LuaTeX not detected.
 \trimtop=\skip46
 \trimedge=\skip47
 
-(/usr/share/texlive/texmf-dist/tex/latex/memoir/mem12.clo
+(/usr/local/texlive/2018/texmf-dist/tex/latex/memoir/mem12.clo
 File: mem12.clo 2010/10/19 v0.4b memoir class 12pt size option
 )
 \binding=\skip48
@@ -50,20 +48,20 @@ File: mem12.clo 2010/10/19 v0.4b memoir class 12pt size option
 \mem@maxheadheight=\skip55
 \mem@maxfootheight=\skip56
 \headwidth=\skip57
-\c@storedpagenumber=\count81
+\c@storedpagenumber=\count82
 \memPD=\dimen102
 \m@mabparskip=\skip58
 \thanksmarkwidth=\skip59
 \thanksmarksep=\skip60
 \droptitle=\skip61
-\c@book=\count82
-\c@part=\count83
-\c@chapter=\count84
-\c@section=\count85
-\c@subsection=\count86
-\c@subsubsection=\count87
-\c@paragraph=\count88
-\c@subparagraph=\count89
+\c@book=\count83
+\c@part=\count84
+\c@chapter=\count85
+\c@section=\count86
+\c@subsection=\count87
+\c@subsubsection=\count88
+\c@paragraph=\count89
+\c@subparagraph=\count90
 \beforechapskip=\skip62
 \midchapskip=\skip63
 \afterchapskip=\skip64
@@ -85,8 +83,8 @@ File: mem12.clo 2010/10/19 v0.4b memoir class 12pt size option
 \beforesubparaskip=\skip80
 \aftersubparaskip=\skip81
 \pfbreakskip=\skip82
-\c@@ppsavesec=\count90
-\c@@ppsaveapp=\count91
+\c@@ppsavesec=\count91
+\c@@ppsaveapp=\count92
 \ragrparindent=\dimen103
 \everylistparindent=\dimen104
 \parsepi=\skip83
@@ -108,10 +106,10 @@ File: mem12.clo 2010/10/19 v0.4b memoir class 12pt size option
 \absrightindent=\skip97
 \absparindent=\skip98
 \absparsep=\skip99
-\c@vslineno=\count92
-\c@poemline=\count93
-\c@modulo@vs=\count94
-\c@memfvsline=\count95
+\c@vslineno=\count93
+\c@poemline=\count94
+\c@modulo@vs=\count95
+\c@memfvsline=\count96
 \vleftskip=\skip100
 \vrightskip=\skip101
 \stanzaskip=\skip102
@@ -119,11 +117,11 @@ File: mem12.clo 2010/10/19 v0.4b memoir class 12pt size option
 \vgap=\skip104
 \vindent=\skip105
 \vleftmargin=\dimen106
-\c@verse=\count96
-\c@chrsinstr=\count97
+\c@verse=\count97
+\c@chrsinstr=\count98
 \beforepoemtitleskip=\skip106
 \afterpoemtitleskip=\skip107
-\c@poem=\count98
+\c@poem=\count99
 \beforePoemTitleskip=\skip108
 \midPoemTitleskip=\skip109
 \afterPoemTitleskip=\skip110
@@ -137,7 +135,7 @@ File: mem12.clo 2010/10/19 v0.4b memoir class 12pt size option
 \TX@old@col=\dimen111
 \TX@target=\dimen112
 \TX@delta=\dimen113
-\TX@cols=\count99
+\TX@cols=\count100
 \TX@ftn=\toks16
 \heavyrulewidth=\dimen114
 \lightrulewidth=\dimen115
@@ -149,22 +147,22 @@ File: mem12.clo 2010/10/19 v0.4b memoir class 12pt size option
 \cmidrulesep=\dimen121
 \cmidrulekern=\dimen122
 \defaultaddspace=\dimen123
-\@cmidla=\count100
-\@cmidlb=\count101
+\@cmidla=\count101
+\@cmidlb=\count102
 \@aboverulesep=\dimen124
 \@belowrulesep=\dimen125
-\@thisruleclass=\count102
-\@lastruleclass=\count103
+\@thisruleclass=\count103
+\@lastruleclass=\count104
 \@thisrulewidth=\dimen126
 \ctableftskip=\skip113
 \ctabrightskip=\skip114
-\abovecolumnspenalty=\count104
-\@linestogo=\count105
-\@cellstogo=\count106
-\@cellsincolumn=\count107
+\abovecolumnspenalty=\count105
+\@linestogo=\count106
+\@cellstogo=\count107
+\@cellsincolumn=\count108
 \crtok=\toks17
 \@mincolumnwidth=\dimen127
-\c@newflo@tctr=\count108
+\c@newflo@tctr=\count109
 \mem@margin@floatbox=\box26
 \@contcwidth=\skip115
 \@contindw=\skip116
@@ -176,7 +174,7 @@ File: mem12.clo 2010/10/19 v0.4b memoir class 12pt size option
 \subfloatbottomskip=\skip122
 \subfloatlabelskip=\skip123
 \subfloatcapmargin=\dimen128
-\c@@contsubnum=\count109
+\c@@contsubnum=\count110
 \m@mscap@capbox=\box27
 \m@mscap@fbox=\box28
 \sidecapsep=\dimen129
@@ -190,8 +188,8 @@ File: mem12.clo 2010/10/19 v0.4b memoir class 12pt size option
 \afterepigraphskip=\skip125
 \epigraphwidth=\skip126
 \epigraphrule=\skip127
-LaTeX Info: Redefining \em on input line 7535.
-LaTeX Info: Redefining \emph on input line 7543.
+LaTeX Info: Redefining \em on input line 7578.
+LaTeX Info: Redefining \emph on input line 7586.
 \tocentryskip=\skip128
 \tocbaseline=\skip129
 \cftparskip=\skip130
@@ -220,7 +218,7 @@ LaTeX Info: Redefining \emph on input line 7543.
 \cftsubparagraphindent=\skip151
 \cftsubparagraphnumwidth=\skip152
 \prechapterprecisshift=\dimen138
-\c@maxsecnumdepth=\count110
+\c@maxsecnumdepth=\count111
 \bibindent=\dimen139
 \bibitemsep=\skip153
 \indexcolsep=\skip154
@@ -241,7 +239,7 @@ LaTeX Info: Redefining \emph on input line 7543.
 \footinsdim=\skip164
 \footinsv@r=\insert197
 \@mpfootinsv@r=\insert196
-\m@m@k=\count111
+\m@m@k=\count112
 \m@m@h=\dimen142
 \m@mipn@skip=\skip165
 \sidefootins=\insert195
@@ -251,66 +249,66 @@ LaTeX Info: Redefining \emph on input line 7543.
 \sidefootvsep=\skip169
 \sidefootwidth=\skip170
 \m@mdownsf=\skip171
-\c@sidefootnote=\count112
+\c@sidefootnote=\count113
 \sidefootmarkwidth=\skip172
 \sidefootmarksep=\skip173
 \sidefootparindent=\skip174
-\c@pagenote=\count113
-\c@pagenoteshadow=\count114
+\c@pagenote=\count114
+\c@pagenoteshadow=\count115
 \mem@pn@lastkern=\skip175
 \every@verbatim=\toks19
 \afterevery@verbatim=\toks20
 \verbatim@line=\toks21
-\tab@position=\count115
+\tab@position=\count116
 \verbatim@in@stream=\read1
 \verbatimindent=\skip176
 \verbatim@out=\write3
 \bvboxsep=\skip177
-\c@memfbvline=\count116
-\c@bvlinectr=\count117
+\c@memfbvline=\count117
+\c@bvlinectr=\count118
 \bvnumlength=\skip178
 \fb@frw=\dimen143
 \fb@frh=\dimen144
 \FrameRule=\dimen145
 \FrameSep=\dimen146
-\c@cp@cntr=\count118
-LaTeX Info: Redefining \: on input line 12052.
-LaTeX Info: Redefining \! on input line 12054.
-\c@ism@mctr=\count119
-\c@xsm@mctr=\count120
-\c@csm@mctr=\count121
-\c@ksm@mctr=\count122
-\c@xksm@mctr=\count123
-\c@cksm@mctr=\count124
-\c@msm@mctr=\count125
-\c@xmsm@mctr=\count126
-\c@cmsm@mctr=\count127
-\c@bsm@mctr=\count128
-\c@workm@mctr=\count129
-\c@sheetsequence=\count130
-\c@lastsheet=\count131
-\c@lastpage=\count132
-\c@figure=\count133
-\c@lofdepth=\count134
+\c@cp@cntr=\count119
+LaTeX Info: Redefining \: on input line 12100.
+LaTeX Info: Redefining \! on input line 12102.
+\c@ism@mctr=\count120
+\c@xsm@mctr=\count121
+\c@csm@mctr=\count122
+\c@ksm@mctr=\count123
+\c@xksm@mctr=\count124
+\c@cksm@mctr=\count125
+\c@msm@mctr=\count126
+\c@xmsm@mctr=\count127
+\c@cmsm@mctr=\count128
+\c@bsm@mctr=\count129
+\c@workm@mctr=\count130
+\c@sheetsequence=\count131
+\c@lastsheet=\count132
+\c@lastpage=\count133
+\c@figure=\count134
+\c@lofdepth=\count135
 \cftbeforefigureskip=\skip179
 \cftfigureindent=\skip180
 \cftfigurenumwidth=\skip181
-\c@table=\count135
-\c@lotdepth=\count136
+\c@table=\count136
+\c@lotdepth=\count137
 \cftbeforetableskip=\skip182
 \cfttableindent=\skip183
 \cfttablenumwidth=\skip184
 Package abstract [2008/07/23] emulated by memoir.
 Package appendix [2008/07/23] emulated by memoir.
-Package array [2008/09/09] emulated by memoir.
-Package booktabs [2008/07/23] emulated by memoir.
+Package array [2016/10/06] emulated by memoir.
+Package booktabs [2016/05/16] emulated by memoir.
 Package ccaption [2008/07/23] emulated by memoir.
 Package changepage [2008/07/23] emulated by memoir.
 Package chngcntr [2008/07/23] emulated by memoir.
 Package chngpage [2008/07/23] emulated by memoir.
 Package crop emulated by memoir.
 Package dcolumn [2008/07/23] emulated by memoir.
-Package delarray [2008/07/23] emulated by memoir.
+Package delarray [2014/10/28] emulated by memoir.
 Package enumerate [2008/07/23] emulated by memoir.
 Package epigraph [2008/07/23] emulated by memoir.
 Package ifmtarg [2008/07/23] emulated by memoir.
@@ -327,7 +325,7 @@ Package patchcmd [2008/07/23] emulated by memoir.
 Package setspace [2008/07/23] emulated by memoir.
 Package shortvrb [2008/07/23] emulated by memoir.
 Package showidx [2008/07/23] emulated by memoir.
-Package tabularx [2008/07/23] emulated by memoir.
+Package tabularx [2016/02/03] emulated by memoir.
 Package titleref [2008/07/23] emulated by memoir.
 Package titling [2008/07/23] emulated by memoir.
 Package tocbibind [2008/07/23] emulated by memoir.
@@ -335,101 +333,106 @@ Package tocloft [2008/07/23] emulated by memoir.
 Package tocvsec2 [2008/07/23] emulated by memoir.
 Package verbatim [2008/07/23] emulated by memoir.
 Package verse [2008/07/23] emulated by memoir.
+))
+(/usr/local/texlive/2018/texmf-dist/tex/latex/biblatex/biblatex.sty
+Package: biblatex 2018/03/04 v3.11 programmable bibliographies (PK/MW)
 
-(/usr/share/texlive/texmf-dist/tex/latex/memoir/mempatch.sty
-Package: mempatch 2009/07/24 v6.0f Patches for memoir class v1.6180339
-)))
-(/usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.sty
-Package: biblatex 2016/03/03 v3.3 programmable bibliographies (PK/JW/AB)
-
-
-Package biblatex Warning: No "backend" specified, using Biber backend.
-(biblatex)                To use BibTeX, load biblatex with 
-(biblatex)                the "backend=bibtex" option.
-
-(/usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex_.sty
-Package: biblatex_ 2016/03/03 v3.3 programmable bibliographies (biber) (PK/JW/A
-B)
-
-(/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
-Package: etoolbox 2015/08/02 v2.2a e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count137
+(/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2018/09/10 v0.29 Utility functions of pdfTeX for LuaTeX (HO
 )
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+
+(/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+)
+(/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2018/08/19 v2.5f e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count138
+)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks22
 )
-(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
-Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
 
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
-Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
-)
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
-Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+(/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
 
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
-Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
-)
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/etexcmds.sty
-Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+(/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
 Package etexcmds Info: Could not find \expanded.
 (etexcmds)             That can mean that you are not using pdfTeX 1.50 or
 (etexcmds)             that some package has redefined \expanded.
 (etexcmds)             In the latter case, load this package earlier.
 )))
-(/usr/share/texlive/texmf-dist/tex/latex/logreq/logreq.sty
+(/usr/local/texlive/2018/texmf-dist/tex/latex/logreq/logreq.sty
 Package: logreq 2010/08/04 v1.0 xml request logger
-\lrq@indent=\count138
+\lrq@indent=\count139
 
-(/usr/share/texlive/texmf-dist/tex/latex/logreq/logreq.def
+(/usr/local/texlive/2018/texmf-dist/tex/latex/logreq/logreq.def
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 ))
-(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+(/usr/local/texlive/2018/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )
-(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
+(/usr/local/texlive/2018/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip10
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-\c@tabx@nest=\count139
-\c@listtotal=\count140
-\c@listcount=\count141
-\c@liststart=\count142
-\c@liststop=\count143
-\c@citecount=\count144
-\c@citetotal=\count145
-\c@multicitecount=\count146
-\c@multicitetotal=\count147
-\c@instcount=\count148
-\c@maxnames=\count149
-\c@minnames=\count150
-\c@maxitems=\count151
-\c@minitems=\count152
-\c@citecounter=\count153
-\c@savedcitecounter=\count154
-\c@uniquelist=\count155
-\c@uniquename=\count156
-\c@refsection=\count157
-\c@refsegment=\count158
-\c@maxextratitle=\count159
-\c@maxextratitleyear=\count160
-\c@maxextrayear=\count161
-\c@maxextraalpha=\count162
-\c@abbrvpenalty=\count163
-\c@highnamepenalty=\count164
-\c@lownamepenalty=\count165
-\c@maxparens=\count166
-\c@parenlevel=\count167
-\blx@tempcnta=\count168
-\blx@tempcntb=\count169
-\blx@tempcntc=\count170
-\blx@maxsection=\count171
-\blx@maxsegment@0=\count172
-\blx@notetype=\count173
-\blx@parenlevel@text=\count174
-\blx@parenlevel@foot=\count175
-\blx@sectionciteorder@0=\count176
+(/usr/local/texlive/2018/texmf-dist/tex/generic/xstring/xstring.sty
+(/usr/local/texlive/2018/texmf-dist/tex/generic/xstring/xstring.tex
+\@xs@message=\write4
+\integerpart=\count140
+\decimalpart=\count141
+)
+Package: xstring 2013/10/13  v1.7c  String manipulations (C Tellechea)
+)
+\c@tabx@nest=\count142
+\c@listtotal=\count143
+\c@listcount=\count144
+\c@liststart=\count145
+\c@liststop=\count146
+\c@citecount=\count147
+\c@citetotal=\count148
+\c@multicitecount=\count149
+\c@multicitetotal=\count150
+\c@instcount=\count151
+\c@maxnames=\count152
+\c@minnames=\count153
+\c@maxitems=\count154
+\c@minitems=\count155
+\c@citecounter=\count156
+\c@savedcitecounter=\count157
+\c@uniquelist=\count158
+\c@uniquename=\count159
+\c@refsection=\count160
+\c@refsegment=\count161
+\c@maxextratitle=\count162
+\c@maxextratitleyear=\count163
+\c@maxextradate=\count164
+\c@maxextraalpha=\count165
+\c@abbrvpenalty=\count166
+\c@highnamepenalty=\count167
+\c@lownamepenalty=\count168
+\c@maxparens=\count169
+\c@parenlevel=\count170
+\blx@tempcnta=\count171
+\blx@tempcntb=\count172
+\blx@tempcntc=\count173
+\blx@maxsection=\count174
+\blx@maxsegment@0=\count175
+\blx@notetype=\count176
+\blx@parenlevel@text=\count177
+\blx@parenlevel@foot=\count178
+\blx@sectionciteorder@0=\count179
 \labelnumberwidth=\skip185
 \labelalphawidth=\skip186
 \biblabelsep=\skip187
@@ -438,125 +441,137 @@ Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 \bibparsep=\skip190
 \bibhang=\skip191
 \blx@bcfin=\read2
-\blx@bcfout=\write4
-\c@mincomprange=\count177
-\c@maxcomprange=\count178
-\c@mincompwidth=\count179
+\blx@bcfout=\write5
+\c@mincomprange=\count180
+\c@maxcomprange=\count181
+\c@mincompwidth=\count182
 Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
 
-(/usr/share/texlive/texmf-dist/tex/latex/biblatex/blx-dm.def)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/biblatex/blx-dm.def
+File: blx-dm.def 2018/03/04 v3.11 biblatex localization (PK/MW)
+)
 Package biblatex Info: Trying to load biblatex custom data model...
 Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
-\c@afterword=\count180
-\c@savedafterword=\count181
-\c@annotator=\count182
-\c@savedannotator=\count183
-\c@author=\count184
-\c@savedauthor=\count185
-\c@bookauthor=\count186
-\c@savedbookauthor=\count187
-\c@commentator=\count188
-\c@savedcommentator=\count189
-\c@editor=\count190
-\c@savededitor=\count191
-\c@editora=\count192
-\c@savededitora=\count193
-\c@editorb=\count194
-\c@savededitorb=\count266
-\c@editorc=\count267
-\c@savededitorc=\count268
-\c@foreword=\count269
-\c@savedforeword=\count270
-\c@holder=\count271
-\c@savedholder=\count272
-\c@introduction=\count273
-\c@savedintroduction=\count274
-\c@namea=\count275
-\c@savednamea=\count276
-\c@nameb=\count277
-\c@savednameb=\count278
-\c@namec=\count279
-\c@savednamec=\count280
-\c@translator=\count281
-\c@savedtranslator=\count282
-\c@shortauthor=\count283
-\c@savedshortauthor=\count284
-\c@shorteditor=\count285
-\c@savedshorteditor=\count286
-\c@labelname=\count287
-\c@savedlabelname=\count288
-\c@institution=\count289
-\c@savedinstitution=\count290
-\c@lista=\count291
-\c@savedlista=\count292
-\c@listb=\count293
-\c@savedlistb=\count294
-\c@listc=\count295
-\c@savedlistc=\count296
-\c@listd=\count297
-\c@savedlistd=\count298
-\c@liste=\count299
-\c@savedliste=\count300
-\c@listf=\count301
-\c@savedlistf=\count302
-\c@location=\count303
-\c@savedlocation=\count304
-\c@organization=\count305
-\c@savedorganization=\count306
-\c@origlocation=\count307
-\c@savedoriglocation=\count308
-\c@origpublisher=\count309
-\c@savedorigpublisher=\count310
-\c@publisher=\count311
-\c@savedpublisher=\count312
-\c@language=\count313
-\c@savedlanguage=\count314
-\c@pageref=\count315
-\c@savedpageref=\count316
+\c@afterword=\count183
+\c@savedafterword=\count184
+\c@annotator=\count185
+\c@savedannotator=\count186
+\c@author=\count187
+\c@savedauthor=\count188
+\c@bookauthor=\count189
+\c@savedbookauthor=\count190
+\c@commentator=\count191
+\c@savedcommentator=\count192
+\c@editor=\count193
+\c@savededitor=\count194
+\c@editora=\count266
+\c@savededitora=\count267
+\c@editorb=\count268
+\c@savededitorb=\count269
+\c@editorc=\count270
+\c@savededitorc=\count271
+\c@foreword=\count272
+\c@savedforeword=\count273
+\c@holder=\count274
+\c@savedholder=\count275
+\c@introduction=\count276
+\c@savedintroduction=\count277
+\c@namea=\count278
+\c@savednamea=\count279
+\c@nameb=\count280
+\c@savednameb=\count281
+\c@namec=\count282
+\c@savednamec=\count283
+\c@translator=\count284
+\c@savedtranslator=\count285
+\c@shortauthor=\count286
+\c@savedshortauthor=\count287
+\c@shorteditor=\count288
+\c@savedshorteditor=\count289
+\c@labelname=\count290
+\c@savedlabelname=\count291
+\c@institution=\count292
+\c@savedinstitution=\count293
+\c@lista=\count294
+\c@savedlista=\count295
+\c@listb=\count296
+\c@savedlistb=\count297
+\c@listc=\count298
+\c@savedlistc=\count299
+\c@listd=\count300
+\c@savedlistd=\count301
+\c@liste=\count302
+\c@savedliste=\count303
+\c@listf=\count304
+\c@savedlistf=\count305
+\c@location=\count306
+\c@savedlocation=\count307
+\c@organization=\count308
+\c@savedorganization=\count309
+\c@origlocation=\count310
+\c@savedoriglocation=\count311
+\c@origpublisher=\count312
+\c@savedorigpublisher=\count313
+\c@publisher=\count314
+\c@savedpublisher=\count315
+\c@language=\count316
+\c@savedlanguage=\count317
+\c@origlanguage=\count318
+\c@savedoriglanguage=\count319
+\c@pageref=\count320
+\c@savedpageref=\count321
 \shorthandwidth=\skip192
 \shortjournalwidth=\skip193
 \shortserieswidth=\skip194
 \shorttitlewidth=\skip256
 \shortauthorwidth=\skip257
 \shorteditorwidth=\skip258
+\locallabelnumberwidth=\skip259
+\locallabelalphawidth=\skip260
+\localshorthandwidth=\skip261
+\localshortjournalwidth=\skip262
+\localshortserieswidth=\skip263
+\localshorttitlewidth=\skip264
+\localshortauthorwidth=\skip265
+\localshorteditorwidth=\skip266
 Package biblatex Info: Trying to load compatibility code...
 Package biblatex Info: ... file 'blx-compat.def' found.
 
-(/usr/share/texlive/texmf-dist/tex/latex/biblatex/blx-compat.def
-File: blx-compat.def 2016/03/03 v3.3 biblatex compatibility (PK/JW/AB)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/biblatex/blx-compat.def
+File: blx-compat.def 2018/03/04 v3.11 biblatex compatibility (PK/MW)
 )
 Package biblatex Info: Trying to load generic definitions...
-Package biblatex Info: ... file 'biblatex_.def' found.
+Package biblatex Info: ... file 'biblatex.def' found.
 
-(/usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex_.def
-File: biblatex_.def 
-\c@textcitecount=\count317
-\c@textcitetotal=\count318
-\c@textcitemaxnames=\count319
-\c@biburlnumpenalty=\count320
-\c@biburlucpenalty=\count321
-\c@biburllcpenalty=\count322
-\c@smartand=\count323
+(/usr/local/texlive/2018/texmf-dist/tex/latex/biblatex/biblatex.def
+File: biblatex.def 2018/03/04 v3.11 biblatex compatibility (PK/MW)
+\c@textcitecount=\count322
+\c@textcitetotal=\count323
+\c@textcitemaxnames=\count324
+\c@biburlnumpenalty=\count325
+\c@biburlucpenalty=\count326
+\c@biburllcpenalty=\count327
+\c@smartand=\count328
 )
 Package biblatex Info: Trying to load bibliography style 'numeric'...
 Package biblatex Info: ... file 'numeric.bbx' found.
 
-(/usr/share/texlive/texmf-dist/tex/latex/biblatex/bbx/numeric.bbx
-File: numeric.bbx 2016/03/03 v3.3 biblatex bibliography style (PK/JW/AB)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/biblatex/bbx/numeric.bbx
+File: numeric.bbx 2018/03/04 v3.11 biblatex bibliography style (PK/MW)
 Package biblatex Info: Trying to load bibliography style 'standard'...
 Package biblatex Info: ... file 'standard.bbx' found.
 
-(/usr/share/texlive/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
-File: standard.bbx 2016/03/03 v3.3 biblatex bibliography style (PK/JW/AB)
-\c@bbx:relatedcount=\count324
-\c@bbx:relatedtotal=\count325
+(/usr/local/texlive/2018/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
+File: standard.bbx 2018/03/04 v3.11 biblatex bibliography style (PK/MW)
+\c@bbx:relatedcount=\count329
+\c@bbx:relatedtotal=\count330
 ))
 Package biblatex Info: Trying to load citation style 'numeric'...
 Package biblatex Info: ... file 'numeric.cbx' found.
 
-(/usr/share/texlive/texmf-dist/tex/latex/biblatex/cbx/numeric.cbx
-File: numeric.cbx 2016/03/03 v3.3 biblatex citation style (PK/JW/AB)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/biblatex/cbx/numeric.cbx
+File: numeric.cbx 2018/03/04 v3.11 biblatex citation style (PK/MW)
 Package biblatex Info: Redefining '\cite'.
 Package biblatex Info: Redefining '\parencite'.
 Package biblatex Info: Redefining '\footcite'.
@@ -572,18 +587,38 @@ Package biblatex Info: Redefining '\smartcites'.
 Package biblatex Info: Trying to load configuration file...
 Package biblatex Info: ... file 'biblatex.cfg' found.
 
-(/usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.cfg
+(/usr/local/texlive/2018/texmf-dist/tex/latex/biblatex/biblatex.cfg
 File: biblatex.cfg 
-)))
-\c@theorem=\count326
+))
+(/usr/local/texlive/2018/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 99.
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen147
+\Gin@req@width=\dimen148
+)
+\c@theorem=\count331
 Package biblatex Info: Trying to load language 'english'...
 Package biblatex Info: ... file 'english.lbx' found.
 
-(/usr/share/texlive/texmf-dist/tex/latex/biblatex/lbx/english.lbx
-File: english.lbx 2016/03/03 v3.3 biblatex localization (PK/JW/AB)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/biblatex/lbx/english.lbx
+File: english.lbx 2018/03/04 v3.11 biblatex localization (PK/MW)
 )
-\@quotelevel=\count327
-\@quotereset=\count328
+\@quotelevel=\count332
+\@quotereset=\count333
 
 (./thesis.aux (./abstract.aux) (./intro.aux) (./equal.aux) (./cfo.aux)
 (./conclusion.aux))
@@ -622,21 +657,54 @@ Sidefoothsep and sidefootwidth: 7pt and 50pt
 Sidefootvsep and sidefootheight: 14.5pt and 546.64995pt
 ******************************************************
 
-Package biblatex Info: No input encoding detected.
-(biblatex)             Assuming 'ascii'.
+Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Automatic encoding selection.
-(biblatex)             Assuming data encoding 'ascii'.
-\openout4 = `thesis.bcf'.
+(biblatex)             Assuming data encoding 'utf8'.
+\openout5 = `thesis.bcf'.
 
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'thesis.bbl' found.
 (./thesis.bbl)
 Package biblatex Info: Reference section=0 on input line 19.
 Package biblatex Info: Reference segment=0 on input line 19.
- [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2]
-[3]
+(/usr/local/texlive/2018/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count334
+\scratchdimen=\dimen149
+\scratchbox=\box29
+\nofMPsegments=\count335
+\nofMParguments=\count336
+\everyMPshowfont=\toks23
+\MPscratchCnt=\count337
+\MPscratchDim=\dimen150
+\MPnumerator=\count338
+\makeMPintoPDFobject=\count339
+\everyMPtoPDFconversion=\toks24
+) (/usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+
+(/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+))
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+38.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 456.
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+[1
+
+{/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+[2] [3]
 \openout2 = `abstract.aux'.
 
  (./abstract.tex [1
@@ -652,8 +720,8 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 
 ] (./thesis.lof) [2
 
-] (./thesis.lot)
-[3
+]
+(./thesis.lot) [3
 
 ] [4]
 \openout2 = `intro.aux'.
@@ -661,76 +729,97 @@ LaTeX Font Info:    External font `cmex10' loaded for size
  (./intro.tex [1
 
 
-] [2] (./related_works.tex)) [3]
+] [2] (./related_works.tex [3])) [4]
 \openout2 = `equal.aux'.
 
- (./equal.tex
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 9.
 
-(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+(./equal.tex
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 9.
+ (/usr/local/texlive/2018/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 9.
- [4
+
+[5
 
 
 
-]) [5]
+]
+<figures/plot_of_division_function.png, id=53, 292.09125pt x 195.73125pt>
+File: figures/plot_of_division_function.png Graphic file (type png)
+<use figures/plot_of_division_function.png>
+Package pdftex.def Info: figures/plot_of_division_function.png  used on input l
+ine 43.
+(pdftex.def)             Requested size: 292.09052pt x 195.73076pt.
+<figures/plot_of_multiplication_func.png, id=55, 287.0725pt x 203.76125pt>
+File: figures/plot_of_multiplication_func.png Graphic file (type png)
+<use figures/plot_of_multiplication_func.png>
+Package pdftex.def Info: figures/plot_of_multiplication_func.png  used on input
+ line 54.
+(pdftex.def)             Requested size: 287.0718pt x 203.76074pt.
+) [6 <./figures/plot_of_division_function.png>] [7 <./figures/plot_of_multiplic
+ation_func.png>]
 \openout2 = `cfo.aux'.
 
- (./cfo.tex)
-[6
+ (./cfo.tex) [8
 
 
 
 ]
 \openout2 = `conclusion.aux'.
 
- (./conclusion.tex) [7
+ (./conclusion.tex) [9
 
 
 
 ]
+Overfull \hbox (9.67142pt too wide) in paragraph at lines 89--89
+\OT1/cmr/m/n/12 Es-ti-ma-tors for Wire-less Chan-nel State In-for-ma-tion''. In
+: \OT1/cmr/m/it/12 arXiv preprint arXiv:1707.06260
+ []
 
-LaTeX Warning: Empty bibliography on input line 88.
+[10
 
-\tf@toc=\write5
-\openout5 = `thesis.toc'.
 
-\tf@lof=\write6
-\openout6 = `thesis.lof'.
+] [11]
+\tf@toc=\write6
+\openout6 = `thesis.toc'.
 
-\tf@lot=\write7
-\openout7 = `thesis.lot'.
+\tf@lof=\write7
+\openout7 = `thesis.lof'.
 
-(./thesis.aux (./abstract.aux) (./intro.aux) (./equal.aux) (./cfo.aux)
-(./conclusion.aux))
+\tf@lot=\write8
+\openout8 = `thesis.lot'.
+
+ (./thesis.aux (./abstract.aux) (./intro.aux) (./equal.aux) (./cfo.aux) (./conc
+lusion.aux))
 Package logreq Info: Writing requests to 'thesis.run.xml'.
 \openout1 = `thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 9456 strings out of 493029
- 152002 string characters out of 6136233
- 590384 words of memory out of 5000000
- 12915 multiletter control sequences out of 15000+600000
- 9152 words of font info for 32 fonts, out of 8000000 for 9000
+ 11629 strings out of 492639
+ 192743 string characters out of 6129287
+ 649002 words of memory out of 5000000
+ 15398 multiletter control sequences out of 15000+600000
+ 9499 words of font info for 33 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
- 48i,11n,32p,875b,668s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmsl12.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmsy8.pfb>
-Output written on thesis.pdf (15 pages, 109413 bytes).
+ 44i,11n,45p,1131b,1156s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
+></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb>
+</usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><
+/usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></u
+sr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr
+/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/lo
+cal/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl12.pfb></usr/loc
+al/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/loca
+l/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/
+texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on thesis.pdf (19 pages, 198010 bytes).
 PDF statistics:
- 89 PDF objects out of 1000 (max. 8388607)
- 62 compressed objects within 1 object stream
+ 111 PDF objects out of 1000 (max. 8388607)
+ 75 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 11 words of extra memory for PDF output out of 10000 (max. 10000000)
 

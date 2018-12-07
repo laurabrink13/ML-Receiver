@@ -1,0 +1,485 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.9 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global}
+    \entry{botoca}{article}{}
+      \name{author}{3}{}{%
+        {{hash=56ebb9a275dc8ae201f9ceef77a4d7d4}{%
+           family={Botoca},
+           familyi={B\bibinitperiod},
+           given={Corina},
+           giveni={C\bibinitperiod}}}%
+        {{hash=2193cdd1a7166d3a66a3e9b1c0d0e8cc}{%
+           family={Budura},
+           familyi={B\bibinitperiod},
+           given={Georgeta},
+           giveni={G\bibinitperiod}}}%
+        {{hash=ee3074ee6c85e2c42d427bf8d0e4ca74}{%
+           family={Nicolae},
+           familyi={N\bibinitperiod},
+           given={Miclau},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{89e8c9acf7e1fc9468b1def874e55bf7}
+      \strng{fullhash}{89e8c9acf7e1fc9468b1def874e55bf7}
+      \strng{bibnamehash}{89e8c9acf7e1fc9468b1def874e55bf7}
+      \strng{authorbibnamehash}{89e8c9acf7e1fc9468b1def874e55bf7}
+      \strng{authornamehash}{89e8c9acf7e1fc9468b1def874e55bf7}
+      \strng{authorfullhash}{89e8c9acf7e1fc9468b1def874e55bf7}
+      \field{sortinit}{B}
+      \field{sortinithash}{276475738cc058478c1677046f857703}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Seria Electronică Şi Telecommuncaţii, Transactions on Electronics and Communications}
+      \field{title}{Nonlinear Channel Equalization Using Complex Neural Networks}
+      \field{year}{2004}
+      \field{pages}{227\bibrangedash 231}
+      \range{pages}{5}
+    \endentry
+    \entry{diamandis}{article}{}
+      \name{author}{1}{}{%
+        {{hash=8c950171bc25a5a060dfa2e79439ef27}{%
+           family={Diamandis},
+           familyi={D\bibinitperiod},
+           given={Theo},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{8c950171bc25a5a060dfa2e79439ef27}
+      \strng{fullhash}{8c950171bc25a5a060dfa2e79439ef27}
+      \strng{bibnamehash}{8c950171bc25a5a060dfa2e79439ef27}
+      \strng{authorbibnamehash}{8c950171bc25a5a060dfa2e79439ef27}
+      \strng{authornamehash}{8c950171bc25a5a060dfa2e79439ef27}
+      \strng{authorfullhash}{8c950171bc25a5a060dfa2e79439ef27}
+      \field{sortinit}{D}
+      \field{sortinithash}{2ef1bd9a78cc71eb74d7231c635177b8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Departement of Electrical Engineering, Stanford University}
+      \field{title}{Survey on Deep Learning Techniques for Wireless Communications}
+      \field{year}{2017}
+    \endentry
+    \entry{dorner2017}{article}{}
+      \name{author}{4}{}{%
+        {{hash=aa3d1ffa2b100a2e0167c0ce2969a522}{%
+           family={Dörner},
+           familyi={D\bibinitperiod},
+           given={Sebastian},
+           giveni={S\bibinitperiod}}}%
+        {{hash=5bbb55f6af035643376019c87d427fc9}{%
+           family={Cammerer},
+           familyi={C\bibinitperiod},
+           given={Sebastian},
+           giveni={S\bibinitperiod}}}%
+        {{hash=0547b0893e0b44f83e1a08d426b10ce5}{%
+           family={Hoydis},
+           familyi={H\bibinitperiod},
+           given={Jakob},
+           giveni={J\bibinitperiod}}}%
+        {{hash=d4cae705d18001258d75a663c1596340}{%
+           family={Brink},
+           familyi={B\bibinitperiod},
+           given={Stephan\bibnamedelima ten},
+           giveni={S\bibinitperiod\bibinitdelim t\bibinitperiod}}}%
+      }
+      \strng{namehash}{c76f97cc4439a2366938914078e2b71a}
+      \strng{fullhash}{c4a5566a7ec421500b11d1c9180ca2c7}
+      \strng{bibnamehash}{c76f97cc4439a2366938914078e2b71a}
+      \strng{authorbibnamehash}{c76f97cc4439a2366938914078e2b71a}
+      \strng{authornamehash}{c76f97cc4439a2366938914078e2b71a}
+      \strng{authorfullhash}{c4a5566a7ec421500b11d1c9180ca2c7}
+      \field{sortinit}{D}
+      \field{sortinithash}{2ef1bd9a78cc71eb74d7231c635177b8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{arXiv preprint arxiv:1707.03384}
+      \field{title}{Deep Learning-Based Communication Over the Air}
+      \field{year}{2017}
+    \endentry
+    \entry{farsad2018}{article}{}
+      \name{author}{2}{}{%
+        {{hash=101613ef85bad944583479a68b3c9144}{%
+           family={Farsad},
+           familyi={F\bibinitperiod},
+           given={Nariman},
+           giveni={N\bibinitperiod}}}%
+        {{hash=9a56ad5172ab29301c3cbfc8f03dbd25}{%
+           family={Goldsmith},
+           familyi={G\bibinitperiod},
+           given={Andrea},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{39b862e76a3eb15642d7d2def5f01fdc}
+      \strng{fullhash}{39b862e76a3eb15642d7d2def5f01fdc}
+      \strng{bibnamehash}{39b862e76a3eb15642d7d2def5f01fdc}
+      \strng{authorbibnamehash}{39b862e76a3eb15642d7d2def5f01fdc}
+      \strng{authornamehash}{39b862e76a3eb15642d7d2def5f01fdc}
+      \strng{authorfullhash}{39b862e76a3eb15642d7d2def5f01fdc}
+      \field{sortinit}{F}
+      \field{sortinithash}{669c706c6f1fbf3b5a83d26f1d9e9e72}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on Signal Processing}
+      \field{title}{Neural Network Detection of Data Sequences in Communication Systems}
+      \field{volume}{PP}
+      \field{year}{2018}
+    \endentry
+    \entry{finn}{article}{}
+      \name{author}{3}{}{%
+        {{hash=058e82495825ae376c6a96a12169e6ee}{%
+           family={Finn},
+           familyi={F\bibinitperiod},
+           given={Chelsea},
+           giveni={C\bibinitperiod}}}%
+        {{hash=e28d4ee199593959d8c29980a64f1974}{%
+           family={Abbeel},
+           familyi={A\bibinitperiod},
+           given={Pieter},
+           giveni={P\bibinitperiod}}}%
+        {{hash=c9545da54b33744da25943cdf66eadac}{%
+           family={Levine},
+           familyi={L\bibinitperiod},
+           given={Sergey},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{8fd1a9b285463d1536dcb64b4011a015}
+      \strng{fullhash}{8fd1a9b285463d1536dcb64b4011a015}
+      \strng{bibnamehash}{8fd1a9b285463d1536dcb64b4011a015}
+      \strng{authorbibnamehash}{8fd1a9b285463d1536dcb64b4011a015}
+      \strng{authornamehash}{8fd1a9b285463d1536dcb64b4011a015}
+      \strng{authorfullhash}{8fd1a9b285463d1536dcb64b4011a015}
+      \field{sortinit}{F}
+      \field{sortinithash}{669c706c6f1fbf3b5a83d26f1d9e9e72}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{International Conference on Machine Learning}
+      \field{title}{Model-agnostic meta-learning for fast adaptation of deep networks}
+      \field{year}{2017}
+    \endentry
+    \entry{kim2018}{article}{}
+      \name{author}{6}{}{%
+        {{hash=0b58fa37f7f7440edaa58ecbca652d47}{%
+           family={Kim},
+           familyi={K\bibinitperiod},
+           given={Hyeji},
+           giveni={H\bibinitperiod}}}%
+        {{hash=70913b4a5e93096c4dcaf1cac9be77e2}{%
+           family={Jiang},
+           familyi={J\bibinitperiod},
+           given={Yihan},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=6d26f5cd5b3a2aec5e8d70816fad648c}{%
+           family={Rana},
+           familyi={R\bibinitperiod},
+           given={Ranvir},
+           giveni={R\bibinitperiod}}}%
+        {{hash=78792c9cde91d47fdd7c1e165a524f70}{%
+           family={Kannan},
+           familyi={K\bibinitperiod},
+           given={Sreeram},
+           giveni={S\bibinitperiod}}}%
+        {{hash=0a708b0573da1c8e751ef081a44490b9}{%
+           family={Oh},
+           familyi={O\bibinitperiod},
+           given={Sewoong},
+           giveni={S\bibinitperiod}}}%
+        {{hash=a0ad9af0a8b432db8f02c85e7da0facb}{%
+           family={Viswanath},
+           familyi={V\bibinitperiod},
+           given={Pramod},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{655b78f6fa261fc451ea097d4b1f2d07}
+      \strng{fullhash}{5bec4270cbcd692d57d94cd36fef9968}
+      \strng{bibnamehash}{655b78f6fa261fc451ea097d4b1f2d07}
+      \strng{authorbibnamehash}{655b78f6fa261fc451ea097d4b1f2d07}
+      \strng{authornamehash}{655b78f6fa261fc451ea097d4b1f2d07}
+      \strng{authorfullhash}{5bec4270cbcd692d57d94cd36fef9968}
+      \field{sortinit}{K}
+      \field{sortinithash}{9fd838a31ba64d981e8f44562bd33f89}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{International Conference on Learning Representations}
+      \field{title}{Communication Algorithms via Deep Learning}
+      \field{year}{2018}
+    \endentry
+    \entry{kimnips}{inproceedings}{}
+      \name{author}{5}{}{%
+        {{hash=0b58fa37f7f7440edaa58ecbca652d47}{%
+           family={Kim},
+           familyi={K\bibinitperiod},
+           given={Hyeji},
+           giveni={H\bibinitperiod}}}%
+        {{hash=1a0a7fbaa0a74b961341626dcb9bb43f}{%
+           family={Jian},
+           familyi={J\bibinitperiod},
+           given={Yihan},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=78792c9cde91d47fdd7c1e165a524f70}{%
+           family={Kannan},
+           familyi={K\bibinitperiod},
+           given={Sreeram},
+           giveni={S\bibinitperiod}}}%
+        {{hash=0a708b0573da1c8e751ef081a44490b9}{%
+           family={Oh},
+           familyi={O\bibinitperiod},
+           given={Sewoong},
+           giveni={S\bibinitperiod}}}%
+        {{hash=a0ad9af0a8b432db8f02c85e7da0facb}{%
+           family={Viswanath},
+           familyi={V\bibinitperiod},
+           given={Pramod},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{655b78f6fa261fc451ea097d4b1f2d07}
+      \strng{fullhash}{ce48c416e48a45f3a0a5675cdd7758c3}
+      \strng{bibnamehash}{655b78f6fa261fc451ea097d4b1f2d07}
+      \strng{authorbibnamehash}{655b78f6fa261fc451ea097d4b1f2d07}
+      \strng{authornamehash}{655b78f6fa261fc451ea097d4b1f2d07}
+      \strng{authorfullhash}{ce48c416e48a45f3a0a5675cdd7758c3}
+      \field{sortinit}{K}
+      \field{sortinithash}{9fd838a31ba64d981e8f44562bd33f89}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Neural Information Processing Systems}
+      \field{title}{Deepcode: Feedback Codes via Deep Learning}
+      \field{year}{2018}
+    \endentry
+    \entry{lake}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=f2dbf08b0944b5201e5315920d480184}{%
+           family={Lake},
+           familyi={L\bibinitperiod},
+           given={Brenden\bibnamedelima M.},
+           giveni={B\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=bd2be300d445e9f6db7808f9533e66cb}{%
+           family={Salakhutdinov},
+           familyi={S\bibinitperiod},
+           given={Ruslan},
+           giveni={R\bibinitperiod}}}%
+        {{hash=bf071dd4a01b75623408640c57abfd8e}{%
+           family={Tenenbaum},
+           familyi={T\bibinitperiod},
+           given={Joshua\bibnamedelima B.},
+           giveni={J\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+      }
+      \strng{namehash}{7adca0a21961e3c18e36e38fcdfcb278}
+      \strng{fullhash}{7adca0a21961e3c18e36e38fcdfcb278}
+      \strng{bibnamehash}{7adca0a21961e3c18e36e38fcdfcb278}
+      \strng{authorbibnamehash}{7adca0a21961e3c18e36e38fcdfcb278}
+      \strng{authornamehash}{7adca0a21961e3c18e36e38fcdfcb278}
+      \strng{authorfullhash}{7adca0a21961e3c18e36e38fcdfcb278}
+      \field{sortinit}{L}
+      \field{sortinithash}{2c7981aaabc885868aba60f0c09ee20f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Science}
+      \field{number}{6266}
+      \field{title}{Human-level concept learning through probabilistic program induction}
+      \field{volume}{350}
+      \field{year}{2015}
+      \field{pages}{1332\bibrangedash 1338}
+      \range{pages}{7}
+    \endentry
+    \entry{osheamimo}{article}{}
+      \name{author}{3}{}{%
+        {{hash=1168ef24c5478085b24966bb867edfc3}{%
+           family={O'Shea},
+           familyi={O\bibinitperiod},
+           given={Timothy},
+           giveni={T\bibinitperiod}}}%
+        {{hash=1b5c3adc1c62ace7aa4f80733767f466}{%
+           family={Erpek},
+           familyi={E\bibinitperiod},
+           given={Tugba},
+           giveni={T\bibinitperiod}}}%
+        {{hash=2d06b755eba63b1401841a30730dd441}{%
+           family={Clancy},
+           familyi={C\bibinitperiod},
+           given={T.\bibnamedelimi Charles},
+           giveni={T\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+      }
+      \strng{namehash}{87b671f47201af5796d351a11e30e29e}
+      \strng{fullhash}{87b671f47201af5796d351a11e30e29e}
+      \strng{bibnamehash}{87b671f47201af5796d351a11e30e29e}
+      \strng{authorbibnamehash}{87b671f47201af5796d351a11e30e29e}
+      \strng{authornamehash}{87b671f47201af5796d351a11e30e29e}
+      \strng{authorfullhash}{87b671f47201af5796d351a11e30e29e}
+      \field{sortinit}{O}
+      \field{sortinithash}{dad3efd0836470093a7b4a7bb756eb8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{arXiv preprint arXiv:1707.07980}
+      \field{title}{Deep Learning-Based MIMO Communications}
+      \field{year}{2017}
+    \endentry
+    \entry{osheacsi}{article}{}
+      \name{author}{3}{}{%
+        {{hash=1168ef24c5478085b24966bb867edfc3}{%
+           family={O'Shea},
+           familyi={O\bibinitperiod},
+           given={Timothy},
+           giveni={T\bibinitperiod}}}%
+        {{hash=571f4793dc37ceba53883260fd0f9ab0}{%
+           family={Karra},
+           familyi={K\bibinitperiod},
+           given={Kiran},
+           giveni={K\bibinitperiod}}}%
+        {{hash=2d06b755eba63b1401841a30730dd441}{%
+           family={Clancy},
+           familyi={C\bibinitperiod},
+           given={T.\bibnamedelimi Charles},
+           giveni={T\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+      }
+      \strng{namehash}{50e500030ae5c15f16943970659b1b07}
+      \strng{fullhash}{50e500030ae5c15f16943970659b1b07}
+      \strng{bibnamehash}{50e500030ae5c15f16943970659b1b07}
+      \strng{authorbibnamehash}{50e500030ae5c15f16943970659b1b07}
+      \strng{authornamehash}{50e500030ae5c15f16943970659b1b07}
+      \strng{authorfullhash}{50e500030ae5c15f16943970659b1b07}
+      \field{sortinit}{O}
+      \field{sortinithash}{dad3efd0836470093a7b4a7bb756eb8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{arXiv preprint arXiv:1707.06260}
+      \field{title}{Learning Approximate Neural Estimators for Wireless Channel State Information}
+      \field{year}{2017}
+    \endentry
+    \entry{raghavendra}{article}{}
+      \name{author}{2}{}{%
+        {{hash=35a89d92b1453c34db11a7324851d6fb}{%
+           family={Raghavendra},
+           familyi={R\bibinitperiod},
+           given={K.\bibnamedelimi T.},
+           giveni={K\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+        {{hash=1517dffd8d27143d29f56e19666b56f7}{%
+           family={Tripathy},
+           familyi={T\bibinitperiod},
+           given={Amiya\bibnamedelima K.},
+           giveni={A\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+      }
+      \strng{namehash}{93254cff4243dcd1cb9bea6676e3293e}
+      \strng{fullhash}{93254cff4243dcd1cb9bea6676e3293e}
+      \strng{bibnamehash}{93254cff4243dcd1cb9bea6676e3293e}
+      \strng{authorbibnamehash}{93254cff4243dcd1cb9bea6676e3293e}
+      \strng{authornamehash}{93254cff4243dcd1cb9bea6676e3293e}
+      \strng{authorfullhash}{93254cff4243dcd1cb9bea6676e3293e}
+      \field{sortinit}{R}
+      \field{sortinithash}{da6b42bd3ab22fee61abed031ee405f7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Neural Network World}
+      \field{title}{An Efficient Channel Equalizer Using Artificial Neural Networks}
+      \field{volume}{16}
+      \field{year}{2006}
+      \field{pages}{357\bibrangedash 368}
+      \range{pages}{12}
+    \endentry
+    \entry{wang}{article}{}
+      \name{author}{6}{}{%
+        {{hash=7c0ff190707875870cc2057a18f5a6a8}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Tianqi},
+           giveni={T\bibinitperiod}}}%
+        {{hash=c824e6070f31269885a0497b5041aab6}{%
+           family={Wen},
+           familyi={W\bibinitperiod},
+           given={Chao-Kai},
+           giveni={C\bibinithyphendelim K\bibinitperiod}}}%
+        {{hash=5861be1c909a7ddd743164fecf6dacf6}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Hanqing},
+           giveni={H\bibinitperiod}}}%
+        {{hash=fd9d93585d1317978d7af8e8a346a262}{%
+           family={Gao},
+           familyi={G\bibinitperiod},
+           given={Feifei},
+           giveni={F\bibinitperiod}}}%
+        {{hash=fcb33f0c8626d335119785afb031c1db}{%
+           family={Jiang},
+           familyi={J\bibinitperiod},
+           given={Tao},
+           giveni={T\bibinitperiod}}}%
+        {{hash=c59d8dd54aa89c2a33d932d96e6f4bbd}{%
+           family={Jin},
+           familyi={J\bibinitperiod},
+           given={Shi},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{e06a861708b3a379a8684666a25a285c}
+      \strng{fullhash}{af75a758bc55c055cc8c42cc13b307ce}
+      \strng{bibnamehash}{e06a861708b3a379a8684666a25a285c}
+      \strng{authorbibnamehash}{e06a861708b3a379a8684666a25a285c}
+      \strng{authornamehash}{e06a861708b3a379a8684666a25a285c}
+      \strng{authorfullhash}{af75a758bc55c055cc8c42cc13b307ce}
+      \field{sortinit}{W}
+      \field{sortinithash}{ecb89ff85896a47dc313960773ac311d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{China Communications}
+      \field{number}{11}
+      \field{title}{Deep Learning for Wireless Physical Layer: Opportunities and Challenges}
+      \field{volume}{14}
+      \field{year}{2017}
+      \field{pages}{92\bibrangedash 111}
+      \range{pages}{20}
+    \endentry
+    \entry{ye2018}{incollection}{}
+      \name{author}{3}{}{%
+        {{hash=27dfc5d4754ab8d88dfd8829759a8109}{%
+           family={Ye},
+           familyi={Y\bibinitperiod},
+           given={Hao},
+           giveni={H\bibinitperiod}}}%
+        {{hash=1408aae9f11912b5e9d07ff8ac47d8c6}{%
+           family={Ye\bibnamedelima Li},
+           familyi={Y\bibinitperiod\bibinitdelim L\bibinitperiod},
+           given={Geoffrey},
+           giveni={G\bibinitperiod}}}%
+        {{hash=d130e0fb0614fc89f8792edf59e1c68a}{%
+           family={Juang},
+           familyi={J\bibinitperiod},
+           given={Biing-Hwang},
+           giveni={B\bibinithyphendelim H\bibinitperiod}}}%
+      }
+      \strng{namehash}{3d2ceea00dc3435c19f38aaa5a677805}
+      \strng{fullhash}{3d2ceea00dc3435c19f38aaa5a677805}
+      \strng{bibnamehash}{3d2ceea00dc3435c19f38aaa5a677805}
+      \strng{authorbibnamehash}{3d2ceea00dc3435c19f38aaa5a677805}
+      \strng{authornamehash}{3d2ceea00dc3435c19f38aaa5a677805}
+      \strng{authorfullhash}{3d2ceea00dc3435c19f38aaa5a677805}
+      \field{sortinit}{Y}
+      \field{sortinithash}{b8d711a035f7be9840c721c82920477e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{IEEE Wireless Communications Letters}
+      \field{title}{Power of Deep Learning for Channel Estimation and Signal Detection in OFDM Systems}
+      \field{year}{2018}
+      \field{pages}{114\bibrangedash 117}
+      \range{pages}{4}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

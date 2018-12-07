@@ -1,0 +1,5 @@
+[0] Config.pm:302> INFO - This is Biber 2.11
+[0] Config.pm:305> INFO - Logfile is 'thesis.tex.blg'
+[25] biber:313> INFO - === Wed Dec  5, 2018, 17:39:18
+[123] Utils.pm:209> ERROR - Cannot find control file 'thesis.tex.bcf'! - Did latex run successfully on your .tex file before you ran biber?
+[123] Biber.pm:114> INFO - ERRORS: 1
