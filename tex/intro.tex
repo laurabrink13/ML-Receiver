@@ -36,7 +36,25 @@ $\tilde{\vec{x}}=[\tilde{x}_0, \tilde{x_1}, \ldots \tilde{x}_{n+l}]$.
 
 Receivers must be able to handle garbled signals in order to transmit data in the real world.  The process of removing the inter-symbol interference is called equalization.  The goal of equalization is to take in a garbled signal and output a signal with minimal inter-symbol interference. 
 
-INSERT IMAGE OF 2 TAP CHANNEL EFFECTS ON QPSK
+\setlength{\tabcolsep}{0pt}
+\begin{figure}
+  \centering
+  \label{fig:multi_tap}\caption{The effects of a two tap channel on the QPSK constellation.}
+  \begin{tabular}{ccc}
+    \includegraphics[width=45mm]{figures/equal_intro/snr_0_c3/cfo_0.png}&
+    \includegraphics[width=45mm]{figures/equal_intro/snr_20_c3/cfo_0.png}&
+    \includegraphics[width=45mm]{figures/equal_intro/snr_10_c3/cfo_0.png}\\
+    \includegraphics[width=45mm]{figures/equal_intro/snr_0_c2/cfo_0.png}&
+    \includegraphics[width=45mm]{figures/equal_intro/snr_20_c2/cfo_0.png}&
+    \includegraphics[width=45mm]{figures/equal_intro/snr_10_c2/cfo_0.png}\\
+    \includegraphics[width=45mm]{figures/equal_intro/snr_0_c4/cfo_0.png}&
+    \includegraphics[width=45mm]{figures/equal_intro/snr_20_c4/cfo_0.png}&
+    \includegraphics[width=45mm]{figures/equal_intro/snr_10_c4/cfo_0.png}\\
+    \includegraphics[width=45mm]{figures/equal_intro/snr_0_c5/cfo_0.png}&
+    \includegraphics[width=45mm]{figures/equal_intro/snr_20_c5/cfo_0.png}&
+    \includegraphics[width=45mm]{figures/equal_intro/snr_10_c5/cfo_0.png}\\
+  \end{tabular}
+\end{figure}
 
 Engineers have built processes to remove inter-symbol interference.  First, let's go into the case when the channel characteristics are known.
 
@@ -75,7 +93,23 @@ $$\tilde{x}_m = x_m e^{mj\omega}$$
 
 The effect will look like something like this 
 
-INSERT IMAGE OF CFO OCCURRING on QPSK
+\setlength{\tabcolsep}{0pt}
+\begin{figure}
+  \centering
+  \label{fig:single_tap_cfo}\caption{The effects of a carrier frequency offset on the QPSK constellation.}
+  \begin{tabular}{ccc}
+    \includegraphics[width=50mm]{figures/cfo_intro/snr_0/cfo_0.png}&
+    \includegraphics[width=50mm]{figures/cfo_intro/snr_0/cfo_1.png}&
+    \includegraphics[width=50mm]{figures/cfo_intro/snr_0/cfo_2.png}\\
+    \includegraphics[width=50mm]{figures/cfo_intro/snr_20/cfo_0.png}&
+    \includegraphics[width=50mm]{figures/cfo_intro/snr_20/cfo_1.png}&
+    \includegraphics[width=50mm]{figures/cfo_intro/snr_20/cfo_2.png}\\
+    \includegraphics[width=50mm]{figures/cfo_intro/snr_10/cfo_0.png}&
+    \includegraphics[width=50mm]{figures/cfo_intro/snr_10/cfo_1.png}&
+    \includegraphics[width=50mm]{figures/cfo_intro/snr_10/cfo_2.png}
+  \end{tabular}
+\end{figure}
+
 
 \subsubsection{How do real systems handle CFO correction?}
 
@@ -89,9 +123,25 @@ What must a modern day receiver handle?  What does it look like when we have bot
 
 $$\tilde{x}_m = (\sum_{i=0}^l a_i x_{m-i})e^{mj\omega} + \eta_i$$
 
-INSERT IMAGE OF AFFECTS OF BOTH CFO AND EQUALIZATION
-
-INSERT IMAGE OF SAME THING WITH NOISE!
+\setlength{\tabcolsep}{0pt}
+\begin{figure}
+  \centering
+  \label{fig:multi_tap_cfo}\caption{The effects of a two tap channel and a carrier frequency offset on the QPSK constellation.}
+  \begin{tabular}{ccc}
+    \includegraphics[width=45mm]{figures/cfo_equal_intro/snr_0_c3/cfo_0.png}&
+    \includegraphics[width=45mm]{figures/cfo_equal_intro/snr_20_c3/cfo_0.png}&
+    \includegraphics[width=45mm]{figures/cfo_equal_intro/snr_10_c3/cfo_0.png}\\
+    \includegraphics[width=45mm]{figures/cfo_equal_intro/snr_0_c2/cfo_0.png}&
+    \includegraphics[width=45mm]{figures/cfo_equal_intro/snr_20_c2/cfo_0.png}&
+    \includegraphics[width=45mm]{figures/cfo_equal_intro/snr_10_c2/cfo_0.png}\\
+    \includegraphics[width=45mm]{figures/cfo_equal_intro/snr_0_c4/cfo_0.png}&
+    \includegraphics[width=45mm]{figures/cfo_equal_intro/snr_20_c4/cfo_0.png}&
+    \includegraphics[width=45mm]{figures/cfo_equal_intro/snr_10_c4/cfo_0.png}\\
+    \includegraphics[width=45mm]{figures/cfo_equal_intro/snr_0_c5/cfo_0.png}&
+    \includegraphics[width=45mm]{figures/cfo_equal_intro/snr_20_c5/cfo_0.png}&
+    \includegraphics[width=45mm]{figures/cfo_equal_intro/snr_10_c5/cfo_0.png}\\
+  \end{tabular}
+\end{figure}
 
 \section{Related Works}
 
