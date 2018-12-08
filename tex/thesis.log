@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.10.4)  8 DEC 2018 12:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.10.4)  8 DEC 2018 13:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -610,32 +610,62 @@ File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 \Gin@req@height=\dimen147
 \Gin@req@width=\dimen148
 )
-\c@theorem=\count331
+(/usr/local/texlive/2018/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2018/05/01 v1.1-162 Sub-captions (AR)
+
+
+Class memoir Warning: You are using the caption package with the memoir class. 
+To prepare we will now reset all captioning macros and configurations to kernel
+ defaults, and then let the caption package take over. Please remember to use
+ the caption package interfaces in order to
+ configure your captions.
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2018/09/12 v3.3-152 Customizing captions (AR)
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2018/09/12 v1.8c caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 64.
+\captionmargin=\dimen149
+\captionmargin@=\dimen150
+\captionwidth=\dimen151
+\caption@tempdima=\dimen152
+\caption@indent=\dimen153
+\caption@parindent=\dimen154
+\caption@hangindent=\dimen155
+)
+\c@caption@flags=\count331
+\c@ContinuedFloat=\count332
+)
+\c@subfigure=\count333
+\c@subtable=\count334
+)
+\c@theorem=\count335
 Package biblatex Info: Trying to load language 'english'...
 Package biblatex Info: ... file 'english.lbx' found.
 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/biblatex/lbx/english.lbx
 File: english.lbx 2018/03/04 v3.11 biblatex localization (PK/MW)
 )
-\@quotelevel=\count332
-\@quotereset=\count333
+\@quotelevel=\count336
+\@quotereset=\count337
 
 (./thesis.aux (./abstract.aux) (./intro.aux) (./equal.aux) (./cfo.aux)
 (./conclusion.aux))
 \openout1 = `thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
 
 
 ******************************************************
@@ -665,21 +695,21 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'thesis.bbl' found.
 (./thesis.bbl)
-Package biblatex Info: Reference section=0 on input line 19.
-Package biblatex Info: Reference segment=0 on input line 19.
+Package biblatex Info: Reference section=0 on input line 20.
+Package biblatex Info: Reference segment=0 on input line 20.
 
 (/usr/local/texlive/2018/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count334
-\scratchdimen=\dimen149
+\scratchcounter=\count338
+\scratchdimen=\dimen156
 \scratchbox=\box29
-\nofMPsegments=\count335
-\nofMParguments=\count336
+\nofMPsegments=\count339
+\nofMParguments=\count340
 \everyMPshowfont=\toks23
-\MPscratchCnt=\count337
-\MPscratchDim=\dimen150
-\MPnumerator=\count338
-\makeMPintoPDFobject=\count339
+\MPscratchCnt=\count341
+\MPscratchDim=\dimen157
+\MPnumerator=\count342
+\makeMPintoPDFobject=\count343
 \everyMPtoPDFconversion=\toks24
 ) (/usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
@@ -701,6 +731,9 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+
 [1
 
 {/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
@@ -726,54 +759,85 @@ LaTeX Font Info:    External font `cmex10' loaded for size
  (./intro.tex [1
 
 
-] [2] (./related_works.tex [3]
-<figures/osheaatt2.png, id=39, 2057.6875pt x 805.0075pt>
+]
+<figures/cfo_intro/cfo_0_snrinf.png, id=29, 433.62pt x 289.08pt>
+File: figures/cfo_intro/cfo_0_snrinf.png Graphic file (type png)
+<use figures/cfo_intro/cfo_0_snrinf.png>
+Package pdftex.def Info: figures/cfo_intro/cfo_0_snrinf.png  used on input line
+ 44.
+(pdftex.def)             Requested size: 170.71652pt x 113.8126pt.
+<figures/cfo_intro/cfo_0_snr20.png, id=31, 433.62pt x 289.08pt>
+File: figures/cfo_intro/cfo_0_snr20.png Graphic file (type png)
+<use figures/cfo_intro/cfo_0_snr20.png>
+Package pdftex.def Info: figures/cfo_intro/cfo_0_snr20.png  used on input line 
+45.
+(pdftex.def)             Requested size: 170.71652pt x 113.8126pt.
+File: figures/cfo_intro/cfo_0_snr20.png Graphic file (type png)
+<use figures/cfo_intro/cfo_0_snr20.png>
+Package pdftex.def Info: figures/cfo_intro/cfo_0_snr20.png  used on input line 
+46.
+(pdftex.def)             Requested size: 170.71652pt x 113.8126pt.
+
+Overfull \hbox (43.19453pt too wide) in paragraph at lines 43--51
+ [][] 
+ []
+
+[2 <./figures/cfo_intro/cfo_0_snrinf.png> <./figures/cfo_intro/cfo_0_snr20.png>
+] [3] (./related_works.tex
+<figures/osheaatt2.png, id=44, 2057.6875pt x 805.0075pt>
 File: figures/osheaatt2.png Graphic file (type png)
 <use figures/osheaatt2.png>
 Package pdftex.def Info: figures/osheaatt2.png  used on input line 21.
 (pdftex.def)             Requested size: 455.24408pt x 178.09715pt.
- [4 <./figures/osheaatt2.png>])) [5]
+
+
+Package caption Warning: \label without proper reference on input line 24.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `fig:oshea' on page 4 undefined on input line 27.
+
+)) [4] [5 <./figures/osheaatt2.png>]
 \openout2 = `equal.aux'.
 
-
-(./equal.tex
+ (./equal.tex
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 9.
- (/usr/local/texlive/2018/texmf-dist/tex/latex/base/omscmr.fd
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 9.
-
-[6
+ [6
 
 
 
 ]
-<figures/plot_of_division_function.png, id=50, 292.09125pt x 195.73125pt>
+<figures/plot_of_division_function.png, id=55, 292.09125pt x 195.73125pt>
 File: figures/plot_of_division_function.png Graphic file (type png)
 <use figures/plot_of_division_function.png>
 Package pdftex.def Info: figures/plot_of_division_function.png  used on input l
 ine 33.
 (pdftex.def)             Requested size: 292.09052pt x 195.73076pt.
-<figures/One_tap_channel_inversion.png, id=52, 301.125pt x 206.7725pt>
+<figures/One_tap_channel_inversion.png, id=56, 301.125pt x 206.7725pt>
 File: figures/One_tap_channel_inversion.png Graphic file (type png)
 <use figures/One_tap_channel_inversion.png>
 Package pdftex.def Info: figures/One_tap_channel_inversion.png  used on input l
 ine 41.
 (pdftex.def)             Requested size: 301.12425pt x 206.77199pt.
-<figures/plot_of_multiplication_func.png, id=53, 287.0725pt x 203.76125pt>
+<figures/plot_of_multiplication_func.png, id=57, 287.0725pt x 203.76125pt>
 File: figures/plot_of_multiplication_func.png Graphic file (type png)
 <use figures/plot_of_multiplication_func.png>
 Package pdftex.def Info: figures/plot_of_multiplication_func.png  used on input
  line 52.
 (pdftex.def)             Requested size: 287.0718pt x 203.76074pt.
-<figures/LSTM_loss_multiplication.png, id=54, 309.155pt x 214.8025pt>
+<figures/LSTM_loss_multiplication.png, id=58, 309.155pt x 214.8025pt>
 File: figures/LSTM_loss_multiplication.png Graphic file (type png)
 <use figures/LSTM_loss_multiplication.png>
 Package pdftex.def Info: figures/LSTM_loss_multiplication.png  used on input li
 ne 60.
 (pdftex.def)             Requested size: 309.15424pt x 214.80197pt.
-<figures/incorrect_channels.png, id=55, 402.50375pt x 294.09875pt>
+<figures/incorrect_channels.png, id=59, 402.50375pt x 294.09875pt>
 File: figures/incorrect_channels.png Graphic file (type png)
 <use figures/incorrect_channels.png>
 Package pdftex.def Info: figures/incorrect_channels.png  used on input line 79.
@@ -791,7 +855,8 @@ oss_multiplication.png> <./figures/incorrect_channels.png>] [10]
 ]
 \openout2 = `conclusion.aux'.
 
- (./conclusion.tex) [12
+
+(./conclusion.tex) [12
 
 
 
@@ -799,7 +864,7 @@ oss_multiplication.png> <./figures/incorrect_channels.png>] [10]
 
 
 ]
-Overfull \hbox (9.67142pt too wide) in paragraph at lines 89--89
+Overfull \hbox (9.67142pt too wide) in paragraph at lines 90--90
 \OT1/cmr/m/n/12 Es-ti-ma-tors for Wire-less Chan-nel State In-for-ma-tion''. In
 : \OT1/cmr/m/it/12 arXiv preprint arXiv:1707.06260
  []
@@ -813,18 +878,21 @@ Overfull \hbox (9.67142pt too wide) in paragraph at lines 89--89
 
  (./thesis.aux (./abstract.aux) (./intro.aux) (./equal.aux) (./cfo.aux)
 (./conclusion.aux))
+
+LaTeX Warning: There were undefined references.
+
 Package logreq Info: Writing requests to 'thesis.run.xml'.
 \openout1 = `thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 11661 strings out of 492639
- 193928 string characters out of 6129287
- 650573 words of memory out of 5000000
- 15429 multiletter control sequences out of 15000+600000
+ 12812 strings out of 492639
+ 214914 string characters out of 6129287
+ 672439 words of memory out of 5000000
+ 16569 multiletter control sequences out of 15000+600000
  9499 words of font info for 33 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
- 44i,10n,45p,1131b,1331s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 45i,11n,49p,1131b,1433s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 ></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb>
 </usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><
@@ -835,10 +903,10 @@ cal/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl12.pfb></usr/loc
 al/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/loca
 l/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/
 texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on thesis.pdf (20 pages, 611504 bytes).
+Output written on thesis.pdf (20 pages, 628604 bytes).
 PDF statistics:
- 121 PDF objects out of 1000 (max. 8388607)
+ 125 PDF objects out of 1000 (max. 8388607)
  77 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 31 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 41 words of extra memory for PDF output out of 10000 (max. 10000000)
 
