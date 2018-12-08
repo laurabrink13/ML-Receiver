@@ -1,6 +1,6 @@
 Recently, many researchers have become more interested in applying deep learning techniques to communications systems.  
 We refer the reader to \cite{botoca}\cite{diamandis}\cite{wang}\cite{hemodel}\cite{osheaphys} for surveys and motivations of these kind of works.  
-Most of the works that we have found typically only deal with additive white gaussian noise (AWGN) channels. Only dealing with AWGN channels, essentially removes the problem of equalization. 
+Most of the works that we have found typically only deal with additive white gaussian noise (AWGN) channels or Rayleigh fading channels.
 
 In \cite{dorner2017}, D\"{o}rner et. al. implemented an end to end transmitter and reciever with neural networks that allowed gradients to flow all the way back from the receiver during training.  
 However, they restricted themselves to only sending a certain set of messages, only seeing AWGN channels, and they did not address CFO. 
@@ -11,13 +11,24 @@ Others have been working with generative adversarial networks (GANs) to train an
 For those that do consider more complex channels, most re-train their models for each new channel seen.  Ye et. al. consider OFDM systems where their feedforward neural networks estimate the channel state information then train offline for that specific channel \cite{ye2018}.  
 \cite{raghavendra} considers nonlinear channels but re-trains their network for each new channel.  Note, this work does not go into detail about the architecture used or how the networks are trained. 
 
-Optics and molecules? \cite{farsad2018}
+Goldsmith and Farsad train a detector for optical and moleculular channels \cite{farsad2018}.  They assume a Poisson model for the channel and attempt to predict the probability mass function.  However, they assume that they retrain for each Poisson parameter and they do not address CFO.
 
 Timothy O'Shea's group has been doing some excellent work in this area. 
+O'Shea's first work in this area jointly optimized a transmitter and receiver for a given channel model (AWGN and Rayleigh fading) but the work does not go into detail about the perforamnce for various channels \cite{osheaphys}.
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=16cm]{figures/osheaatt2.png}
+\caption{The impacts of multipath channels and initial phase offsets on bit error performance \cite{osheaatt}.}
+\end{center}
+\label{fig:oshea}
+\end{figure}
+
+In a subsequent paper, O'Shea et. al. explore how multipath channels and random inital phase affects the system performance \cite{osheaatt}.  Figure \ref{fig:oshea} shows how their performance drastically decreased with multipath channels and for non-zero phase offset.
+
+In \cite{osheasynch}, they added an attention model to perform synchronization for time, frequnecy, phase and sample timing offset.  However, their work showed that the synchronization was still quite noisy and did not perform much better than without the attention model \cite{osheaatt}.  Additionally, this work did not consider channel fading. 
+
+O'Shea et. al. has also attempted to use GANs to approxiate the channel response model for AWGN channels with and without phase noise\cite{osheavoid}.  The GANs were unable to find accurate probability density functions to represent the channel response.  
+
 In \cite{osheacsi}, they use convolutional neural networks (CNNs) to estimate, but not correct, carrier frequency offset and timing offset.  However, they only consider AWGN channels and Rayleigh fading channels.  
 In \cite{osheamimo}, they explore how unsupervised learning can train autoencoders for multiple antenna communications.  They do re-train for each new channel and use a Rayleigh fading channel model.
-
-\cite{osheavoid}
-\cite{osheasynch}
-\cite{osheaphys}
-\cite{osheaatt}

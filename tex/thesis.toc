@@ -24,28 +24,28 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {1.3}Related Works}{3}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\chapternumberline {2}Deep Networks for Equalization}{5}
+\contentsline {chapter}{\chapternumberline {2}Deep Networks for Equalization}{6}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.1}Replicate Results}{5}
+\contentsline {section}{\numberline {2.1}Replicate Results}{6}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.2}Channel Estimation}{5}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.3}Channel Equalization}{5}
+\contentsline {section}{\numberline {2.2}Channel Estimation}{6}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{Learning an inverse}{6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{Learning to multiply two inputs}{6}
+\contentsline {subsection}{Learning to multiply two inputs}{7}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.4}Channel Est + Equal}{6}
+\contentsline {section}{\numberline {2.3}Channel Equalization}{7}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\chapternumberline {3}Deep Networks for CFO}{8}
+\contentsline {section}{\numberline {2.4}Channel Est + Equal}{10}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.1}Recurrent Neural Network Follows a Circle}{8}
+\contentsline {chapter}{\chapternumberline {3}Deep Networks for CFO}{11}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.2}Deep Network Carrier Frequency Offset Estimation}{8}
+\contentsline {section}{\numberline {3.1}Recurrent Neural Network Follows a Circle}{11}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.3}Deep Network Carrier Frequency Offset Correction}{8}
+\contentsline {section}{\numberline {3.2}Deep Network Carrier Frequency Offset Estimation}{11}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\chapternumberline {4}Conclusion}{9}
+\contentsline {section}{\numberline {3.3}Deep Network Carrier Frequency Offset Correction}{11}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Bibliography}{10}
+\contentsline {chapter}{\chapternumberline {4}Conclusion}{12}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Bibliography}{13}

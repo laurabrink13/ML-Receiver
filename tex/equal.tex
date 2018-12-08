@@ -15,16 +15,6 @@
 \item want? how to visualize that NN does better than LS
 \end{itemize}
 
-\section{Channel Equalization}
-
-\begin{itemize}
-\item compare to MMSE
-\item re run with the new RNN architecture
-\item backprop length of ~ 3. crude search from 1-10. 2 tap channel
-\item added channel preprocessing: didn't seem to make too much of a difference
-\item plot log/ log scale to find converging in error
-\end{itemize}
-
 \subsection{Learning an inverse}
 \begin{itemize}
 \item can a NN learn to do division?
@@ -46,6 +36,14 @@
 \label{fig:div_fx}
 \end{figure}
 
+\begin{figure}
+\begin{center}
+\includegraphics{figures/One_tap_channel_inversion.png}
+\caption{One tap channel inversion with respect to range.}
+\end{center}
+\label{fig:one_tap_inv}
+\end{figure}
+
 \subsection{Learning to multiply two inputs}
 NN given x, y - output x*y
 
@@ -55,6 +53,33 @@ NN given x, y - output x*y
 \caption{Multiplication function; $z=xy$.}
 \end{center}
 \label{fig:mult_fx}
+\end{figure}
+
+\begin{figure}
+\begin{center}
+\includegraphics{figures/LSTM_loss_multiplication.png}
+\caption{LSTM loss trying to learn the Multiplication function; $z=xy$.}
+\end{center}
+\label{fig:lstm_loss_mult}
+\end{figure}
+
+
+\section{Channel Equalization}
+
+\begin{itemize}
+\item compare to MMSE
+\item re run with the new RNN architecture
+\item backprop length of ~ 3. crude search from 1-10. 2 tap channel
+\item added channel preprocessing: didn't seem to make too much of a difference
+\item plot log/ log scale to find converging in error
+\end{itemize}
+
+\begin{figure}
+\begin{center}
+\includegraphics{figures/incorrect_channels.png}
+\caption{What two tap channels does the equalizer get wrong?}
+\end{center}
+\label{fig:incorr_chan}
 \end{figure}
 
 \section{Channel Est + Equal}

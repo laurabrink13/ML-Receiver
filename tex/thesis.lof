@@ -2,11 +2,19 @@
 \defcounter {refsection}{0}\relax 
 \addvspace {10pt}
 \defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {1.1}{\ignorespaces The impacts of multipath channels and initial phase offsets on bit error performance \cite {osheaatt}.}}{4}
+\defcounter {refsection}{0}\relax 
 \addvspace {10pt}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Division function; $z={\begingroup x\endgroup \over y}$.}}{6}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Division function; $z={\begingroup x\endgroup \over y}$.}}{7}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Multiplication function; $z=xy$.}}{7}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces One tap channel inversion with respect to range.}}{8}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Multiplication function; $z=xy$.}}{8}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {2.4}{\ignorespaces LSTM loss trying to learn the Multiplication function; $z=xy$.}}{9}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {2.5}{\ignorespaces What two tap channels does the equalizer get wrong?}}{9}
 \defcounter {refsection}{0}\relax 
 \addvspace {10pt}
 \defcounter {refsection}{0}\relax 
