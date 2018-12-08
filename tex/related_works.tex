@@ -1,36 +1,23 @@
-related works!
+Recently, many researchers have become more interested in applying deep learning techniques to communications systems.  
+We refer the reader to \cite{botoca}\cite{diamandis}\cite{wang}\cite{hemodel}\cite{osheaphys} for surveys and motivations of these kind of works.  
+Most of the works that we have found typically only deal with additive white gaussian noise (AWGN) channels. Only dealing with AWGN channels, essentially removes the problem of equalization. 
 
+In \cite{dorner2017}, D\"{o}rner et. al. implemented an end to end transmitter and reciever with neural networks that allowed gradients to flow all the way back from the receiver during training.  
+However, they restricted themselves to only sending a certain set of messages, only seeing AWGN channels, and they did not address CFO. 
 
-\cite{dorner2017}
+Other groups have been focusing on decoding with recurrent neural networks (RNNs) but also only deal with AWGN channels \cite{kim2018}\cite{kimnips}.  
+Others have been working with generative adversarial networks (GANs) to train an end-to-end communication system \cite{yegans}.  However, they also only consider AWGN channels or Rayleigh fading channels.
 
-\cite{kim2018}
+For those that do consider more complex channels, most re-train their models for each new channel seen.  Ye et. al. consider OFDM systems where their feedforward neural networks estimate the channel state information then train offline for that specific channel \cite{ye2018}.  
+\cite{raghavendra} considers nonlinear channels but re-trains their network for each new channel.  Note, this work does not go into detail about the architecture used or how the networks are trained. 
 
-\cite{farsad2018}
+Optics and molecules? \cite{farsad2018}
 
-\cite{osheacsi}
-
-\cite{diamandis}
-
-\cite{raghavendra}
-
-\cite{botoca}
-
-\cite{ye2018}
-
-\cite{osheamimo}
-
-\cite{wang}
-
-\cite{kimnips}
-
-\cite{finn}
-
-\cite{lake}
+Timothy O'Shea's group has been doing some excellent work in this area. 
+In \cite{osheacsi}, they use convolutional neural networks (CNNs) to estimate, but not correct, carrier frequency offset and timing offset.  However, they only consider AWGN channels and Rayleigh fading channels.  
+In \cite{osheamimo}, they explore how unsupervised learning can train autoencoders for multiple antenna communications.  They do re-train for each new channel and use a Rayleigh fading channel model.
 
 \cite{osheavoid}
-
-\cite{yegans}
-
-\cite{hemodel}
-
 \cite{osheasynch}
+\cite{osheaphys}
+\cite{osheaatt}

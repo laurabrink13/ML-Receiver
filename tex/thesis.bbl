@@ -347,6 +347,40 @@
       \field{pages}{1332\bibrangedash 1338}
       \range{pages}{7}
     \endentry
+    \entry{osheaatt}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=909c9965c7e55bd7133fa7d7b7d3dc9b}{%
+           family={O'Shea},
+           familyi={O\bibinitperiod},
+           given={Timothy\bibnamedelima J.},
+           giveni={T\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=571f4793dc37ceba53883260fd0f9ab0}{%
+           family={Karra},
+           familyi={K\bibinitperiod},
+           given={Kiran},
+           giveni={K\bibinitperiod}}}%
+        {{hash=2d06b755eba63b1401841a30730dd441}{%
+           family={Clancy},
+           familyi={C\bibinitperiod},
+           given={T.\bibnamedelimi Charles},
+           giveni={T\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+      }
+      \strng{namehash}{c97715a5dd8c3c88f454338bb8c404ae}
+      \strng{fullhash}{c97715a5dd8c3c88f454338bb8c404ae}
+      \strng{bibnamehash}{c97715a5dd8c3c88f454338bb8c404ae}
+      \strng{authorbibnamehash}{c97715a5dd8c3c88f454338bb8c404ae}
+      \strng{authornamehash}{c97715a5dd8c3c88f454338bb8c404ae}
+      \strng{authorfullhash}{c97715a5dd8c3c88f454338bb8c404ae}
+      \field{sortinit}{O}
+      \field{sortinithash}{dad3efd0836470093a7b4a7bb756eb8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{IEEE International Symposium on Signal Processing and Information Technology}
+      \field{title}{Learning to Communicate: Channel Auto-encoders, Domain Specific Regularizers, and Attention}
+      \field{year}{2016}
+      \field{pages}{223\bibrangedash 228}
+      \range{pages}{6}
+    \endentry
     \entry{osheavoid}{article}{}
       \name{author}{3}{}{%
         {{hash=909c9965c7e55bd7133fa7d7b7d3dc9b}{%
@@ -447,6 +481,37 @@
       \field{journaltitle}{arXiv preprint arXiv:1707.07980}
       \field{title}{Deep Learning-Based MIMO Communications}
       \field{year}{2017}
+    \endentry
+    \entry{osheaphys}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=1168ef24c5478085b24966bb867edfc3}{%
+           family={O'Shea},
+           familyi={O\bibinitperiod},
+           given={Timothy},
+           giveni={T\bibinitperiod}}}%
+        {{hash=0547b0893e0b44f83e1a08d426b10ce5}{%
+           family={Hoydis},
+           familyi={H\bibinitperiod},
+           given={Jakob},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{6fbde11c2f3fa39c5d882c8b83808e85}
+      \strng{fullhash}{6fbde11c2f3fa39c5d882c8b83808e85}
+      \strng{bibnamehash}{6fbde11c2f3fa39c5d882c8b83808e85}
+      \strng{authorbibnamehash}{6fbde11c2f3fa39c5d882c8b83808e85}
+      \strng{authornamehash}{6fbde11c2f3fa39c5d882c8b83808e85}
+      \strng{authorfullhash}{6fbde11c2f3fa39c5d882c8b83808e85}
+      \field{sortinit}{O}
+      \field{sortinithash}{dad3efd0836470093a7b4a7bb756eb8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{IEEE Transactions on Cognitive Communications and Networking}
+      \field{number}{4}
+      \field{title}{An Introduction to Deep Learning for the Physical Layer}
+      \field{volume}{3}
+      \field{year}{2017}
+      \field{pages}{563\bibrangedash 575}
+      \range{pages}{13}
     \endentry
     \entry{osheacsi}{article}{}
       \name{author}{3}{}{%
