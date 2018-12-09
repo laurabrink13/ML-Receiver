@@ -24,16 +24,12 @@ Inter-symbol interference occurs when we are transmitting over a channel that ha
 Let $\vec{x}=[x_0, x_1, \ldots x_n]$ be the set of $n$ complex symbols that the transmitter sends over the channel that connects the transmitter to the receiver.
 Each channel will have different characteristics. Some channels may have echos, others may have delays, often channels will have both.  When a channel has echos, this is called a multipath channel because there are multiple paths to reach the receiver.  Each path is called a tap.  We can characterize a channel by characterizing the taps.
 
-What can cause these echos?  How prevelant are they?
-
-Channel taps:
 Let $\vec{a} = [a_0, a_1, \ldots a_l]$ be the set of characteristic for a multipath channel that has $l$ taps. When a sequence of symbols like $\vec{x}$ is transmitted over this channel, the channel taps are convolved over the sequence.  Additionally, there is noise in the system denoted by $\eta_i$. 
 
 $$\tilde{x}_m = \sum_{i=0}^l a_i x_{m-i} + \eta_i$$
 
 The receiver will hear a signal that is corrupted by inter-symbol interfence and noise;
-$\tilde{\vec{x}}=[\tilde{x}_0, \tilde{x_1}, \ldots \tilde{x}_{n+l}]$. 
-
+$\vec{\tilde{x}}=[\tilde{x}_0, \tilde{x_1}, \ldots \tilde{x}_{n+l}]$. 
 Receivers must be able to handle garbled signals in order to transmit data in the real world.  The process of removing the inter-symbol interference is called equalization.  The goal of equalization is to take in a garbled signal and output a signal with minimal inter-symbol interference. 
 
 \setlength{\tabcolsep}{0pt}
@@ -56,9 +52,11 @@ Receivers must be able to handle garbled signals in order to transmit data in th
   \end{tabular}
 \end{figure}
 
+Figure ~\ref{fig:multi_tap} demonstrates the effects of multi-tap channels on a QPSK modulation constellation.  We see that under certain channel conditions, like when the two taps are equal, it is very difficult to distinguish between the four constellations.  
 Engineers have built processes to remove inter-symbol interference.  First, let's go into the case when the channel characteristics are known.
 
 \subsubsection{Equalization for a known channel}
+
 If you know the channel characteristics, $\vec{a}$, perfectly, then there are a few different methods that can be used. 
 
 Zero-forcing
@@ -68,12 +66,16 @@ While it's important to consider how well a receiver can equalize with a known c
 \subsubsection{Equalization for an unknown channel}
 When the receiver does not know the channel characteristics, the process of equalization essentially has two jobs; first, identify the channel, second, remove the inter-symbol interference. If the receiver did not identify the channel first, there would be no way to remove the affects of it on the received signal. 
 
-In order to do channel estimation, most systems require that packets begin with a known sequence called a preamble. 
+In order to do channel estimation, most systems require that packets begin with a known sequence called a preamble. The signal sent will be broken into two parts; $\vec{x} = [\vec{x}_{pre}, \vec{x}_{data}]$.  The signal received on the transmitter is $\vec{\tilde{x}}=[\vec{\tilde{x}}_{pre},\vec{\tilde{x}}_{data}]$.  
+The receiver knows what the orginal preamble sequence was, $\vec{x}_{pre}$, and can use the received preamble sequence, $\vec{\tilde{x}}_{pre}$ to estimate the behavior of the channel.
+Once the channel is estimated, the receiver then equalizes the data, $\vec{\tilde{x}}_{data}$.
 
 Channel estimation: least squares
 
 Minimum mean squared error equalizer.
  
+ 
+
 \subsubsection{How do real systems handle equalization?}
 
 OFDM does not have this problem!
