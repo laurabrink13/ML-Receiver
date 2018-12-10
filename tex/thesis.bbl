@@ -19,6 +19,38 @@
 
 \refsection{0}
   \datalist[entry]{nty/global//global/global}
+    \entry{bengio}{article}{}
+      \name{author}{3}{}{%
+        {{hash=40a8e4774982146adc2688546f54efb2}{%
+           family={Bengio},
+           familyi={B\bibinitperiod},
+           given={Yoshua},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=02404a92b0be3f52ec5ac08e41c13445}{%
+           family={Bengio},
+           familyi={B\bibinitperiod},
+           given={Samy},
+           giveni={S\bibinitperiod}}}%
+        {{hash=214ea95d5fd0e69d02b5757eab91cdea}{%
+           family={Cloutier},
+           familyi={C\bibinitperiod},
+           given={Jocelyn},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{b46698ec12876b7a270bcc5cf8d3ab1b}
+      \strng{fullhash}{b46698ec12876b7a270bcc5cf8d3ab1b}
+      \strng{bibnamehash}{b46698ec12876b7a270bcc5cf8d3ab1b}
+      \strng{authorbibnamehash}{b46698ec12876b7a270bcc5cf8d3ab1b}
+      \strng{authornamehash}{b46698ec12876b7a270bcc5cf8d3ab1b}
+      \strng{authorfullhash}{b46698ec12876b7a270bcc5cf8d3ab1b}
+      \field{sortinit}{B}
+      \field{sortinithash}{276475738cc058478c1677046f857703}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Technical Report 751, Départment d'Informatique et de Recherche Opérationelle, Université de Montréal, Canada}
+      \field{title}{Learning a synaptic learning rule}
+      \field{year}{1990}
+    \endentry
     \entry{botoca}{article}{}
       \name{author}{3}{}{%
         {{hash=56ebb9a275dc8ae201f9ceef77a4d7d4}{%
@@ -222,6 +254,38 @@
       \field{title}{Model-Driven Deep Learning for Physical Layer Communications}
       \field{year}{2018}
     \endentry
+    \entry{khodadeh}{article}{}
+      \name{author}{3}{}{%
+        {{hash=c4a5f3d773893eba7b6436d9105fe8c7}{%
+           family={Khodadadeh},
+           familyi={K\bibinitperiod},
+           given={Siavash},
+           giveni={S\bibinitperiod}}}%
+        {{hash=015a4080f503e6122f3e4f3832f75fd6}{%
+           family={Bölöni},
+           familyi={B\bibinitperiod},
+           given={Ladislau},
+           giveni={L\bibinitperiod}}}%
+        {{hash=c75751f493070716733608d20f74e3af}{%
+           family={Shah},
+           familyi={S\bibinitperiod},
+           given={Mubarak},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{0f6d2807bfcb67fe3b9409eef3911411}
+      \strng{fullhash}{0f6d2807bfcb67fe3b9409eef3911411}
+      \strng{bibnamehash}{0f6d2807bfcb67fe3b9409eef3911411}
+      \strng{authorbibnamehash}{0f6d2807bfcb67fe3b9409eef3911411}
+      \strng{authornamehash}{0f6d2807bfcb67fe3b9409eef3911411}
+      \strng{authorfullhash}{0f6d2807bfcb67fe3b9409eef3911411}
+      \field{sortinit}{K}
+      \field{sortinithash}{9fd838a31ba64d981e8f44562bd33f89}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{arXiv preprint arxiv:1811.11819}
+      \field{title}{Unsupervised Meta-Learning for Few-Shot Image and Video Classification}
+      \field{year}{2018}
+    \endentry
     \entry{kim2018}{article}{}
       \name{author}{6}{}{%
         {{hash=0b58fa37f7f7440edaa58ecbca652d47}{%
@@ -346,6 +410,43 @@
       \field{year}{2015}
       \field{pages}{1332\bibrangedash 1338}
       \range{pages}{7}
+    \endentry
+    \entry{lemke}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=2f301251734a2a3f20f5fa4cad84d275}{%
+           family={Lemke},
+           familyi={L\bibinitperiod},
+           given={Christiane},
+           giveni={C\bibinitperiod}}}%
+        {{hash=5e9ecb8634646a5d0d4730b5dd2ed310}{%
+           family={Budka},
+           familyi={B\bibinitperiod},
+           given={Marcin},
+           giveni={M\bibinitperiod}}}%
+        {{hash=0c229a393a01c59213ce12b19d582c46}{%
+           family={Gabrys},
+           familyi={G\bibinitperiod},
+           given={Bogdan},
+           giveni={B\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{cfb65757f27025e9aa5cb850d830b035}
+      \strng{fullhash}{cfb65757f27025e9aa5cb850d830b035}
+      \strng{bibnamehash}{cfb65757f27025e9aa5cb850d830b035}
+      \strng{authorbibnamehash}{cfb65757f27025e9aa5cb850d830b035}
+      \strng{authornamehash}{cfb65757f27025e9aa5cb850d830b035}
+      \strng{authorfullhash}{cfb65757f27025e9aa5cb850d830b035}
+      \field{sortinit}{L}
+      \field{sortinithash}{2c7981aaabc885868aba60f0c09ee20f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Artificial Intelligence Review}
+      \field{title}{Metalearning: a survey of trends and technologies}
+      \field{year}{2015}
+      \field{pages}{117\bibrangedash 130}
+      \range{pages}{14}
     \endentry
     \entry{osheaatt}{inproceedings}{}
       \name{author}{3}{}{%

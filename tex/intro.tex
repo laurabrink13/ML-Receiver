@@ -7,13 +7,16 @@ From an academic perspective, the rise of machine learning tools and processing 
 Most communications systems have three main processes at the receiver; equalization, demodulation, and error-correction.  While we will need to design robust forms of all of these processes, we will focus on equalization for the remainder of this paper. 
 
 \section{Motivation}
-Why are we doing this?
 
-What is meta-learning?
+Meta-learning is the idea that algorithms need to be able to `learn to learn' in order to generalize to different applications.  For example, if a robot is trained to pick up coffee mugs, then we want that robot to be able to quickly learn how to pick up water bottles without having to re-train it.  
+Meta-learning was inspired by humans ability to generalize how to learn \cite{lake}.  
+Additionally, researchers in neurology have studied how the brain synapses change over time, suggesting that our algorithms will have to change over time to continue learning \cite{bengio}.
+We refer the reader to \cite{lemke} for a survey of meta-learning technologies and to \cite{finn} for recent developments in meta-learning algorithms.
 
-\cite{finn}
-
-\cite{lake}
+In this paper, we want to understand if our neural network based communication processes can learn to learn.  
+As in, can they handle new environments with new data sequeneces without having to re-train for the new variables. 
+The communications application is arguably an easier application of meta-learning than others have been exploring, like image classification \cite{khodadeh}.  
+In order to better understand the reach and limitations of meta-learning, we need to apply it to something simpler, like communications.  In this paper, we will explore whether or not we can learn to learn to communicate. 
 
 \section{Background}
 
@@ -24,12 +27,14 @@ Inter-symbol interference occurs when we are transmitting over a channel that ha
 Let $\vec{x}=[x_0, x_1, \ldots x_n]$ be the set of $n$ complex symbols that the transmitter sends over the channel that connects the transmitter to the receiver.
 Each channel will have different characteristics. Some channels may have echos, others may have delays, often channels will have both.  When a channel has echos, this is called a multipath channel because there are multiple paths to reach the receiver.  Each path is called a tap.  We can characterize a channel by characterizing the taps.
 
-Let $\vec{a} = [a_0, a_1, \ldots a_l]$ be the set of characteristic for a multipath channel that has $l$ taps. When a sequence of symbols like $\vec{x}$ is transmitted over this channel, the channel taps are convolved over the sequence.  Additionally, there is noise in the system denoted by $\eta_i$. 
+Let $\vec{a} = [a_0, a_1, \ldots a_{\ell}]$ be the set of characteristic for a multipath channel that has $l$ taps. When a sequence of symbols like $\vec{x}$ is transmitted over this channel, the channel taps are convolved over the sequence.  Additionally, there is noise in the system denoted by $v_i$. 
 
-$$\tilde{x}_m = \sum_{i=0}^l a_i x_{m-i} + \eta_i$$
+\begin{align}
+\tilde{x}_m = \sum_{i=0}^{\ell} a_i x_{m-i} + v_i
+\end{align}
 
 The receiver will hear a signal that is corrupted by inter-symbol interfence and noise;
-$\vec{\tilde{x}}=[\tilde{x}_0, \tilde{x_1}, \ldots \tilde{x}_{n+l}]$. 
+$\vec{\tilde{x}}=[\tilde{x}_0, \tilde{x_1}, \ldots \tilde{x}_{n+\ell}]$. 
 Receivers must be able to handle garbled signals in order to transmit data in the real world.  The process of removing the inter-symbol interference is called equalization.  The goal of equalization is to take in a garbled signal and output a signal with minimal inter-symbol interference. 
 
 \setlength{\tabcolsep}{0pt}
@@ -67,18 +72,20 @@ While it's important to consider how well a receiver can equalize with a known c
 When the receiver does not know the channel characteristics, the process of equalization essentially has two jobs; first, identify the channel, second, remove the inter-symbol interference. If the receiver did not identify the channel first, there would be no way to remove the affects of it on the received signal. 
 
 In order to do channel estimation, most systems require that packets begin with a known sequence called a preamble. The signal sent will be broken into two parts; $\vec{x} = [\vec{x}_{pre}, \vec{x}_{data}]$.  The signal received on the transmitter is $\vec{\tilde{x}}=[\vec{\tilde{x}}_{pre},\vec{\tilde{x}}_{data}]$.  
-The receiver knows what the orginal preamble sequence was, $\vec{x}_{pre}$, and can use the received preamble sequence, $\vec{\tilde{x}}_{pre}$ to estimate the behavior of the channel.
+The receiver knows what the orginal preamble sequence was, $\vec{x}_{pre}$, and can use the received preamble sequence, $\vec{\tilde{x}}_{pre}$, to estimate the behavior of the channel.
 Once the channel is estimated, the receiver then equalizes the data, $\vec{\tilde{x}}_{data}$.
 
 Channel estimation: least squares
+\begin{align}
+\min_H ||\vec{\tilde{x}}_{pre}-H\vec{x}_{pre}||^2
+\end{align}
 
-Minimum mean squared error equalizer.
- 
- 
-
-\subsubsection{How do real systems handle equalization?}
-
-OFDM does not have this problem!
+Minimum mean squared error equalizer.  We want to minimize the error between the equalized preamble and the original known preamble.  
+\begin{align}
+\min_W||\vec{x}_{pre}-\vec{\hat{x}}_{pre}||^2 \\
+\vec{\hat{x}}_{pre} = W (H\vec{x}_{pre}+\vec{v}) \\
+W^* = \vec{x}_{pre} \vec{x}_{pre}^T H^T (H \vec{x}_{pre} \vec{x}_{pre}^T H^T + \sigma_v^2 I)^{-1}
+\end{align}
 
  
 \subsection{Carrier Frequency Offset and Correction}
@@ -90,7 +97,9 @@ Carrier frequency offset occurs when ???
 
 When there is a significant CFO present, our symbols will gradually start rotating. CFO will effect our received symbols like
 
-$$\tilde{x}_m = x_m e^{mj\omega}$$
+\begin{align}
+\tilde{x}_m = x_m e^{mj\omega}
+\end{align}
 
 
 The effect will look like something like this 
@@ -121,10 +130,6 @@ The first solution is to try to remove the problem.  Since CFO is dependent on t
 
 A more elegant solution is using phase-lock loops (costas loops).
 
-What must a modern day receiver handle?  What does it look like when we have both CFO and ISI?
-
-$$\tilde{x}_m = (\sum_{i=0}^l a_i x_{m-i})e^{mj\omega} + \eta_i$$
-
 \setlength{\tabcolsep}{0pt}
 \begin{figure}
   \centering
@@ -144,6 +149,13 @@ $$\tilde{x}_m = (\sum_{i=0}^l a_i x_{m-i})e^{mj\omega} + \eta_i$$
     \includegraphics[width=45mm]{figures/cfo_equal_intro/snr_10_c5/cfo_0.png}\\
   \end{tabular}
 \end{figure}
+
+What must a modern day receiver handle?  What does it look like when we have both CFO and ISI?
+
+\begin{align}
+\tilde{x}_m = (\sum_{i=0}^l a_i x_{m-i})e^{mj\omega} + v_i
+\end{align}
+
 
 \section{Related Works}
 
