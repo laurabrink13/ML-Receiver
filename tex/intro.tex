@@ -57,15 +57,22 @@ Receivers must be able to handle garbled signals in order to transmit data in th
   \end{tabular}
 \end{figure}
 
-Figure ~\ref{fig:multi_tap} demonstrates the effects of multi-tap channels on a QPSK modulation constellation.  We see that under certain channel conditions, like when the two taps are equal, it is very difficult to distinguish between the four constellations.  
+Figure ~\ref{fig:multi_tap} demonstrates the effects of multi-tap channels on a QPSK modulation constellation.  
+We show what the received signal symbols constellations are from a sequence of $100$ symbols modulated in QPSK through different two tap channels.  We assume that the channel taps are constant during the transmission of the signal.
+We see that under certain channel conditions, like when the two taps are equal, it is very difficult to distinguish between the four constellations.  
 Engineers have built processes to remove inter-symbol interference.  First, let's go into the case when the channel characteristics are known.
 
 \subsubsection{Equalization for a known channel}
 
 If you know the channel characteristics, $\vec{a}$, perfectly, then there are a few different methods that can be used. 
 
-Zero-forcing
+The zero-forcing equalizer applies the inverse of the channel response to the received signal.  It is called zero-forcing because there will be zero inter-symbol interference if there is no noise.
+There are some limitations of the zero-forcing equalizer. 
+First, the impulse response of the equalizer needs to be infinitely long. 
+Second, if there is a weak signal at a frequency, then the inverse gain is going to be very large.  This will amplify any noise in the system. 
+Third, if there are any zeros in frequency response, these cannot be inverted.
 
+Another equalizer, the minimum mean squared error (MMSE) equalizer, handles noise much better than the zero-forcing equalizer and is explained in the next section.
 While it's important to consider how well a receiver can equalize with a known channel, this is rarely the case.  Usually, we do not know the channel characteristics.
 
 \subsubsection{Equalization for an unknown channel}
@@ -75,34 +82,25 @@ In order to do channel estimation, most systems require that packets begin with 
 The receiver knows what the orginal preamble sequence was, $\vec{x}_{pre}$, and can use the received preamble sequence, $\vec{\tilde{x}}_{pre}$, to estimate the behavior of the channel.
 Once the channel is estimated, the receiver then equalizes the data, $\vec{\tilde{x}}_{data}$.
 
-Channel estimation: least squares
+One common method to estimate the channel is to use the least squares optimization framework. Let $H$ be the estimate of the channel.  The least squares channel estimator wants to find $H$ that minimizes the squared error between the received signal, $\vec{\tilde{x}}_{pre}$, and what the predicted received signal would be if the the channel $H$ was applied to the original preamble, $\vec{x}_{pre}$.
 \begin{align}
 \min_H ||\vec{\tilde{x}}_{pre}-H\vec{x}_{pre}||^2
 \end{align}
 
-Minimum mean squared error equalizer.  We want to minimize the error between the equalized preamble and the original known preamble.  
+The receiver needs to choose the length of $H$, representing how many taps (or echos) there might be in the channel.  The length of $H$ will be set based on the environment that the transmitter and receiver are communicating in.
+
+Once the channel response has been estimated, an equalizer has to use that information to remove the inter-symbol interference from the received signal.
+The MMSE equalizer minimizes the error between the equalized preamble and the original known preamble by choosing the optimal inverse of the channel response, $W$.
 \begin{align}
 \min_W||\vec{x}_{pre}-\vec{\hat{x}}_{pre}||^2 \\
 \vec{\hat{x}}_{pre} = W (H\vec{x}_{pre}+\vec{v}) \\
 W^* = \vec{x}_{pre} \vec{x}_{pre}^T H^T (H \vec{x}_{pre} \vec{x}_{pre}^T H^T + \sigma_v^2 I)^{-1}
 \end{align}
 
+The MMSE equalizer works well for known and unknown channels and does not amplify noise like the zero-forcing equalizer.  This is why the MMSE equalizer paired with a least squares channel estimator are widely used.
+
  
 \subsection{Carrier Frequency Offset and Correction}
-
-Now, if we were to implement our minimum mean squared error algorithm on a physical receiver, we would find some problems with our equalization process.  
-Our equalizer will equalize the first symbols very well.  However, as we equalize end parts of our sequence, we will encounter a physical phenomonen called carrier frequency offset, CFO.
-
-Carrier frequency offset occurs when ???
-
-When there is a significant CFO present, our symbols will gradually start rotating. CFO will effect our received symbols like
-
-\begin{align}
-\tilde{x}_m = x_m e^{mj\omega}
-\end{align}
-
-
-The effect will look like something like this 
 
 \setlength{\tabcolsep}{0pt}
 \begin{figure}
@@ -121,14 +119,23 @@ The effect will look like something like this
   \end{tabular}
 \end{figure}
 
+Now, if we were to implement our minimum mean squared error equalizer on a physical receiver, we would find some problems with our equalization process.  
+Our equalizer will equalize the first symbols very well.  However, as we equalize end parts of our sequence, we will encounter a physical phenomonen called carrier frequency offset, CFO.
+Carrier frequency offset occurs when the transmitter and receiver are at slightly different frequencies.  It also occurs when the transmitter and receiver are moving, causing a sort of Doppler effect. 
 
-\subsubsection{How do real systems handle CFO correction?}
+When there is a significant CFO present, the symbols will gradually rotate. The received signals will be the original signals rotated at a rate $\omega$.
+\begin{align}
+\tilde{x}_i = x_i e^{ij\omega}+v_i
+\end{align} 
+
+Figure ~\ref{fig:single_tap_cfo} demonstrates the effects of CFO on a QPSK modulation constellation (no multipath channels). 
+We show what the received signal symbols constellations are from a sequence of $100$ symbols modulated in QPSK with different CFO rates.  We assume that the CFO rate, $\omega$, is constant during the transmission of the signal.
 
 There are a few ways to handle CFO, some are more elegant than others. 
+The first solution is to try to side-step the problem entirely.  
+Since the effects of CFO depend on the length of a packet, one solution is to make packets so short that the symbols only move a little bit.  In this case, the effects of CFO can be ignored.
 
-The first solution is to try to remove the problem.  Since CFO is dependent on the length of a packet, one solution is to make packets so short that 
-
-A more elegant solution is using phase-lock loops (costas loops).
+Another solution is using phase-lock loops (costas loops).
 
 \setlength{\tabcolsep}{0pt}
 \begin{figure}
@@ -150,12 +157,15 @@ A more elegant solution is using phase-lock loops (costas loops).
   \end{tabular}
 \end{figure}
 
-What must a modern day receiver handle?  What does it look like when we have both CFO and ISI?
+What happens when there is both CFO and inter-symbol interference?  The received signal will have the effects of the channel and CFO as well as the noise. 
 
 \begin{align}
 \tilde{x}_m = (\sum_{i=0}^l a_i x_{m-i})e^{mj\omega} + v_i
 \end{align}
 
+Figure ~\ref{fig:multi_tap_cfo} demonstrates the effects of CFO and multi-tap channels on a QPSK modulation constellation. 
+We show what the received signal symbols constellations are from a sequence of $100$ symbols modulated in QPSK with different CFO rates and two tap channels.  We assume that the CFO rate, $\omega$, and the channel taps are constant during the transmission of the signal.  
+Modern day receivers have to combine CFO correction, channel estimation, and equalization processes in order to handle these received signals.
 
 \section{Related Works}
 

@@ -6,21 +6,21 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {1.2}{\ignorespaces The effects of a carrier frequency offset on the QPSK constellation.\relax }}{5}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {1.3}{\ignorespaces The effects of a two tap channel and a carrier frequency offset on the QPSK constellation.\relax }}{6}
+\contentsline {figure}{\numberline {1.3}{\ignorespaces The effects of a two tap channel and a carrier frequency offset on the QPSK constellation.\relax }}{7}
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {1.4}{\ignorespaces The impacts of multipath channels and initial phase offsets on bit error performance \cite {osheaatt}.\relax }}{8}
 \defcounter {refsection}{0}\relax 
 \addvspace {10pt}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Division function; $z=\frac {x}{y}$.\relax }}{10}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Division function; $z=\frac {x}{y}$.\relax }}{11}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.2}{\ignorespaces One tap channel inversion with respect to range.\relax }}{11}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces One tap channel inversion with respect to range.\relax }}{12}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Multiplication function; $z=xy$.\relax }}{11}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Multiplication function; $z=xy$.\relax }}{12}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.4}{\ignorespaces LSTM loss trying to learn the Multiplication function; $z=xy$.\relax }}{12}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces LSTM loss trying to learn the Multiplication function; $z=xy$.\relax }}{13}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.5}{\ignorespaces What two tap channels does the equalizer get wrong?\relax }}{12}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces What two tap channels does the equalizer get wrong?\relax }}{13}
 \defcounter {refsection}{0}\relax 
 \addvspace {10pt}
 \defcounter {refsection}{0}\relax 
