@@ -135,7 +135,7 @@ There are a few ways to handle CFO, some are more elegant than others.
 The first solution is to try to side-step the problem entirely.  
 Since the effects of CFO depend on the length of a packet, one solution is to make packets so short that the symbols only move a little bit.  In this case, the effects of CFO can be ignored.
 
-Another solution is using phase-lock loops (costas loops).
+Another solution is using as phase-locked loop, which is a control system that outputs a signal with a phase related to the input signal.  A Costas loop is a circuit that implements a phase-locked loop for CFO correction for continuous time signals \cite{costas}.
 
 \setlength{\tabcolsep}{0pt}
 \begin{figure}

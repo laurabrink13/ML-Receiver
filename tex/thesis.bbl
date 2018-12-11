@@ -85,6 +85,32 @@
       \field{pages}{227\bibrangedash 231}
       \range{pages}{5}
     \endentry
+    \entry{costas}{article}{}
+      \name{author}{1}{}{%
+        {{hash=720a0ddd86ae5a575fb2f3327dea1c83}{%
+           family={Costas},
+           familyi={C\bibinitperiod},
+           given={John\bibnamedelima P.},
+           giveni={J\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+      }
+      \strng{namehash}{720a0ddd86ae5a575fb2f3327dea1c83}
+      \strng{fullhash}{720a0ddd86ae5a575fb2f3327dea1c83}
+      \strng{bibnamehash}{720a0ddd86ae5a575fb2f3327dea1c83}
+      \strng{authorbibnamehash}{720a0ddd86ae5a575fb2f3327dea1c83}
+      \strng{authornamehash}{720a0ddd86ae5a575fb2f3327dea1c83}
+      \strng{authorfullhash}{720a0ddd86ae5a575fb2f3327dea1c83}
+      \field{sortinit}{C}
+      \field{sortinithash}{963e9d84a3da2344e8833203de5aed05}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Proceedings of the IRE}
+      \field{number}{12}
+      \field{title}{Synchronous Communications}
+      \field{volume}{44}
+      \field{year}{1956}
+      \field{pages}{1713\bibrangedash 1718}
+      \range{pages}{6}
+    \endentry
     \entry{diamandis}{article}{}
       \name{author}{1}{}{%
         {{hash=8c950171bc25a5a060dfa2e79439ef27}{%
@@ -252,38 +278,6 @@
       \field{labeltitlesource}{title}
       \field{journaltitle}{arXiv preprint arxiv:1809.06059}
       \field{title}{Model-Driven Deep Learning for Physical Layer Communications}
-      \field{year}{2018}
-    \endentry
-    \entry{khodadeh}{article}{}
-      \name{author}{3}{}{%
-        {{hash=c4a5f3d773893eba7b6436d9105fe8c7}{%
-           family={Khodadadeh},
-           familyi={K\bibinitperiod},
-           given={Siavash},
-           giveni={S\bibinitperiod}}}%
-        {{hash=015a4080f503e6122f3e4f3832f75fd6}{%
-           family={Bölöni},
-           familyi={B\bibinitperiod},
-           given={Ladislau},
-           giveni={L\bibinitperiod}}}%
-        {{hash=c75751f493070716733608d20f74e3af}{%
-           family={Shah},
-           familyi={S\bibinitperiod},
-           given={Mubarak},
-           giveni={M\bibinitperiod}}}%
-      }
-      \strng{namehash}{0f6d2807bfcb67fe3b9409eef3911411}
-      \strng{fullhash}{0f6d2807bfcb67fe3b9409eef3911411}
-      \strng{bibnamehash}{0f6d2807bfcb67fe3b9409eef3911411}
-      \strng{authorbibnamehash}{0f6d2807bfcb67fe3b9409eef3911411}
-      \strng{authornamehash}{0f6d2807bfcb67fe3b9409eef3911411}
-      \strng{authorfullhash}{0f6d2807bfcb67fe3b9409eef3911411}
-      \field{sortinit}{K}
-      \field{sortinithash}{9fd838a31ba64d981e8f44562bd33f89}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{arXiv preprint arxiv:1811.11819}
-      \field{title}{Unsupervised Meta-Learning for Few-Shot Image and Video Classification}
       \field{year}{2018}
     \endentry
     \entry{kim2018}{article}{}
@@ -794,6 +788,7 @@
       \range{pages}{4}
     \endentry
   \enddatalist
+  \missing{khodadeh}
 \endrefsection
 \endinput
 
