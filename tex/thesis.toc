@@ -32,20 +32,18 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2.3}Channel Equalization}{11}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.4}Channel Est + Equal}{13}
+\contentsline {chapter}{\chapternumberline {3}Deep Networks for CFO}{16}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\chapternumberline {3}Deep Networks for CFO}{14}
+\contentsline {section}{\numberline {3.1}Recurrent Neural Network Follows a Circle}{16}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.1}Recurrent Neural Network Follows a Circle}{14}
+\contentsline {subsection}{Single Rate}{16}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{Single Rate}{14}
+\contentsline {subsection}{Different Rates}{17}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{Different Rates}{15}
+\contentsline {section}{\numberline {3.2}Deep Network Carrier Frequency Offset Estimation}{17}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.2}Deep Network Carrier Frequency Offset Estimation}{15}
+\contentsline {section}{\numberline {3.3}Deep Network Carrier Frequency Offset Correction}{17}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.3}Deep Network Carrier Frequency Offset Correction}{15}
+\contentsline {chapter}{\chapternumberline {4}Conclusion}{19}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\chapternumberline {4}Conclusion}{17}
-\defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Bibliography}{18}
+\contentsline {chapter}{Bibliography}{20}

@@ -20,14 +20,18 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {2.4}{\ignorespaces LSTM loss trying to learn the Multiplication function; $z=xy$.\relax }}{13}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.5}{\ignorespaces What two tap channels does the equalizer get wrong?\relax }}{13}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces LSTM loss trying to learn the Multiplication function; $z=xy$.\relax }}{13}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {2.6}{\ignorespaces LSTM loss trying to learn the Multiplication function; $z=xy$.\relax }}{14}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {2.7}{\ignorespaces What two tap channels does the equalizer get wrong?\relax }}{15}
 \defcounter {refsection}{0}\relax 
 \addvspace {10pt}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Linear neural network: follow a circle for a constant CFO rate.\relax }}{14}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Linear neural network: follow a circle for a constant CFO rate.\relax }}{16}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Nonlinear neural network: follow a circle for a different CFO rates.\relax }}{15}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Nonlinear neural network: follow a circle for a different CFO rates.\relax }}{17}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.3}{\ignorespaces The log BER of received signals passed through a neural network CFO estimator with a rotation matrix CFO correction and classic demodulator. The log BER of the same signals passed through just the classic demodulator.\relax }}{16}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces The log BER of received signals passed through a neural network CFO estimator with a rotation matrix CFO correction and classic demodulator. The log BER of the same signals passed through just the classic demodulator.\relax }}{18}
 \defcounter {refsection}{0}\relax 
 \addvspace {10pt}
