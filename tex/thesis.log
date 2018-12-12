@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.10.4)  12 DEC 2018 07:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.10.4)  12 DEC 2018 07:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1104,45 +1104,22 @@ M_loss_multiplication.png> <./figures/incorrect_channels.png>] [14]
 File: figures/follow_circle_linear_before.png Graphic file (type png)
 <use figures/follow_circle_linear_before.png>
 Package pdftex.def Info: figures/follow_circle_linear_before.png  used on input
- line 10.
+ line 12.
 (pdftex.def)             Requested size: 142.26378pt x 131.80232pt.
 <figures/follow_circle_linear_after.png, id=154, 273.02pt x 252.945pt>
 File: figures/follow_circle_linear_after.png Graphic file (type png)
 <use figures/follow_circle_linear_after.png>
 Package pdftex.def Info: figures/follow_circle_linear_after.png  used on input 
-line 11.
+line 13.
 (pdftex.def)             Requested size: 142.26378pt x 131.80232pt.
 <figures/follow_circle_linear_loss.png, id=155, 397.485pt x 266.9975pt>
 File: figures/follow_circle_linear_loss.png Graphic file (type png)
 <use figures/follow_circle_linear_loss.png>
 Package pdftex.def Info: figures/follow_circle_linear_loss.png  used on input l
-ine 12.
+ine 14.
 (pdftex.def)             Requested size: 199.16928pt x 133.78766pt.
 
-Overfull \hbox (13.94182pt too wide) in paragraph at lines 9--15
- [][] 
- []
-
-<figures/follow_circle_nonlinear_before.png, id=156, 273.02pt x 252.945pt>
-File: figures/follow_circle_nonlinear_before.png Graphic file (type png)
-<use figures/follow_circle_nonlinear_before.png>
-Package pdftex.def Info: figures/follow_circle_nonlinear_before.png  used on in
-put line 33.
-(pdftex.def)             Requested size: 142.26378pt x 131.80232pt.
-<figures/follow_circle_nonlinear_after.png, id=157, 272.01625pt x 252.945pt>
-File: figures/follow_circle_nonlinear_after.png Graphic file (type png)
-<use figures/follow_circle_nonlinear_after.png>
-Package pdftex.def Info: figures/follow_circle_nonlinear_after.png  used on inp
-ut line 34.
-(pdftex.def)             Requested size: 142.26378pt x 132.29636pt.
-<figures/follow_circle_nonlinear_loss.png, id=158, 389.455pt x 266.9975pt>
-File: figures/follow_circle_nonlinear_loss.png Graphic file (type png)
-<use figures/follow_circle_nonlinear_loss.png>
-Package pdftex.def Info: figures/follow_circle_nonlinear_loss.png  used on inpu
-t line 35.
-(pdftex.def)             Requested size: 199.16928pt x 136.54172pt.
-
-Overfull \hbox (13.94182pt too wide) in paragraph at lines 32--38
+Overfull \hbox (13.94182pt too wide) in paragraph at lines 11--17
  [][] 
  []
 
@@ -1152,18 +1129,40 @@ Overfull \hbox (13.94182pt too wide) in paragraph at lines 32--38
 
  <./figures/follow_circle_linear_before.png> <./figures/follow_circle_linear_af
 ter.png> <./figures/follow_circle_linear_loss.png>]
+<figures/follow_circle_nonlinear_before.png, id=162, 273.02pt x 252.945pt>
+File: figures/follow_circle_nonlinear_before.png Graphic file (type png)
+<use figures/follow_circle_nonlinear_before.png>
+Package pdftex.def Info: figures/follow_circle_nonlinear_before.png  used on in
+put line 39.
+(pdftex.def)             Requested size: 142.26378pt x 131.80232pt.
+<figures/follow_circle_nonlinear_after.png, id=163, 272.01625pt x 252.945pt>
+File: figures/follow_circle_nonlinear_after.png Graphic file (type png)
+<use figures/follow_circle_nonlinear_after.png>
+Package pdftex.def Info: figures/follow_circle_nonlinear_after.png  used on inp
+ut line 40.
+(pdftex.def)             Requested size: 142.26378pt x 132.29636pt.
+<figures/follow_circle_nonlinear_loss.png, id=164, 389.455pt x 266.9975pt>
+File: figures/follow_circle_nonlinear_loss.png Graphic file (type png)
+<use figures/follow_circle_nonlinear_loss.png>
+Package pdftex.def Info: figures/follow_circle_nonlinear_loss.png  used on inpu
+t line 41.
+(pdftex.def)             Requested size: 199.16928pt x 136.54172pt.
+
+Overfull \hbox (13.94182pt too wide) in paragraph at lines 38--44
+ [][] 
+ []
+
 <figures/cfo_estimation.png, id=165, 389.455pt x 266.9975pt>
 File: figures/cfo_estimation.png Graphic file (type png)
 <use figures/cfo_estimation.png>
-Package pdftex.def Info: figures/cfo_estimation.png  used on input line 55.
+Package pdftex.def Info: figures/cfo_estimation.png  used on input line 61.
 (pdftex.def)             Requested size: 398.33858pt x 273.09567pt.
 ) [16 <./figures/follow_circle_nonlinear_before.png> <./figures/follow_circle_n
 onlinear_after.png> <./figures/follow_circle_nonlinear_loss.png>] [17 <./figure
 s/cfo_estimation.png>]
 \openout2 = `conclusion.aux'.
 
-
-(./conclusion.tex) [18
+ (./conclusion.tex) [18
 
 
 
@@ -1202,7 +1201,7 @@ Here is how much of TeX's memory you used:
  17334 multiletter control sequences out of 15000+600000
  10173 words of font info for 36 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
- 45i,13n,49p,1131b,1431s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 45i,14n,49p,1131b,1431s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 ></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb>
 </usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><
@@ -1213,7 +1212,7 @@ cal/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl12.pfb></usr/loc
 al/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/loca
 l/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/
 texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on thesis.pdf (26 pages, 1019133 bytes).
+Output written on thesis.pdf (26 pages, 1020137 bytes).
 PDF statistics:
  220 PDF objects out of 1000 (max. 8388607)
  90 compressed objects within 1 object stream

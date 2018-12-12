@@ -2,6 +2,8 @@
 
 \section{Recurrent Neural Network Follows a Circle}
 
+\subsection{Single Rate}
+
 \setlength{\tabcolsep}{0pt}
 \begin{figure}
   \centering
@@ -14,16 +16,20 @@
   \label{fig:circle_constant_rate}
 \end{figure}
 
-Figure~\ref{fig:circle_constant_rate} shows a recurrent neural network (RNN) that follows a circle for a constant rate of rotation.  The network has input of the starting points, $x[0]$, and must predict the next $100$ points, $x[1] \ldots x[99]$.  Point $x[i]$ is rotated by $e^{ij\omega}$ where $\omega$ is the rate of rotation.  The RNN architecture is one linear layer that takes the current point as input, $x[i]$, and outputs the next point, $x[i+1]$.  We use a linear layer here because the network essentially has to learn how to become the rotation matrix.
+Figure~\ref{fig:circle_constant_rate} shows a recurrent neural network (RNN) that follows a circle for a single rate of rotation.  The network has input of the starting points, $x[0]$, and must predict the next $100$ points, $x[1] \ldots x[99]$.  Point $x[i]$ is rotated by $e^{ij\omega}$ where $\omega$ is the rate of rotation.  The RNN architecture is one linear layer that takes the current point as input, $x[i]$, and outputs the next point, $x[i+1]$.  We use a linear layer here because the network essentially has to learn how to become the rotation matrix which is linear with respect to the input. 
 
 \begin{align}
 R = \begin{bmatrix}
-cos(\omega) & - sin(\omega) \\
-sin(\omega) & cos(\omega)
+\cos(\omega) & - \sin(\omega) \\
+\sin(\omega) & \cos(\omega)
 \end{bmatrix}
 \end{align} 
 
+The RNN was trained for a constant rate of rotation, $\omega$, applied to sequences of $100$ points.  The network trained for $2k$ epochs, each with a batch size of $1k$ data sequences and with a learning rate of $0.006$.  The initial starting point, $x[0]$ is a uniform random variable drawn from on the unit circle. 
+The network is tested on $1k$ new data sequences but with the same $\omega$.
+Figure~\ref{fig:circle_constant_rate} shows the results of an RNN trained and tested for $\omega=0.02$.  The network achieves a loss on the order of $10^{-13}$.  
 
+\subsection{Different Rates}
 
 \setlength{\tabcolsep}{0pt}
 \begin{figure}
