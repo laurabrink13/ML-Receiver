@@ -19,6 +19,38 @@
 
 \refsection{0}
   \datalist[entry]{nty/global//global/global}
+    \entry{bengio}{article}{}
+      \name{author}{3}{}{%
+        {{hash=40a8e4774982146adc2688546f54efb2}{%
+           family={Bengio},
+           familyi={B\bibinitperiod},
+           given={Yoshua},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=02404a92b0be3f52ec5ac08e41c13445}{%
+           family={Bengio},
+           familyi={B\bibinitperiod},
+           given={Samy},
+           giveni={S\bibinitperiod}}}%
+        {{hash=214ea95d5fd0e69d02b5757eab91cdea}{%
+           family={Cloutier},
+           familyi={C\bibinitperiod},
+           given={Jocelyn},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{b46698ec12876b7a270bcc5cf8d3ab1b}
+      \strng{fullhash}{b46698ec12876b7a270bcc5cf8d3ab1b}
+      \strng{bibnamehash}{b46698ec12876b7a270bcc5cf8d3ab1b}
+      \strng{authorbibnamehash}{b46698ec12876b7a270bcc5cf8d3ab1b}
+      \strng{authornamehash}{b46698ec12876b7a270bcc5cf8d3ab1b}
+      \strng{authorfullhash}{b46698ec12876b7a270bcc5cf8d3ab1b}
+      \field{sortinit}{B}
+      \field{sortinithash}{276475738cc058478c1677046f857703}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Technical Report 751, Départment d'Informatique et de Recherche Opérationelle, Université de Montréal, Canada}
+      \field{title}{Learning a synaptic learning rule}
+      \field{year}{1990}
+    \endentry
     \entry{botoca}{article}{}
       \name{author}{3}{}{%
         {{hash=56ebb9a275dc8ae201f9ceef77a4d7d4}{%
@@ -52,6 +84,32 @@
       \field{year}{2004}
       \field{pages}{227\bibrangedash 231}
       \range{pages}{5}
+    \endentry
+    \entry{costas}{article}{}
+      \name{author}{1}{}{%
+        {{hash=720a0ddd86ae5a575fb2f3327dea1c83}{%
+           family={Costas},
+           familyi={C\bibinitperiod},
+           given={John\bibnamedelima P.},
+           giveni={J\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+      }
+      \strng{namehash}{720a0ddd86ae5a575fb2f3327dea1c83}
+      \strng{fullhash}{720a0ddd86ae5a575fb2f3327dea1c83}
+      \strng{bibnamehash}{720a0ddd86ae5a575fb2f3327dea1c83}
+      \strng{authorbibnamehash}{720a0ddd86ae5a575fb2f3327dea1c83}
+      \strng{authornamehash}{720a0ddd86ae5a575fb2f3327dea1c83}
+      \strng{authorfullhash}{720a0ddd86ae5a575fb2f3327dea1c83}
+      \field{sortinit}{C}
+      \field{sortinithash}{963e9d84a3da2344e8833203de5aed05}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Proceedings of the IRE}
+      \field{number}{12}
+      \field{title}{Synchronous Communications}
+      \field{volume}{44}
+      \field{year}{1956}
+      \field{pages}{1713\bibrangedash 1718}
+      \range{pages}{6}
     \endentry
     \entry{diamandis}{article}{}
       \name{author}{1}{}{%
@@ -346,6 +404,43 @@
       \field{year}{2015}
       \field{pages}{1332\bibrangedash 1338}
       \range{pages}{7}
+    \endentry
+    \entry{lemke}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=2f301251734a2a3f20f5fa4cad84d275}{%
+           family={Lemke},
+           familyi={L\bibinitperiod},
+           given={Christiane},
+           giveni={C\bibinitperiod}}}%
+        {{hash=5e9ecb8634646a5d0d4730b5dd2ed310}{%
+           family={Budka},
+           familyi={B\bibinitperiod},
+           given={Marcin},
+           giveni={M\bibinitperiod}}}%
+        {{hash=0c229a393a01c59213ce12b19d582c46}{%
+           family={Gabrys},
+           familyi={G\bibinitperiod},
+           given={Bogdan},
+           giveni={B\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{cfb65757f27025e9aa5cb850d830b035}
+      \strng{fullhash}{cfb65757f27025e9aa5cb850d830b035}
+      \strng{bibnamehash}{cfb65757f27025e9aa5cb850d830b035}
+      \strng{authorbibnamehash}{cfb65757f27025e9aa5cb850d830b035}
+      \strng{authornamehash}{cfb65757f27025e9aa5cb850d830b035}
+      \strng{authorfullhash}{cfb65757f27025e9aa5cb850d830b035}
+      \field{sortinit}{L}
+      \field{sortinithash}{2c7981aaabc885868aba60f0c09ee20f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Artificial Intelligence Review}
+      \field{title}{Metalearning: a survey of trends and technologies}
+      \field{year}{2015}
+      \field{pages}{117\bibrangedash 130}
+      \range{pages}{14}
     \endentry
     \entry{osheaatt}{inproceedings}{}
       \name{author}{3}{}{%
@@ -693,6 +788,7 @@
       \range{pages}{4}
     \endentry
   \enddatalist
+  \missing{khodadeh}
 \endrefsection
 \endinput
 

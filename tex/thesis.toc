@@ -8,44 +8,44 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {1.1}Motivation}{1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.2}Background}{1}
+\contentsline {section}{\numberline {1.2}Background}{2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{Inter-symbol Interference and Equalization}{1}
+\contentsline {subsection}{Inter-symbol Interference and Equalization}{2}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{Equalization for a known channel}{2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Equalization for an unknown channel}{2}
+\contentsline {subsubsection}{Equalization for an unknown channel}{4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{How do real systems handle equalization?}{4}
+\contentsline {subsection}{Carrier Frequency Offset and Correction}{6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{Carrier Frequency Offset and Correction}{4}
+\contentsline {section}{\numberline {1.3}Related Works}{6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{How do real systems handle CFO correction?}{4}
+\contentsline {chapter}{\chapternumberline {2}Deep Networks for Equalization}{10}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.3}Related Works}{4}
+\contentsline {section}{\numberline {2.1}Replicate Results}{10}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\chapternumberline {2}Deep Networks for Equalization}{9}
+\contentsline {section}{\numberline {2.2}Channel Estimation}{10}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.1}Replicate Results}{9}
+\contentsline {subsection}{Learning an inverse}{10}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.2}Channel Estimation}{9}
+\contentsline {subsection}{Learning to multiply two inputs}{11}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{Learning an inverse}{9}
+\contentsline {section}{\numberline {2.3}Channel Equalization}{11}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{Learning to multiply two inputs}{10}
+\contentsline {section}{\numberline {2.4}Channel Est + Equal}{14}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.3}Channel Equalization}{10}
+\contentsline {chapter}{\chapternumberline {3}Deep Networks for CFO}{15}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.4}Channel Est + Equal}{13}
+\contentsline {section}{\numberline {3.1}Recurrent Neural Network Follows a Circle}{15}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\chapternumberline {3}Deep Networks for CFO}{14}
+\contentsline {subsection}{Single Rate}{15}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.1}Recurrent Neural Network Follows a Circle}{14}
+\contentsline {subsection}{Different Rates}{16}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.2}Deep Network Carrier Frequency Offset Estimation}{14}
+\contentsline {section}{\numberline {3.2}Deep Network Carrier Frequency Offset Estimation}{16}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.3}Deep Network Carrier Frequency Offset Correction}{14}
+\contentsline {section}{\numberline {3.3}Deep Network Carrier Frequency Offset Correction}{16}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\chapternumberline {4}Conclusion}{15}
+\contentsline {chapter}{\chapternumberline {4}Conclusion}{18}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Bibliography}{16}
+\contentsline {chapter}{Bibliography}{19}
