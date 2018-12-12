@@ -22,15 +22,13 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\chapternumberline {2}Deep Networks for Equalization}{10}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.1}Replicate Results}{10}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.2}Channel Estimation}{10}
+\contentsline {section}{\numberline {2.1}Channel Estimation}{10}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{Learning an inverse}{10}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{Learning to multiply two inputs}{11}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.3}Channel Equalization}{11}
+\contentsline {section}{\numberline {2.2}Channel Equalization}{11}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\chapternumberline {3}Deep Networks for CFO}{16}
 \defcounter {refsection}{0}\relax 
@@ -40,10 +38,10 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{Different Rates}{17}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.2}Deep Network Carrier Frequency Offset Estimation}{17}
+\contentsline {section}{\numberline {3.2}Deep Network Carrier Frequency Offset Estimation}{18}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.3}Deep Network Carrier Frequency Offset Correction}{17}
+\contentsline {section}{\numberline {3.3}Deep Network Carrier Frequency Offset Correction}{19}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\chapternumberline {4}Conclusion}{19}
+\contentsline {chapter}{\chapternumberline {4}Conclusion}{20}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Bibliography}{20}
+\contentsline {chapter}{Bibliography}{21}

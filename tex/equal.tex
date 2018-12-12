@@ -1,8 +1,5 @@
 \chapter{Deep Networks for Equalization}
 
-
-\section{Replicate Results}
-
 \section{Channel Estimation}
 
 \begin{itemize}
@@ -92,8 +89,22 @@ NN given x, y - output x*y
 
 \begin{figure}
 \begin{center}
-\includegraphics{figures/equal/incorrect_channels.png}
+\includegraphics[width=100mm]{figures/equal/incorrect_channels.png}
 \caption{What two tap channels does the equalizer get wrong?}
-\end{center}
 \label{fig:incorr_chan}
+\end{center}
 \end{figure}
+
+Figure~\ref{fig:incorr_chan} shows which channels the RNN equalizer and classic demodulator got any bits wrong.  
+There were a total of $50k$ random channels in the test set.  
+Of that set, only $43$ channels resulted in incorrect bits after the RNN equalizer and classic demodulator.
+From the figure, it is clear that these difficult channels are clustered into four regions. All of the four regions are when the first 
+
+
+Total number of channels in test set: 50000
+Total Bad Channels: 43
+Mean Squared Error among Bad Channels: 0.7306372348726573
+Mean Squared Error among Good Channels: 0.0002638874699068144
+Counts of each bad channel: {(0.707, 0.707): 14, (-0.707, 0.707): 1, (0.707, -0.707): 16, (-0.707, -0.707): 12}
+Errors of each bad channel: {(0.707, 0.707): 0.7162300079403883, (-0.707, 0.707): 0.5236157671769702, (0.707, -0.707): 0.8172570317294764, (-0.707, -0.707): 0.64920439279252}
+
