@@ -16,7 +16,7 @@
   \label{fig:circle_constant_rate}
 \end{figure}
 
-Figure~\ref{fig:circle_constant_rate} shows a recurrent neural network (RNN) that follows a circle for a single rate of rotation.  The network has input of the starting points, $x[0]$, and must predict the next $100$ points, $x[1] \ldots x[99]$.  Point $x[i]$ is rotated by $e^{ij\omega}$ where $\omega$ is the rate of rotation.  The RNN architecture is one linear layer that takes the current point as input, $x[i]$, and outputs the next point, $x[i+1]$.  We use a linear layer here because the network essentially has to learn how to become the rotation matrix which is linear with respect to the input. 
+Figure~\ref{fig:circle_constant_rate} shows a recurrent neural network (RNN) that follows a circle for a single rate of rotation.  The network's input is the starting point, $x[0]$, and it must predict the next $100$ points, $x[1] \ldots x[99]$.  Point $x[i]$ is rotated by $e^{ij\omega}$ where $\omega$ is the rate of rotation.  The RNN architecture is one linear layer that takes the current point as input, $x[i]$, and outputs the next point, $x[i+1]$.  We are forcing the state of the RNN to be the next point; $\text{state} = x[i+1]$.  We use a linear layer here because the network essentially has to learn how to become the rotation matrix which is linear with respect to the input. 
 
 \begin{align}
 R = \begin{bmatrix}
