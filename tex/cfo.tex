@@ -1,6 +1,42 @@
 \chapter{Deep Networks for CFO}
 
 \section{Recurrent Neural Network Follows a Circle}
+
+\setlength{\tabcolsep}{0pt}
+\begin{figure}
+  \centering
+  \caption{Linear neural network: follow a circle for a constant CFO rate.}
+  \begin{tabular}{ccc}
+    \includegraphics[width=50mm]{figures/follow_circle_linear_before.png}&
+    \includegraphics[width=50mm]{figures/follow_circle_linear_after.png}&
+    \includegraphics[width=70mm]{figures/follow_circle_linear_loss.png}\\
+  \end{tabular}
+  \label{fig:circle_constant_rate}
+\end{figure}
+
+Figure~\ref{fig:circle_constant_rate} shows a recurrent neural network (RNN) that follows a circle for a constant rate of rotation.  The network has input of the starting points, $x[0]$, and must predict the next $100$ points, $x[1] \ldots x[99]$.  Point $x[i]$ is rotated by $e^{ij\omega}$ where $\omega$ is the rate of rotation.  The RNN architecture is one linear layer that takes the current point as input, $x[i]$, and outputs the next point, $x[i+1]$.  We use a linear layer here because the network essentially has to learn how to become the rotation matrix.
+
+\begin{align}
+R = \begin{bmatrix}
+cos(\omega) & - sin(\omega) \\
+sin(\omega) & cos(\omega)
+\end{bmatrix}
+\end{align} 
+
+
+
+\setlength{\tabcolsep}{0pt}
+\begin{figure}
+  \centering
+  \caption{Nonlinear neural network: follow a circle for a different CFO rates.}
+  \begin{tabular}{ccc}
+    \includegraphics[width=50mm]{figures/follow_circle_nonlinear_before.png}&
+    \includegraphics[width=50mm]{figures/follow_circle_nonlinear_after.png}&
+    \includegraphics[width=70mm]{figures/follow_circle_nonlinear_loss.png}\\
+  \end{tabular}
+  \label{fig:circle_diff_rate}
+\end{figure}
+
 for a constant rate
 for a given rate
 

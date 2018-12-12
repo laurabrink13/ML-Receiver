@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.10.4)  11 DEC 2018 21:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.10.4)  12 DEC 2018 07:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -698,6 +698,9 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
 LaTeX Info: Redefining \[ on input line 2817.
 LaTeX Info: Redefining \] on input line 2818.
 )
+(/usr/local/texlive/2018/texmf-dist/tex/latex/capt-of/capt-of.sty
+Package: capt-of 2009/12/29 v0.2 standard captions outside of floats
+)
 \c@theorem=\count347
 Package biblatex Info: Trying to load language 'english'...
 Package biblatex Info: ... file 'english.lbx' found.
@@ -712,18 +715,18 @@ File: english.lbx 2018/03/04 v3.11 biblatex localization (PK/MW)
 (./conclusion.aux))
 \openout1 = `thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
 
 
 ******************************************************
@@ -761,8 +764,8 @@ Package biblatex Warning: The following entry could not be found
 (biblatex)                LaTeX afterwards.
 
 )
-Package biblatex Info: Reference section=0 on input line 21.
-Package biblatex Info: Reference segment=0 on input line 21.
+Package biblatex Info: Reference section=0 on input line 22.
+Package biblatex Info: Reference segment=0 on input line 22.
  (/usr/local/texlive/2018/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count350
@@ -1097,39 +1100,89 @@ M_loss_multiplication.png> <./figures/incorrect_channels.png>] [14]
 
 
 (./cfo.tex
-<figures/cfo_estimation.png, id=153, 395.4775pt x 266.9975pt>
+<figures/follow_circle_linear_before.png, id=153, 273.02pt x 252.945pt>
+File: figures/follow_circle_linear_before.png Graphic file (type png)
+<use figures/follow_circle_linear_before.png>
+Package pdftex.def Info: figures/follow_circle_linear_before.png  used on input
+ line 10.
+(pdftex.def)             Requested size: 142.26378pt x 131.80232pt.
+<figures/follow_circle_linear_after.png, id=154, 273.02pt x 252.945pt>
+File: figures/follow_circle_linear_after.png Graphic file (type png)
+<use figures/follow_circle_linear_after.png>
+Package pdftex.def Info: figures/follow_circle_linear_after.png  used on input 
+line 11.
+(pdftex.def)             Requested size: 142.26378pt x 131.80232pt.
+<figures/follow_circle_linear_loss.png, id=155, 397.485pt x 266.9975pt>
+File: figures/follow_circle_linear_loss.png Graphic file (type png)
+<use figures/follow_circle_linear_loss.png>
+Package pdftex.def Info: figures/follow_circle_linear_loss.png  used on input l
+ine 12.
+(pdftex.def)             Requested size: 199.16928pt x 133.78766pt.
+
+Overfull \hbox (13.94182pt too wide) in paragraph at lines 9--15
+ [][] 
+ []
+
+<figures/follow_circle_nonlinear_before.png, id=156, 273.02pt x 252.945pt>
+File: figures/follow_circle_nonlinear_before.png Graphic file (type png)
+<use figures/follow_circle_nonlinear_before.png>
+Package pdftex.def Info: figures/follow_circle_nonlinear_before.png  used on in
+put line 33.
+(pdftex.def)             Requested size: 142.26378pt x 131.80232pt.
+<figures/follow_circle_nonlinear_after.png, id=157, 272.01625pt x 252.945pt>
+File: figures/follow_circle_nonlinear_after.png Graphic file (type png)
+<use figures/follow_circle_nonlinear_after.png>
+Package pdftex.def Info: figures/follow_circle_nonlinear_after.png  used on inp
+ut line 34.
+(pdftex.def)             Requested size: 142.26378pt x 132.29636pt.
+<figures/follow_circle_nonlinear_loss.png, id=158, 389.455pt x 266.9975pt>
+File: figures/follow_circle_nonlinear_loss.png Graphic file (type png)
+<use figures/follow_circle_nonlinear_loss.png>
+Package pdftex.def Info: figures/follow_circle_nonlinear_loss.png  used on inpu
+t line 35.
+(pdftex.def)             Requested size: 199.16928pt x 136.54172pt.
+
+Overfull \hbox (13.94182pt too wide) in paragraph at lines 32--38
+ [][] 
+ []
+
+[15
+
+
+
+ <./figures/follow_circle_linear_before.png> <./figures/follow_circle_linear_af
+ter.png> <./figures/follow_circle_linear_loss.png>]
+<figures/cfo_estimation.png, id=165, 389.455pt x 266.9975pt>
 File: figures/cfo_estimation.png Graphic file (type png)
 <use figures/cfo_estimation.png>
-Package pdftex.def Info: figures/cfo_estimation.png  used on input line 19.
-(pdftex.def)             Requested size: 398.33858pt x 268.93199pt.
-) [15
-
-
-
-] [16 <./figures/cfo_estimation.png>]
+Package pdftex.def Info: figures/cfo_estimation.png  used on input line 55.
+(pdftex.def)             Requested size: 398.33858pt x 273.09567pt.
+) [16 <./figures/follow_circle_nonlinear_before.png> <./figures/follow_circle_n
+onlinear_after.png> <./figures/follow_circle_nonlinear_loss.png>] [17 <./figure
+s/cfo_estimation.png>]
 \openout2 = `conclusion.aux'.
 
- (./conclusion.tex)
-[17
+
+(./conclusion.tex) [18
 
 
 
 ]
-Overfull \hbox (13.92412pt too wide) in paragraph at lines 91--91
+Overfull \hbox (13.92412pt too wide) in paragraph at lines 92--92
 \OT1/cmr/m/n/12 rule''. In: \OT1/cmr/m/it/12 Tech-ni-cal Re-port 751, D^^Separt
 ment d'Informatique et de Recherche Op^^Serationelle,
  []
 
-[18
+[19
 
 
 ]
-Overfull \hbox (9.67142pt too wide) in paragraph at lines 91--91
+Overfull \hbox (9.67142pt too wide) in paragraph at lines 92--92
 \OT1/cmr/m/n/12 Es-ti-ma-tors for Wire-less Chan-nel State In-for-ma-tion''. In
 : \OT1/cmr/m/it/12 arXiv preprint arXiv:1707.06260
  []
 
-[19]
+[20]
 \tf@toc=\write6
 \openout6 = `thesis.toc'.
 
@@ -1143,13 +1196,13 @@ Package logreq Info: Writing requests to 'thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 13592 strings out of 492639
- 228801 string characters out of 6129287
- 685731 words of memory out of 5000000
- 17303 multiletter control sequences out of 15000+600000
+ 13633 strings out of 492639
+ 230368 string characters out of 6129287
+ 685963 words of memory out of 5000000
+ 17334 multiletter control sequences out of 15000+600000
  10173 words of font info for 36 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
- 45i,12n,49p,1131b,1431s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 45i,13n,49p,1131b,1431s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 ></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb>
 </usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><
@@ -1160,10 +1213,10 @@ cal/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl12.pfb></usr/loc
 al/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/loca
 l/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/
 texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on thesis.pdf (25 pages, 969759 bytes).
+Output written on thesis.pdf (26 pages, 1019133 bytes).
 PDF statistics:
- 205 PDF objects out of 1000 (max. 8388607)
- 88 compressed objects within 1 object stream
+ 220 PDF objects out of 1000 (max. 8388607)
+ 90 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 201 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 231 words of extra memory for PDF output out of 10000 (max. 10000000)
 

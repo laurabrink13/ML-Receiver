@@ -38,10 +38,10 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3.1}Recurrent Neural Network Follows a Circle}{15}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.2}Deep Network Carrier Frequency Offset Estimation}{15}
+\contentsline {section}{\numberline {3.2}Deep Network Carrier Frequency Offset Estimation}{16}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.3}Deep Network Carrier Frequency Offset Correction}{15}
+\contentsline {section}{\numberline {3.3}Deep Network Carrier Frequency Offset Correction}{16}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\chapternumberline {4}Conclusion}{17}
+\contentsline {chapter}{\chapternumberline {4}Conclusion}{18}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Bibliography}{18}
+\contentsline {chapter}{Bibliography}{19}
