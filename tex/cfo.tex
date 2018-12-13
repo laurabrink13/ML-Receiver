@@ -1,6 +1,7 @@
-\chapter{Deep Networks for CFO}
+\chapter[cfo]{Deep Networks for Carrier Frequency Offset\raisebox{.3\baselineskip}{\normalsize\footnotemark}}
+\footnotetext{The contents of this chapter were produced in collaboration with Nikhil Shinde.} 
 
-The carrier frequency offset (CFO) correction process removes the symbol rotation caused by the non-ideal conditions of the transmitter and receiver environment.  We will explore how neural networks can both estimate the CFO and correct for rate of rotation.
+The carrier frequency offset (CFO) correction process removes the symbol rotation caused by the non-ideal conditions of the transmitter and receiver environment.  We will explore how neural networks can both estimate the CFO and correct for rate of rotation without using backpropagation for each new rate.
 
 \section{Recurrent Neural Network Follows a Circle}
 
@@ -71,6 +72,7 @@ Figure~\ref{fig:circle_diff_rate} shows the results of an RNN trained and tested
 We explore estimating carrier frequency offset and correction with neural networks.
 One of the challenges with CFO is that it cannot be directly measured in the real world.  
 Therefore, all of the loss functions will not depend on $\omega$.
+Again, we want a neural network that does not need to update its weights every time it encounters a new rate of rotation.
 
 \begin{figure}
 \begin{center}
