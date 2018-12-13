@@ -32,20 +32,18 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{RNN for Channel Equalization}{12}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\chapternumberline {3}Deep Networks for CFO}{16}
+\contentsline {chapter}{\chapternumberline {3}Deep Networks for CFO}{15}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.1}Recurrent Neural Network Follows a Circle}{16}
+\contentsline {section}{\numberline {3.1}Recurrent Neural Network Follows a Circle}{15}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{Single Rate}{16}
+\contentsline {subsection}{Single Rate}{15}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{Different Rates}{17}
+\contentsline {subsection}{Different Rates}{16}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.2}Deep Network Carrier Frequency Offset Estimation}{18}
+\contentsline {section}{\numberline {3.2}Deep Network Carrier Frequency Offset Estimation}{17}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.3}Deep Network Carrier Frequency Offset Correction}{19}
+\contentsline {chapter}{\chapternumberline {4}Conclusion}{18}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\chapternumberline {4}Conclusion}{20}
+\contentsline {section}{\numberline {4.1}Future Work}{18}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.1}Future Work}{20}
-\defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Bibliography}{21}
+\contentsline {chapter}{Bibliography}{19}

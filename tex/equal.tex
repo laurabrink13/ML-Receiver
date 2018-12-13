@@ -56,41 +56,49 @@ The architecture consists of two dense layers with $50$ nodes each and sigmoid a
 The network is re-trained with $10k$ data points for different values of $\beta$. As $\beta$ gets close to zero, the error increases dramatically.  This is expected because the closer $\beta$ is to zero, the stronger the effects are of the infinite peaks of the division function.
 
 \subsection{Learning to multiply two inputs}
-NN given x, y - output x*y
 
 \begin{figure}
 \begin{center}
 \includegraphics{figures/equal/Multiplication_Function_plot.png}
 \caption{Topographical surface representation of the multiplication function; $z=xy$.}
-\end{center}
 \label{fig:mult_fx}
+\end{center}
 \end{figure}
 
-\begin{figure}
-\begin{center}
-\includegraphics{figures/equal/LSTM_loss_multiplication.png}
-\caption{LSTM loss trying to learn the Multiplication function; $z=xy$.}
-\end{center}
-\label{fig:lstm_loss_mult}
-\end{figure}
+%\begin{figure}
+%\begin{center}
+%\includegraphics{figures/equal/LSTM_loss_multiplication.png}
+%\caption{LSTM loss trying to learn the Multiplication function; $z=xy$.}
+%\end{center}
+%\label{fig:lstm_loss_mult}
+%\end{figure}
 
-\begin{figure}
-\begin{center}
-\includegraphics{figures/equal/Multiplication_loss_vs_epoch.png}
-\caption{LSTM loss trying to learn the Multiplication function; $z=xy$.}
-\end{center}
-\label{fig:loss_mult}
-\end{figure}
+%\begin{figure}
+%\begin{center}
+%\includegraphics{figures/equal/Multiplication_loss_vs_epoch.png}
+%\caption{LSTM loss trying to learn the Multiplication function; $z=xy$.}
+%\end{center}
+%\label{fig:loss_mult}
+%\end{figure}
 
 \begin{figure}
 \begin{center}
 \includegraphics{figures/equal/Channel_upper_bound_multiplication.png}
-\caption{LSTM loss trying to learn the Multiplication function; $z=xy$.}
-\end{center}
+\caption{Neural network divsion with respect to the upper bound of $y$.}
 \label{fig:mult_bound}
+\end{center}
 \end{figure}
 
 We explore whether a neural network can learn to do multiplication.  
+Figure~\ref{fig:mult_fx} shows the topological representation of the multiplication function, $z=xy$.  A neural network that is trained to do multiplication will need to approximate the surface of this function.  
+When $x$ and $y$ are close to zero, the function is stable.  However, as $x$ and $y$ grow, the function becomes unstable and grows to infinity. 
+
+Figure~\ref{fig:mult_bound} shows the performance of a neural network learning multiplication.
+The neural network's input is $x$ and $y$ and the output is $\hat{z}$.  Both inputs are uniform random variables; $x$ is drawn uniformly $[-1,1]$ and $y$ is drawn uniformly $[0,\gamma]$. 
+The loss function is the mean squared error between the estimated multiplication and the true multiplication, $\hat{z}-xy$.
+The architecture consists of two dense layers with $50$ nodes each and sigmoid activiation function.  This feeds into a linear layer that outputs the scalar estimate of $\hat{z}$.  
+The network is re-trained with $50k$ data points for different values of $\gamma$. As $\gamma$ increases, the error increases dramatically.  This is expected because the larger $\gamma$ is, the stronger the effects are of the infinite limits of the multiplication function.
+
 
 \subsection{RNN for Channel Equalization}
 
