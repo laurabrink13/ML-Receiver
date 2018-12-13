@@ -20,16 +20,16 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {2.4}{\ignorespaces Neural network divsion with respect to the upper bound of $y$.\relax }}{14}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Comparison of RNN to MMSE in the mean squared error after equalization.\relax }}{14}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Comparison of RNN and MMSE mean squared error after equalization.\relax }}{14}
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {2.6}{\ignorespaces What two tap channels does the equalizer get wrong?\relax }}{15}
 \defcounter {refsection}{0}\relax 
 \addvspace {10pt}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Linear neural network: follow a circle for a constant CFO rate.\relax }}{17}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Linear neural network: follow a circle for a constant CFO rate.\relax }}{18}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Nonlinear neural network: follow a circle for a different CFO rates.\relax }}{17}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Nonlinear neural network: follow a circle for a different CFO rates.\relax }}{18}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.3}{\ignorespaces The log BER of received signals passed through a neural network CFO estimator with a rotation matrix CFO correction and classic demodulator. The log BER of the same signals passed through just the classic demodulator.\relax }}{19}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces The log BER of received signals passed through a neural network CFO estimator with a rotation matrix CFO correction and classic demodulator. The log BER of the same signals passed through just the classic demodulator.\relax }}{20}
 \defcounter {refsection}{0}\relax 
 \addvspace {10pt}

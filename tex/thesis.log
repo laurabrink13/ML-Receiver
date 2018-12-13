@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.10.4)  12 DEC 2018 21:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.10.4)  12 DEC 2018 21:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1099,32 +1099,32 @@ File: figures/equal/RNN_vs_MMSE.png Graphic file (type png)
 Package pdftex.def Info: figures/equal/RNN_vs_MMSE.png  used on input line 115.
 
 (pdftex.def)             Requested size: 284.52756pt x 195.0695pt.
-<figures/equal/incorrect_channels.png, id=143, 404.51125pt x 280.04625pt>
+ [13 <./figures/equal/Multiplication_Function_plot.png>] [14 <./figures/equal/C
+hannel_upper_bound_multiplication.png> <./figures/equal/RNN_vs_MMSE.png>]
+<figures/equal/incorrect_channels.png, id=153, 404.51125pt x 280.04625pt>
 File: figures/equal/incorrect_channels.png Graphic file (type png)
 <use figures/equal/incorrect_channels.png>
 Package pdftex.def Info: figures/equal/incorrect_channels.png  used on input li
-ne 128.
+ne 136.
 (pdftex.def)             Requested size: 284.52756pt x 196.98393pt.
- [13 <./figures/equal/Multiplication_Function_plot.png>] [14 <./figures/equal/C
-hannel_upper_bound_multiplication.png> <./figures/equal/RNN_vs_MMSE.png>]) [15 
-<./figures/equal/incorrect_channels.png>]
+ [15 <./figures/equal/incorrect_channels.png>])
+[16]
 \openout2 = `cfo.aux'.
 
-
-(./cfo.tex
-<figures/cfo/follow_circle_linear_before.png, id=158, 273.02pt x 252.945pt>
+ (./cfo.tex
+<figures/cfo/follow_circle_linear_before.png, id=161, 273.02pt x 252.945pt>
 File: figures/cfo/follow_circle_linear_before.png Graphic file (type png)
 <use figures/cfo/follow_circle_linear_before.png>
 Package pdftex.def Info: figures/cfo/follow_circle_linear_before.png  used on i
 nput line 19.
 (pdftex.def)             Requested size: 142.26378pt x 131.80232pt.
-<figures/cfo/follow_circle_linear_after.png, id=159, 273.02pt x 252.945pt>
+<figures/cfo/follow_circle_linear_after.png, id=162, 273.02pt x 252.945pt>
 File: figures/cfo/follow_circle_linear_after.png Graphic file (type png)
 <use figures/cfo/follow_circle_linear_after.png>
 Package pdftex.def Info: figures/cfo/follow_circle_linear_after.png  used on in
 put line 20.
 (pdftex.def)             Requested size: 142.26378pt x 131.80232pt.
-<figures/cfo/follow_circle_linear_loss.png, id=160, 397.485pt x 266.9975pt>
+<figures/cfo/follow_circle_linear_loss.png, id=163, 397.485pt x 266.9975pt>
 File: figures/cfo/follow_circle_linear_loss.png Graphic file (type png)
 <use figures/cfo/follow_circle_linear_loss.png>
 Package pdftex.def Info: figures/cfo/follow_circle_linear_loss.png  used on inp
@@ -1135,25 +1135,25 @@ Overfull \hbox (13.94182pt too wide) in paragraph at lines 18--24
  [][] 
  []
 
-[16
+[17
 
 
 
 ]
-<figures/cfo/follow_circle_nonlinear_before.png, id=164, 273.02pt x 252.945pt>
+<figures/cfo/follow_circle_nonlinear_before.png, id=167, 273.02pt x 252.945pt>
 File: figures/cfo/follow_circle_nonlinear_before.png Graphic file (type png)
 <use figures/cfo/follow_circle_nonlinear_before.png>
 Package pdftex.def Info: figures/cfo/follow_circle_nonlinear_before.png  used o
 n input line 47.
 (pdftex.def)             Requested size: 142.26378pt x 131.80232pt.
-<figures/cfo/follow_circle_nonlinear_after.png, id=165, 272.01625pt x 252.945pt
+<figures/cfo/follow_circle_nonlinear_after.png, id=168, 272.01625pt x 252.945pt
 >
 File: figures/cfo/follow_circle_nonlinear_after.png Graphic file (type png)
 <use figures/cfo/follow_circle_nonlinear_after.png>
 Package pdftex.def Info: figures/cfo/follow_circle_nonlinear_after.png  used on
  input line 48.
 (pdftex.def)             Requested size: 142.26378pt x 132.29636pt.
-<figures/cfo/follow_circle_nonlinear_loss.png, id=166, 389.455pt x 266.9975pt>
+<figures/cfo/follow_circle_nonlinear_loss.png, id=169, 389.455pt x 266.9975pt>
 File: figures/cfo/follow_circle_nonlinear_loss.png Graphic file (type png)
 <use figures/cfo/follow_circle_nonlinear_loss.png>
 Package pdftex.def Info: figures/cfo/follow_circle_nonlinear_loss.png  used on 
@@ -1164,20 +1164,20 @@ Overfull \hbox (13.94182pt too wide) in paragraph at lines 46--52
  [][] 
  []
 
-[17 <./figures/cfo/follow_circle_linear_before.png> <./figures/cfo/follow_circl
+[18 <./figures/cfo/follow_circle_linear_before.png> <./figures/cfo/follow_circl
 e_linear_after.png> <./figures/cfo/follow_circle_linear_loss.png> <./figures/cf
 o/follow_circle_nonlinear_before.png> <./figures/cfo/follow_circle_nonlinear_af
 ter.png> <./figures/cfo/follow_circle_nonlinear_loss.png>]
-<figures/cfo/cfo_estimation.png, id=176, 389.455pt x 266.9975pt>
+<figures/cfo/cfo_estimation.png, id=179, 389.455pt x 266.9975pt>
 File: figures/cfo/cfo_estimation.png Graphic file (type png)
 <use figures/cfo/cfo_estimation.png>
 Package pdftex.def Info: figures/cfo/cfo_estimation.png  used on input line 77.
 
 (pdftex.def)             Requested size: 341.43306pt x 234.08258pt.
-) [18] [19 <./figures/cfo/cfo_estimation.png>]
+) [19] [20 <./figures/cfo/cfo_estimation.png>]
 \openout2 = `conclusion.aux'.
 
- (./conclusion.tex) [20
+ (./conclusion.tex) [21
 
 
 
@@ -1187,7 +1187,7 @@ Overfull \hbox (13.92412pt too wide) in paragraph at lines 92--92
 ment d'Informatique et de Recherche Op^^Serationelle,
  []
 
-[21
+[22
 
 
 ]
@@ -1196,7 +1196,7 @@ Overfull \hbox (9.67142pt too wide) in paragraph at lines 92--92
 : \OT1/cmr/m/it/12 arXiv preprint arXiv:1707.06260
  []
 
-[22]
+[23]
 \tf@toc=\write6
 \openout6 = `thesis.toc'.
 
@@ -1212,7 +1212,7 @@ Package logreq Info: Writing requests to 'thesis.run.xml'.
 Here is how much of TeX's memory you used:
  13641 strings out of 492639
  230844 string characters out of 6129287
- 686098 words of memory out of 5000000
+ 686092 words of memory out of 5000000
  17339 multiletter control sequences out of 15000+600000
  10173 words of font info for 36 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
@@ -1227,10 +1227,10 @@ cal/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl12.pfb></usr/loc
 al/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/loca
 l/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/
 texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on thesis.pdf (28 pages, 1046545 bytes).
+Output written on thesis.pdf (29 pages, 1047921 bytes).
 PDF statistics:
- 228 PDF objects out of 1000 (max. 8388607)
- 94 compressed objects within 1 object stream
+ 231 PDF objects out of 1000 (max. 8388607)
+ 96 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  236 words of extra memory for PDF output out of 10000 (max. 10000000)
 

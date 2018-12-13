@@ -123,7 +123,8 @@ A bidirectional RNN connects the forward and backwards nodes of the RNN, allowin
 An RNN that has LSTM units allows the nodes to store memory for a short period of time.
 Our network also has time-distributed dense layers which are used after LSTMs to flatten the output by applying a fully connected dense layer at each time step.
 
-
+The input to our RNN is the channel taps concatenated with a sequence of $10$ of the symbols.  The inputs are fed into four layers of bidirectional LSTM units.  Each layer has a state size of $90$ units for each forward and backward state.  The output of the four bidirectional LSTM layers is $180$ units for each of the $10$ sequences.  
+This is then fed into two time-distributed dense layers with $180$ nodes and $100$ nodes respectively and they each have Relu activation functions. These time-distributed dense layers bring the output size down from $180$ to $100$ to $100$.  The output is then fed into one final time-distributed dense layer with $100$ nodes and linear activation.  The outputs of the RNN are $10$ equalized symbols.  
 
 
 Figure~\ref{fig:rnn_vs_mmse} shows ... 
