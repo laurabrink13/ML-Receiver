@@ -86,8 +86,15 @@ The neural network architecture consists of two non-linear layers, each with $10
 The received preamble is then rotated using a special layer with the function $e^{-ij\hat{\omega}}$.
 
 Figure~\ref{fig:cfo_est} compares the performance of the neural network correcting CFO versus no CFO correction.  The training and testing data are solely for a one tap channel and have varying values of $\omega$. The preamble length is kept constant at $100$ symbols in QPSK.
-The neural network is trained for $15k$ epochs with batch size of $100$ sequences and with a learning rate of $0.001$.  The neural network and no CFO correction are tested on $10k$ sequences with different $\omega$.  
+The neural network is trained for $15k$ epochs with batch size of $100$ sequences and with a learning rate of $0.001$.  The neural network and no CFO correction are tested on $10k$ sequences with different rates of rotation, $\omega$.  
+The rate of rotation, $\omega$, is a uniform random variable, $[0,\frac{1}{100}]$.
 The training and testing process is repeated for each SNR.  Note, we re-train the network for each SNR.  
+We compare the bit error rate of the neural network and classic demodulator versus the bit error rate of just the classic demodulator without any CFO correction.
+
+For SNR above $25$, the neural network does not have any incorrect bits in the $10k$ data sequences each with $100$ symbols, or $50$ bits.  The neural network consistently performs better than just the classic demodulator for all SNR.  Although, the performance is similar for SNR$=1$.
+
+
+Plot: multi tap channel cfo correction!
 
 %\section{Deep Network Carrier Frequency Offset Correction}
 %Program a Costas loop for comparison 
