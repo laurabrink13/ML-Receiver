@@ -127,16 +127,12 @@ The input to our RNN is the channel taps concatenated with a sequence of $10$ of
 This is then fed into two time-distributed dense layers with $180$ nodes and $100$ nodes respectively and they each have Relu activation functions. These time-distributed dense layers bring the output size down from $180$ to $100$ to $100$.  The output is then fed into one final time-distributed dense layer with $100$ nodes and linear activation.  The outputs of the RNN are $10$ equalized symbols.  
 
 
-Figure~\ref{fig:rnn_vs_mmse} shows ... 
-Plot comparing RNN to MMSE.
+Figure~\ref{fig:rnn_vs_mmse} compares the mean squared error loss on test data for the RNN architecture defined above and the MMSE equalizer defined in the introduction.  
+The RNN is trained on $40k$ data sequences, with a decaying learning rate starting at $0.01$.
+The RNN and MMSE are tested on the same $10k$ data sequences.  New data is generated for each SNR and the RNN is re-trained for each SNR.  Each data sequence consits of $60$ bits modulated to $30$ complex symbols.
+We assume that the RNN and MMSE both have access to the true channel chracteristics.
 
-
-%preamble_length  80 (in bits) 40 symbols
-%data_length 60 (in bits) 30 symbols
- %       dataset_size 50000
-  %      channel_length  2
-   %     constellations 4
-%Start learning rate 0.01
+The RNN equalizer performs comparably to the MMSE equalizer for low SNRs and performs better than MMSE equalizer for medium SNRs.  However, the RNN equalizer performs worse than the MMSE equalizer for high SNRs.  We take a closer look at what kind of channels the RNN equalizer is getting wrong.
 
 \begin{figure}
 \begin{center}
@@ -158,11 +154,10 @@ Plot comparing RNN to MMSE.
 \end{align*}
 
 Figure~\ref{fig:incorr_chan} shows which channels the RNN equalizer and classic demodulator got any bits wrong.  
-There were a total of $50k$ random channels in the test set.  
+There were a total of $50k$ random channels in the test set with SNR$=100$.
 Of that set, only $43$ channels resulted in incorrect bits after the RNN equalizer and classic demodulator.
 From the figure, it is clear that these difficult channels are clustered into four regions. All of the four regions are when the first and second tap of the channel are equal in magnitude.
 The mean squared error between the equalized data and the true data among just the bad channels was $0.7306$.  The mean squared error among the good channels was $0.000264$.
-
 
 
 In this chapter, we designed a deep neural network to estimate two tap channels.
