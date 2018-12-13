@@ -24,11 +24,13 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2.1}Channel Estimation}{10}
 \defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.2}Channel Equalization}{10}
+\defcounter {refsection}{0}\relax 
 \contentsline {subsection}{Learning an inverse}{10}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{Learning to multiply two inputs}{11}
+\contentsline {subsection}{Learning to multiply two inputs}{12}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.2}Channel Equalization}{11}
+\contentsline {subsection}{RNN for Channel Equalization}{12}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\chapternumberline {3}Deep Networks for CFO}{16}
 \defcounter {refsection}{0}\relax 

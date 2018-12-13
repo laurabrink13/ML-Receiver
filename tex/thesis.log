@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.10.4)  12 DEC 2018 16:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.10.4)  12 DEC 2018 16:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1058,68 +1058,63 @@ File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 6.
+<figures/equal/Division_Function_plot.png, id=127, 398.48875pt x 282.05376pt>
+File: figures/equal/Division_Function_plot.png Graphic file (type png)
+<use figures/equal/Division_Function_plot.png>
+Package pdftex.def Info: figures/equal/Division_Function_plot.png  used on inpu
+t line 24.
+(pdftex.def)             Requested size: 398.48778pt x 282.05305pt.
+<figures/equal/One_tap_channel_inversion.png, id=128, 301.125pt x 206.7725pt>
+File: figures/equal/One_tap_channel_inversion.png Graphic file (type png)
+<use figures/equal/One_tap_channel_inversion.png>
+Package pdftex.def Info: figures/equal/One_tap_channel_inversion.png  used on i
+nput line 32.
+(pdftex.def)             Requested size: 301.12425pt x 206.77199pt.
 [10
 
 
 
-]
-<figures/equal/Division_Function_plot.png, id=130, 398.48875pt x 282.05376pt>
-File: figures/equal/Division_Function_plot.png Graphic file (type png)
-<use figures/equal/Division_Function_plot.png>
-Package pdftex.def Info: figures/equal/Division_Function_plot.png  used on inpu
-t line 30.
-(pdftex.def)             Requested size: 398.48778pt x 282.05305pt.
-<figures/equal/One_tap_channel_inversion.png, id=131, 301.125pt x 206.7725pt>
-File: figures/equal/One_tap_channel_inversion.png Graphic file (type png)
-<use figures/equal/One_tap_channel_inversion.png>
-Package pdftex.def Info: figures/equal/One_tap_channel_inversion.png  used on i
-nput line 38.
-(pdftex.def)             Requested size: 301.12425pt x 206.77199pt.
-<figures/equal/Multiplication_Function_plot.png, id=132, 398.48875pt x 282.0537
+] [11 <./figures/equal/Division_Function_plot.png> <./figures/equal/One_tap_cha
+nnel_inversion.png>]
+<figures/equal/Multiplication_Function_plot.png, id=137, 398.48875pt x 282.0537
 6pt>
 File: figures/equal/Multiplication_Function_plot.png Graphic file (type png)
 <use figures/equal/Multiplication_Function_plot.png>
 Package pdftex.def Info: figures/equal/Multiplication_Function_plot.png  used o
-n input line 49.
+n input line 58.
 (pdftex.def)             Requested size: 398.48778pt x 282.05305pt.
-<figures/equal/LSTM_loss_multiplication.png, id=133, 309.155pt x 214.8025pt>
+<figures/equal/LSTM_loss_multiplication.png, id=138, 309.155pt x 214.8025pt>
 File: figures/equal/LSTM_loss_multiplication.png Graphic file (type png)
 <use figures/equal/LSTM_loss_multiplication.png>
 Package pdftex.def Info: figures/equal/LSTM_loss_multiplication.png  used on in
-put line 57.
+put line 66.
 (pdftex.def)             Requested size: 309.15424pt x 214.80197pt.
-<figures/equal/Multiplication_loss_vs_epoch.png, id=134, 382.42876pt x 278.0387
+<figures/equal/Multiplication_loss_vs_epoch.png, id=139, 382.42876pt x 278.0387
 6pt>
 File: figures/equal/Multiplication_loss_vs_epoch.png Graphic file (type png)
 <use figures/equal/Multiplication_loss_vs_epoch.png>
 Package pdftex.def Info: figures/equal/Multiplication_loss_vs_epoch.png  used o
-n input line 65.
+n input line 74.
 (pdftex.def)             Requested size: 382.42781pt x 278.03807pt.
-<figures/equal/Channel_upper_bound_multiplication.png, id=135, 395.4775pt x 278
+<figures/equal/Channel_upper_bound_multiplication.png, id=140, 395.4775pt x 278
 .03876pt>
 File: figures/equal/Channel_upper_bound_multiplication.png Graphic file (type p
 ng)
 <use figures/equal/Channel_upper_bound_multiplication.png>
 Package pdftex.def Info: figures/equal/Channel_upper_bound_multiplication.png  
-used on input line 73.
+used on input line 82.
 (pdftex.def)             Requested size: 395.47653pt x 278.03807pt.
-<figures/equal/incorrect_channels.png, id=136, 404.51125pt x 280.04625pt>
+ [12 <./figures/equal/Multiplication_Function_plot.png>] [13 <./figures/equal/L
+STM_loss_multiplication.png> <./figures/equal/Multiplication_loss_vs_epoch.png>
+]
+<figures/equal/incorrect_channels.png, id=151, 404.51125pt x 280.04625pt>
 File: figures/equal/incorrect_channels.png Graphic file (type png)
 <use figures/equal/incorrect_channels.png>
 Package pdftex.def Info: figures/equal/incorrect_channels.png  used on input li
-ne 92.
+ne 100.
 (pdftex.def)             Requested size: 284.52756pt x 196.98393pt.
- [11 <./figures/equal/Division_Function_plot.png>] [12 <./figures/equal/One_tap
-_channel_inversion.png> <./figures/equal/Multiplication_Function_plot.png>] [13
- <./figures/equal/LSTM_loss_multiplication.png> <./figures/equal/Multiplication
-_loss_vs_epoch.png>] [14 <./figures/equal/Channel_upper_bound_multiplication.pn
-g> <./figures/equal/incorrect_channels.png>]
-Overfull \hbox (16.29826pt too wide) in paragraph at lines 115--121
-\OT1/cmr/m/n/12 0.7162300079403883, (-0.707, 0.707): 0.5236157671769702, (0.707
-, -0.707): 0.8172570317294764,
- []
-
-) [15]
+) [14 <./figures/equal/Channel_upper_bound_multiplication.png>] [15 <./figures/
+equal/incorrect_channels.png>]
 \openout2 = `cfo.aux'.
 
  (./cfo.tex
@@ -1238,7 +1233,7 @@ cal/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl12.pfb></usr/loc
 al/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/loca
 l/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/
 texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on thesis.pdf (28 pages, 1063456 bytes).
+Output written on thesis.pdf (28 pages, 1063389 bytes).
 PDF statistics:
  230 PDF objects out of 1000 (max. 8388607)
  94 compressed objects within 1 object stream

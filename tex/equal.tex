@@ -12,18 +12,12 @@
 \item want? how to visualize that NN does better than LS
 \end{itemize}
 
+
+
+
+\section{Channel Equalization}
+
 \subsection{Learning an inverse}
-\begin{itemize}
-\item can a NN learn to do division?
-\item given a one tap channel and data sequence, output is equalized data sequence
-\item with and without log feature scaling
-\item without log errors = $10^-6$
-\item MMSE gets error = $10^-32$
-\item with log errors = 
-\item straight inversion, without log feature scaling $10^-7$ - with dense layers
-\item inversion with log feature scaling with error of $10^-14$ 
-\item plots: inversion, but as a function of beta for both non-log and log
-\end{itemize}
 
 \begin{figure}
 \begin{center}
@@ -40,6 +34,21 @@
 \end{center}
 \label{fig:one_tap_inv}
 \end{figure}
+
+We explore whether a neural network can learn to do division.  
+
+\begin{itemize}
+\item can a NN learn to do division?
+\item given a one tap channel and data sequence, output is equalized data sequence
+\item with and without log feature scaling
+\item without log errors = $10^-6$
+\item MMSE gets error = $10^-32$
+\item with log errors = 
+\item straight inversion, without log feature scaling $10^-7$ - with dense layers
+\item inversion with log feature scaling with error of $10^-14$ 
+\item plots: inversion, but as a function of beta for both non-log and log
+\end{itemize}
+
 
 \subsection{Learning to multiply two inputs}
 NN given x, y - output x*y
@@ -76,8 +85,7 @@ NN given x, y - output x*y
 \label{fig:mult_bound}
 \end{figure}
 
-
-\section{Channel Equalization}
+\subsection{RNN for Channel Equalization}
 
 \begin{itemize}
 \item compare to MMSE
@@ -99,6 +107,7 @@ Figure~\ref{fig:incorr_chan} shows which channels the RNN equalizer and classic 
 There were a total of $50k$ random channels in the test set.  
 Of that set, only $43$ channels resulted in incorrect bits after the RNN equalizer and classic demodulator.
 From the figure, it is clear that these difficult channels are clustered into four regions. All of the four regions are when the first and second tap of the channel are equal in magnitude.
+The mean squared error between the equalized data and the true data among just the bad channels was $0.7306$.  The mean squared error among the good channels was $0.000264$.
 
 \begin{align*}
 \begin{bmatrix}
@@ -111,11 +120,4 @@ From the figure, it is clear that these difficult channels are clustered into fo
 \end{bmatrix}
 \end{align*}
 
-
-Total number of channels in test set: 50000
-Total Bad Channels: 43
-Mean Squared Error among Bad Channels: 0.7306372348726573
-Mean Squared Error among Good Channels: 0.0002638874699068144
-Counts of each bad channel: {(0.707, 0.707): 14, (-0.707, 0.707): 1, (0.707, -0.707): 16, (-0.707, -0.707): 12}
-Errors of each bad channel: {(0.707, 0.707): 0.7162300079403883, (-0.707, 0.707): 0.5236157671769702, (0.707, -0.707): 0.8172570317294764, (-0.707, -0.707): 0.64920439279252}
 
