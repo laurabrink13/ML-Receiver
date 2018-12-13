@@ -1,9 +1,10 @@
 \chapter{Deep Networks for CFO}
 
-
+The carrier frequency offset (CFO) correction process removes the symbol rotation caused by the non-ideal conditions of the transmitter and receiver environment.  We will explore how neural networks can both estimate the CFO and correct for rate of rotation.
 
 \section{Recurrent Neural Network Follows a Circle}
 
+A carrier frequency offset affects the received symbols by slowly rotating them around the origin.  If we want a neural network to be able to correct this, we essentially need it to act as a clock, following around a circle at a certain rate.
 We first explore what kind of architectures are necessary for a recurrent neural network (RNN) to learn how to follow a circle.
 We show that a simple, small linear RNN can learn to act as the rotation matrix for a single rate of rotation around a circle.
 We also show that in order to have an RNN follow a circle for different rates of rotation, we need a large non-linear layer.
@@ -31,9 +32,10 @@ R = \begin{bmatrix}
 \end{bmatrix}
 \end{align} 
 
-The RNN was trained for a constant rate of rotation, $\omega$, applied to sequences of $100$ points.  The network trained for $2k$ epochs, each with a batch size of $1k$ data sequences and with a learning rate of $0.006$.  The initial starting point, $x[0]$ is a uniform random variable drawn from on the unit circle. 
+The RNN is trained for a constant rate of rotation, $\omega$, applied to sequences of $100$ points.  The network trained for $2k$ epochs, each with a batch size of $1k$ data sequences and with a learning rate of $0.006$.  The initial starting point, $x[0]$ is a uniform random variable drawn from on the unit circle. 
 The network is tested on $1k$ new data sequences but with the same $\omega$.
-Figure~\ref{fig:circle_constant_rate} shows the results of an RNN trained and tested for $\omega=0.02$.  The network achieves a loss on the order of $10^{-13}$.  
+Figure~\ref{fig:circle_constant_rate} shows the results of an RNN trained and tested for $\omega=0.02$.  
+The network achieves a loss on the order of $10^{-13}$.  However, the minimum loss is not very sticky.  The network ends up jumping away from this minimum while training.  A more thorough search over learning rate decay is needed to prevent this jumping from happening.
 
 \subsection{Different Rates}
 
@@ -66,7 +68,9 @@ Figure~\ref{fig:circle_diff_rate} shows the results of an RNN trained and tested
 
 \section{Deep Network Carrier Frequency Offset Estimation and Correction}
 
-
+We explore estimating carrier frequency offset and correction with neural networks.
+One of the challenges with CFO is that it cannot be directly measured in the real world.  
+Therefore, all of the loss functions will not depend on $\omega$.
 
 \begin{figure}
 \begin{center}
@@ -76,7 +80,14 @@ Figure~\ref{fig:circle_diff_rate} shows the results of an RNN trained and tested
 \end{center}
 \end{figure}
 
-Figure~\ref{fig:cfo_est} shows how...
+The inputs of the neural network are the known preamble, $\vec{x}_{pre}$, and the received preamble, $\vec{\tilde{x}}_{pre}$.  The neural network outputs the estimated preamble symbols, $\vec{\hat{x}}_{pre}$.  
+The loss function is the mean squared error between the original preamble and the estimated preamble, $||\vec{x}_{pre}-\vec{\hat{x}}_{pre}||^2$.
+The neural network architecture consists of two non-linear layers, each with $10$ nodes and sigmoid activations.  This then feeds into a linear layer that outputs a scalar, treated as the estimate for the rate of rotation, $\hat{\omega}$. 
+The received preamble is then rotated using a special layer with the function $e^{-ij\hat{\omega}}$.
+
+Figure~\ref{fig:cfo_est} compares the performance of the neural network correcting CFO versus no CFO correction.  The training and testing data are solely for a one tap channel and have varying values of $\omega$. The preamble length is kept constant at $100$ symbols in QPSK.
+The neural network is trained for $15k$ epochs with batch size of $100$ sequences and with a learning rate of $0.001$.  The neural network and no CFO correction are tested on $10k$ sequences with different $\omega$.  
+The training and testing process is repeated for each SNR.  Note, we re-train the network for each SNR.  
 
 %\section{Deep Network Carrier Frequency Offset Correction}
 %Program a Costas loop for comparison 
