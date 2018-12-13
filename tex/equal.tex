@@ -159,6 +159,8 @@ Of that set, only $43$ channels resulted in incorrect bits after the RNN equaliz
 From the figure, it is clear that these difficult channels are clustered into four regions. All of the four regions are when the first and second tap of the channel are equal in magnitude.
 The mean squared error between the equalized data and the true data among just the bad channels was $0.7306$.  The mean squared error among the good channels was $0.000264$.
 
+We expect these channels to be difficult.  Refer to Figure~\ref{fig:multi_tap} to see how the constellations fall right on top of each other.
+Additionally, if we think about these channels in terms of the infinite impulse response, these channels could result in highly variable inverses.  Because the two channels are equal, then the infinite impulse response is constantly cancelling out and everything will have to balance out exactly.  This representation means there will be a lot of variation of the inverse of those channels.
 
 In this chapter, we designed a deep neural network to estimate two tap channels.
 We explored the difficulties in learning to divide and learning to multiply with neural networks. We showed that a deep recursive neural network, with bidirectional LSTM layers, can learn to learn to equalize for random channels.  We also examined when these equalizers fail. 
