@@ -59,16 +59,12 @@ The RNN is trained for different rates of rotation, $\omega$, applied to sequenc
 The rate of rotation is a uniform random variable drawn from $0-\frac{1}{50}$.
 We use mean squared error of the true data sequence and the estimated data sequence for the loss function; $||\vec{x}-\vec{\hat{x}}||^2$.  The network is trained for $10k$ epochs, each with a batch size of $1k$ data sequences and with a learning rate of $0.01$.  The initial starting point, $x_0$ is a uniform random variable drawn from on the unit circle.
 The network is tested on $100k$ new data sequences with random $\omega$.
-Figure~\ref{fig:circle_constant_rate} shows the results of an RNN trained and tested for $10k$ epochs.  The network achieves a loss on the order of $10^{-5}$.
+Figure~\ref{fig:circle_diff_rate} shows the results of an RNN trained and tested for $10k$ epochs.  The network achieves a loss on the order of $10^{-5}$.
 
 
-\section{Deep Network Carrier Frequency Offset Estimation}
-\begin{itemize}
-\item complex gradients problems
-\item act like the real and imaginary parts are separate
-\item plots: one tap channel plots, without equalization problems
-\item plots: two tap channel plots, with equalization problems
-\end{itemize}
+\section{Deep Network Carrier Frequency Offset Estimation and Correction}
+
+
 
 \begin{figure}
 \begin{center}

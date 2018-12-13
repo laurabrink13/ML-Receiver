@@ -12,6 +12,7 @@
 \item want? how to visualize that NN does better than LS
 \end{itemize}
 
+Plot comparing least squares to KNN to NN.
 
 
 
@@ -39,13 +40,13 @@ If that is the case, then the neural networks will need to know how to take and 
 
 \begin{figure}
 \begin{center}
-\includegraphics{figures/equal/One_tap_channel_inversion.png}
+\includegraphics{figures/equal/Channel_lower_bound_division.png}
 \caption{Neural network divsion with respect to the lower bound of $y$.}
 \label{fig:one_tap_inv}
 \end{center}
 \end{figure}
 
-We explore whether a neural network can learn to do division.  
+We explore whether a neural network can learn to do division.  We did not do a thorough architecture search or train for very long as we wanted an idea of the behavior of the neural network and will do this in future work.  
 Figure~\ref{fig:div_fx} shows the topological representation of the division function, $z=\frac{x}{y}$.  A neural network that is trained to do division will need to approximate the surface of this function.  
 When $y$ is close to zero, $z$ becomes very large and goes to infinity.  These large peaks will make it difficult for a neural network to do division.  
 
@@ -89,7 +90,7 @@ The network is re-trained with $10k$ data points for different values of $\beta$
 \end{center}
 \end{figure}
 
-We explore whether a neural network can learn to do multiplication.  
+We explore whether a neural network can learn to do multiplication. We did not do a thorough architecture search or train for very long as we wanted an idea of the behavior of the neural network and will do this in future work. 
 Figure~\ref{fig:mult_fx} shows the topological representation of the multiplication function, $z=xy$.  A neural network that is trained to do multiplication will need to approximate the surface of this function.  
 When $x$ and $y$ are close to zero, the function is stable.  However, as $x$ and $y$ grow, the function becomes unstable and grows to infinity. 
 
@@ -109,6 +110,8 @@ The network is re-trained with $50k$ data points for different values of $\gamma
 \item added channel preprocessing: didn't seem to make too much of a difference
 \item plot log/ log scale to find converging in error
 \end{itemize}
+
+Plot comparing RNN to MMSE.
 
 \begin{figure}
 \begin{center}
