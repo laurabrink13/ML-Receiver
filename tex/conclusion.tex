@@ -5,14 +5,9 @@ conclucsion
 
 \section{Future Work}
 
-Explore adding log layers into nets for equalization
+In the future, we would like to expand our channel estimation networks to handle any number of channel taps and channel taps that also have imaginary parts.
+We would also like to explore how we might be able to learn to estimate the channel even without a shared preamble.
 
-More than two tap channels, imaginary parts to channels
+We hope to explore and expand our research on equalization networks.  One first step will be investigating how adding logarithmic layers into the networks affects the performance.  We also want to expand our CFO estimation and correction to work with multi-tap channels and eventually combine all of the aspects in this paper to create one deep equalizer network.
 
-What if you don't have a preamble?
-
-CFO estimation for multi tap
-
-More thorough architecture searches and longer training
-
-Training on real radio data and not simulated data
+In general, this paper was more of an exploration into how neural networks can learn to learn to communicate for equalization and CFO.  We would like to do a more thorough architecture search and longer training runs.  We also hope to to verify the ideas presented in this paper by training on real radio data instead of the simulated data used in this paper.
