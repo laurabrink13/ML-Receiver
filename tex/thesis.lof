@@ -32,4 +32,6 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {3.3}{\ignorespaces The log BER of received signals passed through a neural network CFO estimator with a rotation matrix CFO correction and classic demodulator. The log BER of the same signals passed through just the classic demodulator.\relax }}{20}
 \defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Nonlinear neural network estimating and correcting CFO for different $\omega $. In this particular test example, $\omega =0.00969545$ and SNR$=\infty $.\relax }}{20}
+\defcounter {refsection}{0}\relax 
 \addvspace {10pt}

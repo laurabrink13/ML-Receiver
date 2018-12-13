@@ -93,8 +93,24 @@ We compare the bit error rate of the neural network and classic demodulator vers
 
 For SNR above $25$, the neural network does not have any incorrect bits in the $10k$ data sequences each with $100$ symbols, or $50$ bits.  The neural network consistently performs better than just the classic demodulator for all SNR.  Although, the performance is similar for SNR$=1$.
 
+\setlength{\tabcolsep}{0pt}
+\begin{figure}
+  \centering
+  \caption{Nonlinear neural network estimating and correcting CFO for different $\omega$. In this particular test example, $\omega=0.00969545$ and SNR$=\infty$.}
+  \begin{tabular}{ccc}
+    \includegraphics[width=55mm]{figures/cfo/cfo_estimation_original_data.png}&
+    \includegraphics[width=55mm]{figures/cfo/cfo_estimation_cfo_data.png}&
+    \includegraphics[width=55mm]{figures/cfo/cfo_estimation_est_data.png}\\
+  \end{tabular}
+  \label{fig:cfo_demon_single_tap}
+\end{figure}
 
-Plot: multi tap channel cfo correction!
+
+Figure~\ref{fig:cfo_demon_single_tap} shows one example of a data sequence passed through the neural network described above.
+The neural network is trained for SNR$=0$. The three plots show that the neural network corrects for CFO quite well.
+
+In this chapter, we demonstrated that recursive neural networks can act like clocks; they can follow a circle for a given rate of rotation.  They can learn to learn to follow a circle for a given rate.
+We have also demonstrated that a neural network can learn to learn how to estimate CFO and correct for it.  All of the simulations in this chapter were for single tap channels.  We attempted to learn how to estimate CFO and correct for it when there were random two tap channels.  However, the results were not promising and will need to be explored more in future work.
 
 %\section{Deep Network Carrier Frequency Offset Correction}
 %Program a Costas loop for comparison 
