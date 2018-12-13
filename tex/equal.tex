@@ -1,6 +1,6 @@
 \chapter{Deep Networks for Equalization}
 
-The equalization process removes inter-symbol interference caused by the channel from a sequence of symbols.  We will explore how neural networks can both estimate the channel characteristics and remove the inter-symbol interference.
+The equalization process removes inter-symbol interference caused by the channel from a sequence of symbols.  We will explore how neural networks can both estimate the channel characteristics and remove the inter-symbol interference.  For the remainder of this paper, we will assume that all channels only have real parts. 
 
 \section{Channel Estimation}
 
@@ -113,15 +113,22 @@ The loss function that the RNN is trained on is the mean squared error between t
 \begin{figure}
 \begin{center}
 \includegraphics[width=100mm]{figures/equal/RNN_vs_MMSE.png}
-\caption{Comparison of RNN to MMSE in the mean squared error after equalization.}
+\caption{Comparison of RNN and MMSE mean squared error after equalization.}
 \label{fig:rnn_vs_mmse}
 \end{center}
 \end{figure}
 
+The neural network architecture for our equalizer uses a special type of RNN called a bidriectional long-short term memory (LSTM) network.  
+A bidirectional RNN connects the forward and backwards nodes of the RNN, allowing the output to depend on both future and past states.
+An RNN that has LSTM units allows the nodes to store memory for a short period of time.
+Our network also has time-distributed dense layers which are used after LSTMs to flatten the output by applying a fully connected dense layer at each time step.
 
+
+
+
+Figure~\ref{fig:rnn_vs_mmse} shows ... 
 Plot comparing RNN to MMSE.
 
-Just real channels!
 
 \begin{figure}
 \begin{center}
