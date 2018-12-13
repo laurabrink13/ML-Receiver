@@ -105,13 +105,19 @@ The network is re-trained with $50k$ data points for different values of $\gamma
 
 \subsection{RNN for Channel Equalization}
 
-\begin{itemize}
-\item compare to MMSE
-\item re run with the new RNN architecture
-\item backprop length of ~ 3. crude search from 1-10. 2 tap channel
-\item added channel preprocessing: didn't seem to make too much of a difference
-\item plot log/ log scale to find converging in error
-\end{itemize}
+We designed an RNN to perform channel equalization.
+The inputs of the RNN are the true channel taps.  We assume a two tap channel so $a_0, a_1$ are input to the RNN.  Another input is the received data sequence, $\vec{\tilde{x}}_{data}$.
+The output of the RNN is an estimate of the original data sequence, $\vec{\hat{x}}_{data}$. 
+The loss function that the RNN is trained on is the mean squared error between the original and estimated data sequence, $||\vec{x}_{data}-\vec{\hat{x}}_{data}||^2$.
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=100mm]{figures/equal/RNN_vs_MMSE.png}
+\caption{Comparison of RNN to MMSE in the mean squared error after equalization.}
+\label{fig:rnn_vs_mmse}
+\end{center}
+\end{figure}
+
 
 Plot comparing RNN to MMSE.
 
