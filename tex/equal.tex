@@ -98,7 +98,18 @@ NN given x, y - output x*y
 Figure~\ref{fig:incorr_chan} shows which channels the RNN equalizer and classic demodulator got any bits wrong.  
 There were a total of $50k$ random channels in the test set.  
 Of that set, only $43$ channels resulted in incorrect bits after the RNN equalizer and classic demodulator.
-From the figure, it is clear that these difficult channels are clustered into four regions. All of the four regions are when the first 
+From the figure, it is clear that these difficult channels are clustered into four regions. All of the four regions are when the first and second tap of the channel are equal in magnitude.
+
+\begin{align*}
+\begin{bmatrix}
+\text{Tap 1} & \text{Tap 2} & \text{Counts of bad estimates} & \text{Mean Squared Error}\\
+\hline
+0.707 & 0.707 & 14 & 0.7162\\
+-0.707 & 0.707 & 1 & 0.5236\\
+0.707 & -0.707 & 16 & 0.8172\\
+-0.707 & -0.707 & 12 & 0.6492\\
+\end{bmatrix}
+\end{align*}
 
 
 Total number of channels in test set: 50000
