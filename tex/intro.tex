@@ -30,7 +30,7 @@ Each channel will have different characteristics. Some channels may have echos, 
 Let $\vec{a} = [a_0, a_1, \ldots a_{\ell}]$ be the set of characteristic for a multipath channel that has $l$ taps. When a sequence of symbols like $\vec{x}$ is transmitted over this channel, the channel taps are convolved over the sequence.  Additionally, there is noise in the system denoted by $v_i$. 
 
 \begin{align}
-\tilde{x}_m = \sum_{i=0}^{\ell} a_i x_{m-i} + v_i
+\tilde{x}_m = \sum_{i=0}^{\ell} a_i x_{m-i} + v_m
 \end{align}
 
 The receiver will hear a signal that is corrupted by inter-symbol interfence and noise;
@@ -163,7 +163,7 @@ A Costas loop is a circuit that implements a phase-locked loop for CFO correctio
 What happens when there is both CFO and inter-symbol interference?  The received signal will have the effects of the channel and CFO as well as the noise. 
 
 \begin{align}
-\tilde{x}_m = (\sum_{i=0}^l a_i x_{m-i})e^{mj\omega} + v_i
+\tilde{x}_m = (\sum_{i=0}^l a_i x_{m-i})e^{mj\omega} + v_m
 \end{align}
 
 Figure ~\ref{fig:multi_tap_cfo} demonstrates the effects of CFO and multi-tap channels on a QPSK modulation constellation. 

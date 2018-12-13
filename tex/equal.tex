@@ -17,25 +17,42 @@
 
 \section{Channel Equalization}
 
+The process of equalization tries to remove inter-symbol interference from a sequence of symbols.  
+In a two tap channel, the equalization process is trying to remove the effect from the second channel tap.  Given the received symbol, $\tilde{x}_m$, the channel taps, $a_0, a_1$, and the previous symbol, $x_{m-1}$, we can solve for the best estimate of the orignal symbol.
+\begin{align}
+\tilde{x}_m &= a_0 x_{m} + a_1 x_{m-1} + v_m\\
+\hat{x}_m &= \frac{\tilde{x}_m - a_1 x_{m-1}}{a_0}
+\end{align}
+
+If we want neural networks to perform equalization, they might try to solve for $\hat{x}_m$ in this way.  
+If that is the case, then the neural networks will need to know how to take and input and divide by it and how to multiply two inputs.  
+
 \subsection{Learning an inverse}
 
 \begin{figure}
 \begin{center}
 \includegraphics{figures/equal/Division_Function_plot.png}
 \caption{Topographical surface representation of the division function; $z=\frac{x}{y}$.}
-\end{center}
 \label{fig:div_fx}
+\end{center}
 \end{figure}
 
 \begin{figure}
 \begin{center}
 \includegraphics{figures/equal/One_tap_channel_inversion.png}
-\caption{One tap channel inversion with respect to range.}
-\end{center}
+\caption{Neural network divsion with respect to the lower bound of $y$.}
 \label{fig:one_tap_inv}
+\end{center}
 \end{figure}
 
 We explore whether a neural network can learn to do division.  
+Figure~\ref{fig:div_fx} shows the topological representation of the division function, $z=\frac{x}{y}$.  A neural network that is trained to do division will need to approximate the surface of this function.  
+When $y$ is close to zero, $z$ becomes very large and goes to infinity.  These large peaks will make it difficult for a neural network to do division.  
+
+Figure~\ref{fig:one_tap_inv} shows the performance of a neural network learning division.
+The neural network's input is $x$ and $y$ and the output is $\hat{z}$.  Both inputs are uniform random variables; $x$ is drawn uniformly $[-1,1]$ and $y$ is drawn uniformly $[\beta,1]$. 
+The loss function is the mean squared error between the estimated division and the true division, $\hat{z}-\frac{x}{y}$.
+The architecture consists of two dense layers with $50$ nodes each and sigmoid activiation function.  This feeds into a linear layer that outputs the scalar estimate of $\hat{z}$.  
 
 \begin{itemize}
 \item can a NN learn to do division?
@@ -85,6 +102,8 @@ NN given x, y - output x*y
 \label{fig:mult_bound}
 \end{figure}
 
+We explore whether a neural network can learn to do multiplication.  
+
 \subsection{RNN for Channel Equalization}
 
 \begin{itemize}
@@ -103,12 +122,6 @@ NN given x, y - output x*y
 \end{center}
 \end{figure}
 
-Figure~\ref{fig:incorr_chan} shows which channels the RNN equalizer and classic demodulator got any bits wrong.  
-There were a total of $50k$ random channels in the test set.  
-Of that set, only $43$ channels resulted in incorrect bits after the RNN equalizer and classic demodulator.
-From the figure, it is clear that these difficult channels are clustered into four regions. All of the four regions are when the first and second tap of the channel are equal in magnitude.
-The mean squared error between the equalized data and the true data among just the bad channels was $0.7306$.  The mean squared error among the good channels was $0.000264$.
-
 \begin{align*}
 \begin{bmatrix}
 \text{Tap 1} & \text{Tap 2} & \text{Counts of bad estimates} & \text{Mean Squared Error}\\
@@ -119,5 +132,12 @@ The mean squared error between the equalized data and the true data among just t
 -0.707 & -0.707 & 12 & 0.6492\\
 \end{bmatrix}
 \end{align*}
+
+Figure~\ref{fig:incorr_chan} shows which channels the RNN equalizer and classic demodulator got any bits wrong.  
+There were a total of $50k$ random channels in the test set.  
+Of that set, only $43$ channels resulted in incorrect bits after the RNN equalizer and classic demodulator.
+From the figure, it is clear that these difficult channels are clustered into four regions. All of the four regions are when the first and second tap of the channel are equal in magnitude.
+The mean squared error between the equalized data and the true data among just the bad channels was $0.7306$.  The mean squared error among the good channels was $0.000264$.
+
 
 

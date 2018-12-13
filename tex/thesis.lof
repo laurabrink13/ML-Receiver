@@ -14,15 +14,15 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {2.1}{\ignorespaces Topographical surface representation of the division function; $z=\frac {x}{y}$.\relax }}{11}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.2}{\ignorespaces One tap channel inversion with respect to range.\relax }}{11}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Neural network divsion with respect to the lower bound of $y$.\relax }}{12}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Topographical surface representation of the multiplication function; $z=xy$.\relax }}{12}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Topographical surface representation of the multiplication function; $z=xy$.\relax }}{13}
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {2.4}{\ignorespaces LSTM loss trying to learn the Multiplication function; $z=xy$.\relax }}{13}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.5}{\ignorespaces LSTM loss trying to learn the Multiplication function; $z=xy$.\relax }}{13}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces LSTM loss trying to learn the Multiplication function; $z=xy$.\relax }}{14}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.6}{\ignorespaces LSTM loss trying to learn the Multiplication function; $z=xy$.\relax }}{14}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces LSTM loss trying to learn the Multiplication function; $z=xy$.\relax }}{15}
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {2.7}{\ignorespaces What two tap channels does the equalizer get wrong?\relax }}{15}
 \defcounter {refsection}{0}\relax 
