@@ -53,19 +53,7 @@ Figure~\ref{fig:one_tap_inv} shows the performance of a neural network learning 
 The neural network's input is $x$ and $y$ and the output is $\hat{z}$.  Both inputs are uniform random variables; $x$ is drawn uniformly $[-1,1]$ and $y$ is drawn uniformly $[\beta,1]$. 
 The loss function is the mean squared error between the estimated division and the true division, $\hat{z}-\frac{x}{y}$.
 The architecture consists of two dense layers with $50$ nodes each and sigmoid activiation function.  This feeds into a linear layer that outputs the scalar estimate of $\hat{z}$.  
-
-\begin{itemize}
-\item can a NN learn to do division?
-\item given a one tap channel and data sequence, output is equalized data sequence
-\item with and without log feature scaling
-\item without log errors = $10^-6$
-\item MMSE gets error = $10^-32$
-\item with log errors = 
-\item straight inversion, without log feature scaling $10^-7$ - with dense layers
-\item inversion with log feature scaling with error of $10^-14$ 
-\item plots: inversion, but as a function of beta for both non-log and log
-\end{itemize}
-
+The network is re-trained with $10k$ data points for different values of $\beta$. As $\beta$ gets close to zero, the error increases dramatically.  This is expected because the closer $\beta$ is to zero, the stronger the effects are of the infinite peaks of the division function.
 
 \subsection{Learning to multiply two inputs}
 NN given x, y - output x*y
