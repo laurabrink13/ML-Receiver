@@ -12,28 +12,28 @@
 \defcounter {refsection}{0}\relax 
 \addvspace {10pt}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Comparison of a neural network, a K-Nearest-Neighbors, and a least squares channel estimators for two tap, real channels.\relax }}{12}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Comparison of a neural network, a K-Nearest-Neighbors, and a least squares channel estimators for two tap, real channels.\relax }}{13}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Topographical surface representation of the division function; $z=\frac {x}{y}$.\relax }}{13}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Topographical surface representation of the division function; $z=\frac {x}{y}$.\relax }}{14}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Neural network divsion loss with respect to the lower bound of $y$.\relax }}{14}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Neural network divsion loss with respect to the lower bound of $y$.\relax }}{15}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Topographical surface representation of the multiplication function; $z=xy$.\relax }}{15}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Topographical surface representation of the multiplication function; $z=xy$.\relax }}{16}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Neural network multiplication loss with respect to the upper bound of $y$.\relax }}{16}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Neural network multiplication loss with respect to the upper bound of $y$.\relax }}{17}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Comparison of RNN and MMSE equalizers loss over SNR.\relax }}{17}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Comparison of RNN and MMSE equalizers loss over SNR.\relax }}{18}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.7}{\ignorespaces What two tap channels does the equalizer get wrong?\relax }}{18}
+\contentsline {figure}{\numberline {2.7}{\ignorespaces What two tap channels does the equalizer get wrong?\relax }}{19}
 \defcounter {refsection}{0}\relax 
 \addvspace {10pt}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Linear neural network: follow a circle for a constant CFO rate, $\omega =0.02$. The figure on the left shows the original data of length $100$. The figure in the middle shows the estimated data from the neural network given the starting point from the left figure. The figure on the right shows the log of the test cost of the neural network versus traing epoch.\relax }}{20}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Linear neural network: follow a circle for a constant CFO rate, $\omega =0.02$. The figure on the left shows the original data of length $100$. The figure in the middle shows the estimated data from the neural network given the starting point from the left figure. The figure on the right shows the log of the test cost of the neural network versus traing epoch.\relax }}{21}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Nonlinear neural network: follow a circle for different CFO rates. The figure on the left shows the original data of length $100$ for $\omega =0.01063284$. The figure in the middle shows the estimated data from the neural network given the starting point and rate of rotation from the left figure. The figure on the right shows the log of the test cost of the neural network versus traing epoch.\relax }}{21}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Nonlinear neural network: follow a circle for different CFO rates. The figure on the left shows the original data of length $100$ for $\omega =0.01063284$. The figure in the middle shows the estimated data from the neural network given the starting point and rate of rotation from the left figure. The figure on the right shows the log of the test cost of the neural network versus traing epoch.\relax }}{22}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.3}{\ignorespaces The log BER of received signals passed through a neural network CFO estimator with a rotation matrix CFO correction and classic demodulator. The log BER of the same signals passed through just the classic demodulator.\relax }}{22}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces The log BER of received signals passed through a neural network CFO estimator with a rotation matrix CFO correction and classic demodulator. The log BER of the same signals passed through just the classic demodulator.\relax }}{23}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Nonlinear neural network estimating and correcting CFO for different $\omega $. In this particular test example, $\omega =0.00969545$ and SNR$=\infty $. The figure on the left shows the constellation of the $100$ original data symbols. The figure in the middle shows the constellation of the original data symbols after CFO. The figure on the right shows the constellation of the data symbols after the neural network CFO correction.\relax }}{23}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Nonlinear neural network estimating and correcting CFO for different $\omega $. In this particular test example, $\omega =0.00969545$ and SNR$=\infty $. The figure on the left shows the constellation of the $100$ original data symbols. The figure in the middle shows the constellation of the original data symbols after CFO. The figure on the right shows the constellation of the data symbols after the neural network CFO correction.\relax }}{24}
 \defcounter {refsection}{0}\relax 
 \addvspace {10pt}

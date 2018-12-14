@@ -213,3 +213,14 @@ Modern day receivers have to combine CFO correction, channel estimation, and equ
 \section{Related Works}
 
 \input{related_works}
+
+\section{Contributions of this Report}
+
+In this report, we show that a channel estimator can learn to learn to estimate two tap, real-valued channels but that more work is needed for the network to perform comparably to the baseline, the least squares channel estimator.
+We also design an equalizer recursive neural network that equalizes a stream of data for any two tap, real-valued channel. This equalizer does not need to re-train for each new channel and performs better than the baseline, the minimum mean squared error equalizer, for low signal to noise ratios.  We also show that the baseline is much better than the neural network at handling difficult channels, specifically channels that have equal taps.
+
+This work is novel in this area because all of the other related works have re-trained the networks for each new channel they encounter.  This is the first equalizer that learns to learn to handle each new channel without having to re-train.
+
+Additionally, we design a neural network to estimate and correct carrier frequency offset that does not need to be retrained for each new carrier frequency offset.
+This work is novel in this area because the other related works have re-trained the networks for each new carrier frequency offset.  This is the first carrier frequency offset correction network that learns to learn to handle each new carrier frequency offset without having to re-train.
+We also explore whether recursive neural networks can behave as clocks and show that this is a non-trivial problem that needs more exploration.
