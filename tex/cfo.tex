@@ -13,7 +13,7 @@ We will then design a deep neural network to estimate the rate of rotation cause
 
 \subsection{Single Rate}
 
-Figure~\ref{fig:circle_constant_rate} shows a recurrent neural network (RNN) that follows a circle for a single rate of rotation.  The network's input is the starting point, $x[0]$, and it must predict the next $99$ points, $x[1] \ldots x[99]$.  Point $x[i]$ is rotated by $e^{ij\omega}$ where $\omega$ is the rate of rotation.  The RNN architecture is one linear layer that takes the current point as input, $x[i]$, and outputs the next point, $x[i+1]$.  We are forcing the state of the RNN to be the next point; $\text{state} = x[i+1]$.  We use a linear layer here because the network essentially has to learn how to become the rotation matrix which is linear with respect to the input. 
+Figure~\ref{fig:circle_constant_rate} shows a recurrent neural network (RNN) that follows a circle for a single rate of rotation.  The network's input is the starting point, $x_0$, and it must predict the next $99$ points, $x_1 \ldots x_{99}$.  Point $x_m$ is rotated by $e^{mj\omega}$ where $\omega$ is the rate of rotation.  The RNN architecture is one linear layer that takes the current point as input, $x_m$, and outputs the next point, $x_{m+1}$.  We are forcing the state of the RNN to be the estimate of the next point; $\text{state} = \hat{x}_{m+1}$.  We use a linear layer here because the network essentially has to learn how to become the rotation matrix which is linear with respect to the input. 
 
 \begin{align}
 R = \begin{bmatrix}
@@ -34,17 +34,17 @@ R = \begin{bmatrix}
   \label{fig:circle_constant_rate}
 \end{figure}
 
-The RNN is trained for a constant rate of rotation, $\omega$, applied to sequences of $100$ points.  The network trained for $2k$ epochs, each with a batch size of $1k$ data sequences and with a learning rate of $0.006$.  The initial starting point, $x[0]$ is a uniform random variable drawn from on the unit circle. 
+The RNN is trained for a constant rate of rotation, $\omega$, applied to sequences of $100$ points.  The network trained for $2k$ epochs, each with a batch size of $1k$ data sequences and with a learning rate of $0.006$.  The initial starting point, $x_0$ is a uniform random variable drawn from on the unit circle. 
 The network is tested on $1k$ new data sequences but with the same $\omega$.
 Figure~\ref{fig:circle_constant_rate} shows the results of an RNN trained and tested for $\omega=0.02$.  
-The network achieves a loss on the order of $10^{-13}$.  However, the minimum loss is not very sticky.  The network ends up jumping away from this minimum while training.  A more thorough search over learning rate decay is needed to prevent this jumping from happening.
+The network achieves a loss on the order of $10^{-13}$.  However, the minimum loss is not very sticky.  Notice that the figure on the right in figure~\ref{fig:circle_constant_rate} shows the network jumping away from this minimum while training at around $1400$ epochs.  A more thorough search over learning rate decay is needed to prevent this jumping from happening.
 
 \subsection{Different Rates}
 
 
 Figure~\ref{fig:circle_diff_rate} shows a recurrent neural network (RNN) that follows a circle for a given rate of rotation.
 The network's inputs are the starting point, $x_0$ and the rate of rotation, $\omega$.
-The RNN must predict the next $99$ points, $x_1 \ldots x_{99}$.  Point $x_i$ is rotated by $e^{ij\omega}$.
+The RNN must predict the next $99$ points, $x_1 \ldots x_{99}$.  Point $x_m$ is rotated by $e^{mj\omega}$.
 
 \setlength{\tabcolsep}{0pt}
 \begin{figure}
@@ -60,7 +60,7 @@ The RNN must predict the next $99$ points, $x_1 \ldots x_{99}$.  Point $x_i$ is 
 
 We cannot use just linear layers in this case because the RNN must learn to find $\cos(\omega)$ and $\sin(\omega)$ for different $\omega$.  Essentially, this RNN needs to approximate the $\sin, \cos$ functions and then apply them to the state.
 
-The RNN architecture consists of one non-linear layer, with $100$ nodes and Relu activation functions, and a linear layer at the output with $2$ nodes. The inputs to the RNN are the estimated current point, $\hat{x}_i$, and the rate of rotation, $\omega$.  The RNN outputs the estimate of the next point, $\hat{x}_{i+1}$.  We are forcing the state of the RNN to be the estimate of the next point concatenated with the rate of rotation; $\text{state} = [\hat{x}_{i+1},\omega]$ so that state then becomes the input to the next run of the RNN.
+The RNN architecture consists of one non-linear layer, with $100$ nodes and Relu activation functions, and a linear layer at the output with $2$ nodes. The inputs to the RNN are the estimated current point, $\hat{x}_m$, and the rate of rotation, $\omega$.  The RNN outputs the estimate of the next point, $\hat{x}_{m+1}$.  We are forcing the state of the RNN to be the estimate of the next point concatenated with the rate of rotation; $\text{state} = [\hat{x}_{m+1},\omega]$ so that state then becomes the input to the next run of the RNN.
 
 The RNN is trained for different rates of rotation, $\omega$, applied to sequences of $100$ points.
 The rate of rotation is a uniform random variable $[0,\frac{1}{50}]$.
@@ -79,7 +79,7 @@ Again, we want a neural network that does not need to update its weights every t
 The inputs of the neural network are the known preamble, $\vec{x}_{pre}$, and the received preamble, $\vec{\tilde{x}}_{pre}$.  The neural network outputs the estimated preamble symbols, $\vec{\hat{x}}_{pre}$.  
 The loss function is the mean squared error between the original preamble and the estimated preamble, $||\vec{x}_{pre}-\vec{\hat{x}}_{pre}||^2$.
 The neural network architecture consists of two non-linear layers, each with $10$ nodes and sigmoid activations.  This then feeds into a linear layer that outputs a scalar, treated as the estimate for the rate of rotation, $\hat{\omega}$. 
-The received preamble is then rotated using a special layer with the function $e^{-ij\hat{\omega}}$.
+The received preamble is then rotated using a special layer with the function $e^{-mj\hat{\omega}}$ that is differentiable and can pass gradients.
 
 Figure~\ref{fig:cfo_est} compares the performance of the neural network correcting CFO versus no CFO correction.  The training and testing data are solely for a one tap channel and have varying values of $\omega$. The preamble length is kept constant at $100$ symbols in QPSK.
 The neural network is trained for $15k$ epochs with batch size of $100$ sequences and with a learning rate of $0.001$.  The neural network and no CFO correction are tested on $10k$ sequences with different rates of rotation, $\omega$.  

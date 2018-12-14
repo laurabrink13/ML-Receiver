@@ -7,14 +7,14 @@ The equalization process removes inter-symbol interference caused by the channel
 
 The process of channel estimation tries to identify the coefficients of the channel taps as best as possible.  We want to estimate $\vec{a}$ that minimizes the difference between the estimated channel taps, $\vec{\hat{a}}$, and the true channel taps, $\vec{a}$.  We can choose $\vec{\hat{a}}$ to minimize this difference.
 
-In Figure~\ref{fig:chann_est}, we compare the performance of neural network channel estimator, a K-Nearest-Neighbors (KNN) channel estimator (where $K=15$), and the least squares channel estimator for two tap real channels.
+In Figure~\ref{fig:chann_est}, we compare the performance of neural network channel estimator, a K-Nearest-Neighbors (KNN) channel estimator (where $K=15$), and the least-squares channel estimator for two tap real channels.
 We train the neural network and KNN on $40k$ data sequences with random channels.  Each data sequence has a preamble length of $100$ bits modulated to $50$ QPSK symbols.  
 Each channel tap is a uniform random variable, $[-1,1]$.  We normalize the channel power such that $||\vec{a}||^2 = 1$.  
 
 \begin{figure}
 \begin{center}
 \includegraphics{figures/equal/Channel_Estimation_KNN_LSTSQ_NN.png}
-\caption{Comparison of a neural network, a K-Nearest-Neighbors, and a least squares channel estimators for two tap, real channels.}
+\caption{Comparison of a neural network, a K-Nearest-Neighbors, and a least-squares channel estimators for two tap, real channels.}
 \label{fig:chann_est}
 \end{center}
 \end{figure}
@@ -25,7 +25,7 @@ The neural network has an architecture that consists of three dense layers.
 The first and second layers have $300$ nodes with sigmoid activation functions.  The final layer has two nodes with the tanh activation function.  The network has a decaying learning rate that starts at 0.01. 
 The loss function is mean squared error of the true channel and channel estimates; $||\vec{a}-\vec{\hat{a}}||^2$.
 
-All three channel estimators are tested on $10k$ data sequences with random channels.  The neural network and the KNN channel estimators are not re-trained for each new channel.  The least squares estimator consistently outperforms the neural network and KNN channel estimators, especially for high SNRs.
+All three channel estimators are tested on $10k$ data sequences with random channels.  The neural network and the KNN channel estimators are not re-trained for each new channel.  The least-squares estimator consistently outperforms the neural network and KNN channel estimators, especially for high SNRs.
 The neural network channel estimator performs better than the KNN channel estimator for high SNRs but worse for low SNRs.
 
 

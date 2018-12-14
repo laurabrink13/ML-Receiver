@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.10.4)  14 DEC 2018 10:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.10.4)  14 DEC 2018 10:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1193,30 +1193,30 @@ File: figures/cfo/cfo_estimation.png Graphic file (type png)
 Package pdftex.def Info: figures/cfo/cfo_estimation.png  used on input line 92.
 
 (pdftex.def)             Requested size: 341.43306pt x 234.08258pt.
-<figures/cfo/cfo_estimation_original_data.png, id=202, 273.02pt x 264.99pt>
+ [23 <./figures/cfo/cfo_estimation.png>]
+<figures/cfo/cfo_estimation_original_data.png, id=206, 273.02pt x 264.99pt>
 File: figures/cfo/cfo_estimation_original_data.png Graphic file (type png)
 <use figures/cfo/cfo_estimation_original_data.png>
 Package pdftex.def Info: figures/cfo/cfo_estimation_original_data.png  used on 
 input line 107.
 (pdftex.def)             Requested size: 156.49014pt x 151.88689pt.
-<figures/cfo/cfo_estimation_cfo_data.png, id=203, 273.02pt x 264.99pt>
+<figures/cfo/cfo_estimation_cfo_data.png, id=207, 273.02pt x 264.99pt>
 File: figures/cfo/cfo_estimation_cfo_data.png Graphic file (type png)
 <use figures/cfo/cfo_estimation_cfo_data.png>
 Package pdftex.def Info: figures/cfo/cfo_estimation_cfo_data.png  used on input
  line 108.
 (pdftex.def)             Requested size: 156.49014pt x 151.88689pt.
-<figures/cfo/cfo_estimation_est_data.png, id=204, 273.02pt x 264.99pt>
+<figures/cfo/cfo_estimation_est_data.png, id=208, 273.02pt x 264.99pt>
 File: figures/cfo/cfo_estimation_est_data.png Graphic file (type png)
 <use figures/cfo/cfo_estimation_est_data.png>
 Package pdftex.def Info: figures/cfo/cfo_estimation_est_data.png  used on input
  line 109.
 (pdftex.def)             Requested size: 156.49014pt x 151.88689pt.
- [23 <./figures/cfo/cfo_estimation.png>]) [24 <./figures/cfo/cfo_estimation_ori
-ginal_data.png> <./figures/cfo/cfo_estimation_cfo_data.png> <./figures/cfo/cfo_
-estimation_est_data.png>]
+) [24 <./figures/cfo/cfo_estimation_original_data.png> <./figures/cfo/cfo_estim
+ation_cfo_data.png> <./figures/cfo/cfo_estimation_est_data.png>] [25]
 \openout2 = `conclusion.aux'.
 
- (./conclusion.tex) [25
+ (./conclusion.tex) [26
 
 
 
@@ -1232,7 +1232,7 @@ Overfull \hbox (11.42784pt too wide) in paragraph at lines 93--93
 . ``Un-su-per-vised Meta-Learning
  []
 
-[26
+[27
 
 
 ]
@@ -1241,7 +1241,7 @@ Overfull \hbox (9.67142pt too wide) in paragraph at lines 93--93
 : \OT1/cmr/m/it/12 arXiv preprint arXiv:1707.06260
  []
 
-[27]
+[28]
 \tf@toc=\write6
 \openout6 = `thesis.toc'.
 
@@ -1276,10 +1276,10 @@ e/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl12.pfb></usr/local/texlive
 /2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/
 2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/20
 18/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on thesis.pdf (34 pages, 1144879 bytes).
+Output written on thesis.pdf (35 pages, 1145248 bytes).
 PDF statistics:
- 272 PDF objects out of 1000 (max. 8388607)
- 119 compressed objects within 2 object streams
+ 275 PDF objects out of 1000 (max. 8388607)
+ 121 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  256 words of extra memory for PDF output out of 10000 (max. 10000000)
 

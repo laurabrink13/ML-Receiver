@@ -62,7 +62,7 @@ Each channel will have different characteristics. Some channels may have echos, 
 When a channel is modeled as a delay line, each multipath signal component at the receiver is modeled as a tap on the delay line.  
 We can characterize a channel by characterizing the channel taps.
 
-Let $\vec{a} = [a_0, a_1, \ldots a_{\ell}]$ be the set of characteristics for a multipath channel that has $\ell$ taps. When a sequence of symbols like $\vec{x}$ is transmitted over this channel, the channel taps are convolved over the sequence.  Additionally, there is noise in the system denoted by $v_m$. 
+Let $\vec{a} = [a_0, a_1, \ldots a_{\ell}]$ be the characteristics for a multipath channel that has $\ell+1$ taps. When a sequence of symbols like $\vec{x}$ is transmitted over this channel, the channel taps are convolved over the sequence.  Additionally, there is noise in the system denoted by $v_m$. 
 
 \begin{align}
 \tilde{x}_m = \sum_{i=0}^{\ell} a_i x_{m-i} + v_m
@@ -126,7 +126,7 @@ In order to estimate a channel, most systems require that packets begin with a k
 The receiver knows what the orginal preamble sequence was, $\vec{x}_{pre}$, and can use the received preamble sequence, $\vec{\tilde{x}}_{pre}$, to estimate the behavior of the channel.
 Once the channel is estimated, the receiver then equalizes the data, $\vec{\tilde{x}}_{data}$.
 
-One common method to estimate the channel is to use the least squares optimization framework. Let $H$ be the estimate of the channel.  The least squares channel estimator wants to find $H$ that minimizes the mean squared error between the received signal, $\vec{\tilde{x}}_{pre}$, and what the predicted received signal would be if the the estimated channel $H$ were applied to the original preamble, $\vec{x}_{pre}$.
+One common method to estimate the channel is to use the least-squares optimization framework. Let $H$ be the estimate of the channel.  The least-squares channel estimator wants to find $H$ that minimizes the mean squared error between the received signal, $\vec{\tilde{x}}_{pre}$, and what the predicted received signal would be if the the estimated channel $H$ were applied to the original preamble, $\vec{x}_{pre}$.
 \begin{align}
 \min_H ||\vec{\tilde{x}}_{pre}-H\vec{x}_{pre}||^2
 \end{align}
@@ -138,16 +138,16 @@ Once the channel response has been estimated, an equalizer uses that information
  
 \subsection{Carrier Frequency Offset and Correction}
 
-If we were to implement our minimum mean squared error equalizer on a physical receiver, we would find some problems with our equalization process.  
-Our equalizer will equalize the first symbols very well.  However, as we reach the end of our sequence, we will encounter a physical phenomonen called carrier frequency offset, CFO.
+If we were to implement our minimum mean squared error equalizer on a real-world physical receiver, we would find some problems with our equalization process.  
+Our equalizer will equalize the first symbols very well.  However, as we equalize later parts of our sequence, we will encounter a physical phenomonen called carrier frequency offset, CFO.
 Carrier frequency offset can occur when the transmitter and receiver are at slightly different frequencies.  It can also occur when the transmitter and receiver are moving, causing a sort of Doppler effect. 
 
-When there is a significant CFO present, the symbols will gradually rotate. The received signals will be the original signals rotated at a rate $\omega$. Gaussian noise, $v_i$, is also added.
+When there is a significant CFO present, the symbols will gradually rotate. The received signals will be the original signals rotated at a rate $\omega$. Gaussian noise, $v_m$, is also added.
 \begin{align}
-\tilde{x}_i = x_i e^{ij\omega}+v_i
+\tilde{x}_m = x_m e^{mj\omega}+v_m
 \end{align} 
 
-Figure~\ref{fig:single_tap_cfo} demonstrates the effects of CFO on a QPSK modulation constellation (no multipath channels). 
+Figure~\ref{fig:single_tap_cfo} demonstrates the effects of pure CFO on a QPSK modulation constellation (no multipath). 
 We show what the received signal symbols constellations are from a sequence of $100$ symbols modulated in QPSK with different CFO rates.  We assume that the CFO rate, $\omega$, is constant during the transmission of the signal.
 For small CFO rates, the data does not rotate that much.  For larger CFO rates, the data turns more and as we add noise (lower SNR), the groupings of the symbols become mixed.
 
@@ -216,8 +216,8 @@ Modern day receivers have to combine CFO correction, channel estimation, and equ
 
 \section{Contributions of this Report}
 
-In this report, we show that a channel estimator can learn to learn to estimate two tap, real-valued channels but that more work is needed for the network to perform comparably to the baseline, the least squares channel estimator.
-We also design an equalizer recursive neural network that equalizes a stream of data for any two tap, real-valued channel. This equalizer does not need to re-train for each new channel and performs better than the baseline, the minimum mean squared error equalizer, for low signal to noise ratios.  We also show that the baseline is much better than the neural network at handling difficult channels, specifically channels that have equal taps.
+In this report, we show that a channel estimator can learn to learn to estimate two tap, real-valued channels but that more work is needed for the network to perform comparably to the baseline, the least-squares channel estimator.
+We also design an equalizer recursive neural network that equalizes a stream of data for any two tap, real-valued channel. This equalizer does not need to re-train for each new channel and performs better than the baseline, the minimum mean squared error equalizer, for low signal to noise ratios.  We also show that the baseline is much better than the neural network at handling difficult channels, specifically channels that have approximately equal taps.
 
 This work is novel in this area because all of the other related works have re-trained the networks for each new channel they encounter.  This is the first equalizer that learns to learn to handle each new channel without having to re-train.
 
