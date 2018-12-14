@@ -109,11 +109,21 @@ Second, if there is a weak signal at a frequency, then the inverse gain is going
 Third, if there are any zeros in the frequency response, these cannot be inverted.
 
 Another equalizer, the minimum mean squared error (MMSE) equalizer, handles noise much better than the zero-forcing equalizer.
-The MMSE equalizer minimizes the error between the equalized preamble and the original known preamble by choosing the optimal inverse of the channel response, $W$.  Let $H$ be the representation of the channel taps.
+The MMSE equalizer minimizes the error between the equalized preamble and the original known preamble by choosing the optimal inverse of the channel response, $W$.  Let $H$ be the circulant matrix of the channel taps.
 \begin{align}
-\min_W||\vec{x}_{pre}-\vec{\hat{x}}_{pre}||^2 \\
-\vec{\hat{x}}_{pre} = W (H\vec{x}_{pre}+\vec{v}) \\
-W^* = \vec{x}_{pre} \vec{x}_{pre}^T H^T (H \vec{x}_{pre} \vec{x}_{pre}^T H^T + \sigma_v^2 I)^{-1}
+\vec{\tilde{x}}_{pre} &= H\vec{x}_{pre}+\vec{v}\\ 
+H &= \begin{bmatrix}
+a_0 & 0 & & & \cdots & & 0 \\
+a_1 & a_0 & 0 & & \cdots & & 0 \\
+\vdots & & & & & & \vdots \\
+a_{\ell} & a_{\ell-1} & \cdots & a_0 & 0 & \cdots & 0 \\
+0 & a_{\ell} & a_{\ell-1} & \cdots & a_0 & \cdots & 0 \\
+\vdots & & & & & & \vdots \\
+0 & \cdots & 0 & a_{\ell} & a_{\ell-1} & \cdots & a_0 \\
+\end{bmatrix}\\
+& \min_W||\vec{x}_{pre}-\vec{\hat{x}}_{pre}||^2 \\
+\vec{\hat{x}}_{pre} &= W (H\vec{x}_{pre}+\vec{v}) \\
+W^* &= \vec{x}_{pre} \vec{x}_{pre}^T H^T (H \vec{x}_{pre} \vec{x}_{pre}^T H^T + \sigma_v^2 I)^{-1}
 \end{align}
 
 The MMSE equalizer works well for known and unknown channels and does not amplify noise like the zero-forcing equalizer.
@@ -126,7 +136,7 @@ In order to estimate a channel, most systems require that packets begin with a k
 The receiver knows what the orginal preamble sequence was, $\vec{x}_{pre}$, and can use the received preamble sequence, $\vec{\tilde{x}}_{pre}$, to estimate the behavior of the channel.
 Once the channel is estimated, the receiver then equalizes the data, $\vec{\tilde{x}}_{data}$.
 
-One common method to estimate the channel is to use the least-squares optimization framework. Let $H$ be the estimate of the channel.  The least-squares channel estimator wants to find $H$ that minimizes the mean squared error between the received signal, $\vec{\tilde{x}}_{pre}$, and what the predicted received signal would be if the the estimated channel $H$ were applied to the original preamble, $\vec{x}_{pre}$.
+One common method to estimate the channel is to use the least-squares optimization framework. Let $H$ be the circulant matrix of estimates of the channel taps.  The least-squares channel estimator wants to find $H$ that minimizes the mean squared error between the received signal, $\vec{\tilde{x}}_{pre}$, and what the predicted received signal would be if the the estimated channel $H$ were applied to the original preamble, $\vec{x}_{pre}$.
 \begin{align}
 \min_H ||\vec{\tilde{x}}_{pre}-H\vec{x}_{pre}||^2
 \end{align}
