@@ -11,11 +11,12 @@ Most communications systems have three main processes at the receiver; equalizat
 Meta-learning is the idea that algorithms need to be able to `learn to learn' in order to generalize to different applications.  For example, if a robot is trained to pick up coffee mugs, then we want that robot to be able to quickly learn how to pick up water bottles without having to re-train it.  
 Meta-learning was inspired by humans ability to generalize how to learn \cite{lake}.  
 Additionally, researchers in neurology have studied how the brain synapses change over time, suggesting that our algorithms will have to change over time to continue learning \cite{bengio}.
+Our brains know how to update the synapses as we learn new things, this is like updating the weights of a neural network for new data points.  
 We refer the reader to \cite{lemke} for a survey of meta-learning technologies and to \cite{finn} for recent developments in meta-learning algorithms.
 
 In this paper, we want to understand if our neural network based communication processes can learn to learn.  
 As in, can they handle new environments with new data sequeneces without having to re-train for the new variables. 
-The communications application is arguably an easier application of meta-learning than others have been exploring, like image classification \cite{khodadeh}.  
+The communications application is arguably an easier application of meta-learning than others have been exploring, like image classification \cite{khodadadeh}.  
 In order to better understand the reach and limitations of meta-learning, we need to apply it to something simpler, like communications.  In this paper, we will explore whether or not we can learn to learn to communicate. 
 
 \section{Background}
