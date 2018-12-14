@@ -20,9 +20,10 @@ Each channel tap is a uniform random variable, $[-1,1]$.  We normalize the chann
 \end{figure}
 
 The neural network channel estimator takes the received preamble, $\vec{\tilde{x}}_{pre}$, and the known preamble, $\vec{x}_{pre}$, as inputs.
-The output of the neural network is the estimate of the channel taps, $\vec{\hat{a}}$.  We assume that the neural network knows there are only two channel taps and thus limit the size of the output to two.
-The neural network has an architecture that consists of the three dense layers.  
-The first and second layers has $300$ nodes with sigmoid activation functions.  The final layer has two nodes with the tanh activation function.  The network has decaying learning rate that starts at 0.01.
+The output of the neural network is the estimate of the channel taps, $\vec{\hat{a}}$.  We assume that the neural network knows there are only two channel taps and thus, limit the size of the output to two.
+The neural network has an architecture that consists of three dense layers.  
+The first and second layers have $300$ nodes with sigmoid activation functions.  The final layer has two nodes with the tanh activation function.  The network has a decaying learning rate that starts at 0.01. 
+The loss function is mean squared error of the true channel and channel estimates; $||\vec{a}-\vec{\hat{a}}||^2$.
 
 All three channel estimators are tested on $10k$ data sequences with random channels.  The neural network and the KNN channel estimators are not re-trained for each new channel.  The least squares estimator consistently outperforms the neural network and KNN channel estimators, especially for high SNRs.
 The neural network channel estimator performs better than the KNN channel estimator for high SNRs but worse for low SNRs.
@@ -38,18 +39,18 @@ In a two tap channel, the equalization process is trying to remove the effect fr
 \end{align}
 
 If we want neural networks to perform equalization, they might try to solve for $\hat{x}_m$ in this way.  
-If that is the case, then the neural networks will need to know how to take and input and divide by it and how to multiply two inputs.  
+If that is the case, then the neural networks will need to know how to take an input and divide by it and how to multiply two inputs.  
 
 \subsection{Learning an inverse}
 
 We explore whether a neural network can learn to do division.  We did not do a thorough architecture search or train for very long as we wanted an idea of the behavior of the neural network and will do this in future work.  
 Figure~\ref{fig:div_fx} shows the topological representation of the division function, $z=\frac{x}{y}$.  A neural network that is trained to do division will need to approximate the surface of this function.  
-When $y$ is close to zero, $z$ becomes very large and goes to infinity.  These large peaks will make it difficult for a neural network to do division.  
+When $y$ is close to zero, $z$ goes to infinity or negative infinity.  These large peaks will make it difficult for a neural network to do division.  
 
 Figure~\ref{fig:one_tap_inv} shows the performance of a neural network learning division.
-The neural network's input is $x$ and $y$ and the output is $\hat{z}$.  Both inputs are uniform random variables; $x$ is drawn uniformly $[-1,1]$ and $y$ is drawn uniformly $[\beta,1]$. 
-The loss function is the mean squared error between the estimated division and the true division, $\hat{z}-\frac{x}{y}$.
-The architecture consists of two dense layers with $50$ nodes each and sigmoid activiation function.  This feeds into a linear layer that outputs the scalar estimate of $\hat{z}$.  
+The neural network's inputs are $x$ and $y$ and the output is $\hat{z}$.  Both inputs are uniform random variables; $x$ is drawn uniformly $[-1,1]$ and $y$ is drawn uniformly $[\beta,1]$. 
+The loss function is the mean squared error between the estimated division and the true division, $||\hat{z}-\frac{x}{y}||^2$.
+The architecture consists of two dense layers with $50$ nodes each and sigmoid activiation functions.  This feeds into a linear layer that outputs the scalar estimate of $\hat{z}$.  
 The network is re-trained with $10k$ data points for different values of $\beta$. As $\beta$ gets close to zero, the error increases dramatically.  This is expected because the closer $\beta$ is to zero, the stronger the effects are of the infinite peaks of the division function.
 
 \begin{figure}
@@ -88,7 +89,7 @@ The network is re-trained with $10k$ data points for different values of $\beta$
 
 We explore whether a neural network can learn to do multiplication. We did not do a thorough architecture search or train for very long as we wanted an idea of the behavior of the neural network and will do this in future work. 
 Figure~\ref{fig:mult_fx} shows the topological representation of the multiplication function, $z=xy$.  A neural network that is trained to do multiplication will need to approximate the surface of this function.  
-When $x$ and $y$ are close to zero, the function is stable.  However, as $x$ and $y$ grow, the function becomes unstable and grows to infinity. 
+When $x$ and $y$ are close to zero, the function is stable.  However, as $x$ and $y$ grow, the function becomes unstable and grows to infinity or negative infinity.
 
 
 \begin{figure}
@@ -100,10 +101,10 @@ When $x$ and $y$ are close to zero, the function is stable.  However, as $x$ and
 \end{figure}
 
 Figure~\ref{fig:mult_bound} shows the performance of a neural network learning multiplication.
-The neural network's input is $x$ and $y$ and the output is $\hat{z}$.  Both inputs are uniform random variables; $x$ is drawn uniformly $[-1,1]$ and $y$ is drawn uniformly $[0,\gamma]$. 
-The loss function is the mean squared error between the estimated multiplication and the true multiplication, $\hat{z}-xy$.
-The architecture consists of two dense layers with $50$ nodes each and sigmoid activiation function.  This feeds into a linear layer that outputs the scalar estimate of $\hat{z}$.  
-The network is re-trained with $50k$ data points for different values of $\gamma$. As $\gamma$ increases, the error increases dramatically.  This is expected because the larger $\gamma$ is, the stronger the effects are of the infinite limits of the multiplication function.
+The neural network's inputs are $x$ and $y$ and the output is $\hat{z}$.  Both inputs are uniform random variables; $x$ is drawn uniformly $[-1,1]$ and $y$ is drawn uniformly $[0,\gamma]$. 
+The loss function is the mean squared error between the estimated multiplication and the true multiplication, $||\hat{z}-xy||^2$.
+The architecture consists of two dense layers with $50$ nodes each and sigmoid activiation functions.  This feeds into a linear layer that outputs the scalar estimate of $\hat{z}$.  
+The network is re-trained with $50k$ data points for different values of $\gamma$. As $\gamma$ increases, the error increases drastically.  This is expected because the larger $\gamma$ is, the stronger the effects are of the infinite limits of the multiplication function.
 
 \begin{figure}
 \begin{center}
@@ -115,24 +116,25 @@ The network is re-trained with $50k$ data points for different values of $\gamma
 
 \subsection{RNN for Channel Equalization}
 
-We designed an RNN to perform channel equalization.
-The inputs of the RNN are the true channel taps.  We assume a two tap channel so $a_0, a_1$ are input to the RNN.  Another input is the received data sequence, $\vec{\tilde{x}}_{data}$.
+We design an RNN to perform channel equalization.
+The inputs of the RNN are the true channel taps.  We assume a two tap channel, so $a_0, a_1$ are inputs to the RNN.  Another input is the received data sequence, $\vec{\tilde{x}}_{data}$.
 The output of the RNN is an estimate of the original data sequence, $\vec{\hat{x}}_{data}$. 
 The loss function that the RNN is trained on is the mean squared error between the original and estimated data sequence, $||\vec{x}_{data}-\vec{\hat{x}}_{data}||^2$.
 
-The neural network architecture for our equalizer uses a special type of RNN called a bidriectional long-short term memory (LSTM) network.  
+The neural network architecture for our equalizer uses a special type of RNN called a bidirectional long-short term memory (LSTM) network.  
 A bidirectional RNN connects the forward and backwards nodes of the RNN, allowing the output to depend on both future and past states.
 An RNN that has LSTM units allows the nodes to store memory for a short period of time.
-Our network also has time-distributed dense layers which are used after LSTMs to flatten the output by applying a fully connected dense layer at each time step.
+Our network also has time-distributed dense layers which are used after the LSTMs to flatten the output by applying a fully connected dense layer at each time step.
 
-The input to our RNN is the channel taps concatenated with a sequence of $10$ of the symbols.  The inputs are fed into four layers of bidirectional LSTM units.  Each layer has a state size of $90$ units for each forward and backward state.  The output of the four bidirectional LSTM layers is $180$ units for each of the $10$ sequences.  
+The inputs to our RNN are the channel taps concatenated with a sequence of $10$ of the data symbols.  The inputs are fed into four layers of bidirectional LSTM units.  Each layer has a state size of $90$ units for each forward and backward state.  The output of the four bidirectional LSTM layers is $180$ units for each of the $10$ symbols.  
 This is then fed into two time-distributed dense layers with $180$ nodes and $100$ nodes respectively and they each have Relu activation functions. These time-distributed dense layers bring the output size down from $180$ to $100$ to $100$.  The output is then fed into one final time-distributed dense layer with $100$ nodes and linear activation.  The outputs of the RNN are $10$ equalized symbols.  
+For data sequences longer than $10$ symbols, the process is repeated for each set of $10$.
 
 
 Figure~\ref{fig:rnn_vs_mmse} compares the mean squared error loss on test data for the RNN architecture defined above and the MMSE equalizer defined in the introduction.  
 The RNN is trained on $40k$ data sequences, with a decaying learning rate starting at $0.01$.
 The RNN and MMSE are tested on the same $10k$ data sequences.  New data is generated for each SNR and the RNN is re-trained for each SNR.  Each data sequence consits of $60$ bits modulated to $30$ complex symbols.
-We assume that the RNN and MMSE both have access to the true channel chracteristics.
+We assume that the RNN and MMSE both have access to the true channel taps.
 
 \begin{figure}
 \begin{center}
@@ -142,7 +144,7 @@ We assume that the RNN and MMSE both have access to the true channel chracterist
 \end{center}
 \end{figure}
 
-The RNN equalizer performs comparably to the MMSE equalizer for low SNRs and performs better than MMSE equalizer for medium SNRs.  However, the RNN equalizer performs worse than the MMSE equalizer for high SNRs.  We take a closer look at what kind of channels the RNN equalizer is getting wrong.
+The RNN equalizer performs comparably to the MMSE equalizer for low SNRs and performs better than MMSE equalizer for medium SNRs.  However, the RNN equalizer performs worse than the MMSE equalizer for high SNRs.  We take a closer look at what kind of channels the RNN equalizer is getting wrong for these high SNRs.
 
 \begin{align*}
 \begin{bmatrix}
@@ -155,11 +157,12 @@ The RNN equalizer performs comparably to the MMSE equalizer for low SNRs and per
 \end{bmatrix}
 \end{align*}
 
-Figure~\ref{fig:incorr_chan} shows which channels the RNN equalizer and classic demodulator got any bits wrong.  
-There were a total of $50k$ random channels in the test set with SNR$=100$.
-Of that set, only $43$ channels resulted in incorrect bits after the RNN equalizer and classic demodulator.
-From the figure, it is clear that these difficult channels are clustered into four regions. All of the four regions are when the first and second tap of the channel are equal in magnitude.
-The mean squared error between the equalized data and the true data among just the bad channels was $0.7306$.  The mean squared error among the good channels was $0.000264$.
+Figure~\ref{fig:incorr_chan} shows which channels the RNN equalizer paired with a classic demodulator get any bits wrong.  
+There are a total of $50k$ random channels in the test set with SNR$=100$.
+Of that set, only $43$ channels result in incorrect bits after the RNN equalizer and classic demodulator.
+From the figure, it is clear that these difficult channels are clustered into four regions. All of the four regions are when the first and second tap of the channel are equal in magnitude; $|a_0|\approx |a_1|$.
+The mean squared error between the equalized data and the true data among just the bad channels is $0.7306$.  The mean squared error among the good channels is $0.000264$. 
+So when the RNN equalizes incorrectly, it gets it very wrong.
 
 \begin{figure}
 \begin{center}
@@ -169,8 +172,8 @@ The mean squared error between the equalized data and the true data among just t
 \end{center}
 \end{figure}
 
-We expect these channels to be difficult.  Refer to Figure~\ref{fig:multi_tap} to see how the constellations fall right on top of each other.
-Additionally, if we think about these channels in terms of the infinite impulse response, these channels could result in highly variable inverses.  Because the two channels are equal, then the infinite impulse response is constantly cancelling out and everything will have to balance out exactly.  This representation means there will be a lot of variation of the inverse of those channels.
+We expect these channels to be difficult.  Refer to Figure~\ref{fig:multi_tap} to see how the constellations of two bits fall right on top of each other.
+Additionally, if we think about these channels in terms of the infinite impulse response, these channels could result in highly variable inverses.  Because the two channel taps are equal, the infinite impulse response is constantly cancelling out and everything will have to balance out exactly.  This representation means there will be a lot of variation of the inverse of those channels, causing the system to be almost unstable.
 
 In this chapter, we designed a deep neural network to estimate two tap channels.
-We explored the difficulties in learning to divide and learning to multiply with neural networks. We showed that a deep recursive neural network, with bidirectional LSTM layers, can learn to learn to equalize for random channels.  We also examined when these equalizers fail. 
+We explored the difficulties in learning to divide and learning to multiply with neural networks. We showed that a deep recursive neural network, with bidirectional LSTM layers, can learn to learn to equalize for random two tap channels.  We also examined when the RNN equalizer fails. 

@@ -1,7 +1,7 @@
 \chapter[Deep Networks for Carrier Frequency Offset]{Deep Networks for Carrier Frequency Offset\raisebox{.3\baselineskip}{\normalsize\footnotemark}}
 \footnotetext{The contents of this chapter were produced in collaboration with Nikhil Shinde.} 
 
-The carrier frequency offset (CFO) correction process removes the symbol rotation caused by the non-ideal conditions of the transmitter and receiver environment.  We will explore how neural networks can both estimate the CFO and correct for rate of rotation without using backpropagation for each new rate.
+The carrier frequency offset (CFO) correction process removes the symbol rotation caused by the non-ideal conditions of the transmitter and receiver environment.  We will explore how neural networks can both estimate the CFO and correct for the rate of rotation without using backpropagation for each new rate.
 
 \section{Recurrent Neural Network Follows a Circle}
 
@@ -9,10 +9,11 @@ A carrier frequency offset affects the received symbols by slowly rotating them 
 We first explore what kind of architectures are necessary for a recurrent neural network (RNN) to learn how to follow a circle.
 We show that a simple, small linear RNN can learn to act as the rotation matrix for a single rate of rotation around a circle.
 We also show that in order to have an RNN follow a circle for different rates of rotation, we need a large non-linear layer.
+We will then design a deep neural network to estimate the rate of rotation caused by CFO and correct it.
 
 \subsection{Single Rate}
 
-Figure~\ref{fig:circle_constant_rate} shows a recurrent neural network (RNN) that follows a circle for a single rate of rotation.  The network's input is the starting point, $x[0]$, and it must predict the next $100$ points, $x[1] \ldots x[99]$.  Point $x[i]$ is rotated by $e^{ij\omega}$ where $\omega$ is the rate of rotation.  The RNN architecture is one linear layer that takes the current point as input, $x[i]$, and outputs the next point, $x[i+1]$.  We are forcing the state of the RNN to be the next point; $\text{state} = x[i+1]$.  We use a linear layer here because the network essentially has to learn how to become the rotation matrix which is linear with respect to the input. 
+Figure~\ref{fig:circle_constant_rate} shows a recurrent neural network (RNN) that follows a circle for a single rate of rotation.  The network's input is the starting point, $x[0]$, and it must predict the next $99$ points, $x[1] \ldots x[99]$.  Point $x[i]$ is rotated by $e^{ij\omega}$ where $\omega$ is the rate of rotation.  The RNN architecture is one linear layer that takes the current point as input, $x[i]$, and outputs the next point, $x[i+1]$.  We are forcing the state of the RNN to be the next point; $\text{state} = x[i+1]$.  We use a linear layer here because the network essentially has to learn how to become the rotation matrix which is linear with respect to the input. 
 
 \begin{align}
 R = \begin{bmatrix}
@@ -42,8 +43,8 @@ The network achieves a loss on the order of $10^{-13}$.  However, the minimum lo
 
 
 Figure~\ref{fig:circle_diff_rate} shows a recurrent neural network (RNN) that follows a circle for a given rate of rotation.
-The network's input is the starting point, $x_0$ and the rate of rotation, $\omega$.
-The RNN must predict the next $100$ points, $x_1 \ldots x_{99}$.  Point $x_i$ is rotated by $e^{ij\omega}$.
+The network's inputs are the starting point, $x_0$ and the rate of rotation, $\omega$.
+The RNN must predict the next $99$ points, $x_1 \ldots x_{99}$.  Point $x_i$ is rotated by $e^{ij\omega}$.
 
 \setlength{\tabcolsep}{0pt}
 \begin{figure}
@@ -57,15 +58,15 @@ The RNN must predict the next $100$ points, $x_1 \ldots x_{99}$.  Point $x_i$ is
   \label{fig:circle_diff_rate}
 \end{figure}
 
-We cannot use just linear layers in this case because the RNN must learn to find $\cos(\omega)$ and $\sin(\omega)$ for different $\omega$.  Essentially, this RNN needs to approximate the $\sin, \cos$ functions an then apply them to the data points.
+We cannot use just linear layers in this case because the RNN must learn to find $\cos(\omega)$ and $\sin(\omega)$ for different $\omega$.  Essentially, this RNN needs to approximate the $\sin, \cos$ functions and then apply them to the state.
 
-The RNN architecture consists of one non-linear layer, with $100$ nodes and Relu activation functions, and a linear layer at the output with $2$ nodes. The input to the RNN is the estimated current point, $\hat{x}_i$, and the rate of rotation, $\omega$.  The RNN outputs the estimate of the next point, $\hat{x}_{i+1}$.  We are forcing the state of the RNN to be the estimate of the next point concatenated with the rate of rotation; $\text{state} = [\hat{x}_{i+1},\omega]$ so that state then becomes the input to the next run of the RNN.
+The RNN architecture consists of one non-linear layer, with $100$ nodes and Relu activation functions, and a linear layer at the output with $2$ nodes. The inputs to the RNN are the estimated current point, $\hat{x}_i$, and the rate of rotation, $\omega$.  The RNN outputs the estimate of the next point, $\hat{x}_{i+1}$.  We are forcing the state of the RNN to be the estimate of the next point concatenated with the rate of rotation; $\text{state} = [\hat{x}_{i+1},\omega]$ so that state then becomes the input to the next run of the RNN.
 
 The RNN is trained for different rates of rotation, $\omega$, applied to sequences of $100$ points.
-The rate of rotation is a uniform random variable drawn from $0-\frac{1}{50}$.
+The rate of rotation is a uniform random variable $[0,\frac{1}{50}]$.
 We use mean squared error of the true data sequence and the estimated data sequence for the loss function; $||\vec{x}-\vec{\hat{x}}||^2$.  The network is trained for $10k$ epochs, each with a batch size of $1k$ data sequences and with a learning rate of $0.01$.  The initial starting point, $x_0$ is a uniform random variable drawn from on the unit circle.
 The network is tested on $100k$ new data sequences with random $\omega$.
-Figure~\ref{fig:circle_diff_rate} shows the results of an RNN trained and tested for $10k$ epochs.  The network achieves a loss on the order of $10^{-5}$.
+Figure~\ref{fig:circle_diff_rate} shows the results of an RNN trained and tested for $10k$ epochs.  The network achieves a loss on the order of $10^{-5}$ but is still data hungry and should be trained for more epochs.
 
 
 \section{Deep Network Carrier Frequency Offset Estimation and Correction}
@@ -95,10 +96,8 @@ We compare the bit error rate of the neural network and classic demodulator vers
 \end{figure}
 
 For SNR above $25$, the neural network does not have any incorrect bits in the $10k$ data sequences each with $100$ symbols, or $50$ bits.  The neural network consistently performs better than just the classic demodulator for all SNR.  Although, the performance is similar for SNR$=1$.
-
-
 Figure~\ref{fig:cfo_demon_single_tap} shows one example of a data sequence passed through the neural network described above.
-The neural network is trained for SNR$=0$. The three plots show that the neural network corrects for CFO quite well.
+The neural network is trained for SNR$=\infty$. The three plots show that the neural network corrects for CFO quite well.
 
 \setlength{\tabcolsep}{0pt}
 \begin{figure}
