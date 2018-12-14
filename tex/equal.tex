@@ -25,8 +25,8 @@ The neural network has an architecture that consists of three dense layers.
 The first and second layers have $300$ nodes with sigmoid activation functions.  The final layer has two nodes with the tanh activation function.  The network has a decaying learning rate that starts at 0.01. 
 The loss function is mean squared error of the true channel and channel estimates; $||\vec{a}-\vec{\hat{a}}||^2$.
 
-All three channel estimators are tested on $10k$ data sequences with random channels.  The neural network and the KNN channel estimators are not re-trained for each new channel.  The least-squares estimator consistently outperforms the neural network and KNN channel estimators, especially for high SNRs.
-The neural network channel estimator performs better than the KNN channel estimator for high SNRs but worse for low SNRs.
+All three channel estimators are tested on $10k$ data sequences with random channels.  The neural network and the KNN channel estimators are not re-trained for each new channel.  The least-squares estimator consistently outperforms the neural network and KNN channel estimators, especially for high SNRs.  For low SNRs, the least-sqares estimator is better than the neural network by a factor of about five.  For high SNRs, the least-squares estimator is better than the neural networks by a factor of about thirty. 
+The neural network channel estimator performs better than the KNN channel estimator for high SNRs by a factor of about three but worse for low SNRs by a factor of about three.
 
 
 \section{Channel Equalization}

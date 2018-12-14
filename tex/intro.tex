@@ -4,10 +4,8 @@ Signal processing has long relied on well-defined, structured processes and prot
 However, in order to move towards more robust and adaptive systems, we will need to overhaul these tightly structured processes.  We must design new robust and adaptive communications systems.
 
 From an academic perspective, the rise of machine learning tools and processing has allowed us to tackle problems we have not yet been able to, like in image processing.  However, we still do not fully understand the possibilities or the limitations of this technology.  
-
-\cite{imagenet}
-\cite{videogame}
-
+Most applications for machine learning techniques lack good baselines to compare performance.
+Applications such as image processing \cite{imagenet}, videogame control \cite{videogame}, playing the game Go, \cite{alphago}, and natural language processing \cite{nlp}, are all missing good baselines to compare against.
 In order to study the limitations of machine learning techniques, we must apply them to spaces that we have studied extensively, like communications, and compare them to the well-known baselines that are already very good.
 
 Most communications systems have three main processes at the receiver; equalization, demodulation, and error-correction.  While we will need to design robust forms of all of these processes, we will focus on equalization for the remainder of this report. 
@@ -233,7 +231,26 @@ Modern day receivers have to combine CFO correction, channel estimation, and equ
 In this report, we show that a channel estimator can learn to learn to estimate two tap, real-valued channels but that more work is needed for the network to perform comparably to the baseline, the least-squares channel estimator.
 We also design an equalizer recursive neural network that equalizes a stream of data for any two tap, real-valued channel. This equalizer does not need to re-train for each new channel and performs better than the baseline, the minimum mean squared error equalizer, for low signal to noise ratios.  We also show that the baseline is much better than the neural network at handling difficult channels, specifically channels that have approximately equal taps.
 
-This work is novel in this area because all of the other related works have re-trained the networks for each new channel they encounter.  This is the first equalizer that learns to learn to handle each new channel without having to re-train.
+This work is novel in this area because all of the other related works have re-trained the networks for each new channel they encounter.  This is the first equalizer that learns to learn to handle each new channel without having to re-train. Table~\ref{tab:table1} compares our work with previous works.
+
+\setlength{\tabcolsep}{4pt}
+\begin{table}[h!]
+  \begin{center}
+    \caption{Comparison of our work and related works.}
+    \label{tab:table1}
+    \begin{tabular}{c|c|c|c|c} % <-- Alignments: 1st column left, 2nd middle and 3rd right, with vertical lines in between
+       & {Goldsmith \cite{farsad2018}} & {Ye \cite{ye2018}} & {O'Shea \cite{osheaatt}} & {Our Work}\\
+      \hline
+      Types of channels & Poisson & AWGN & AWGN &AWGN \\
+           considered &  & Multipath & Multipath & Multipath\\
+           \hline
+      Do they address CFO? & No & No & Yes & Yes \\
+      \hline
+      Do they re-train for & No & Yes & No & No\\
+      each new enviornment? &  &  &  &\\
+    \end{tabular}
+  \end{center}
+\end{table}
 
 Additionally, we design a neural network to estimate and correct carrier frequency offset that does not need to be retrained for each new carrier frequency offset.
 This work is novel in this area because the other related works have re-trained the networks for each new carrier frequency offset.  This is the first carrier frequency offset correction network that learns to learn to handle each new carrier frequency offset without having to re-train.

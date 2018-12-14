@@ -32,9 +32,9 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{Learning an inverse}{14}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{Learning to multiply two inputs}{15}
+\contentsline {subsection}{Learning to multiply two inputs}{14}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{RNN for Channel Equalization}{16}
+\contentsline {subsection}{RNN for Channel Equalization}{15}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2.3}Future Work}{19}
 \defcounter {refsection}{0}\relax 

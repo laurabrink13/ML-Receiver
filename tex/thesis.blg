@@ -1,32 +1,34 @@
 [0] Config.pm:302> INFO - This is Biber 2.11
 [0] Config.pm:305> INFO - Logfile is 'thesis.blg'
-[24] biber:313> INFO - === Fri Dec 14, 2018, 11:23:06
-[41] Biber.pm:371> INFO - Reading 'thesis.bcf'
-[100] Biber.pm:857> INFO - Found 25 citekeys in bib section 0
-[110] Biber.pm:3976> INFO - Processing section 0
-[119] Biber.pm:4136> INFO - Looking for bibtex format file 'references.bib' for section 0
-[120] bibtex.pm:1500> INFO - LaTeX decoding ...
-[143] bibtex.pm:1316> INFO - Found BibTeX data source 'references.bib'
-[270] Utils.pm:193> WARN - BibTeX subsystem: warning: comma(s) at end of name (removing)
-[271] Utils.pm:193> WARN - BibTeX subsystem: author, warning: comma(s) at end of name (removing)
-[271] Utils.pm:193> WARN - BibTeX subsystem: warning: comma(s) at end of name (removing)
-[271] Utils.pm:193> WARN - BibTeX subsystem: author, warning: comma(s) at end of name (removing)
-[271] Utils.pm:193> WARN - BibTeX subsystem: warning: comma(s) at end of name (removing)
-[271] Utils.pm:193> WARN - BibTeX subsystem: author, warning: comma(s) at end of name (removing)
-[271] Utils.pm:193> WARN - BibTeX subsystem: warning: comma(s) at end of name (removing)
-[271] Utils.pm:193> WARN - BibTeX subsystem: author, warning: comma(s) at end of name (removing)
-[271] Utils.pm:193> WARN - BibTeX subsystem: warning: comma(s) at end of name (removing)
-[271] Utils.pm:193> WARN - BibTeX subsystem: author, warning: comma(s) at end of name (removing)
-[271] Utils.pm:193> WARN - BibTeX subsystem: warning: comma(s) at end of name (removing)
-[271] Utils.pm:193> WARN - BibTeX subsystem: author, warning: comma(s) at end of name (removing)
-[271] Utils.pm:193> WARN - BibTeX subsystem: warning: comma(s) at end of name (removing)
-[272] Utils.pm:193> WARN - BibTeX subsystem: author, warning: comma(s) at end of name (removing)
-[272] Utils.pm:193> WARN - BibTeX subsystem: warning: comma(s) at end of name (removing)
-[272] Utils.pm:193> WARN - BibTeX subsystem: author, warning: comma(s) at end of name (removing)
-[298] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[298] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[298] Biber.pm:3804> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
-[298] Biber.pm:3810> INFO - No sort tailoring available for locale 'en-US'
-[319] bbl.pm:617> INFO - Writing 'thesis.bbl' with encoding 'UTF-8'
-[327] bbl.pm:720> INFO - Output to thesis.bbl
-[327] Biber.pm:110> INFO - WARNINGS: 16
+[25] biber:313> INFO - === Fri Dec 14, 2018, 11:39:24
+[42] Biber.pm:371> INFO - Reading 'thesis.bcf'
+[102] Biber.pm:857> INFO - Found 27 citekeys in bib section 0
+[112] Biber.pm:3976> INFO - Processing section 0
+[121] Biber.pm:4136> INFO - Looking for bibtex format file 'references.bib' for section 0
+[122] bibtex.pm:1500> INFO - LaTeX decoding ...
+[147] bibtex.pm:1316> INFO - Found BibTeX data source 'references.bib'
+[288] Utils.pm:193> WARN - BibTeX subsystem: warning: comma(s) at end of name (removing)
+[288] Utils.pm:193> WARN - BibTeX subsystem: author, warning: comma(s) at end of name (removing)
+[288] Utils.pm:193> WARN - BibTeX subsystem: warning: comma(s) at end of name (removing)
+[288] Utils.pm:193> WARN - BibTeX subsystem: author, warning: comma(s) at end of name (removing)
+[288] Utils.pm:193> WARN - BibTeX subsystem: warning: comma(s) at end of name (removing)
+[288] Utils.pm:193> WARN - BibTeX subsystem: author, warning: comma(s) at end of name (removing)
+[288] Utils.pm:193> WARN - BibTeX subsystem: warning: comma(s) at end of name (removing)
+[288] Utils.pm:193> WARN - BibTeX subsystem: author, warning: comma(s) at end of name (removing)
+[288] Utils.pm:193> WARN - BibTeX subsystem: warning: comma(s) at end of name (removing)
+[288] Utils.pm:193> WARN - BibTeX subsystem: author, warning: comma(s) at end of name (removing)
+[289] Utils.pm:193> WARN - BibTeX subsystem: warning: comma(s) at end of name (removing)
+[289] Utils.pm:193> WARN - BibTeX subsystem: author, warning: comma(s) at end of name (removing)
+[289] Utils.pm:193> WARN - BibTeX subsystem: warning: comma(s) at end of name (removing)
+[289] Utils.pm:193> WARN - BibTeX subsystem: author, warning: comma(s) at end of name (removing)
+[289] Utils.pm:193> WARN - BibTeX subsystem: warning: comma(s) at end of name (removing)
+[289] Utils.pm:193> WARN - BibTeX subsystem: author, warning: comma(s) at end of name (removing)
+[289] Utils.pm:193> WARN - BibTeX subsystem: warning: comma(s) at end of name (removing)
+[289] Utils.pm:193> WARN - BibTeX subsystem: author, warning: comma(s) at end of name (removing)
+[316] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[316] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[316] Biber.pm:3804> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
+[316] Biber.pm:3810> INFO - No sort tailoring available for locale 'en-US'
+[338] bbl.pm:617> INFO - Writing 'thesis.bbl' with encoding 'UTF-8'
+[347] bbl.pm:720> INFO - Output to thesis.bbl
+[347] Biber.pm:110> INFO - WARNINGS: 18

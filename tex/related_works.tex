@@ -16,12 +16,15 @@ Goldsmith and Farsad train a detector for optical and moleculular channels \cite
 Timothy O'Shea's group has been doing some excellent work in this area. 
 O'Shea's first work in this area jointly optimized a transmitter and receiver for a given channel model (AWGN and Rayleigh fading) but the work does not go into detail about the performance for various channels \cite{osheaphys}.
 
-In a subsequent paper, O'Shea et. al. explore how multipath channels and random initial phase affects the system performance \cite{osheaatt}.  Figure~\ref{fig:oshea} shows how the convolutional neural network performance drastically decreased with multipath channels and for non-zero phase offset.
+In a subsequent paper, O'Shea et. al. explored how multipath channels and random initial phase affects the system performance \cite{osheaatt}.  
+This is the only work that we know of that does not re-train for each new multipath channel or carrier frequency offset. 
+Figure~\ref{fig:oshea} shows how the convolutional neural network performance drastically decreased with multipath channels and for non-zero phase offset.
+This particularly motivates our work as we hope to increase performance on learning to learn equalization and CFO.
 
 \begin{figure}
 \begin{center}
 \includegraphics[width=16cm]{figures/osheaatt2.png}
-\caption{The impacts of multipath channels and initial phase offsets on bit error performance \cite{osheaatt}.}
+\caption{The impacts of multipath channels and initial phase offsets on bit error performance \cite{osheaatt}.  Note, the network is not re-trained for each new environment.  As the number of paths and carrier frequency offset increase, the performance of the CNN decreases.}
 \label{fig:oshea}
 \end{center}
 \end{figure}
