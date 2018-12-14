@@ -20,30 +20,30 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {1.3}Related Works}{7}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\chapternumberline {2}equal}{10}
+\contentsline {chapter}{\chapternumberline {2}Deep Networks for Equalization}{11}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.1}Channel Estimation}{10}
+\contentsline {section}{\numberline {2.1}Channel Estimation}{11}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.2}Channel Equalization}{11}
+\contentsline {section}{\numberline {2.2}Channel Equalization}{12}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{Learning an inverse}{12}
+\contentsline {subsection}{Learning an inverse}{13}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{Learning to multiply two inputs}{13}
+\contentsline {subsection}{Learning to multiply two inputs}{14}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{RNN for Channel Equalization}{14}
+\contentsline {subsection}{RNN for Channel Equalization}{15}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\chapternumberline {3}cfo}{18}
+\contentsline {chapter}{\chapternumberline {3}Deep Networks for Carrier Frequency Offset}{19}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.1}Recurrent Neural Network Follows a Circle}{18}
+\contentsline {section}{\numberline {3.1}Recurrent Neural Network Follows a Circle}{19}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{Single Rate}{18}
+\contentsline {subsection}{Single Rate}{19}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{Different Rates}{19}
+\contentsline {subsection}{Different Rates}{20}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.2}Deep Network Carrier Frequency Offset Estimation and Correction}{20}
+\contentsline {section}{\numberline {3.2}Deep Network Carrier Frequency Offset Estimation and Correction}{21}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\chapternumberline {4}Conclusion}{23}
+\contentsline {chapter}{\chapternumberline {4}Conclusion}{24}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.1}Future Work}{23}
+\contentsline {section}{\numberline {4.1}Future Work}{24}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Bibliography}{24}
+\contentsline {chapter}{Bibliography}{25}

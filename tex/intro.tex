@@ -1,28 +1,29 @@
 \chapter{Introduction}
 
-Signal processing has long relied on well-defined, structured processes and protocols to function.  However, in order to move to more robust and adaptive systems, we will need to overhaul these tightly structured processes.  We must design new robust and adaptive communications systems.
+Signal processing has long relied on well-defined, structured processes and protocols to function.  
+However, in order to move towards more robust and adaptive systems, we will need to overhaul these tightly structured processes.  We must design new robust and adaptive communications systems.
 
-From an academic perspective, the rise of machine learning tools and processing has allowed us to tackle problems we have not yet been able to, like in image processing.  However, we still do not fully understand the reach or the limitations of this technology.  In order to study the limitations of machine learning, we must apply them to spaces that we have studied extensively, like communications, and compare them to the well-known baselines.
+From an academic perspective, the rise of machine learning tools and processing has allowed us to tackle problems we have not yet been able to, like in image processing.  However, we still do not fully understand the possibilities or the limitations of this technology.  In order to study the limitations of machine learning, we must apply them to spaces that we have studied extensively, like communications, and compare them to the well-known baselines.
 
 Most communications systems have three main processes at the receiver; equalization, demodulation, and error-correction.  While we will need to design robust forms of all of these processes, we will focus on equalization for the remainder of this paper. 
 
 \section{Motivation}
 
-Meta-learning is the idea that algorithms need to be able to `learn to learn' in order to generalize to different applications.  For example, if a robot is trained to pick up coffee mugs, then we want that robot to be able to quickly learn how to pick up water bottles without having to re-train it.  
-Meta-learning was inspired by humans ability to generalize how to learn \cite{lake}.  
+Meta-learning is the idea that algorithms need to be able to `learn to learn' in order to generalize to different applications.  For example, if a robot is trained to pick up coffee mugs, then we want that robot to be able to quickly learn how to pick up water bottles without having to re-train the robot.  
+Meta-learning is inspired by humans ability to generalize how to learn \cite{lake}.  
 Additionally, researchers in neurology have studied how the brain synapses change over time, suggesting that our algorithms will have to change over time to continue learning \cite{bengio}.
-Our brains know how to update the synapses as we learn new things, this is like updating the weights of a neural network for new data points.  
+Our brains know how to update the synapses as we learn new things. This is like updating the weights of a neural network for new data points.  
 We refer the reader to \cite{lemke} for a survey of meta-learning technologies and to \cite{finn} for recent developments in meta-learning algorithms.
 
 In this paper, we want to understand if our neural network based communication processes can learn to learn.  
 As in, can they handle new environments with new data sequeneces without having to re-train for the new variables. 
 The communications application is arguably an easier application of meta-learning than others have been exploring, like image classification \cite{khodadadeh}.  
-In order to better understand the reach and limitations of meta-learning, we need to apply it to something simpler, like communications.  In this paper, we will explore whether or not we can learn to learn to communicate. 
+In order to better understand the possibilities and limitations of meta-learning, we need to apply it to something simpler, like communications.  In this paper, we will explore whether or not we can learn to learn to communicate. 
 
 \section{Background}
 
 While we will not be designing new modulation or demodulation processes in this paper, we must introduce some terminology.
-A constellation if a mapping of bits to complex symbols.  
+A constellation is a mapping of bits to complex symbols.  
 A classic quadrature phase shift keying (QPSK) modulator maps pairs of bits to complex symbols.
 For the remainder of the paper, when we use a QPSK constellation, we use the following mapping.
 \begin{align*}
@@ -36,6 +37,11 @@ For the remainder of the paper, when we use a QPSK constellation, we use the fol
 \end{bmatrix}
 \end{align*}
 
+We will also use signal to noise ratio (SNR) to evaluate our models.  SNR is the ratio of the signal power to the noise power.  
+If the SNR is greater than one, then this means that there is more signal than noise.  If the SNR is infinity, this means that there is no noise added.
+We use $\text{SNR}=\frac{E_b}{N_0}$ where $E_b$ is the energy per bit and $N_0$ is the noise power spectral density.
+We set the SNR in our simulations by changing the noise power of a Gaussian random variable. 
+
 \subsection{Inter-symbol Interference and Equalization}
 
 Inter-symbol interference occurs when we are transmitting over a channel that has some echos.  These echos cause the receiver to hear a garbled signal instead of the original signal from the transmitter.  This is called inter-symbol interference because the receiver is hearing a combination of symbols across time. 
@@ -45,7 +51,7 @@ Each channel will have different characteristics. Some channels may have echos, 
 When a channel is modeled as a delay line, each multipath signal component at the receiver is modeled as a tap on the delay line.  
 We can characterize a channel by characterizing the channel taps.
 
-Let $\vec{a} = [a_0, a_1, \ldots a_{\ell}]$ be the set of characteristic for a multipath channel that has $l$ taps. When a sequence of symbols like $\vec{x}$ is transmitted over this channel, the channel taps are convolved over the sequence.  Additionally, there is noise in the system denoted by $v_i$. 
+Let $\vec{a} = [a_0, a_1, \ldots a_{\ell}]$ be the set of characteristics for a multipath channel that has $\ell$ taps. When a sequence of symbols like $\vec{x}$ is transmitted over this channel, the channel taps are convolved over the sequence.  Additionally, there is noise in the system denoted by $v_m$. 
 
 \begin{align}
 \tilde{x}_m = \sum_{i=0}^{\ell} a_i x_{m-i} + v_m
@@ -55,8 +61,8 @@ The receiver will hear a signal that is corrupted by inter-symbol interfence and
 $\vec{\tilde{x}}=[\tilde{x}_0, \tilde{x_1}, \ldots \tilde{x}_{n+\ell}]$. 
 Receivers must be able to handle garbled signals in order to transmit data in the real world.  The process of removing the inter-symbol interference is called equalization.  The goal of equalization is to take in a garbled signal and output a signal with minimal inter-symbol interference. 
 
-Figure~\ref{fig:multi_tap} demonstrates the effects of multi-tap channels on a QPSK modulation constellation.  
-We show what the received signal symbols constellations are from a sequence of $100$ symbols modulated in QPSK through different two tap channels.  We assume that the channel taps are constant during the transmission of the signal.
+Figure~\ref{fig:multi_tap} demonstrates the effects of two tap channels on a QPSK modulation constellation.  
+We show what the received signal constellations are from a sequence of $100$ symbols modulated in QPSK through different two tap channels.  We assume that the channel taps are constant during the transmission of the signal.
 We see that under certain channel conditions, like when the two taps are equal, it is very difficult to distinguish between the four constellations.  
 Engineers have built processes to remove inter-symbol interference.  First, let's go into the case when the channel characteristics are known.
 
@@ -88,26 +94,26 @@ The zero-forcing equalizer applies the inverse of the channel response to the re
 There are some limitations of the zero-forcing equalizer. 
 First, the impulse response of the equalizer needs to be infinitely long. 
 Second, if there is a weak signal at a frequency, then the inverse gain is going to be very large.  This will amplify any noise in the system. 
-Third, if there are any zeros in frequency response, these cannot be inverted.
+Third, if there are any zeros in the frequency response, these cannot be inverted.
 
 Another equalizer, the minimum mean squared error (MMSE) equalizer, handles noise much better than the zero-forcing equalizer and is explained in the next section.
-While it's important to consider how well a receiver can equalize with a known channel, this is rarely the case.  Usually, we do not know the channel characteristics.
+While it is important to consider how well a receiver can equalize with a known channel, this is rarely the case.  Usually, we do not know the channel characteristics.
 
 \subsubsection{Equalization for an unknown channel}
-When the receiver does not know the channel characteristics, the process of equalization essentially has two jobs; first, identify the channel, second, remove the inter-symbol interference. If the receiver did not identify the channel first, there would be no way to remove the affects of it on the received signal. 
+When the receiver does not know the channel characteristics, the process of equalization essentially has two jobs; first, identify the channel, second, remove the inter-symbol interference. If the receiver did not identify the channel first, there would be no way to remove the effects of it on the received signal. 
 
-In order to do channel estimation, most systems require that packets begin with a known sequence called a preamble. The signal sent will be broken into two parts; $\vec{x} = [\vec{x}_{pre}, \vec{x}_{data}]$.  The signal received on the transmitter is $\vec{\tilde{x}}=[\vec{\tilde{x}}_{pre},\vec{\tilde{x}}_{data}]$.  
+In order to estimate a channel, most systems require that packets begin with a known sequence called a preamble. The signal sent is broken into two parts; $\vec{x} = [\vec{x}_{pre}, \vec{x}_{data}]$.  The signal received on the transmitter is $\vec{\tilde{x}}=[\vec{\tilde{x}}_{pre},\vec{\tilde{x}}_{data}]$.  
 The receiver knows what the orginal preamble sequence was, $\vec{x}_{pre}$, and can use the received preamble sequence, $\vec{\tilde{x}}_{pre}$, to estimate the behavior of the channel.
 Once the channel is estimated, the receiver then equalizes the data, $\vec{\tilde{x}}_{data}$.
 
-One common method to estimate the channel is to use the least squares optimization framework. Let $H$ be the estimate of the channel.  The least squares channel estimator wants to find $H$ that minimizes the squared error between the received signal, $\vec{\tilde{x}}_{pre}$, and what the predicted received signal would be if the the channel $H$ was applied to the original preamble, $\vec{x}_{pre}$.
+One common method to estimate the channel is to use the least squares optimization framework. Let $H$ be the estimate of the channel.  The least squares channel estimator wants to find $H$ that minimizes the mean squared error between the received signal, $\vec{\tilde{x}}_{pre}$, and what the predicted received signal would be if the the estimated channel $H$ were applied to the original preamble, $\vec{x}_{pre}$.
 \begin{align}
 \min_H ||\vec{\tilde{x}}_{pre}-H\vec{x}_{pre}||^2
 \end{align}
 
-The receiver needs to choose the length of $H$, representing how many taps (or echos) there might be in the channel.  The length of $H$ will be set based on the environment that the transmitter and receiver are communicating in.
+The receiver needs to choose the length of $H$, representing how many taps (or echos) there might be in the channel.  The length of $H$ will be set based on the environment of the transmitter and receiver.
 
-Once the channel response has been estimated, an equalizer has to use that information to remove the inter-symbol interference from the received signal.
+Once the channel response has been estimated, an equalizer uses that information to remove the inter-symbol interference from the received signal.
 The MMSE equalizer minimizes the error between the equalized preamble and the original known preamble by choosing the optimal inverse of the channel response, $W$.
 \begin{align}
 \min_W||\vec{x}_{pre}-\vec{\hat{x}}_{pre}||^2 \\
@@ -115,7 +121,7 @@ The MMSE equalizer minimizes the error between the equalized preamble and the or
 W^* = \vec{x}_{pre} \vec{x}_{pre}^T H^T (H \vec{x}_{pre} \vec{x}_{pre}^T H^T + \sigma_v^2 I)^{-1}
 \end{align}
 
-The MMSE equalizer works well for known and unknown channels and does not amplify noise like the zero-forcing equalizer.  This is why the MMSE equalizer paired with a least squares channel estimator are widely used.
+The MMSE equalizer works well for known and unknown channels and does not amplify noise like the zero-forcing equalizer.  This is why the MMSE equalizer paired with a least squares channel estimator is widely used.
 
  
 \subsection{Carrier Frequency Offset and Correction}

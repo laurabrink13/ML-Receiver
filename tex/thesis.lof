@@ -12,28 +12,28 @@
 \defcounter {refsection}{0}\relax 
 \addvspace {10pt}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Comparison of a neural network, a K-Nearest-Neighbors, and a least squares channel estimator for two tap real channels.\relax }}{11}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Comparison of a neural network, a K-Nearest-Neighbors, and a least squares channel estimators for two tap, real channels.\relax }}{12}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Topographical surface representation of the division function; $z=\frac {x}{y}$.\relax }}{12}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Topographical surface representation of the division function; $z=\frac {x}{y}$.\relax }}{13}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Neural network divsion with respect to the lower bound of $y$.\relax }}{13}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Neural network divsion loss with respect to the lower bound of $y$.\relax }}{14}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Topographical surface representation of the multiplication function; $z=xy$.\relax }}{14}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Topographical surface representation of the multiplication function; $z=xy$.\relax }}{15}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Neural network divsion with respect to the upper bound of $y$.\relax }}{15}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Neural network multiplication loss with respect to the upper bound of $y$.\relax }}{16}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Comparison of RNN and MMSE mean squared error after equalization.\relax }}{16}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Comparison of RNN and MMSE equalizers loss over SNR.\relax }}{17}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.7}{\ignorespaces What two tap channels does the equalizer get wrong?\relax }}{17}
+\contentsline {figure}{\numberline {2.7}{\ignorespaces What two tap channels does the equalizer get wrong?\relax }}{18}
 \defcounter {refsection}{0}\relax 
 \addvspace {10pt}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Linear neural network: follow a circle for a constant CFO rate.\relax }}{19}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Linear neural network: follow a circle for a constant CFO rate.\relax }}{20}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Nonlinear neural network: follow a circle for a different CFO rates.\relax }}{20}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Nonlinear neural network: follow a circle for different CFO rates.\relax }}{21}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.3}{\ignorespaces The log BER of received signals passed through a neural network CFO estimator with a rotation matrix CFO correction and classic demodulator. The log BER of the same signals passed through just the classic demodulator.\relax }}{21}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces The log BER of received signals passed through a neural network CFO estimator with a rotation matrix CFO correction and classic demodulator. The log BER of the same signals passed through just the classic demodulator.\relax }}{22}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Nonlinear neural network estimating and correcting CFO for different $\omega $. In this particular test example, $\omega =0.00969545$ and SNR$=\infty $.\relax }}{22}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Nonlinear neural network estimating and correcting CFO for different $\omega $. In this particular test example, $\omega =0.00969545$ and SNR$=\infty $.\relax }}{23}
 \defcounter {refsection}{0}\relax 
 \addvspace {10pt}

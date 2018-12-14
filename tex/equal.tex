@@ -1,4 +1,4 @@
-\chapter[equal]{Deep Networks for Equalization\raisebox{.3\baselineskip}{\normalsize\footnotemark}}
+\chapter[Deep Networks for Equalization]{Deep Networks for Equalization\raisebox{.3\baselineskip}{\normalsize\footnotemark}}
 \footnotetext{The contents of this chapter were produced in collaboration with Nipun Ramakrishnan.} 
 
 The equalization process removes inter-symbol interference caused by the channel from a sequence of symbols.  We will explore how neural networks can both estimate the channel characteristics and remove the inter-symbol interference.  For the remainder of this paper, we will assume that all channels only have real parts. 
@@ -14,7 +14,7 @@ Each channel tap is a uniform random variable, $[-1,1]$.  We normalize the chann
 \begin{figure}
 \begin{center}
 \includegraphics{figures/equal/Channel_Estimation_KNN_LSTSQ_NN.png}
-\caption{Comparison of a neural network, a K-Nearest-Neighbors, and a least squares channel estimator for two tap real channels.}
+\caption{Comparison of a neural network, a K-Nearest-Neighbors, and a least squares channel estimators for two tap, real channels.}
 \label{fig:chann_est}
 \end{center}
 \end{figure}
@@ -63,7 +63,7 @@ The network is re-trained with $10k$ data points for different values of $\beta$
 \begin{figure}
 \begin{center}
 \includegraphics{figures/equal/Channel_lower_bound_division.png}
-\caption{Neural network divsion with respect to the lower bound of $y$.}
+\caption{Neural network divsion loss with respect to the lower bound of $y$.}
 \label{fig:one_tap_inv}
 \end{center}
 \end{figure}
@@ -108,7 +108,7 @@ The network is re-trained with $50k$ data points for different values of $\gamma
 \begin{figure}
 \begin{center}
 \includegraphics{figures/equal/Channel_upper_bound_multiplication.png}
-\caption{Neural network divsion with respect to the upper bound of $y$.}
+\caption{Neural network multiplication loss with respect to the upper bound of $y$.}
 \label{fig:mult_bound}
 \end{center}
 \end{figure}
@@ -137,7 +137,7 @@ We assume that the RNN and MMSE both have access to the true channel chracterist
 \begin{figure}
 \begin{center}
 \includegraphics[width=100mm]{figures/equal/RNN_vs_MMSE.png}
-\caption{Comparison of RNN and MMSE mean squared error after equalization.}
+\caption{Comparison of RNN and MMSE equalizers loss over SNR.}
 \label{fig:rnn_vs_mmse}
 \end{center}
 \end{figure}
