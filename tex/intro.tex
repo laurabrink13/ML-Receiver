@@ -21,12 +21,29 @@ In order to better understand the reach and limitations of meta-learning, we nee
 
 \section{Background}
 
+While we will not be designing new modulation or demodulation processes in this paper, we must introduce some terminology.
+A constellation if a mapping of bits to complex symbols.  
+A classic quadrature phase shift keying (QPSK) modulator maps pairs of bits to complex symbols.
+For the remainder of the paper, when we use a QPSK constellation, we use the following mapping.
+\begin{align*}
+\begin{bmatrix}
+\text{Bits} & \text{Complex Symbol} \\
+\hline
+00 & -1-1j \\
+10 & 1 -1j \\
+01 & -1 + 1j \\
+11 & 1+1j \\
+\end{bmatrix}
+\end{align*}
+
 \subsection{Inter-symbol Interference and Equalization}
 
 Inter-symbol interference occurs when we are transmitting over a channel that has some echos.  These echos cause the receiver to hear a garbled signal instead of the original signal from the transmitter.  This is called inter-symbol interference because the receiver is hearing a combination of symbols across time. 
 
 Let $\vec{x}=[x_0, x_1, \ldots x_n]$ be the set of $n$ complex symbols that the transmitter sends over the channel that connects the transmitter to the receiver.
-Each channel will have different characteristics. Some channels may have echos, others may have delays, often channels will have both.  When a channel has echos, this is called a multipath channel because there are multiple paths to reach the receiver.  Each path is called a tap.  We can characterize a channel by characterizing the taps.
+Each channel will have different characteristics. Some channels may have echos, others may have delays, often channels will have both.  When a channel has echos, this is called a multipath channel because there are multiple paths to reach the receiver.  
+When a channel is modeled as a delay line, each multipath signal component at the receiver is modeled as a tap on the delay line.  
+We can characterize a channel by characterizing the channel taps.
 
 Let $\vec{a} = [a_0, a_1, \ldots a_{\ell}]$ be the set of characteristic for a multipath channel that has $l$ taps. When a sequence of symbols like $\vec{x}$ is transmitted over this channel, the channel taps are convolved over the sequence.  Additionally, there is noise in the system denoted by $v_i$. 
 
@@ -38,7 +55,7 @@ The receiver will hear a signal that is corrupted by inter-symbol interfence and
 $\vec{\tilde{x}}=[\tilde{x}_0, \tilde{x_1}, \ldots \tilde{x}_{n+\ell}]$. 
 Receivers must be able to handle garbled signals in order to transmit data in the real world.  The process of removing the inter-symbol interference is called equalization.  The goal of equalization is to take in a garbled signal and output a signal with minimal inter-symbol interference. 
 
-Figure ~\ref{fig:multi_tap} demonstrates the effects of multi-tap channels on a QPSK modulation constellation.  
+Figure~\ref{fig:multi_tap} demonstrates the effects of multi-tap channels on a QPSK modulation constellation.  
 We show what the received signal symbols constellations are from a sequence of $100$ symbols modulated in QPSK through different two tap channels.  We assume that the channel taps are constant during the transmission of the signal.
 We see that under certain channel conditions, like when the two taps are equal, it is very difficult to distinguish between the four constellations.  
 Engineers have built processes to remove inter-symbol interference.  First, let's go into the case when the channel characteristics are known.
@@ -112,7 +129,7 @@ When there is a significant CFO present, the symbols will gradually rotate. The 
 \tilde{x}_i = x_i e^{ij\omega}+v_i
 \end{align} 
 
-Figure ~\ref{fig:single_tap_cfo} demonstrates the effects of CFO on a QPSK modulation constellation (no multipath channels). 
+Figure~\ref{fig:single_tap_cfo} demonstrates the effects of CFO on a QPSK modulation constellation (no multipath channels). 
 We show what the received signal symbols constellations are from a sequence of $100$ symbols modulated in QPSK with different CFO rates.  We assume that the CFO rate, $\omega$, is constant during the transmission of the signal.
 
 \setlength{\tabcolsep}{0pt}
@@ -146,7 +163,7 @@ What happens when there is both CFO and inter-symbol interference?  The received
 \tilde{x}_m = (\sum_{i=0}^l a_i x_{m-i})e^{mj\omega} + v_m
 \end{align}
 
-Figure ~\ref{fig:multi_tap_cfo} demonstrates the effects of CFO and multi-tap channels on a QPSK modulation constellation. 
+Figure~\ref{fig:multi_tap_cfo} demonstrates the effects of CFO and multi-tap channels on a QPSK modulation constellation. 
 We show what the received signal symbols constellations are from a sequence of $100$ symbols modulated in QPSK with different CFO rates and two tap channels.  We assume that the CFO rate, $\omega$, and the channel taps are constant during the transmission of the signal.  
 Modern day receivers have to combine CFO correction, channel estimation, and equalization processes in order to handle these received signals.
 
