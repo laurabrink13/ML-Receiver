@@ -3,7 +3,12 @@
 Signal processing has long relied on well-defined, structured processes and protocols to function.  
 However, in order to move towards more robust and adaptive systems, we will need to overhaul these tightly structured processes.  We must design new robust and adaptive communications systems.
 
-From an academic perspective, the rise of machine learning tools and processing has allowed us to tackle problems we have not yet been able to, like in image processing.  However, we still do not fully understand the possibilities or the limitations of this technology.  In order to study the limitations of machine learning techniques, we must apply them to spaces that we have studied extensively, like communications, and compare them to the well-known baselines that are already very good.
+From an academic perspective, the rise of machine learning tools and processing has allowed us to tackle problems we have not yet been able to, like in image processing.  However, we still do not fully understand the possibilities or the limitations of this technology.  
+
+\cite{imagenet}
+\cite{videogame}
+
+In order to study the limitations of machine learning techniques, we must apply them to spaces that we have studied extensively, like communications, and compare them to the well-known baselines that are already very good.
 
 Most communications systems have three main processes at the receiver; equalization, demodulation, and error-correction.  While we will need to design robust forms of all of these processes, we will focus on equalization for the remainder of this report. 
 
@@ -141,8 +146,7 @@ One common method to estimate the channel is to use the least-squares optimizati
 \min_H ||\vec{\tilde{x}}_{pre}-H\vec{x}_{pre}||^2
 \end{align}
 
-The receiver needs to choose the length of $H$, representing how many taps (or echos) there might be in the channel.  The length of $H$ will be set based on the environment of the transmitter and receiver.
-
+The receiver needs to choose the number of non-zeros in $H$, representing how many taps (or echos) there might be in the channel.  The number of taps, or non-zeros, in $H$ will be set based on the environment of the transmitter and receiver.
 Once the channel response has been estimated, an equalizer uses that information to remove the inter-symbol interference from the received signal, like the MMSE equalizer defined above.
 
  
