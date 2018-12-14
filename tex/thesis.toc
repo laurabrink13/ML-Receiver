@@ -34,6 +34,8 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{RNN for Channel Equalization}{15}
 \defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.3}Future Work}{18}
+\defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\chapternumberline {3}Deep Networks for Carrier Frequency Offset}{19}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3.1}Recurrent Neural Network Follows a Circle}{19}
@@ -44,8 +46,8 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3.2}Deep Network Carrier Frequency Offset Estimation and Correction}{21}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\chapternumberline {4}Conclusion}{24}
+\contentsline {section}{\numberline {3.3}Future Work}{23}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.1}Future Work}{24}
+\contentsline {chapter}{\chapternumberline {4}Conclusion}{24}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{Bibliography}{25}

@@ -177,3 +177,11 @@ Additionally, if we think about these channels in terms of the infinite impulse 
 
 In this chapter, we designed a deep neural network to estimate two tap channels.
 We explored the difficulties in learning to divide and learning to multiply with neural networks. We showed that a deep recursive neural network, with bidirectional LSTM layers, can learn to learn to equalize for random two tap channels.  We also examined when the RNN equalizer fails. 
+
+\section{Future Work}
+
+In the future, we would like to expand our channel estimation networks to handle any number of channel taps and channel taps that also have imaginary parts.
+We would also like to explore how we might be able to learn to estimate the channel even without a shared preamble.
+We hope to explore and expand our research on equalization networks.  One first step will be investigating how adding logarithmic layers into the networks affects the performance.  
+We want to combine the channel estimator and equalizer networks into one deep network and have gradients flow all the way back.  This will take the work one step further in the direction of learning to learn.
+We also want to do more thorough architecture searches and train the networks for longer.
