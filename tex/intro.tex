@@ -20,6 +20,17 @@ As in, can they handle new environments with new data sequeneces without having 
 The communications application is arguably an easier application of meta-learning than others have been exploring, like image classification \cite{khodadadeh}.  
 In order to better understand the possibilities and limitations of meta-learning, we need to apply it to something simpler, like communications.  In this paper, we will explore whether or not we can learn to learn to communicate. 
 
+\subsection{Context}
+
+A team at UC Berkeley and Nokia Bell Labs  participated in the DARPA Spectrum Collaboration Challenge, a competition to build collaborative, intelligent radios.
+The challenge consists of putting multiple radio networks in the same space and bandwidth.  
+Without having been codesigned, the networks must collaborate and share all of the resources.
+The environment was open to all of the teams so there are no rigid bands like we use today.
+
+One of the potential scenarios for this challenge was that networks might have stranded radios where no radio in their own network can reach them.  In this case, that network would need to rely on another network to relay messages to and from the stranded node.  
+The challenge is that the relay network must forward along a signal that it cannot fully decode itself.  This requires the network to equalize a signal and correct for CFO and then send it without using demodulation or error-correction.  
+This challenge is one of the practical applications for robust and adaptive processes for equalization.
+
 \section{Background}
 
 While we will not be designing new modulation or demodulation processes in this paper, we must introduce some terminology.
@@ -97,7 +108,15 @@ First, the impulse response of the equalizer needs to be infinitely long.
 Second, if there is a weak signal at a frequency, then the inverse gain is going to be very large.  This will amplify any noise in the system. 
 Third, if there are any zeros in the frequency response, these cannot be inverted.
 
-Another equalizer, the minimum mean squared error (MMSE) equalizer, handles noise much better than the zero-forcing equalizer and is explained in the next section.
+Another equalizer, the minimum mean squared error (MMSE) equalizer, handles noise much better than the zero-forcing equalizer.
+The MMSE equalizer minimizes the error between the equalized preamble and the original known preamble by choosing the optimal inverse of the channel response, $W$.  Let $H$ be the representation of the channel taps.
+\begin{align}
+\min_W||\vec{x}_{pre}-\vec{\hat{x}}_{pre}||^2 \\
+\vec{\hat{x}}_{pre} = W (H\vec{x}_{pre}+\vec{v}) \\
+W^* = \vec{x}_{pre} \vec{x}_{pre}^T H^T (H \vec{x}_{pre} \vec{x}_{pre}^T H^T + \sigma_v^2 I)^{-1}
+\end{align}
+
+The MMSE equalizer works well for known and unknown channels and does not amplify noise like the zero-forcing equalizer.
 While it is important to consider how well a receiver can equalize with a known channel, this is rarely the case.  Usually, we do not know the channel characteristics.
 
 \subsubsection{Equalization for an unknown channel}
@@ -114,15 +133,7 @@ One common method to estimate the channel is to use the least squares optimizati
 
 The receiver needs to choose the length of $H$, representing how many taps (or echos) there might be in the channel.  The length of $H$ will be set based on the environment of the transmitter and receiver.
 
-Once the channel response has been estimated, an equalizer uses that information to remove the inter-symbol interference from the received signal.
-The MMSE equalizer minimizes the error between the equalized preamble and the original known preamble by choosing the optimal inverse of the channel response, $W$.
-\begin{align}
-\min_W||\vec{x}_{pre}-\vec{\hat{x}}_{pre}||^2 \\
-\vec{\hat{x}}_{pre} = W (H\vec{x}_{pre}+\vec{v}) \\
-W^* = \vec{x}_{pre} \vec{x}_{pre}^T H^T (H \vec{x}_{pre} \vec{x}_{pre}^T H^T + \sigma_v^2 I)^{-1}
-\end{align}
-
-The MMSE equalizer works well for known and unknown channels and does not amplify noise like the zero-forcing equalizer.  This is why the MMSE equalizer paired with a least squares channel estimator is widely used.
+Once the channel response has been estimated, an equalizer uses that information to remove the inter-symbol interference from the received signal, like the MMSE equalizer defined above.
 
  
 \subsection{Carrier Frequency Offset and Correction}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.10.4)  13 DEC 2018 23:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.10.4)  14 DEC 2018 07:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -825,84 +825,85 @@ Package caption Info: End \AtBeginDocument code.
 
 ] (./thesis.lof) [2
 
-]
+] [3]
 \openout2 = `intro.aux'.
 
- (./intro.tex [1
+
+(./intro.tex [1
 
 
 ] [2]
-<figures/equal_intro/snr_0_c3/cfo_0.png, id=38, 268.00125pt x 280.04625pt>
+<figures/equal_intro/snr_0_c3/cfo_0.png, id=41, 268.00125pt x 280.04625pt>
 File: figures/equal_intro/snr_0_c3/cfo_0.png Graphic file (type png)
 <use figures/equal_intro/snr_0_c3/cfo_0.png>
 Package pdftex.def Info: figures/equal_intro/snr_0_c3/cfo_0.png  used on input 
-line 75.
+line 86.
 (pdftex.def)             Requested size: 128.0374pt x 133.78824pt.
-<figures/equal_intro/snr_20_c3/cfo_0.png, id=40, 268.00125pt x 280.04625pt>
+<figures/equal_intro/snr_20_c3/cfo_0.png, id=43, 268.00125pt x 280.04625pt>
 File: figures/equal_intro/snr_20_c3/cfo_0.png Graphic file (type png)
 <use figures/equal_intro/snr_20_c3/cfo_0.png>
 Package pdftex.def Info: figures/equal_intro/snr_20_c3/cfo_0.png  used on input
- line 76.
+ line 87.
 (pdftex.def)             Requested size: 128.0374pt x 133.78824pt.
-<figures/equal_intro/snr_10_c3/cfo_0.png, id=41, 268.00125pt x 280.04625pt>
+<figures/equal_intro/snr_10_c3/cfo_0.png, id=44, 268.00125pt x 280.04625pt>
 File: figures/equal_intro/snr_10_c3/cfo_0.png Graphic file (type png)
 <use figures/equal_intro/snr_10_c3/cfo_0.png>
 Package pdftex.def Info: figures/equal_intro/snr_10_c3/cfo_0.png  used on input
- line 77.
+ line 88.
 (pdftex.def)             Requested size: 128.0374pt x 133.78824pt.
-<figures/equal_intro/snr_0_c2/cfo_0.png, id=42, 269.005pt x 280.04625pt>
+<figures/equal_intro/snr_0_c2/cfo_0.png, id=45, 269.005pt x 280.04625pt>
 File: figures/equal_intro/snr_0_c2/cfo_0.png Graphic file (type png)
 <use figures/equal_intro/snr_0_c2/cfo_0.png>
 Package pdftex.def Info: figures/equal_intro/snr_0_c2/cfo_0.png  used on input 
-line 78.
+line 89.
 (pdftex.def)             Requested size: 128.0374pt x 133.29254pt.
-<figures/equal_intro/snr_20_c2/cfo_0.png, id=43, 269.005pt x 280.04625pt>
+<figures/equal_intro/snr_20_c2/cfo_0.png, id=46, 269.005pt x 280.04625pt>
 File: figures/equal_intro/snr_20_c2/cfo_0.png Graphic file (type png)
 <use figures/equal_intro/snr_20_c2/cfo_0.png>
 Package pdftex.def Info: figures/equal_intro/snr_20_c2/cfo_0.png  used on input
- line 79.
+ line 90.
 (pdftex.def)             Requested size: 128.0374pt x 133.29254pt.
-<figures/equal_intro/snr_10_c2/cfo_0.png, id=44, 269.005pt x 280.04625pt>
+<figures/equal_intro/snr_10_c2/cfo_0.png, id=47, 269.005pt x 280.04625pt>
 File: figures/equal_intro/snr_10_c2/cfo_0.png Graphic file (type png)
 <use figures/equal_intro/snr_10_c2/cfo_0.png>
 Package pdftex.def Info: figures/equal_intro/snr_10_c2/cfo_0.png  used on input
- line 80.
+ line 91.
 (pdftex.def)             Requested size: 128.0374pt x 133.29254pt.
-<figures/equal_intro/snr_0_c4/cfo_0.png, id=45, 268.00125pt x 280.04625pt>
+<figures/equal_intro/snr_0_c4/cfo_0.png, id=48, 268.00125pt x 280.04625pt>
 File: figures/equal_intro/snr_0_c4/cfo_0.png Graphic file (type png)
 <use figures/equal_intro/snr_0_c4/cfo_0.png>
 Package pdftex.def Info: figures/equal_intro/snr_0_c4/cfo_0.png  used on input 
-line 81.
+line 92.
 (pdftex.def)             Requested size: 128.0374pt x 133.78824pt.
-<figures/equal_intro/snr_20_c4/cfo_0.png, id=46, 268.00125pt x 280.04625pt>
+<figures/equal_intro/snr_20_c4/cfo_0.png, id=49, 268.00125pt x 280.04625pt>
 File: figures/equal_intro/snr_20_c4/cfo_0.png Graphic file (type png)
 <use figures/equal_intro/snr_20_c4/cfo_0.png>
 Package pdftex.def Info: figures/equal_intro/snr_20_c4/cfo_0.png  used on input
- line 82.
+ line 93.
 (pdftex.def)             Requested size: 128.0374pt x 133.78824pt.
-<figures/equal_intro/snr_10_c4/cfo_0.png, id=47, 268.00125pt x 280.04625pt>
+<figures/equal_intro/snr_10_c4/cfo_0.png, id=50, 268.00125pt x 280.04625pt>
 File: figures/equal_intro/snr_10_c4/cfo_0.png Graphic file (type png)
 <use figures/equal_intro/snr_10_c4/cfo_0.png>
 Package pdftex.def Info: figures/equal_intro/snr_10_c4/cfo_0.png  used on input
- line 83.
+ line 94.
 (pdftex.def)             Requested size: 128.0374pt x 133.78824pt.
-<figures/equal_intro/snr_0_c5/cfo_0.png, id=48, 266.9975pt x 280.04625pt>
+<figures/equal_intro/snr_0_c5/cfo_0.png, id=51, 266.9975pt x 280.04625pt>
 File: figures/equal_intro/snr_0_c5/cfo_0.png Graphic file (type png)
 <use figures/equal_intro/snr_0_c5/cfo_0.png>
 Package pdftex.def Info: figures/equal_intro/snr_0_c5/cfo_0.png  used on input 
-line 84.
+line 95.
 (pdftex.def)             Requested size: 128.0374pt x 134.30101pt.
-<figures/equal_intro/snr_20_c5/cfo_0.png, id=49, 266.9975pt x 280.04625pt>
+<figures/equal_intro/snr_20_c5/cfo_0.png, id=52, 266.9975pt x 280.04625pt>
 File: figures/equal_intro/snr_20_c5/cfo_0.png Graphic file (type png)
 <use figures/equal_intro/snr_20_c5/cfo_0.png>
 Package pdftex.def Info: figures/equal_intro/snr_20_c5/cfo_0.png  used on input
- line 85.
+ line 96.
 (pdftex.def)             Requested size: 128.0374pt x 134.30101pt.
-<figures/equal_intro/snr_10_c5/cfo_0.png, id=50, 266.9975pt x 280.04625pt>
+<figures/equal_intro/snr_10_c5/cfo_0.png, id=53, 266.9975pt x 280.04625pt>
 File: figures/equal_intro/snr_10_c5/cfo_0.png Graphic file (type png)
 <use figures/equal_intro/snr_10_c5/cfo_0.png>
 Package pdftex.def Info: figures/equal_intro/snr_10_c5/cfo_0.png  used on input
- line 86.
+ line 97.
 (pdftex.def)             Requested size: 128.0374pt x 134.30101pt.
  [3] [4 <./figures/equal_intro/snr_0_c3/cfo_0.png> <./figures/equal_intro/snr_2
 0_c3/cfo_0.png> <./figures/equal_intro/snr_10_c3/cfo_0.png> <./figures/equal_in
@@ -910,162 +911,165 @@ tro/snr_0_c2/cfo_0.png> <./figures/equal_intro/snr_20_c2/cfo_0.png> <./figures/
 equal_intro/snr_10_c2/cfo_0.png> <./figures/equal_intro/snr_0_c4/cfo_0.png> <./
 figures/equal_intro/snr_20_c4/cfo_0.png> <./figures/equal_intro/snr_10_c4/cfo_0
 .png> <./figures/equal_intro/snr_0_c5/cfo_0.png> <./figures/equal_intro/snr_20_
-c5/cfo_0.png> <./figures/equal_intro/snr_10_c5/cfo_0.png>] [5]
-<figures/cfo_intro/snr_0/cfo_0.png, id=73, 266.9975pt x 280.04625pt>
+c5/cfo_0.png> <./figures/equal_intro/snr_10_c5/cfo_0.png>]
+[5]
+<figures/cfo_intro/snr_0/cfo_0.png, id=76, 266.9975pt x 280.04625pt>
 File: figures/cfo_intro/snr_0/cfo_0.png Graphic file (type png)
 <use figures/cfo_intro/snr_0/cfo_0.png>
 Package pdftex.def Info: figures/cfo_intro/snr_0/cfo_0.png  used on input line 
-148.
+159.
 (pdftex.def)             Requested size: 142.26378pt x 149.22287pt.
-<figures/cfo_intro/snr_0/cfo_1.png, id=74, 266.9975pt x 280.04625pt>
+<figures/cfo_intro/snr_0/cfo_1.png, id=77, 266.9975pt x 280.04625pt>
 File: figures/cfo_intro/snr_0/cfo_1.png Graphic file (type png)
 <use figures/cfo_intro/snr_0/cfo_1.png>
 Package pdftex.def Info: figures/cfo_intro/snr_0/cfo_1.png  used on input line 
-149.
+160.
 (pdftex.def)             Requested size: 142.26378pt x 149.22287pt.
-<figures/cfo_intro/snr_0/cfo_2.png, id=75, 266.9975pt x 280.04625pt>
+<figures/cfo_intro/snr_0/cfo_2.png, id=78, 266.9975pt x 280.04625pt>
 File: figures/cfo_intro/snr_0/cfo_2.png Graphic file (type png)
 <use figures/cfo_intro/snr_0/cfo_2.png>
 Package pdftex.def Info: figures/cfo_intro/snr_0/cfo_2.png  used on input line 
-150.
+161.
 (pdftex.def)             Requested size: 142.26378pt x 149.22287pt.
-<figures/cfo_intro/snr_20/cfo_0.png, id=76, 266.9975pt x 280.04625pt>
+<figures/cfo_intro/snr_20/cfo_0.png, id=79, 266.9975pt x 280.04625pt>
 File: figures/cfo_intro/snr_20/cfo_0.png Graphic file (type png)
 <use figures/cfo_intro/snr_20/cfo_0.png>
 Package pdftex.def Info: figures/cfo_intro/snr_20/cfo_0.png  used on input line
- 151.
+ 162.
 (pdftex.def)             Requested size: 142.26378pt x 149.22287pt.
-<figures/cfo_intro/snr_20/cfo_1.png, id=77, 266.9975pt x 280.04625pt>
+<figures/cfo_intro/snr_20/cfo_1.png, id=80, 266.9975pt x 280.04625pt>
 File: figures/cfo_intro/snr_20/cfo_1.png Graphic file (type png)
 <use figures/cfo_intro/snr_20/cfo_1.png>
 Package pdftex.def Info: figures/cfo_intro/snr_20/cfo_1.png  used on input line
- 152.
+ 163.
 (pdftex.def)             Requested size: 142.26378pt x 149.22287pt.
-<figures/cfo_intro/snr_20/cfo_2.png, id=78, 266.9975pt x 280.04625pt>
+<figures/cfo_intro/snr_20/cfo_2.png, id=81, 266.9975pt x 280.04625pt>
 File: figures/cfo_intro/snr_20/cfo_2.png Graphic file (type png)
 <use figures/cfo_intro/snr_20/cfo_2.png>
 Package pdftex.def Info: figures/cfo_intro/snr_20/cfo_2.png  used on input line
- 153.
+ 164.
 (pdftex.def)             Requested size: 142.26378pt x 149.22287pt.
-<figures/cfo_intro/snr_10/cfo_0.png, id=79, 266.9975pt x 280.04625pt>
+<figures/cfo_intro/snr_10/cfo_0.png, id=82, 266.9975pt x 280.04625pt>
 File: figures/cfo_intro/snr_10/cfo_0.png Graphic file (type png)
 <use figures/cfo_intro/snr_10/cfo_0.png>
 Package pdftex.def Info: figures/cfo_intro/snr_10/cfo_0.png  used on input line
- 154.
+ 165.
 (pdftex.def)             Requested size: 142.26378pt x 149.22287pt.
-<figures/cfo_intro/snr_10/cfo_1.png, id=80, 266.9975pt x 280.04625pt>
+<figures/cfo_intro/snr_10/cfo_1.png, id=83, 266.9975pt x 280.04625pt>
 File: figures/cfo_intro/snr_10/cfo_1.png Graphic file (type png)
 <use figures/cfo_intro/snr_10/cfo_1.png>
 Package pdftex.def Info: figures/cfo_intro/snr_10/cfo_1.png  used on input line
- 155.
+ 166.
 (pdftex.def)             Requested size: 142.26378pt x 149.22287pt.
-<figures/cfo_intro/snr_10/cfo_2.png, id=81, 266.9975pt x 280.04625pt>
+<figures/cfo_intro/snr_10/cfo_2.png, id=84, 266.9975pt x 280.04625pt>
 File: figures/cfo_intro/snr_10/cfo_2.png Graphic file (type png)
 <use figures/cfo_intro/snr_10/cfo_2.png>
 Package pdftex.def Info: figures/cfo_intro/snr_10/cfo_2.png  used on input line
- 156.
+ 167.
 (pdftex.def)             Requested size: 142.26378pt x 149.22287pt.
- [6 <./figures/cfo_intro/snr_0/cfo_0.png> <./figures/cfo_intro/snr_0/cfo_1.png>
- <./figures/cfo_intro/snr_0/cfo_2.png> <./figures/cfo_intro/snr_20/cfo_0.png> <
-./figures/cfo_intro/snr_20/cfo_1.png> <./figures/cfo_intro/snr_20/cfo_2.png> <.
-/figures/cfo_intro/snr_10/cfo_0.png> <./figures/cfo_intro/snr_10/cfo_1.png> <./
-figures/cfo_intro/snr_10/cfo_2.png>]
-<figures/cfo_equal_intro/snr_0_c3/cfo_0.png, id=94, 268.00125pt x 295.1025pt>
+ [6] [7 <./figures/cfo_intro/snr_0/cfo_0.png> <./figures/cfo_intro/snr_0/cfo_1.
+png> <./figures/cfo_intro/snr_0/cfo_2.png> <./figures/cfo_intro/snr_20/cfo_0.pn
+g> <./figures/cfo_intro/snr_20/cfo_1.png> <./figures/cfo_intro/snr_20/cfo_2.png
+> <./figures/cfo_intro/snr_10/cfo_0.png> <./figures/cfo_intro/snr_10/cfo_1.png>
+ <./figures/cfo_intro/snr_10/cfo_2.png>]
+<figures/cfo_equal_intro/snr_0_c3/cfo_0.png, id=101, 268.00125pt x 295.1025pt>
 File: figures/cfo_equal_intro/snr_0_c3/cfo_0.png Graphic file (type png)
 <use figures/cfo_equal_intro/snr_0_c3/cfo_0.png>
 Package pdftex.def Info: figures/cfo_equal_intro/snr_0_c3/cfo_0.png  used on in
-put line 186.
+put line 197.
 (pdftex.def)             Requested size: 128.0374pt x 140.98116pt.
-<figures/cfo_equal_intro/snr_20_c3/cfo_0.png, id=95, 268.00125pt x 295.1025pt>
+<figures/cfo_equal_intro/snr_20_c3/cfo_0.png, id=102, 268.00125pt x 295.1025pt>
+
 File: figures/cfo_equal_intro/snr_20_c3/cfo_0.png Graphic file (type png)
 <use figures/cfo_equal_intro/snr_20_c3/cfo_0.png>
 Package pdftex.def Info: figures/cfo_equal_intro/snr_20_c3/cfo_0.png  used on i
-nput line 187.
+nput line 198.
 (pdftex.def)             Requested size: 128.0374pt x 140.98116pt.
-<figures/cfo_equal_intro/snr_10_c3/cfo_0.png, id=96, 268.00125pt x 295.1025pt>
+<figures/cfo_equal_intro/snr_10_c3/cfo_0.png, id=103, 268.00125pt x 295.1025pt>
+
 File: figures/cfo_equal_intro/snr_10_c3/cfo_0.png Graphic file (type png)
 <use figures/cfo_equal_intro/snr_10_c3/cfo_0.png>
 Package pdftex.def Info: figures/cfo_equal_intro/snr_10_c3/cfo_0.png  used on i
-nput line 188.
+nput line 199.
 (pdftex.def)             Requested size: 128.0374pt x 140.98116pt.
-<figures/cfo_equal_intro/snr_0_c2/cfo_0.png, id=97, 269.005pt x 295.1025pt>
+<figures/cfo_equal_intro/snr_0_c2/cfo_0.png, id=104, 269.005pt x 295.1025pt>
 File: figures/cfo_equal_intro/snr_0_c2/cfo_0.png Graphic file (type png)
 <use figures/cfo_equal_intro/snr_0_c2/cfo_0.png>
 Package pdftex.def Info: figures/cfo_equal_intro/snr_0_c2/cfo_0.png  used on in
-put line 189.
+put line 200.
 (pdftex.def)             Requested size: 128.0374pt x 140.45882pt.
-<figures/cfo_equal_intro/snr_20_c2/cfo_0.png, id=98, 269.005pt x 295.1025pt>
+<figures/cfo_equal_intro/snr_20_c2/cfo_0.png, id=105, 269.005pt x 295.1025pt>
 File: figures/cfo_equal_intro/snr_20_c2/cfo_0.png Graphic file (type png)
 <use figures/cfo_equal_intro/snr_20_c2/cfo_0.png>
 Package pdftex.def Info: figures/cfo_equal_intro/snr_20_c2/cfo_0.png  used on i
-nput line 190.
+nput line 201.
 (pdftex.def)             Requested size: 128.0374pt x 140.45882pt.
-<figures/cfo_equal_intro/snr_10_c2/cfo_0.png, id=99, 269.005pt x 295.1025pt>
+<figures/cfo_equal_intro/snr_10_c2/cfo_0.png, id=106, 269.005pt x 295.1025pt>
 File: figures/cfo_equal_intro/snr_10_c2/cfo_0.png Graphic file (type png)
 <use figures/cfo_equal_intro/snr_10_c2/cfo_0.png>
 Package pdftex.def Info: figures/cfo_equal_intro/snr_10_c2/cfo_0.png  used on i
-nput line 191.
+nput line 202.
 (pdftex.def)             Requested size: 128.0374pt x 140.45882pt.
-<figures/cfo_equal_intro/snr_0_c4/cfo_0.png, id=100, 268.00125pt x 295.1025pt>
+<figures/cfo_equal_intro/snr_0_c4/cfo_0.png, id=107, 268.00125pt x 295.1025pt>
 File: figures/cfo_equal_intro/snr_0_c4/cfo_0.png Graphic file (type png)
 <use figures/cfo_equal_intro/snr_0_c4/cfo_0.png>
 Package pdftex.def Info: figures/cfo_equal_intro/snr_0_c4/cfo_0.png  used on in
-put line 192.
+put line 203.
 (pdftex.def)             Requested size: 128.0374pt x 140.98116pt.
-<figures/cfo_equal_intro/snr_20_c4/cfo_0.png, id=101, 268.00125pt x 295.1025pt>
+<figures/cfo_equal_intro/snr_20_c4/cfo_0.png, id=108, 268.00125pt x 295.1025pt>
 
 File: figures/cfo_equal_intro/snr_20_c4/cfo_0.png Graphic file (type png)
 <use figures/cfo_equal_intro/snr_20_c4/cfo_0.png>
 Package pdftex.def Info: figures/cfo_equal_intro/snr_20_c4/cfo_0.png  used on i
-nput line 193.
+nput line 204.
 (pdftex.def)             Requested size: 128.0374pt x 140.98116pt.
-<figures/cfo_equal_intro/snr_10_c4/cfo_0.png, id=102, 268.00125pt x 295.1025pt>
+<figures/cfo_equal_intro/snr_10_c4/cfo_0.png, id=109, 268.00125pt x 295.1025pt>
 
 File: figures/cfo_equal_intro/snr_10_c4/cfo_0.png Graphic file (type png)
 <use figures/cfo_equal_intro/snr_10_c4/cfo_0.png>
 Package pdftex.def Info: figures/cfo_equal_intro/snr_10_c4/cfo_0.png  used on i
-nput line 194.
+nput line 205.
 (pdftex.def)             Requested size: 128.0374pt x 140.98116pt.
-<figures/cfo_equal_intro/snr_0_c5/cfo_0.png, id=103, 266.9975pt x 295.1025pt>
+<figures/cfo_equal_intro/snr_0_c5/cfo_0.png, id=110, 266.9975pt x 295.1025pt>
 File: figures/cfo_equal_intro/snr_0_c5/cfo_0.png Graphic file (type png)
 <use figures/cfo_equal_intro/snr_0_c5/cfo_0.png>
 Package pdftex.def Info: figures/cfo_equal_intro/snr_0_c5/cfo_0.png  used on in
-put line 195.
+put line 206.
 (pdftex.def)             Requested size: 128.0374pt x 141.5215pt.
-<figures/cfo_equal_intro/snr_20_c5/cfo_0.png, id=104, 266.9975pt x 295.1025pt>
+<figures/cfo_equal_intro/snr_20_c5/cfo_0.png, id=111, 266.9975pt x 295.1025pt>
 File: figures/cfo_equal_intro/snr_20_c5/cfo_0.png Graphic file (type png)
 <use figures/cfo_equal_intro/snr_20_c5/cfo_0.png>
 Package pdftex.def Info: figures/cfo_equal_intro/snr_20_c5/cfo_0.png  used on i
-nput line 196.
+nput line 207.
 (pdftex.def)             Requested size: 128.0374pt x 141.5215pt.
-<figures/cfo_equal_intro/snr_10_c5/cfo_0.png, id=105, 266.9975pt x 295.1025pt>
+<figures/cfo_equal_intro/snr_10_c5/cfo_0.png, id=112, 266.9975pt x 295.1025pt>
 File: figures/cfo_equal_intro/snr_10_c5/cfo_0.png Graphic file (type png)
 <use figures/cfo_equal_intro/snr_10_c5/cfo_0.png>
 Package pdftex.def Info: figures/cfo_equal_intro/snr_10_c5/cfo_0.png  used on i
-nput line 197.
+nput line 208.
 (pdftex.def)             Requested size: 128.0374pt x 141.5215pt.
 
 
-LaTeX Warning: Float too large for page by 13.84276pt on input line 200.
+LaTeX Warning: Float too large for page by 13.84276pt on input line 211.
 
-(./related_works.tex [7] [8 <./figures/cfo_equal_intro/snr_0_c3/cfo_0.png> <./f
-igures/cfo_equal_intro/snr_20_c3/cfo_0.png> <./figures/cfo_equal_intro/snr_10_c
-3/cfo_0.png> <./figures/cfo_equal_intro/snr_0_c2/cfo_0.png> <./figures/cfo_equa
-l_intro/snr_20_c2/cfo_0.png> <./figures/cfo_equal_intro/snr_10_c2/cfo_0.png> <.
-/figures/cfo_equal_intro/snr_0_c4/cfo_0.png> <./figures/cfo_equal_intro/snr_20_
-c4/cfo_0.png> <./figures/cfo_equal_intro/snr_10_c4/cfo_0.png> <./figures/cfo_eq
-ual_intro/snr_0_c5/cfo_0.png> <./figures/cfo_equal_intro/snr_20_c5/cfo_0.png> <
-./figures/cfo_equal_intro/snr_10_c5/cfo_0.png>]
-<figures/osheaatt2.png, id=125, 2057.6875pt x 805.0075pt>
+(./related_works.tex
+<figures/osheaatt2.png, id=113, 2057.6875pt x 805.0075pt>
 File: figures/osheaatt2.png Graphic file (type png)
 <use figures/osheaatt2.png>
 Package pdftex.def Info: figures/osheaatt2.png  used on input line 23.
 (pdftex.def)             Requested size: 455.24408pt x 178.09715pt.
-)) [9 <./figures/osheaatt2.png>] [10]
+ [8] [9 <./figures/cfo_equal_intro/snr_0_c3/cfo_0.png> <./figures/cfo_equal_int
+ro/snr_20_c3/cfo_0.png> <./figures/cfo_equal_intro/snr_10_c3/cfo_0.png> <./figu
+res/cfo_equal_intro/snr_0_c2/cfo_0.png> <./figures/cfo_equal_intro/snr_20_c2/cf
+o_0.png> <./figures/cfo_equal_intro/snr_10_c2/cfo_0.png> <./figures/cfo_equal_i
+ntro/snr_0_c4/cfo_0.png> <./figures/cfo_equal_intro/snr_20_c4/cfo_0.png> <./fig
+ures/cfo_equal_intro/snr_10_c4/cfo_0.png> <./figures/cfo_equal_intro/snr_0_c5/c
+fo_0.png> <./figures/cfo_equal_intro/snr_20_c5/cfo_0.png> <./figures/cfo_equal_
+intro/snr_10_c5/cfo_0.png>])) [10 <./figures/osheaatt2.png>]
 \openout2 = `equal.aux'.
 
  (./equal.tex
-<figures/equal/Channel_Estimation_KNN_LSTSQ_NN.png, id=132, 401.5pt x 278.03876
+<figures/equal/Channel_Estimation_KNN_LSTSQ_NN.png, id=135, 401.5pt x 278.03876
 pt>
 File: figures/equal/Channel_Estimation_KNN_LSTSQ_NN.png Graphic file (type png)
 
@@ -1078,28 +1082,29 @@ d on input line 16.
 
 
 ] [12 <./figures/equal/Channel_Estimation_KNN_LSTSQ_NN.png>]
-<figures/equal/Division_Function_plot.png, id=142, 398.48875pt x 282.05376pt>
+<figures/equal/Division_Function_plot.png, id=146, 398.48875pt x 282.05376pt>
 File: figures/equal/Division_Function_plot.png Graphic file (type png)
 <use figures/equal/Division_Function_plot.png>
 Package pdftex.def Info: figures/equal/Division_Function_plot.png  used on inpu
 t line 58.
 (pdftex.def)             Requested size: 398.48778pt x 282.05305pt.
-<figures/equal/Channel_lower_bound_division.png, id=143, 376.40625pt x 278.0387
+<figures/equal/Channel_lower_bound_division.png, id=147, 376.40625pt x 278.0387
 6pt>
 File: figures/equal/Channel_lower_bound_division.png Graphic file (type png)
 <use figures/equal/Channel_lower_bound_division.png>
 Package pdftex.def Info: figures/equal/Channel_lower_bound_division.png  used o
 n input line 66.
 (pdftex.def)             Requested size: 376.40532pt x 278.03807pt.
- [13 <./figures/equal/Division_Function_plot.png>]
-<figures/equal/Multiplication_Function_plot.png, id=149, 398.48875pt x 282.0537
+
+[13 <./figures/equal/Division_Function_plot.png>]
+<figures/equal/Multiplication_Function_plot.png, id=152, 398.48875pt x 282.0537
 6pt>
 File: figures/equal/Multiplication_Function_plot.png Graphic file (type png)
 <use figures/equal/Multiplication_Function_plot.png>
 Package pdftex.def Info: figures/equal/Multiplication_Function_plot.png  used o
 n input line 97.
 (pdftex.def)             Requested size: 398.48778pt x 282.05305pt.
-<figures/equal/Channel_upper_bound_multiplication.png, id=150, 395.4775pt x 278
+<figures/equal/Channel_upper_bound_multiplication.png, id=153, 395.4775pt x 278
 .03876pt>
 File: figures/equal/Channel_upper_bound_multiplication.png Graphic file (type p
 ng)
@@ -1109,14 +1114,14 @@ used on input line 111.
 (pdftex.def)             Requested size: 395.47653pt x 278.03807pt.
  [14 <./figures/equal/Channel_lower_bound_division.png>] [15 <./figures/equal/M
 ultiplication_Function_plot.png>]
-<figures/equal/RNN_vs_MMSE.png, id=159, 389.455pt x 266.9975pt>
+<figures/equal/RNN_vs_MMSE.png, id=162, 389.455pt x 266.9975pt>
 File: figures/equal/RNN_vs_MMSE.png Graphic file (type png)
 <use figures/equal/RNN_vs_MMSE.png>
 Package pdftex.def Info: figures/equal/RNN_vs_MMSE.png  used on input line 141.
 
 (pdftex.def)             Requested size: 284.52756pt x 195.0695pt.
  [16 <./figures/equal/Channel_upper_bound_multiplication.png>]
-<figures/equal/incorrect_channels.png, id=164, 404.51125pt x 280.04625pt>
+<figures/equal/incorrect_channels.png, id=167, 404.51125pt x 280.04625pt>
 File: figures/equal/incorrect_channels.png Graphic file (type png)
 <use figures/equal/incorrect_channels.png>
 Package pdftex.def Info: figures/equal/incorrect_channels.png  used on input li
@@ -1132,19 +1137,19 @@ s.png>]
 
 
 ]
-<figures/cfo/follow_circle_linear_before.png, id=177, 273.02pt x 252.945pt>
+<figures/cfo/follow_circle_linear_before.png, id=180, 273.02pt x 252.945pt>
 File: figures/cfo/follow_circle_linear_before.png Graphic file (type png)
 <use figures/cfo/follow_circle_linear_before.png>
 Package pdftex.def Info: figures/cfo/follow_circle_linear_before.png  used on i
 nput line 30.
 (pdftex.def)             Requested size: 142.26378pt x 131.80232pt.
-<figures/cfo/follow_circle_linear_after.png, id=178, 273.02pt x 252.945pt>
+<figures/cfo/follow_circle_linear_after.png, id=181, 273.02pt x 252.945pt>
 File: figures/cfo/follow_circle_linear_after.png Graphic file (type png)
 <use figures/cfo/follow_circle_linear_after.png>
 Package pdftex.def Info: figures/cfo/follow_circle_linear_after.png  used on in
 put line 31.
 (pdftex.def)             Requested size: 142.26378pt x 131.80232pt.
-<figures/cfo/follow_circle_linear_loss.png, id=179, 397.485pt x 266.9975pt>
+<figures/cfo/follow_circle_linear_loss.png, id=182, 397.485pt x 266.9975pt>
 File: figures/cfo/follow_circle_linear_loss.png Graphic file (type png)
 <use figures/cfo/follow_circle_linear_loss.png>
 Package pdftex.def Info: figures/cfo/follow_circle_linear_loss.png  used on inp
@@ -1155,20 +1160,20 @@ Overfull \hbox (13.94182pt too wide) in paragraph at lines 29--35
  [][] 
  []
 
-<figures/cfo/follow_circle_nonlinear_before.png, id=180, 273.02pt x 252.945pt>
+<figures/cfo/follow_circle_nonlinear_before.png, id=183, 273.02pt x 252.945pt>
 File: figures/cfo/follow_circle_nonlinear_before.png Graphic file (type png)
 <use figures/cfo/follow_circle_nonlinear_before.png>
 Package pdftex.def Info: figures/cfo/follow_circle_nonlinear_before.png  used o
 n input line 54.
 (pdftex.def)             Requested size: 142.26378pt x 131.80232pt.
-<figures/cfo/follow_circle_nonlinear_after.png, id=181, 272.01625pt x 252.945pt
+<figures/cfo/follow_circle_nonlinear_after.png, id=184, 272.01625pt x 252.945pt
 >
 File: figures/cfo/follow_circle_nonlinear_after.png Graphic file (type png)
 <use figures/cfo/follow_circle_nonlinear_after.png>
 Package pdftex.def Info: figures/cfo/follow_circle_nonlinear_after.png  used on
  input line 55.
 (pdftex.def)             Requested size: 142.26378pt x 132.29636pt.
-<figures/cfo/follow_circle_nonlinear_loss.png, id=182, 389.455pt x 266.9975pt>
+<figures/cfo/follow_circle_nonlinear_loss.png, id=185, 389.455pt x 266.9975pt>
 File: figures/cfo/follow_circle_nonlinear_loss.png Graphic file (type png)
 <use figures/cfo/follow_circle_nonlinear_loss.png>
 Package pdftex.def Info: figures/cfo/follow_circle_nonlinear_loss.png  used on 
@@ -1183,31 +1188,31 @@ Overfull \hbox (13.94182pt too wide) in paragraph at lines 53--59
 e_linear_after.png> <./figures/cfo/follow_circle_linear_loss.png>] [21 <./figur
 es/cfo/follow_circle_nonlinear_before.png> <./figures/cfo/follow_circle_nonline
 ar_after.png> <./figures/cfo/follow_circle_nonlinear_loss.png>]
-<figures/cfo/cfo_estimation.png, id=195, 389.455pt x 266.9975pt>
+<figures/cfo/cfo_estimation.png, id=198, 389.455pt x 266.9975pt>
 File: figures/cfo/cfo_estimation.png Graphic file (type png)
 <use figures/cfo/cfo_estimation.png>
 Package pdftex.def Info: figures/cfo/cfo_estimation.png  used on input line 92.
 
 (pdftex.def)             Requested size: 341.43306pt x 234.08258pt.
-<figures/cfo/cfo_estimation_original_data.png, id=196, 273.02pt x 264.99pt>
+<figures/cfo/cfo_estimation_original_data.png, id=199, 273.02pt x 264.99pt>
 File: figures/cfo/cfo_estimation_original_data.png Graphic file (type png)
 <use figures/cfo/cfo_estimation_original_data.png>
 Package pdftex.def Info: figures/cfo/cfo_estimation_original_data.png  used on 
 input line 107.
 (pdftex.def)             Requested size: 156.49014pt x 151.88689pt.
-<figures/cfo/cfo_estimation_cfo_data.png, id=197, 273.02pt x 264.99pt>
+<figures/cfo/cfo_estimation_cfo_data.png, id=200, 273.02pt x 264.99pt>
 File: figures/cfo/cfo_estimation_cfo_data.png Graphic file (type png)
 <use figures/cfo/cfo_estimation_cfo_data.png>
 Package pdftex.def Info: figures/cfo/cfo_estimation_cfo_data.png  used on input
  line 108.
 (pdftex.def)             Requested size: 156.49014pt x 151.88689pt.
-<figures/cfo/cfo_estimation_est_data.png, id=198, 273.02pt x 264.99pt>
+<figures/cfo/cfo_estimation_est_data.png, id=201, 273.02pt x 264.99pt>
 File: figures/cfo/cfo_estimation_est_data.png Graphic file (type png)
 <use figures/cfo/cfo_estimation_est_data.png>
 Package pdftex.def Info: figures/cfo/cfo_estimation_est_data.png  used on input
  line 109.
 (pdftex.def)             Requested size: 156.49014pt x 151.88689pt.
-) [22 <./figures/cfo/cfo_estimation.png>] [23 <./figures/cfo/cfo_estimation_ori
+ [22 <./figures/cfo/cfo_estimation.png>]) [23 <./figures/cfo/cfo_estimation_ori
 ginal_data.png> <./figures/cfo/cfo_estimation_cfo_data.png> <./figures/cfo/cfo_
 estimation_est_data.png>]
 \openout2 = `conclusion.aux'.
@@ -1253,7 +1258,7 @@ Package logreq Info: Writing requests to 'thesis.run.xml'.
 Here is how much of TeX's memory you used:
  13746 strings out of 492639
  233149 string characters out of 6129287
- 688220 words of memory out of 5000000
+ 689118 words of memory out of 5000000
  17439 multiletter control sequences out of 15000+600000
  10627 words of font info for 38 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
@@ -1272,10 +1277,10 @@ e/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl12.pfb></usr/local/texlive
 /2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/
 2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/20
 18/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on thesis.pdf (32 pages, 1137795 bytes).
+Output written on thesis.pdf (33 pages, 1141572 bytes).
 PDF statistics:
- 266 PDF objects out of 1000 (max. 8388607)
- 115 compressed objects within 2 object streams
+ 269 PDF objects out of 1000 (max. 8388607)
+ 117 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  256 words of extra memory for PDF output out of 10000 (max. 10000000)
 

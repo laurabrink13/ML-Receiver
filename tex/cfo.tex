@@ -1,5 +1,5 @@
 \chapter[Deep Networks for Carrier Frequency Offset]{Deep Networks for Carrier Frequency Offset\raisebox{.3\baselineskip}{\normalsize\footnotemark}}
-\footnotetext{The contents of this chapter were produced in collaboration with Nikhil Shinde.} 
+\footnotetext{The contents of this chapter were produced in collaboration with Nikhil Shinde, an undergrad researcher that I am mentoring.} 
 
 The carrier frequency offset (CFO) correction process removes the symbol rotation caused by the non-ideal conditions of the transmitter and receiver environment.  We will explore how neural networks can both estimate the CFO and correct for the rate of rotation without using backpropagation for each new rate.
 
@@ -25,7 +25,7 @@ R = \begin{bmatrix}
 \setlength{\tabcolsep}{0pt}
 \begin{figure}
   \centering
-  \caption{Linear neural network: follow a circle for a constant CFO rate.}
+  \caption{Linear neural network: follow a circle for a constant CFO rate, $\omega=0.02$. The figure on the left shows the original data of length $100$. The figure in the middle shows the estimated data from the neural network given the starting point from the left figure.  The figure on the right shows the log of the test cost of the neural network versus traing epoch.}
   \begin{tabular}{ccc}
     \includegraphics[width=50mm]{figures/cfo/follow_circle_linear_before.png}&
     \includegraphics[width=50mm]{figures/cfo/follow_circle_linear_after.png}&
@@ -49,7 +49,7 @@ The RNN must predict the next $99$ points, $x_1 \ldots x_{99}$.  Point $x_i$ is 
 \setlength{\tabcolsep}{0pt}
 \begin{figure}
   \centering
-  \caption{Nonlinear neural network: follow a circle for different CFO rates.}
+  \caption{Nonlinear neural network: follow a circle for different CFO rates. The figure on the left shows the original data of length $100$ for $\omega=0.01063284$. The figure in the middle shows the estimated data from the neural network given the starting point and rate of rotation from the left figure.  The figure on the right shows the log of the test cost of the neural network versus traing epoch.}
   \begin{tabular}{ccc}
     \includegraphics[width=50mm]{figures/cfo/follow_circle_nonlinear_before.png}&
     \includegraphics[width=50mm]{figures/cfo/follow_circle_nonlinear_after.png}&
@@ -95,14 +95,14 @@ We compare the bit error rate of the neural network and classic demodulator vers
 \end{center}
 \end{figure}
 
-For SNR above $25$, the neural network does not have any incorrect bits in the $10k$ data sequences each with $100$ symbols, or $50$ bits.  The neural network consistently performs better than just the classic demodulator for all SNR.  Although, the performance is similar for SNR$=1$.
+For SNR above $25$, the neural network does not have any incorrect bits in the $10k$ data sequences each with $100$ symbols, or $200$ bits.  The neural network consistently performs better than just the classic demodulator for all SNR.  Although, the performance is similar for SNR$=1$.
 Figure~\ref{fig:cfo_demon_single_tap} shows one example of a data sequence passed through the neural network described above.
-The neural network is trained for SNR$=\infty$. The three plots show that the neural network corrects for CFO quite well.
+The neural network is trained for SNR$=\infty$ with the same training sequence as described above. The estimated data constellation plot has removed most of the effects of the CFO and looks quite similar to the original data constellation plot.
 
 \setlength{\tabcolsep}{0pt}
 \begin{figure}
   \centering
-  \caption{Nonlinear neural network estimating and correcting CFO for different $\omega$. In this particular test example, $\omega=0.00969545$ and SNR$=\infty$.}
+  \caption{Nonlinear neural network estimating and correcting CFO for different $\omega$. In this particular test example, $\omega=0.00969545$ and SNR$=\infty$. The figure on the left shows the constellation of the $100$ original data symbols. The figure in the middle shows the constellation of the original data symbols after CFO. The figure on the right shows the constellation of the data symbols after the neural network CFO correction.}
   \begin{tabular}{ccc}
     \includegraphics[width=55mm]{figures/cfo/cfo_estimation_original_data.png}&
     \includegraphics[width=55mm]{figures/cfo/cfo_estimation_cfo_data.png}&
