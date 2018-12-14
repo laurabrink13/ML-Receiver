@@ -3,9 +3,9 @@
 Signal processing has long relied on well-defined, structured processes and protocols to function.  
 However, in order to move towards more robust and adaptive systems, we will need to overhaul these tightly structured processes.  We must design new robust and adaptive communications systems.
 
-From an academic perspective, the rise of machine learning tools and processing has allowed us to tackle problems we have not yet been able to, like in image processing.  However, we still do not fully understand the possibilities or the limitations of this technology.  In order to study the limitations of machine learning, we must apply them to spaces that we have studied extensively, like communications, and compare them to the well-known baselines.
+From an academic perspective, the rise of machine learning tools and processing has allowed us to tackle problems we have not yet been able to, like in image processing.  However, we still do not fully understand the possibilities or the limitations of this technology.  In order to study the limitations of machine learning techniques, we must apply them to spaces that we have studied extensively, like communications, and compare them to the well-known baselines that are already very good.
 
-Most communications systems have three main processes at the receiver; equalization, demodulation, and error-correction.  While we will need to design robust forms of all of these processes, we will focus on equalization for the remainder of this paper. 
+Most communications systems have three main processes at the receiver; equalization, demodulation, and error-correction.  While we will need to design robust forms of all of these processes, we will focus on equalization for the remainder of this report. 
 
 \section{Motivation}
 
@@ -15,14 +15,14 @@ Additionally, researchers in neurology have studied how the brain synapses chang
 Our brains know how to update the synapses as we learn new things. This is like updating the weights of a neural network for new data points.  
 We refer the reader to \cite{lemke} for a survey of meta-learning technologies and to \cite{finn} for recent developments in meta-learning algorithms.
 
-In this paper, we want to understand if our neural network based communication processes can learn to learn.  
+In this report, we want to understand if our neural network based communication processes can learn to learn.  
 As in, can they handle new environments with new data sequeneces without having to re-train for the new variables. 
 The communications application is arguably an easier application of meta-learning than others have been exploring, like image classification \cite{khodadadeh}.  
-In order to better understand the possibilities and limitations of meta-learning, we need to apply it to something simpler, like communications.  In this paper, we will explore whether or not we can learn to learn to communicate. 
+In order to better understand the possibilities and limitations of meta-learning, we need to apply it to something simpler, like communications.  In this report, we will explore whether or not we can learn to learn to communicate. 
 
 \subsection{Context}
 
-A team at UC Berkeley and Nokia Bell Labs  participated in the DARPA Spectrum Collaboration Challenge, a competition to build collaborative, intelligent radios.
+A team at UC Berkeley and Nokia Bell Labs  participated in the DARPA Spectrum Collaboration Challenge, a competition to build collaborative, intelligent radios\footnote{I was heavily involved with this project and this report grew out of my work on this challenge.}.
 The challenge consists of putting multiple radio networks in the same space and bandwidth.  
 Without having been codesigned, the networks must collaborate and share all of the resources.
 The environment was open to all of the teams so there are no rigid bands like we use today.
@@ -33,10 +33,10 @@ This challenge is one of the practical applications for robust and adaptive proc
 
 \section{Background}
 
-While we will not be designing new modulation or demodulation processes in this paper, we must introduce some terminology.
+While we will not be designing new modulation or demodulation processes in this report, we must introduce some terminology.
 A constellation is a mapping of bits to complex symbols.  
 A classic quadrature phase shift keying (QPSK) modulator maps pairs of bits to complex symbols.
-For the remainder of the paper, when we use a QPSK constellation, we use the following mapping.
+For the remainder of the report, when we use a QPSK constellation, we use the following mapping.
 \begin{align*}
 \begin{bmatrix}
 \text{Bits} & \text{Complex Symbol} \\
