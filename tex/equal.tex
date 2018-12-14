@@ -7,6 +7,10 @@ The equalization process removes inter-symbol interference caused by the channel
 
 The process of channel estimation tries to identify the coefficients of the channel taps as best as possible.  We want to estimate $\vec{a}$ that minimizes the difference between the estimated channel taps, $\vec{\hat{a}}$, and the true channel taps, $\vec{a}$.  We can choose $\vec{\hat{a}}$ to minimize this difference.
 
+In Figure~\ref{fig:chann_est}, we compare the performance of neural network channel estimator, a K-Nearest-Neighbors (KNN) channel estimator (where $K=15$), and the least squares channel estimator for two tap real channels.
+We train the neural network and KNN on $40k$ data sequences with random channels.  Each data sequence has a preamble length of $100$ bits modulated to $50$ QPSK symbols.  
+Each channel tap is a uniform random variable, $[-1,1]$.  We normalize the channel power such that $||\vec{a}||^2 = 1$.  
+
 \begin{figure}
 \begin{center}
 \includegraphics{figures/equal/Channel_Estimation_KNN_LSTSQ_NN.png}
@@ -14,10 +18,6 @@ The process of channel estimation tries to identify the coefficients of the chan
 \label{fig:chann_est}
 \end{center}
 \end{figure}
-
-In Figure~\ref{fig:chann_est}, we compare the performance of neural network channel estimator, a K-Nearest-Neighbors (KNN) channel estimator (where $K=15$), and the least squares channel estimator for two tap real channels.
-We train the neural network and KNN on $40k$ data sequences with random channels.  Each data sequence has a preamble length of $100$ bits modulated to $50$ QPSK symbols.  
-Each channel tap is a uniform random variable, $[-1,1]$.  We normalize the channel power such that $||\vec{a}||^2 = 1$.  
 
 The neural network channel estimator takes the received preamble, $\vec{\tilde{x}}_{pre}$, and the known preamble, $\vec{x}_{pre}$, as inputs.
 The output of the neural network is the estimate of the channel taps, $\vec{\hat{a}}$.  We assume that the neural network knows there are only two channel taps and thus limit the size of the output to two.
@@ -42,6 +42,16 @@ If that is the case, then the neural networks will need to know how to take and 
 
 \subsection{Learning an inverse}
 
+We explore whether a neural network can learn to do division.  We did not do a thorough architecture search or train for very long as we wanted an idea of the behavior of the neural network and will do this in future work.  
+Figure~\ref{fig:div_fx} shows the topological representation of the division function, $z=\frac{x}{y}$.  A neural network that is trained to do division will need to approximate the surface of this function.  
+When $y$ is close to zero, $z$ becomes very large and goes to infinity.  These large peaks will make it difficult for a neural network to do division.  
+
+Figure~\ref{fig:one_tap_inv} shows the performance of a neural network learning division.
+The neural network's input is $x$ and $y$ and the output is $\hat{z}$.  Both inputs are uniform random variables; $x$ is drawn uniformly $[-1,1]$ and $y$ is drawn uniformly $[\beta,1]$. 
+The loss function is the mean squared error between the estimated division and the true division, $\hat{z}-\frac{x}{y}$.
+The architecture consists of two dense layers with $50$ nodes each and sigmoid activiation function.  This feeds into a linear layer that outputs the scalar estimate of $\hat{z}$.  
+The network is re-trained with $10k$ data points for different values of $\beta$. As $\beta$ gets close to zero, the error increases dramatically.  This is expected because the closer $\beta$ is to zero, the stronger the effects are of the infinite peaks of the division function.
+
 \begin{figure}
 \begin{center}
 \includegraphics{figures/equal/Division_Function_plot.png}
@@ -58,25 +68,7 @@ If that is the case, then the neural networks will need to know how to take and 
 \end{center}
 \end{figure}
 
-We explore whether a neural network can learn to do division.  We did not do a thorough architecture search or train for very long as we wanted an idea of the behavior of the neural network and will do this in future work.  
-Figure~\ref{fig:div_fx} shows the topological representation of the division function, $z=\frac{x}{y}$.  A neural network that is trained to do division will need to approximate the surface of this function.  
-When $y$ is close to zero, $z$ becomes very large and goes to infinity.  These large peaks will make it difficult for a neural network to do division.  
-
-Figure~\ref{fig:one_tap_inv} shows the performance of a neural network learning division.
-The neural network's input is $x$ and $y$ and the output is $\hat{z}$.  Both inputs are uniform random variables; $x$ is drawn uniformly $[-1,1]$ and $y$ is drawn uniformly $[\beta,1]$. 
-The loss function is the mean squared error between the estimated division and the true division, $\hat{z}-\frac{x}{y}$.
-The architecture consists of two dense layers with $50$ nodes each and sigmoid activiation function.  This feeds into a linear layer that outputs the scalar estimate of $\hat{z}$.  
-The network is re-trained with $10k$ data points for different values of $\beta$. As $\beta$ gets close to zero, the error increases dramatically.  This is expected because the closer $\beta$ is to zero, the stronger the effects are of the infinite peaks of the division function.
-
 \subsection{Learning to multiply two inputs}
-
-\begin{figure}
-\begin{center}
-\includegraphics{figures/equal/Multiplication_Function_plot.png}
-\caption{Topographical surface representation of the multiplication function; $z=xy$.}
-\label{fig:mult_fx}
-\end{center}
-\end{figure}
 
 %\begin{figure}
 %\begin{center}
@@ -94,6 +86,25 @@ The network is re-trained with $10k$ data points for different values of $\beta$
 %\label{fig:loss_mult}
 %\end{figure}
 
+We explore whether a neural network can learn to do multiplication. We did not do a thorough architecture search or train for very long as we wanted an idea of the behavior of the neural network and will do this in future work. 
+Figure~\ref{fig:mult_fx} shows the topological representation of the multiplication function, $z=xy$.  A neural network that is trained to do multiplication will need to approximate the surface of this function.  
+When $x$ and $y$ are close to zero, the function is stable.  However, as $x$ and $y$ grow, the function becomes unstable and grows to infinity. 
+
+
+\begin{figure}
+\begin{center}
+\includegraphics{figures/equal/Multiplication_Function_plot.png}
+\caption{Topographical surface representation of the multiplication function; $z=xy$.}
+\label{fig:mult_fx}
+\end{center}
+\end{figure}
+
+Figure~\ref{fig:mult_bound} shows the performance of a neural network learning multiplication.
+The neural network's input is $x$ and $y$ and the output is $\hat{z}$.  Both inputs are uniform random variables; $x$ is drawn uniformly $[-1,1]$ and $y$ is drawn uniformly $[0,\gamma]$. 
+The loss function is the mean squared error between the estimated multiplication and the true multiplication, $\hat{z}-xy$.
+The architecture consists of two dense layers with $50$ nodes each and sigmoid activiation function.  This feeds into a linear layer that outputs the scalar estimate of $\hat{z}$.  
+The network is re-trained with $50k$ data points for different values of $\gamma$. As $\gamma$ increases, the error increases dramatically.  This is expected because the larger $\gamma$ is, the stronger the effects are of the infinite limits of the multiplication function.
+
 \begin{figure}
 \begin{center}
 \includegraphics{figures/equal/Channel_upper_bound_multiplication.png}
@@ -102,31 +113,12 @@ The network is re-trained with $10k$ data points for different values of $\beta$
 \end{center}
 \end{figure}
 
-We explore whether a neural network can learn to do multiplication. We did not do a thorough architecture search or train for very long as we wanted an idea of the behavior of the neural network and will do this in future work. 
-Figure~\ref{fig:mult_fx} shows the topological representation of the multiplication function, $z=xy$.  A neural network that is trained to do multiplication will need to approximate the surface of this function.  
-When $x$ and $y$ are close to zero, the function is stable.  However, as $x$ and $y$ grow, the function becomes unstable and grows to infinity. 
-
-Figure~\ref{fig:mult_bound} shows the performance of a neural network learning multiplication.
-The neural network's input is $x$ and $y$ and the output is $\hat{z}$.  Both inputs are uniform random variables; $x$ is drawn uniformly $[-1,1]$ and $y$ is drawn uniformly $[0,\gamma]$. 
-The loss function is the mean squared error between the estimated multiplication and the true multiplication, $\hat{z}-xy$.
-The architecture consists of two dense layers with $50$ nodes each and sigmoid activiation function.  This feeds into a linear layer that outputs the scalar estimate of $\hat{z}$.  
-The network is re-trained with $50k$ data points for different values of $\gamma$. As $\gamma$ increases, the error increases dramatically.  This is expected because the larger $\gamma$ is, the stronger the effects are of the infinite limits of the multiplication function.
-
-
 \subsection{RNN for Channel Equalization}
 
 We designed an RNN to perform channel equalization.
 The inputs of the RNN are the true channel taps.  We assume a two tap channel so $a_0, a_1$ are input to the RNN.  Another input is the received data sequence, $\vec{\tilde{x}}_{data}$.
 The output of the RNN is an estimate of the original data sequence, $\vec{\hat{x}}_{data}$. 
 The loss function that the RNN is trained on is the mean squared error between the original and estimated data sequence, $||\vec{x}_{data}-\vec{\hat{x}}_{data}||^2$.
-
-\begin{figure}
-\begin{center}
-\includegraphics[width=100mm]{figures/equal/RNN_vs_MMSE.png}
-\caption{Comparison of RNN and MMSE mean squared error after equalization.}
-\label{fig:rnn_vs_mmse}
-\end{center}
-\end{figure}
 
 The neural network architecture for our equalizer uses a special type of RNN called a bidriectional long-short term memory (LSTM) network.  
 A bidirectional RNN connects the forward and backwards nodes of the RNN, allowing the output to depend on both future and past states.
@@ -142,15 +134,15 @@ The RNN is trained on $40k$ data sequences, with a decaying learning rate starti
 The RNN and MMSE are tested on the same $10k$ data sequences.  New data is generated for each SNR and the RNN is re-trained for each SNR.  Each data sequence consits of $60$ bits modulated to $30$ complex symbols.
 We assume that the RNN and MMSE both have access to the true channel chracteristics.
 
-The RNN equalizer performs comparably to the MMSE equalizer for low SNRs and performs better than MMSE equalizer for medium SNRs.  However, the RNN equalizer performs worse than the MMSE equalizer for high SNRs.  We take a closer look at what kind of channels the RNN equalizer is getting wrong.
-
 \begin{figure}
 \begin{center}
-\includegraphics[width=100mm]{figures/equal/incorrect_channels.png}
-\caption{What two tap channels does the equalizer get wrong?}
-\label{fig:incorr_chan}
+\includegraphics[width=100mm]{figures/equal/RNN_vs_MMSE.png}
+\caption{Comparison of RNN and MMSE mean squared error after equalization.}
+\label{fig:rnn_vs_mmse}
 \end{center}
 \end{figure}
+
+The RNN equalizer performs comparably to the MMSE equalizer for low SNRs and performs better than MMSE equalizer for medium SNRs.  However, the RNN equalizer performs worse than the MMSE equalizer for high SNRs.  We take a closer look at what kind of channels the RNN equalizer is getting wrong.
 
 \begin{align*}
 \begin{bmatrix}
@@ -168,6 +160,14 @@ There were a total of $50k$ random channels in the test set with SNR$=100$.
 Of that set, only $43$ channels resulted in incorrect bits after the RNN equalizer and classic demodulator.
 From the figure, it is clear that these difficult channels are clustered into four regions. All of the four regions are when the first and second tap of the channel are equal in magnitude.
 The mean squared error between the equalized data and the true data among just the bad channels was $0.7306$.  The mean squared error among the good channels was $0.000264$.
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=100mm]{figures/equal/incorrect_channels.png}
+\caption{What two tap channels does the equalizer get wrong?}
+\label{fig:incorr_chan}
+\end{center}
+\end{figure}
 
 We expect these channels to be difficult.  Refer to Figure~\ref{fig:multi_tap} to see how the constellations fall right on top of each other.
 Additionally, if we think about these channels in terms of the infinite impulse response, these channels could result in highly variable inverses.  Because the two channels are equal, then the infinite impulse response is constantly cancelling out and everything will have to balance out exactly.  This representation means there will be a lot of variation of the inverse of those channels.
