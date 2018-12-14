@@ -85,6 +85,35 @@
       \field{pages}{227\bibrangedash 231}
       \range{pages}{5}
     \endentry
+    \entry{costas}{inproceedings}{}
+      \name{author}{1}{}{%
+        {{hash=720a0ddd86ae5a575fb2f3327dea1c83}{%
+           family={Costas},
+           familyi={C\bibinitperiod},
+           given={John\bibnamedelima P.},
+           giveni={J\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{720a0ddd86ae5a575fb2f3327dea1c83}
+      \strng{fullhash}{720a0ddd86ae5a575fb2f3327dea1c83}
+      \strng{bibnamehash}{720a0ddd86ae5a575fb2f3327dea1c83}
+      \strng{authorbibnamehash}{720a0ddd86ae5a575fb2f3327dea1c83}
+      \strng{authornamehash}{720a0ddd86ae5a575fb2f3327dea1c83}
+      \strng{authorfullhash}{720a0ddd86ae5a575fb2f3327dea1c83}
+      \field{sortinit}{C}
+      \field{sortinithash}{963e9d84a3da2344e8833203de5aed05}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the IRE}
+      \field{number}{12}
+      \field{title}{Synchronous Communications}
+      \field{volume}{44}
+      \field{year}{1956}
+      \field{pages}{1713\bibrangedash 1718}
+      \range{pages}{6}
+    \endentry
     \entry{diamandis}{article}{}
       \name{author}{1}{}{%
         {{hash=8c950171bc25a5a060dfa2e79439ef27}{%
@@ -794,7 +823,6 @@
       \range{pages}{4}
     \endentry
   \enddatalist
-  \missing{costas}
 \endrefsection
 \endinput
 
